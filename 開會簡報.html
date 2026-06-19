@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IEC2026 數創大賞 — 參賽策略討論</title>
+<style>
+  :root{
+    --ink:#15181d; --muted:#5c6470; --line:#e5e3dc;
+    --paper:#f6f4ee; --card:#fffefb;
+    --accent:#c8472b;
+    --accent2:#1f6f5c;
+    --gold:#b8860b;
+    --maxw:1080px;
+    --r:14px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+    color:var(--ink);background:var(--paper);line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  section{padding:80px 0;border-bottom:1px solid var(--line)}
+  .eyebrow{font-size:13px;letter-spacing:.2em;color:var(--accent);font-weight:700;margin-bottom:14px}
+  h1{font-size:clamp(2.4rem,1.5rem+4vw,4.4rem);line-height:1.05;font-weight:900;letter-spacing:-.02em}
+  h2{font-size:clamp(1.6rem,1.1rem+2.2vw,2.6rem);line-height:1.15;font-weight:800;letter-spacing:-.01em;margin-bottom:8px}
+  h3{font-size:1.2rem;font-weight:800;margin:0 0 6px}
+  p{color:var(--muted);font-size:1.05rem}
+  .lead{font-size:clamp(1.02rem,.9rem+.5vw,1.25rem);color:var(--ink);font-weight:500}
+  strong{color:var(--ink);font-weight:700}
+
+  .hero{background:var(--ink);color:#fff;border-bottom:none;position:relative;overflow:hidden}
+  .hero .eyebrow{color:#ff9a7a}
+  .hero h1{color:#fff}
+  .hero p{color:#c9cdd4;max-width:700px;margin-top:20px;font-size:1.12rem}
+  .hero .tag{display:inline-flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+  .hero .tag span{border:1px solid rgba(255,255,255,.22);border-radius:8px;padding:7px 14px;font-size:.9rem;color:#e8eaee}
+
+  .grid{display:grid;gap:20px}
+  .g2{grid-template-columns:repeat(2,1fr)}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  @media(max-width:780px){.g2,.g3{grid-template-columns:1fr}}
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:26px}
+  .card .n{font-size:2.1rem;font-weight:900;color:var(--accent);line-height:1}
+  .card.tinted{background:#fff;border-left:4px solid var(--accent2)}
+
+  .wall{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+  @media(max-width:900px){.wall{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.wall{grid-template-columns:1fr}}
+  figure{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;margin:0;box-shadow:0 5px 16px rgba(0,0,0,.05)}
+  figure img{width:100%;display:block;background:#eee;aspect-ratio:1/1.32;object-fit:cover;object-position:top}
+  figcaption{padding:12px 14px}
+  figcaption .award{font-size:.78rem;font-weight:700;color:#fff;background:var(--gold);border-radius:6px;padding:2px 8px;display:inline-block}
+  figcaption .award.g{background:var(--accent)}
+  figcaption .award.s{background:var(--accent2)}
+  figcaption b{display:block;margin-top:8px;font-size:1rem;color:var(--ink)}
+  figcaption span.bm{display:block;font-size:.86rem;color:var(--muted);margin-top:3px}
+
+  table{width:100%;border-collapse:collapse;margin-top:18px;background:#fff;border-radius:12px;overflow:hidden;border:1px solid var(--line)}
+  th,td{padding:14px 18px;text-align:left;border-bottom:1px solid var(--line);font-size:1rem;vertical-align:top}
+  th{background:var(--ink);color:#fff;font-weight:600}
+  tr:last-child td{border-bottom:none}
+  td.win{background:#f0f7f3;font-weight:600;color:var(--accent2)}
+  .pick{color:var(--accent2);font-weight:800}
+
+  ol.steps{counter-reset:s;list-style:none;margin-top:20px}
+  ol.steps li{counter-increment:s;position:relative;padding:15px 0 15px 60px;border-bottom:1px dashed var(--line)}
+  ol.steps li::before{content:counter(s);position:absolute;left:0;top:12px;width:40px;height:40px;background:var(--ink);color:#fff;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:1.05rem}
+  ol.steps li b{font-size:1.08rem}
+  ol.steps li p{margin-top:2px}
+
+  ul.crit{list-style:none;margin-top:12px}
+  ul.crit li{padding:8px 0 8px 26px;position:relative;color:var(--muted)}
+  ul.crit li::before{content:"";position:absolute;left:4px;top:17px;width:7px;height:7px;background:var(--accent2);border-radius:50%}
+  ul.crit li b{color:var(--ink)}
+
+  .flow{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:18px;background:#fff}
+  .flow .h{background:var(--accent2);color:#fff;padding:13px 18px;font-weight:700}
+  .flow .h.b{background:var(--ink)}
+  .flow .cell{padding:13px 18px;border-top:1px solid var(--line);font-size:.98rem;color:var(--muted)}
+  .flow .cell.l{border-right:1px solid var(--line);color:var(--ink);font-weight:600}
+  @media(max-width:600px){.flow{grid-template-columns:1fr}.flow .cell.l{border-right:none}}
+
+  .note{background:#fff;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:10px;padding:20px 24px;margin-top:24px}
+  .note h3{color:var(--ink)}
+
+  .timeline{display:flex;flex-wrap:wrap;margin-top:20px}
+  .tl{flex:1;min-width:130px;padding:18px;border:1px solid var(--line);background:#fff;border-left:4px solid var(--accent)}
+  .tl .d{font-weight:900;font-size:1.2rem;color:var(--accent)}
+  .tl .t{font-size:.9rem;color:var(--muted);margin-top:4px}
+  .tl.due{background:#fff5f2}
+
+  .feed{background:#1c1f25;color:#e8eaee;border-radius:12px;padding:24px 26px;margin-top:22px;font-size:.95rem;line-height:1.85;overflow-x:auto}
+  .feed .lane{color:#ff9a7a;font-weight:700}
+  .feed b{color:#fff}
+  .feed .src{display:block;color:#7fb8a6;font-size:.85rem;margin-top:2px}
+  .feed .ins{color:#c9cdd4;border-top:1px solid #2c3038;margin-top:14px;padding-top:14px;display:block}
+  .feed ul{list-style:none;margin:12px 0 0}
+  .feed li{padding:7px 0 7px 18px;position:relative}
+  .feed li::before{content:"–";position:absolute;left:0;color:#5c6470}
+  footer{padding:44px 0;text-align:center;color:var(--muted);font-size:.9rem}
+  .kicker{font-weight:700;color:var(--accent2);font-size:.92rem}
+  code{background:#efece3;padding:1px 6px;border-radius:5px;font-size:.9em}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">IEC2026 臺灣數創大賞</div>
+    <h1>參賽策略討論</h1>
+    <p>這份簡報整理自 2024、2025 兩屆共 31 件得獎海報，給第一次開會用。目標是先把組別和大方向定下來，主題與細節留到討論時補。</p>
+    <div class="tag">
+      <span>報名截止 7/22</span>
+      <span>總獎金 70 萬</span>
+      <span>每隊 2–6 人，需指導老師</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">比賽基本盤</div>
+    <h2>先對齊事實</h2>
+    <div class="grid g2" style="margin-top:24px">
+      <div class="card">
+        <h3>兩個組別</h3>
+        <p><strong>數位+組</strong>：App、網站、動畫、影片、遊戲，評審看重商業論述。<br><strong>智慧+組</strong>：AI、物聯網、大數據，評審看重能運作的系統和量化指標。</p>
+      </div>
+      <div class="card">
+        <h3>初賽評分權重</h3>
+        <p>創新創意性 <strong>40%</strong>、市場價值 <strong>30%</strong>、技術成熟度 <strong>30%</strong>。創新是單項最大的一塊，選題的新意比技術難度更影響分數。</p>
+      </div>
+      <div class="card">
+        <h3>企業特別獎（不分組）</h3>
+        <p>2 名各 5 萬，由精誠資訊、雄欣科技各自依自家標準遴選。報哪一組都有資格被選上。精誠另有人才庫實習與面試的媒合。</p>
+      </div>
+      <div class="card">
+        <h3>規定</h3>
+        <p>需 1–2 位指導老師，一隊只能報一個主題。所有繳件匿名，不得出現校名、系所、教授姓名或企業名。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">核心觀察</div>
+    <h2>得獎跟技術難度的關係沒有想像中大</h2>
+    <p class="lead" style="margin:14px 0 28px">讀完 31 件海報後，金銀獎和佳作之間最穩定的差別，是商業模式講不講得清、市場有沒有量化，而不是技術做得多深。</p>
+    <div class="grid g3">
+      <div class="card">
+        <div class="n">01</div>
+        <h3 style="margin-top:12px">技術最深的不一定贏</h3>
+        <p>2024 銅獎「時尚循環」自己訓練了擴散模型，是當年技術最重的作品，但海報沒寫商業模式，停在銅獎。同年金獎「懂一點商」技術普通，市場論述完整。</p>
+      </div>
+      <div class="card">
+        <div class="n">02</div>
+        <h3 style="margin-top:12px">金銀獎多半有商業模型</h3>
+        <p>金、銀、銅幾乎都附了明確的收費方式和市場規模估算。多數佳作的海報只有產品插畫，沒有商業模式，也沒有市場數字。</p>
+      </div>
+      <div class="card">
+        <div class="n">03</div>
+        <h3 style="margin-top:12px">原型要看得到，不必做完整</h3>
+        <p>不少得獎作只是串接現成工具（OpenAI API、現成濾鏡、3D 工具），但海報都有可展示的畫面。純文字概念稿大多停在佳作。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#efece3">
+  <div class="wrap">
+    <div class="eyebrow">海報範例</div>
+    <h2>得獎作品多半附了商業模型</h2>
+    <p style="margin-top:10px">以下是數位+組的得獎海報，可以看到訂閱定價、交易抽成或市場規模估算。這部分正好是商科同學能著力的地方。</p>
+    <div class="wall">
+      <figure>
+        <img src="images/kà台譯_金獎.jpg" alt="kà台譯 海報">
+        <figcaption><span class="award g">金獎</span><b>kà台譯</b><span class="bm">訂閱制 150 元×2 學期，市場估 2.96 億</span></figcaption>
+      </figure>
+      <figure>
+        <img src="images/懂一點商_金獎.jpg" alt="懂一點商 海報">
+        <figcaption><span class="award g">金獎</span><b>懂一點商</b><span class="bm">完整 TAM / SAM / SOM 市場估算</span></figcaption>
+      </figure>
+      <figure>
+        <img src="images/Subwich_銀獎.jpg" alt="Subwich 海報">
+        <figcaption><span class="award s">銀獎</span><b>Subwich</b><span class="bm">交易抽成 3%／筆</span></figcaption>
+      </figure>
+      <figure>
+        <img src="images/Finctory_銅獎.jpg" alt="Finctory 海報">
+        <figcaption><span class="award">銅獎</span><b>Finctory</b><span class="bm">月費 3000 加廣告，附市場估算</span></figcaption>
+      </figure>
+      <figure>
+        <img src="images/鬥陣AI啦_企業特別獎.jpg" alt="鬥陣AI啦 海報">
+        <figcaption><span class="award">企業特別獎</span><b>鬥陣AI啦</b><span class="bm">分層收費，附市場規模拆解</span></figcaption>
+      </figure>
+      <figure>
+        <img src="images/RenderResume_佳作.jpg" alt="RenderResume 海報">
+        <figcaption><span class="award" style="background:#888">佳作</span><b>RenderResume</b><span class="bm">市場估算與產品路線圖最完整</span></figcaption>
+      </figure>
+    </div>
+    <p style="margin-top:24px;font-size:.92rem">原始海報全檔在 <code>歷屆得獎作品/</code>（2024、2025 共 31 件）。完整計畫書是官方密件，不對外公開。</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">決策一</div>
+    <h2>選哪一組：建議 <span class="pick">數位+組</span></h2>
+    <table>
+      <tr><th style="width:26%"></th><th>數位+組</th><th>智慧+組</th></tr>
+      <tr><td><b>拿金銀靠什麼</b></td><td class="win">商業論述加上輕量原型</td><td>能運作的系統，加上量化指標或產學實場域</td></tr>
+      <tr><td><b>技術門檻</b></td><td class="win">較低，串接現成工具即可</td><td>較高，多半要訓模型、做硬體或實測</td></tr>
+      <tr><td><b>跟我們的組成</b></td><td class="win">相符</td><td>佳作可行，金銀需要較多實作時間</td></tr>
+    </table>
+    <p class="lead" style="margin-top:22px">我們是 4 位商科加 2 位資工，不打算花太多時間實作。數位+組的勝負點落在商業論述，跟這個組成比較合。</p>
+  </div>
+</section>
+
+<section style="background:#efece3">
+  <div class="wrap">
+    <div class="eyebrow">決策二</div>
+    <h2>主題：新意要從問題來，不是從技術來</h2>
+    <p style="margin:12px 0 8px">前一版想到的「企業 RAG 助手」其實不適合。創新佔初賽 40%，而 RAG 助手到處都有，精誠自己就在賣，做一個學生版給他們看反而吃虧。歷屆金獎（台語學習、新鮮人理財、水下考古 XR）技術都不難，贏在題目選得準。</p>
+    <p style="margin:0 0 26px"><strong>方向是找一個夠窄、夠痛、目前沒人好好做的問題或對象，技術用現成的包起來就好。</strong></p>
+    <div class="grid g3">
+      <div class="card tinted">
+        <span class="kicker">方向 A</span>
+        <h3 style="margin-top:8px">特定族群的垂直工具</h3>
+        <p>移工與新住民、視障、偏鄉學生、台中在地小產業等。對象越具體，創新分越好拿，社會價值也好講。</p>
+      </div>
+      <div class="card tinted">
+        <span class="kicker">方向 B</span>
+        <h3 style="margin-top:8px">切一個具體的淨零痛點</h3>
+        <p>不是泛談碳盤查，而是某個產業的某個動作。同時搭上政策風向和兩家贊助商的相鄰領域。</p>
+      </div>
+      <div class="card tinted">
+        <span class="kicker">方向 C</span>
+        <h3 style="margin-top:8px">資料角度刁鑽的點子</h3>
+        <p>重點在別人沒想到去用的一份資料，技術反而簡單。新意來自切入點。</p>
+      </div>
+    </div>
+    <h3 style="margin:34px 0 0">具體候選（開會挑一個）</h3>
+    <p style="margin-top:6px">把最強的方向落成三個具體題目，照標準評。推薦第一個，它接近去年金獎「kà台譯」的路線：被忽略的語言或文化族群，加上 AI 和社會價值。</p>
+    <table>
+      <tr><th>題目</th><th>好理解</th><th>創新</th><th>市場</th><th>做得到</th><th>看頭</th></tr>
+      <tr><td><b>移工／新住民 多語生活＋求職助手</b></td><td class="win">高</td><td class="win">高</td><td class="win">高</td><td class="win">高</td><td class="win">高</td></tr>
+      <tr><td>高齡者 AI 防詐／求助助手</td><td>高</td><td>中</td><td>高</td><td>高</td><td>高</td></tr>
+      <tr><td>偏鄉學童 AI 學習陪伴</td><td>高</td><td>中</td><td>中</td><td>高</td><td>中</td></tr>
+    </table>
+
+    <h3 style="margin:34px 0 0">選題的三個門檻</h3>
+    <ul class="crit">
+      <li><b>題目夠具體、有新意</b>（避開大家都在做、贊助商已經在賣的東西）</li>
+      <li><b>商業模式講得清</b>（收誰的錢、市場多大）</li>
+      <li><b>資工能用現成工具做出能截圖的 Demo</b></li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">分工</div>
+    <h2>初賽前：分頭研究，餵 AI 生初稿</h2>
+    <p class="lead" style="margin:14px 0 24px">初賽前不用主講。每人顧一條研究線，交付的是條列重點加連結，不是完整文章。整理好丟給 AI 生計畫書初稿，再一起審稿。</p>
+    <table>
+      <tr><th style="width:24%">研究線</th><th style="width:12%">負責</th><th>交付（餵 AI 用）</th></tr>
+      <tr><td><b>痛點與目標對象</b></td><td>商科</td><td>族群多痛、真實案例、佐證數據與來源連結</td></tr>
+      <tr><td><b>市場與競品</b></td><td>商科</td><td>市場規模數字、競品清單、它們的缺口</td></tr>
+      <tr><td><b>商業模式</b></td><td>商科</td><td>收誰的錢、定價、獲利路徑、類似案例</td></tr>
+      <tr><td><b>政策與社會價值</b></td><td>商科</td><td>對應哪個政策或 SDG、佐證報導連結</td></tr>
+      <tr><td><b>技術與 Demo</b></td><td>資工</td><td>用哪些現成 API 或模型、一個能截圖的 Demo 加一個數字</td></tr>
+    </table>
+
+    <h3 style="margin:34px 0 0">AI 產出什麼，成員提供什麼</h3>
+    <div class="flow">
+      <div class="h b">交給 AI 生成</div>
+      <div class="h">成員提供的上下文</div>
+      <div class="cell l">計畫書全文（依官方範本）</div><div class="cell">主題、痛點、客群、商業模式重點、市場數字來源</div>
+      <div class="cell l">決賽簡報</div><div class="cell">計畫書定稿，加上想強調的幾個賣點</div>
+      <div class="cell l">海報文案與排版建議</div><div class="cell">計畫書定稿，加上 Demo 截圖</div>
+      <div class="cell l">市場估算初稿、競品分析</div><div class="cell">產業關鍵字、目標客群</div>
+      <div class="cell l">簡報講稿、Q&A 模擬</div><div class="cell">簡報定稿</div>
+    </div>
+
+    <div class="note">
+      <h3>隊長與主講之後再定</h3>
+      <p>隊長是報名和聯絡的行政角色，評分表沒有這項，評審不看，初賽前先不用急著定。決賽要上台簡報和答 Q&A（佔決賽 20%），到時候再從成員裡挑口條最穩的當主講即可。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">餵 AI 的資料長什麼樣</div>
+    <h2>形式不拘，但內容要精確、附來源</h2>
+    <p style="margin:10px 0 4px">重點不是寫得漂亮，而是每個說法都有具體數字，並附一條能讓 AI 讀到完整內容的連結。條列就好。下面是一條研究線填好的樣子。</p>
+
+    <div class="feed">
+      <span class="lane">研究線：痛點與目標對象 ｜ 主題：移工／新住民 求職助手</span>
+      <ul>
+        <li>在台移工約 <b>75 萬人</b>（勞動部 2025 統計）<span class="src">來源：貼實際統計頁面連結</span></li>
+        <li>常看不懂勞動契約、健保、居留規定，求職多靠口耳相傳<span class="src">來源：相關新聞報導連結</span></li>
+        <li>現有翻譯 App 多為通用翻譯，缺法規與求職情境，部分東南亞語支援也不足<span class="src">競品：Google 翻譯等，缺口說明連結</span></li>
+        <li>台中工業區移工密集，地緣上貼近比賽在地性<span class="src">來源：移民署縣市分布資料連結</span></li>
+      </ul>
+      <span class="ins">給 AI 的指示：依以上重點和連結整理「問題定義」段落，數字一律標來源，語氣中性，先別美化。</span>
+    </div>
+
+    <div class="grid g2" style="margin-top:26px">
+      <div class="card" style="border-left:4px solid var(--accent)">
+        <h3>模糊（不好）</h3>
+        <p>「很多移工在台灣生活有困難，需要協助。」沒有數字、沒有來源，AI 只能憑空發揮。</p>
+      </div>
+      <div class="card" style="border-left:4px solid var(--accent2)">
+        <h3>精確（好）</h3>
+        <p>「在台移工約 75 萬人（勞動部 2025，連結），主要困難是看不懂法規文件（報導連結）。」有數字、有來源，AI 寫得準也查得到。</p>
+      </div>
+    </div>
+
+    <p style="margin-top:22px">幾個原則：給數字而不是形容詞；每個重點配一條來源連結（原始報告或新聞頁面，讓 AI 讀完整內容）；標清楚哪些是查到的事實、哪些是我們的假設。</p>
+  </div>
+</section>
+
+<section style="background:var(--ink);color:#fff;border:none">
+  <div class="wrap">
+    <div class="eyebrow" style="color:#ff9a7a">關鍵時程 2026</div>
+    <h2 style="color:#fff">倒推死線</h2>
+    <div class="timeline">
+      <div class="tl due"><div class="d">7/22</div><div class="t">報名截止，繳初賽計畫書</div></div>
+      <div class="tl"><div class="d">9/7</div><div class="t">決賽名單公告</div></div>
+      <div class="tl"><div class="d">9/28</div><div class="t">決賽文件繳交</div></div>
+      <div class="tl"><div class="d">10/16</div><div class="t">東海良鑑廳實體決賽，5 分簡報加 2 分 Q&A，須到場</div></div>
+      <div class="tl"><div class="d">11月</div><div class="t">頒獎</div></div>
+    </div>
+    <p style="color:#c9cdd4;margin-top:22px">最近的死線是 7/22。要先確定指導老師，並收齊全員的切結書簽名。</p>
+  </div>
+</section>
+
+<section style="background:#efece3">
+  <div class="wrap">
+    <div class="eyebrow">團名構思</div>
+    <h2>幾個方向，開會再選</h2>
+    <p style="margin-top:10px">走諧音和仿成語路線，扣著比賽名「數創」和拿獎。團名是公開展示的，不受匿名規定限制，只要別暴露自己學校就好。</p>
+    <div class="grid g3" style="margin-top:22px">
+      <div class="card"><h3>數一數二</h3><p>成語本意是名列前茅，又含「數」，好記有氣勢。</p></div>
+      <div class="card"><h3>勝券在數</h3><p>仿「勝券在握」，勝算就在數據裡。</p></div>
+      <div class="card"><h3>創無不勝</h3><p>仿「戰無不勝」，呼應數創的「創」。</p></div>
+      <div class="card"><h3>點數成金</h3><p>仿「點石成金」，把資料變成獎金。</p></div>
+      <div class="card"><h3>臺中選之人</h3><p>仿「天選之人」，比賽在臺中，走搞笑路線。</p></div>
+      <div class="card"><h3>東海龍王</h3><p>主辦是東海大學，借現成神話人物雙關。</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">今天開會</div>
+    <h2>議程</h2>
+    <ol class="steps">
+      <li><b>對齊目標</b><p>保佳作、衝銀，還是試企業特別獎？大家能投入的時間到哪裡？</p></li>
+      <li><b>敲定組別</b><p>確認報數位+組，或提出不同意見</p></li>
+      <li><b>收斂主題</b><p>每人帶 1 到 2 個點子，用三個門檻篩，當場選一個</p></li>
+      <li><b>確認交付內容</b><p>商業計畫（AI 生成）、輕量原型截圖（資工）、海報</p></li>
+      <li><b>分工到人</b><p>行政隊長、內容組、原型組，順便定決賽主講</p></li>
+      <li><b>找指導教授</b><p>列可能人選，分派誰去問</p></li>
+      <li><b>排死線</b><p>倒推 7/22，先處理指導老師和切結書簽名</p></li>
+    </ol>
+  </div>
+</section>
+
+<footer>
+  IEC2026 臺灣數創大賞 · 參賽策略討論 ｜ 文字版見 <code>策略總結.md</code>
+</footer>
+
+</body>
+</html>
