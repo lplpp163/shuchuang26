@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>島語通｜移工／新住民多語生活導航</title>
+<style>
+  :root{
+    --ink:#18212a;
+    --muted:#56606b;
+    --paper:#f7f8f6;
+    --panel:#ffffff;
+    --line:#dfe5e1;
+    --teal:#0f766e;
+    --teal-dark:#0b4f4a;
+    --coral:#d95c45;
+    --amber:#d99a2b;
+    --blue:#3f6fb5;
+    --soft:#eaf4f1;
+    --maxw:1120px;
+    --r:8px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.72;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  section{padding:72px 0;border-bottom:1px solid var(--line)}
+  .eyebrow{font-size:13px;letter-spacing:.16em;color:var(--coral);font-weight:800;margin-bottom:12px}
+  h1{font-size:clamp(2.6rem,1.4rem + 5vw,5.4rem);line-height:1.02;font-weight:900}
+  h2{font-size:clamp(1.6rem,1.1rem + 2vw,2.55rem);line-height:1.18;font-weight:850;margin-bottom:12px}
+  h3{font-size:1.15rem;font-weight:850;margin-bottom:8px}
+  p{font-size:1.03rem;color:var(--muted)}
+  strong{color:var(--ink);font-weight:850}
+  .lead{font-size:clamp(1.05rem,.95rem + .45vw,1.22rem);color:#2a343e;font-weight:500}
+  .small{font-size:.92rem;color:var(--muted)}
+
+  .hero{
+    min-height:86vh;
+    display:grid;
+    align-items:center;
+    color:#fff;
+    border-bottom:none;
+    position:relative;
+    overflow:hidden;
+    background:
+      linear-gradient(90deg,rgba(10,18,24,.92) 0%,rgba(10,18,24,.78) 36%,rgba(10,18,24,.20) 70%,rgba(10,18,24,.08) 100%),
+      url("images/multilingual-life-hero.png") center/cover no-repeat;
+  }
+  .hero::after{
+    content:"";
+    position:absolute;
+    inset:auto 0 0;
+    height:120px;
+    background:linear-gradient(0deg,var(--paper),rgba(247,248,246,0));
+    pointer-events:none;
+  }
+  .hero .wrap{position:relative;z-index:1;width:100%}
+  .hero .eyebrow{color:#ffb29f}
+  .hero p{color:#dfe7e8;max-width:680px;margin-top:22px}
+  .hero .tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+  .hero .tags span{
+    border:1px solid rgba(255,255,255,.32);
+    color:#f2fbfb;
+    padding:7px 12px;
+    border-radius:var(--r);
+    font-size:.9rem;
+    background:rgba(255,255,255,.07);
+  }
+  .hero .jump{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+  .hero .jump a{
+    text-decoration:none;
+    font-weight:800;
+    color:#0d2728;
+    background:#fff;
+    border-radius:var(--r);
+    padding:10px 15px;
+  }
+  .hero .jump a:last-child{background:#ffd5ca}
+
+  .grid{display:grid;gap:18px}
+  .g2{grid-template-columns:repeat(2,1fr)}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  .g4{grid-template-columns:repeat(4,1fr)}
+  @media(max-width:880px){.g2,.g3,.g4{grid-template-columns:1fr}}
+
+  .metric{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:var(--r);
+    padding:22px;
+    min-height:154px;
+  }
+  .metric .num{font-size:2.35rem;line-height:1;font-weight:950;color:var(--teal)}
+  .metric .label{font-weight:850;margin-top:10px;color:var(--ink)}
+  .metric .src{font-size:.82rem;color:var(--muted);margin-top:8px}
+
+  .card{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:var(--r);
+    padding:24px;
+  }
+  .card.accent{border-top:4px solid var(--teal)}
+  .card.coral{border-top-color:var(--coral)}
+  .card.amber{border-top-color:var(--amber)}
+  .card.blue{border-top-color:var(--blue)}
+  .card .k{display:inline-block;font-size:.83rem;font-weight:850;color:var(--teal);margin-bottom:8px}
+
+  .band{background:#eef5f2}
+  .dark{background:#152026;color:#fff;border-bottom:none}
+  .dark p{color:#c8d2d3}
+  .dark h2,.dark h3,.dark strong{color:#fff}
+  .dark .card{background:#1d2b32;border-color:#32434a}
+  .dark .small{color:#aebabc}
+  .dark .step{
+    background:#fff;
+    border-color:#eef2f0;
+    box-shadow:0 12px 28px rgba(0,0,0,.18);
+  }
+  .dark .step h3{color:var(--ink)}
+  .dark .step p{color:#3d4852;font-weight:520}
+  .dark .step strong{color:var(--ink)}
+
+  .two-col{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) 380px;
+    gap:34px;
+    align-items:start;
+  }
+  @media(max-width:920px){.two-col{grid-template-columns:1fr}}
+
+  .phone{
+    background:#111820;
+    border-radius:28px;
+    padding:14px;
+    box-shadow:0 18px 46px rgba(15,35,38,.22);
+  }
+  .screen{
+    background:#f8fbfa;
+    border-radius:20px;
+    min-height:590px;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,.18);
+  }
+  .screen .top{background:var(--teal);color:#fff;padding:18px}
+  .screen .top b{display:block;font-size:1.15rem}
+  .screen .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+  .screen .chips span{background:rgba(255,255,255,.18);border-radius:999px;padding:3px 9px;font-size:.78rem}
+  .screen .body{padding:16px}
+  .bubble{
+    background:#fff;
+    border:1px solid #e3e9e6;
+    border-radius:14px;
+    padding:13px 14px;
+    margin-bottom:12px;
+  }
+  .bubble.user{background:#e6f3ef;border-color:#cfe4de;margin-left:36px}
+  .bubble .meta{font-size:.78rem;font-weight:850;color:var(--coral);margin-bottom:5px}
+  .action{
+    display:grid;
+    grid-template-columns:42px 1fr;
+    gap:12px;
+    align-items:center;
+    padding:12px;
+    border:1px solid #e3e9e6;
+    border-radius:var(--r);
+    margin-top:10px;
+    background:#fff;
+  }
+  .action .icon{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:#e9f4f1;color:var(--teal);font-weight:950}
+
+  table{width:100%;border-collapse:collapse;margin-top:18px;background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+  th,td{padding:13px 15px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+  th{background:#14232b;color:#fff;font-weight:750}
+  tr:last-child td{border-bottom:none}
+  td.good{background:#edf7f4;color:var(--teal-dark);font-weight:850}
+
+  .payer-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:24px}
+  .payer{
+    background:#fff;
+    border:1px solid var(--line);
+    border-left:4px solid var(--teal);
+    border-radius:var(--r);
+    padding:20px;
+  }
+  .payer:nth-child(2){border-left-color:var(--blue)}
+  .payer:nth-child(3){border-left-color:var(--coral)}
+  .payer:nth-child(4){border-left-color:var(--amber)}
+  .payer .why{font-size:.9rem;font-weight:850;color:var(--teal-dark);margin-bottom:6px}
+  .money-case{
+    margin-top:20px;
+    background:#14232b;
+    color:#fff;
+    border-radius:var(--r);
+    padding:22px;
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:20px;
+    align-items:start;
+  }
+  .money-case p{color:#d8e5e4}
+  .money-case strong{color:#fff}
+  .money-case .pill{
+    display:inline-block;
+    background:#ffd5ca;
+    color:#36150f;
+    font-weight:900;
+    border-radius:999px;
+    padding:4px 10px;
+    margin-bottom:10px;
+    font-size:.82rem;
+  }
+  @media(max-width:880px){.payer-grid,.money-case{grid-template-columns:1fr}}
+
+  .steps{display:grid;gap:12px;margin-top:20px}
+  .step{
+    display:grid;
+    grid-template-columns:44px 1fr;
+    gap:14px;
+    align-items:start;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:var(--r);
+    padding:16px;
+  }
+  .step .n{width:44px;height:44px;background:var(--ink);color:#fff;display:grid;place-items:center;border-radius:50%;font-weight:900}
+
+  .sources a{display:block;color:var(--teal-dark);font-size:.95rem;margin:8px 0;word-break:break-word}
+  footer{padding:38px 0;text-align:center;color:var(--muted);font-size:.9rem}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">IEC2026 臺灣數創大賞｜初賽題目初版</div>
+    <h1>島語通</h1>
+    <p class="lead">面向移工與新住民的 AI 多語生活導航。不是再做一個通用翻譯器，而是把契約、居留、醫療、交通、求職與申訴情境轉成「看得懂、做得到、找得到人」的生活流程。</p>
+    <div class="tags">
+      <span>數位+組</span>
+      <span>移工／新住民</span>
+      <span>中文、越南語、印尼語、菲律賓語、泰語</span>
+      <span>輕量 Demo 可截圖</span>
+    </div>
+    <div class="jump">
+      <a href="#problem">看問題</a>
+      <a href="#solution">看方案</a>
+      <a href="#contest">初賽交付</a>
+    </div>
+  </div>
+</section>
+
+<section id="facts">
+  <div class="wrap">
+    <div class="eyebrow">WHY THIS TOPIC</div>
+    <h2>題目夠大，但切口夠窄</h2>
+    <p class="lead">在台移工與新住民不是小眾議題；真正缺的是把多語資訊、生活任務和官方轉介串成一個能每天用的入口。</p>
+    <div class="grid g4" style="margin-top:26px">
+      <div class="metric">
+        <div class="num">88.7萬</div>
+        <div class="label">引進移工在臺總計</div>
+        <p class="src">勞動部 2026 年 5 月底，含有效聘僱與聘僱許可失效移工。</p>
+      </div>
+      <div class="metric">
+        <div class="num">78.7萬</div>
+        <div class="label">有效聘僱許可移工</div>
+        <p class="src">同月有效聘僱許可，其中產業移工 55.7 萬、社福移工 23.0 萬。</p>
+      </div>
+      <div class="metric">
+        <div class="num">62.1萬</div>
+        <div class="label">新住民配偶累計</div>
+        <p class="src">移民署 76 年 1 月至 115 年 5 月統計；含外裔、外籍與大陸港澳配偶。</p>
+      </div>
+      <div class="metric">
+        <div class="num">17.1萬</div>
+        <div class="label">台中可做試點</div>
+        <p class="src">台中有效聘僱移工 10.4 萬，新住民配偶 6.7 萬，具在地展示性。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="problem" class="band">
+  <div class="wrap">
+    <div class="eyebrow">PROBLEM</div>
+    <h2>問題不是「不會翻譯」，而是「不知道下一步」</h2>
+    <div class="grid g3" style="margin-top:24px">
+      <div class="card accent">
+        <span class="k">生活文件</span>
+        <h3>看懂字，但不懂後果</h3>
+        <p>勞動契約、租屋條款、健保、居留、罰單或通知單常有專有名詞。通用翻譯可以翻字，卻不會告訴使用者風險、期限和該準備的文件。</p>
+      </div>
+      <div class="card coral">
+        <span class="k">求助入口</span>
+        <h3>政府資源存在，但分散</h3>
+        <p>1955、1990、地方服務站、NGO 都能提供協助，但使用者常不知道自己的問題該找誰、怎麼描述、哪些情況需要立刻求助。</p>
+      </div>
+      <div class="card amber">
+        <span class="k">求職與轉職</span>
+        <h3>資訊靠熟人，容易不透明</h3>
+        <p>移工與新住民找工作、轉職、申請文件時常仰賴仲介或社群口耳相傳。資訊不透明時，容易出現誤解、延誤或被不合理收費。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="solution">
+  <div class="wrap two-col">
+    <div>
+      <div class="eyebrow">SOLUTION</div>
+      <h2>島語通：一個把多語生活問題變成行動清單的入口</h2>
+      <p class="lead">核心不是取代 1955 或 1990，而是在求助前先分流、整理問題、翻譯情境，必要時一鍵轉接官方或社福資源。</p>
+      <div class="grid g2" style="margin-top:24px">
+        <div class="card accent">
+          <h3>掃描文件</h3>
+          <p>手機拍契約、通知單、薪資單，AI 擷取重點，轉成母語摘要、期限、風險和要問的問題。</p>
+        </div>
+        <div class="card blue">
+          <h3>情境問答</h3>
+          <p>用生活情境問，而不是用法條問。例：想換工作、看病、孩子入學、租屋押金、薪資扣款。</p>
+        </div>
+        <div class="card coral">
+          <h3>任務清單</h3>
+          <p>把回答拆成下一步：要帶什麼文件、去哪裡、何時前完成、哪些句子可以直接拿去問。</p>
+        </div>
+        <div class="card amber">
+          <h3>官方轉介</h3>
+          <p>高風險事件直接顯示 1955、1990、地方移民署服務站、勞工局或合作 NGO 的聯絡入口。</p>
+        </div>
+      </div>
+    </div>
+    <div class="phone" aria-label="島語通原型示意">
+      <div class="screen">
+        <div class="top">
+          <b>島語通 DaoTalk</b>
+          <div class="chips"><span>Tiếng Việt</span><span>Indonesia</span><span>ไทย</span><span>中文</span></div>
+        </div>
+        <div class="body">
+          <div class="bubble user">
+            <div class="meta">使用者</div>
+            我收到一張扣款通知，看不懂是不是合理。
+          </div>
+          <div class="bubble">
+            <div class="meta">AI 生活導航</div>
+            這份文件看起來和薪資扣款有關。請先確認三件事：扣款項目、扣款金額、是否有事先書面同意。
+          </div>
+          <div class="action">
+            <div class="icon">1</div>
+            <div><strong>拍照翻譯</strong><p class="small">擷取金額、日期、雇主名稱與扣款原因。</p></div>
+          </div>
+          <div class="action">
+            <div class="icon">2</div>
+            <div><strong>產生詢問句</strong><p class="small">輸出中文與母語對照，方便詢問雇主或仲介。</p></div>
+          </div>
+          <div class="action">
+            <div class="icon">3</div>
+            <div><strong>需要協助時轉接</strong><p class="small">顯示 1955 勞工諮詢申訴專線與所在地勞工局。</p></div>
+          </div>
+          <div class="bubble" style="margin-top:14px">
+            <div class="meta">提醒</div>
+            我可以整理問題，但不能替代官方法律判定；若涉及人身安全或重大扣款，請直接求助。
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="market" class="band">
+  <div class="wrap">
+    <div class="eyebrow">MARKET & BUSINESS</div>
+    <h2>商業模式：先賣給「有管理責任的人」</h2>
+    <p class="lead">個人端免費是為了讓移工與新住民敢用；機構端付費的理由不是愛心，而是它能把已經存在的翻譯、教育訓練、申訴處理和重複問答成本，變成可控、可紀錄、可稽核的工作流程。</p>
+    <div class="payer-grid">
+      <div class="payer">
+        <div class="why">工廠／雇主為什麼付</div>
+        <h3>降低溝通錯誤與管理風險</h3>
+        <p>移工入職、宿舍、安全、薪資扣款、請假與健康檢查都需要反覆說明。島語通把常見規則做成多語公告、任務清單與案件紀錄，減少主管和人資一對一解釋時間。</p>
+      </div>
+      <div class="payer">
+        <div class="why">仲介公司為什麼付</div>
+        <h3>把售後服務做成標準化工具</h3>
+        <p>仲介每天處理大量重複問題。機構版可以建立客戶 FAQ、產生雙語通知、整理申訴前的問題脈絡，讓服務品質變穩，也更容易支撐續約與口碑。</p>
+      </div>
+      <div class="payer">
+        <div class="why">長照／家庭雇主為什麼付</div>
+        <h3>照護情境不能靠猜</h3>
+        <p>看護工作牽涉用藥、飲食、緊急事件與家屬溝通。多語照護句庫、每日交接表和緊急轉介卡，比單純翻譯更接近實際需求。</p>
+      </div>
+      <div class="payer">
+        <div class="why">政府／NGO 為什麼付</div>
+        <h3>提升初步分流效率</h3>
+        <p>服務站最耗時的是釐清案件背景。島語通先把文件、語言、情境和需求整理成摘要，讓社工、志工或承辦人能更快判斷下一步。</p>
+      </div>
+    </div>
+    <div class="money-case">
+      <div>
+        <span class="pill">答辯說法</span>
+        <h3>不是請機構多花錢，是替它省掉已經在花的錢</h3>
+        <p>初期不要賣「AI App」，要賣「多語管理外掛」。只要一個機構每月有數十件重複詢問、文件翻譯或申訴前溝通，月費 1,500-6,000 元就能用節省的人力時間、降低誤解風險與留下服務紀錄來說服採購。</p>
+      </div>
+      <div>
+        <h3>初賽驗證指標</h3>
+        <p><strong>1.</strong> 每件詢問節省幾分鐘整理時間。<br><strong>2.</strong> 常見問題自助解決率。<br><strong>3.</strong> 1955/1990 轉介前資料完整度。<br><strong>4.</strong> 機構是否願意付試用月費或合作導入。</p>
+      </div>
+    </div>
+    <table>
+      <tr><th>層級</th><th>對象</th><th>價值</th><th>收入假設</th></tr>
+      <tr><td><strong>TAM</strong></td><td>移工、新住民與接觸他們的雇主/服務機構</td><td>全台約 88.7 萬移工與 62.1 萬新住民配偶累計資料可支撐需求規模</td><td>先不直接向個人收費，避免降低可近性</td></tr>
+      <tr><td><strong>SAM</strong></td><td>支援越南、印尼、菲律賓/英語、泰語的生活與勞動情境</td><td>四大移工來源語言幾乎涵蓋有效聘僱移工主體</td><td>機構月費 1,500-6,000 元，依帳號數、後台與客製知識庫分級</td></tr>
+      <tr><td><strong>SOM</strong></td><td>台中試點：工業區、仲介分公司、長照雇主、服務站、社福單位</td><td>台中有效聘僱移工 10.4 萬、新住民 6.7 萬，有足夠在地展示面</td><td>先找 5-10 個願意訪談或試用的單位，驗證是否願意付費</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="edge">
+  <div class="wrap">
+    <div class="eyebrow">POSITIONING</div>
+    <h2>不是跟官方熱線競爭，而是補上「求助前」的空白</h2>
+    <div class="grid g3" style="margin-top:24px">
+      <div class="card accent">
+        <h3>相較通用翻譯</h3>
+        <p>多了情境分類、風險提示、文件清單和官方轉介；翻譯只是入口，行動建議才是核心。</p>
+      </div>
+      <div class="card blue">
+        <h3>相較 1955 / 1990</h3>
+        <p>官方熱線負責諮詢與轉介；島語通先幫使用者整理問題、準備雙語描述，降低求助門檻。</p>
+      </div>
+      <div class="card coral">
+        <h3>相較社群與仲介</h3>
+        <p>資訊來源可追溯到官方資料與合作機構，降低以訛傳訛與資訊不透明的風險。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contest" class="dark">
+  <div class="wrap">
+    <div class="eyebrow" style="color:#ffb29f">PRELIMINARY ROUND</div>
+    <h2>初賽交付：計畫書、簡報內容、可截圖 Demo</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="n">1</div>
+        <div><h3>計畫書主軸</h3><p>用「多語生活導航」包住痛點、市場、社會價值與商業模式，避免只像一個翻譯 App。</p></div>
+      </div>
+      <div class="step">
+        <div class="n">2</div>
+        <div><h3>Demo 畫面</h3><p>先做手機網頁原型：語言切換、文件掃描結果、情境問答、轉接 1955/1990、機構後台簡版。</p></div>
+      </div>
+      <div class="step">
+        <div class="n">3</div>
+        <div><h3>評分對應</h3><p>創新性：被忽略族群 + 情境化 AI；市場價值：百萬級受眾 + 機構管理成本可被量化；技術成熟：OCR、RAG、LLM、PWA 都可用現成工具快速完成。</p></div>
+      </div>
+      <div class="step">
+        <div class="n">4</div>
+        <div><h3>接下來三天</h3><p>補 3 個真實情境案例、列競品、畫 5 張 Demo 截圖、把初賽計畫書壓成官方 PDF 篇幅。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sources">
+  <div class="wrap">
+    <div class="eyebrow">SOURCES</div>
+    <h2>初版引用資料</h2>
+    <p class="lead">數字先用官方資料，計畫書定稿前再補新聞案例、訪談或問卷。</p>
+    <div class="sources" style="margin-top:18px">
+      <a href="https://statdb.mol.gov.tw/html/mon/212010.htm" target="_blank" rel="noopener noreferrer">勞動部統計資料庫：表 12-1 引進移工在臺人數－按開放項目分</a>
+      <a href="https://statdb.mol.gov.tw/html/mon/212030.htm" target="_blank" rel="noopener noreferrer">勞動部統計資料庫：表 12-3 引進移工在臺人數－按國籍分</a>
+      <a href="https://statdb.mol.gov.tw/html/mon/213170.htm" target="_blank" rel="noopener noreferrer">勞動部統計資料庫：表 13-17 有效聘僱許可移工人數－按地區及國籍分</a>
+      <a href="https://www.immigration.gov.tw/5385/7344/70395/143257/" target="_blank" rel="noopener noreferrer">內政部移民署：新住民打造多元文化社會</a>
+      <a href="https://www.immigration.gov.tw/5385/7344/7350/8887/?alias=settledown" target="_blank" rel="noopener noreferrer">內政部移民署：外籍配偶人數與大陸（含港澳）配偶人數統計</a>
+      <a href="https://www.wda.gov.tw/News_Content.aspx?n=277&s=18960" target="_blank" rel="noopener noreferrer">勞動部勞動力發展署：1955 勞工諮詢申訴專線</a>
+      <a href="https://www.immigration.gov.tw/5385/7445/7910/204893/" target="_blank" rel="noopener noreferrer">內政部移民署：外來人士在臺生活諮詢服務熱線 1990</a>
+      <a href="https://laws.mol.gov.tw/flaw/FLAWDAT0201.aspx?id=FL028065" target="_blank" rel="noopener noreferrer">勞動部勞動法令查詢系統：雇主聘僱外國人許可及管理辦法</a>
+      <a href="https://fw.wda.gov.tw/wda-employer/home/download-file/2c95efb38ecb08cb018ecb45a9a800fb.pdf" target="_blank" rel="noopener noreferrer">勞動部勞動力發展署：移工權益維護報告書</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  IEC2026 臺灣數創大賞｜島語通初賽初版｜簡報文字見「初賽簡報內容.md」，計畫書見「初賽計畫書初版.md」
+</footer>
+
+</body>
+</html>

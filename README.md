@@ -1,25 +1,36 @@
-# shuchuang26｜IEC2026 臺灣數創大賞 開會資料
+# 島語通 DaoTalk AI｜團隊成果網站
 
-目前方向已收斂為：
+這個儲存庫是組員查看最新成果的靜態網站。首頁以專案根目錄的 `交付成果/README.md` 為最新索引，並把需要在 GitHub Pages 瀏覽的檔案鏡像到本儲存庫。
 
-**島語通 DaoTalk：移工／新住民 AI 多語生活導航**
+## 直接瀏覽
 
-## 怎麼看
+- 首頁：`index.html`
+- 最新計畫書：`deliverables/plan/DaoTalk-AI-plan.pdf`
+- 正式互動 Demo：`deliverables/demo/index.html`
+- 3 分 20 秒正式動畫：`deliverables/video/index.html`
+- 訪談素材：`deliverables/interview/index.html`
+- 同步來源與 SHA-256：`deliverables/manifest.json`
 
-- **新版網頁**：開 `index.html`。主視覺、問題、解法、市場、初賽交付都在同一頁。
-- **舊入口**：開 `開會簡報.html` 會自動導到 `index.html`。
-- **初賽計畫書初稿**：看 `初賽計畫書初版.md`。
-- **初賽簡報文案**：看 `初賽簡報內容.md`。
-- **策略摘要**：看 `策略總結.md`。
+正式 Demo 放在 GitHub Pages 時，可以操作清楚標示的合成範例與前端備援。自訂圖片、PDF 或文字的 live AI 分析仍需啟動 `正式版/backend`，不可把 Pages 版本描述成已部署完整 AI 後端。
 
-## 目前內容
+## 更新最新交付成果
 
-- 題目定位：移工／新住民多語生活導航，不只是翻譯 App。
-- 官方市場數字：勞動部移工統計、移民署新住民統計、台中試點數字。
-- 產品功能：文件掃描、AI 情境問答、任務清單、1955/1990 轉介、機構後台。
-- 商業模式：個人端免費、機構端 SaaS 收費。
-- 初賽簡報：10 張 slide 的初版文案與 Q&A。
+在這個儲存庫目錄執行：
 
-## 圖片
+```powershell
+.\scripts\sync-deliverables.ps1
+```
 
-主視覺放在 `images/multilingual-life-hero.png`。這張是本次為新版方向生成的網站橫幅圖。
+腳本會從同層專案的 `交付成果/` 與 `正式版/` 複製 22 個指定成果，驗證來源與鏡像的 SHA-256，並重建 `deliverables/manifest.json`。執行後請檢查首頁、Demo、影片與所有本機連結，再提交 Git。
+
+## 版本界線
+
+- `deliverables/`：目前最新的可瀏覽成果鏡像。
+- `archive/2026-07-07/`：早期「移工／新住民多語生活導航」提案頁與三份草稿，只供追溯決策歷程。
+- `開會簡報.html`：保留舊網址，會導向目前首頁。
+
+最新版本聚焦「在臺移工的職場文件 AI 行動導航」。求職媒合、醫療、租屋與未驗證的機構採購不屬於目前 MVP。
+
+## 發布
+
+GitHub Pages 應使用 `main` 分支的儲存庫根目錄。所有站內資產都使用相對路徑，可部署在 `/shuchuang26/` 專案子路徑。

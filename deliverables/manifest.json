@@ -1,0 +1,182 @@
+{
+  "source_of_truth": "交付成果/README.md",
+  "synced_at": "2026-07-11T08:39:11.9006578+08:00",
+  "files": [
+    {
+      "label": "最新計畫書 PDF",
+      "source": "交付成果/計畫書/2026臺灣數創大賞_數位組創業計畫書_島語通_AI正式版.pdf",
+      "destination": "deliverables/plan/DaoTalk-AI-plan.pdf",
+      "bytes": 607856,
+      "source_modified_at": "2026-07-11T07:01:59.5772665+08:00",
+      "sha256": "73F2996B411D0B06FD05FC058A462FB1ED488342BCBA059AF5679A0DDA4162D1"
+    },
+    {
+      "label": "最新計畫書 DOCX",
+      "source": "交付成果/計畫書/2026臺灣數創大賞_數位組創業計畫書_島語通_AI正式版.docx",
+      "destination": "deliverables/plan/DaoTalk-AI-plan.docx",
+      "bytes": 249803,
+      "source_modified_at": "2026-07-11T07:01:59.5292483+08:00",
+      "sha256": "CE3CB118CD4BC55F781DDBD7851321B9AE5B6B36A521D563CF484E812E2FD8AA"
+    },
+    {
+      "label": "計畫書版面預覽",
+      "source": "交付成果/計畫書/AI正式版_QA/verified-contact-sheet.png",
+      "destination": "deliverables/previews/plan-contact-sheet.png",
+      "bytes": 2259337,
+      "source_modified_at": "2026-07-11T07:04:20.1184044+08:00",
+      "sha256": "9B3212C31EB014F1C0A3F37692DDE7A6A1605E4DA0B6211436817F13F2E7CD0D"
+    },
+    {
+      "label": "正式 Demo HTML",
+      "source": "正式版/frontend/index.html",
+      "destination": "deliverables/demo/index.html",
+      "bytes": 17537,
+      "source_modified_at": "2026-07-11T06:28:32.3309991+08:00",
+      "sha256": "D2B274D9466FF79835E313B83CEC7FE96FB3ABAE44324CFB10ABFBA429C900B1"
+    },
+    {
+      "label": "正式 Demo CSS",
+      "source": "正式版/frontend/styles.css",
+      "destination": "deliverables/demo/styles.css",
+      "bytes": 29486,
+      "source_modified_at": "2026-07-11T06:28:41.4794029+08:00",
+      "sha256": "D4E84FD818B243A421DCE98210E31CE143F5A8617B4EDED24EC93EECF3C6CFFF"
+    },
+    {
+      "label": "正式 Demo JavaScript",
+      "source": "正式版/frontend/app.js",
+      "destination": "deliverables/demo/app.js",
+      "bytes": 27846,
+      "source_modified_at": "2026-07-11T06:35:01.0703397+08:00",
+      "sha256": "6C584993C71C579132AD8E932824B14AE073BFB70D145DCAF7AE84ACC65B890D"
+    },
+    {
+      "label": "正式影片 HTML",
+      "source": "正式版/video/index.html",
+      "destination": "deliverables/video/index.html",
+      "bytes": 14052,
+      "source_modified_at": "2026-07-11T06:49:27.4123015+08:00",
+      "sha256": "95A226F09BD459CF348BB6F278BE726DD660E3EF7FF783B63610129097A1C5E0"
+    },
+    {
+      "label": "正式影片 CSS",
+      "source": "正式版/video/styles.css",
+      "destination": "deliverables/video/styles.css",
+      "bytes": 25173,
+      "source_modified_at": "2026-07-11T06:52:25.8427937+08:00",
+      "sha256": "D6F7ACC826A9643114FFB9A1C08E2545654F96F7575974AE66DFFB4E6D74FA44"
+    },
+    {
+      "label": "正式影片 JavaScript",
+      "source": "正式版/video/app.js",
+      "destination": "deliverables/video/app.js",
+      "bytes": 6619,
+      "source_modified_at": "2026-07-11T06:53:15.6066476+08:00",
+      "sha256": "2A34D04CE294DA556224B9561C9D628F6750744C4670380770A4C43F3401727E"
+    },
+    {
+      "label": "影片旁白逐字稿",
+      "source": "正式版/video/旁白逐字稿.md",
+      "destination": "deliverables/video/narration.md",
+      "bytes": 5298,
+      "source_modified_at": "2026-07-11T06:54:09.7333791+08:00",
+      "sha256": "80D979724FB2F2EC4669A51DB609757D333448EAFEB718BC53CF020F23664853"
+    },
+    {
+      "label": "影片合成薪資單圖片",
+      "source": "正式版/sample_documents/合成薪資明細_中越_清晰.png",
+      "destination": "deliverables/sample_documents/合成薪資明細_中越_清晰.png",
+      "bytes": 93354,
+      "source_modified_at": "2026-07-11T06:23:02.6294654+08:00",
+      "sha256": "B3B35BE6691F88916B09037E185E9217485A6D10B89BFD65391CFCD8C505454C"
+    },
+    {
+      "label": "合成薪資單 PDF",
+      "source": "正式版/sample_documents/合成薪資明細_中越.pdf",
+      "destination": "deliverables/sample_documents/synthetic-payroll.pdf",
+      "bytes": 477185,
+      "source_modified_at": "2026-07-11T06:22:11.9007624+08:00",
+      "sha256": "17453892821351D5D40529C0F50DC8B19B4DE809369279DDEFCC48E4C1525EEA"
+    },
+    {
+      "label": "訪談素材列印版",
+      "source": "交付成果/移工訪談素材包/訪談素材列印版.html",
+      "destination": "deliverables/interview/index.html",
+      "bytes": 37745,
+      "source_modified_at": "2026-07-11T05:47:34.4016591+08:00",
+      "sha256": "F1A78F30057160A931FF2E2B4A19340DF4523D6BA11337BAE74AD6CF0BA99D62"
+    },
+    {
+      "label": "正式產品首頁預覽",
+      "source": "交付成果/QA截圖/正式版_首頁.png",
+      "destination": "deliverables/previews/product-home.png",
+      "bytes": 902442,
+      "source_modified_at": "2026-07-11T06:39:39.2183586+08:00",
+      "sha256": "296FA0ECF9E624591CF67BFCC50A1CBFD2AC41EFF1A107C5E2B334CECBA94277"
+    },
+    {
+      "label": "正式產品結果預覽",
+      "source": "交付成果/QA截圖/正式版_結果.png",
+      "destination": "deliverables/previews/product-result.png",
+      "bytes": 216307,
+      "source_modified_at": "2026-07-11T06:39:41.5431011+08:00",
+      "sha256": "32A8B39863D93FB99DE4C7FB89A972E74701A3344AC6F0D23434C2C45FE86CD3"
+    },
+    {
+      "label": "訪談素材預覽",
+      "source": "交付成果/QA截圖/訪談素材列印版.png",
+      "destination": "deliverables/previews/interview.png",
+      "bytes": 156004,
+      "source_modified_at": "2026-07-11T05:47:53.7459289+08:00",
+      "sha256": "8B59466880978FB9A84F38F657ECCDE45201D063487661FE7AE38737B8E8EA1E"
+    },
+    {
+      "label": "正式影片 13 幕預覽",
+      "source": "正式版/video/QA/contact-sheet.png",
+      "destination": "deliverables/previews/video-contact-sheet.png",
+      "bytes": 3014417,
+      "source_modified_at": "2026-07-11T06:57:42.6238890+08:00",
+      "sha256": "73064E4EDB5F3813B0AF134B3BA00F852F7A77C3F72C8606458687481B5A0D31"
+    },
+    {
+      "label": "正式版嚴格驗收報告",
+      "source": "正式版/嚴格驗收報告.md",
+      "destination": "deliverables/docs/acceptance-report.md",
+      "bytes": 8981,
+      "source_modified_at": "2026-07-11T06:59:43.6277540+08:00",
+      "sha256": "6EDF8DA7721C309A7907381C1B74D78F00E8AE7AF2DBCB4EBA7A26974F8B63CB"
+    },
+    {
+      "label": "正式版技術架構",
+      "source": "正式版/docs/正式版技術架構.md",
+      "destination": "deliverables/docs/technical-architecture.md",
+      "bytes": 8219,
+      "source_modified_at": "2026-07-11T06:25:31.6821136+08:00",
+      "sha256": "8C0723FDE90120E34CC4BBC36FC54C8875EE8B2DBF07CEF9ED28FA7A8F3F37CC"
+    },
+    {
+      "label": "AI 評估規格",
+      "source": "正式版/docs/AI評估規格.md",
+      "destination": "deliverables/docs/evaluation-spec.md",
+      "bytes": 10690,
+      "source_modified_at": "2026-07-11T06:33:45.5971299+08:00",
+      "sha256": "1CC81ACFEDEBAFC8D055A48B01FCEDDA87B4483ABBC8D4A0F5D5F3535A2D4E8B"
+    },
+    {
+      "label": "後端驗證紀錄",
+      "source": "正式版/backend/VALIDATION.md",
+      "destination": "deliverables/docs/backend-validation.md",
+      "bytes": 2082,
+      "source_modified_at": "2026-07-11T06:35:48.2620139+08:00",
+      "sha256": "DC847091B0BC68ED4CAC49DE371A43EF36D700B3BF4C3B9EA57BF02D0F39E01A"
+    },
+    {
+      "label": "Offline mock 評測報告",
+      "source": "正式版/evals/reports/backend_offline_mock.md",
+      "destination": "deliverables/docs/offline-mock-report.md",
+      "bytes": 5418,
+      "source_modified_at": "2026-07-11T06:35:24.4758097+08:00",
+      "sha256": "DF419F9C078335CBB9A1284BB3D258E0E5055AAA3DFB0DB529339580BCE9EC3D"
+    }
+  ]
+}

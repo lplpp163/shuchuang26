@@ -1,413 +1,269 @@
-<!DOCTYPE html>
-<html lang="zh-TW">
+<!doctype html>
+<html lang="zh-Hant">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>島語通｜移工／新住民多語生活導航</title>
-<style>
-  :root{
-    --ink:#18212a;
-    --muted:#56606b;
-    --paper:#f7f8f6;
-    --panel:#ffffff;
-    --line:#dfe5e1;
-    --teal:#0f766e;
-    --teal-dark:#0b4f4a;
-    --coral:#d95c45;
-    --amber:#d99a2b;
-    --blue:#3f6fb5;
-    --soft:#eaf4f1;
-    --maxw:1120px;
-    --r:8px;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{
-    font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
-    color:var(--ink);
-    background:var(--paper);
-    line-height:1.72;
-    -webkit-font-smoothing:antialiased;
-  }
-  a{color:inherit}
-  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
-  section{padding:72px 0;border-bottom:1px solid var(--line)}
-  .eyebrow{font-size:13px;letter-spacing:.16em;color:var(--coral);font-weight:800;margin-bottom:12px}
-  h1{font-size:clamp(2.6rem,1.4rem + 5vw,5.4rem);line-height:1.02;font-weight:900}
-  h2{font-size:clamp(1.6rem,1.1rem + 2vw,2.55rem);line-height:1.18;font-weight:850;margin-bottom:12px}
-  h3{font-size:1.15rem;font-weight:850;margin-bottom:8px}
-  p{font-size:1.03rem;color:var(--muted)}
-  strong{color:var(--ink);font-weight:850}
-  .lead{font-size:clamp(1.05rem,.95rem + .45vw,1.22rem);color:#2a343e;font-weight:500}
-  .small{font-size:.92rem;color:var(--muted)}
-
-  .hero{
-    min-height:86vh;
-    display:grid;
-    align-items:center;
-    color:#fff;
-    border-bottom:none;
-    position:relative;
-    overflow:hidden;
-    background:
-      linear-gradient(90deg,rgba(10,18,24,.92) 0%,rgba(10,18,24,.78) 36%,rgba(10,18,24,.20) 70%,rgba(10,18,24,.08) 100%),
-      url("images/multilingual-life-hero.png") center/cover no-repeat;
-  }
-  .hero::after{
-    content:"";
-    position:absolute;
-    inset:auto 0 0;
-    height:120px;
-    background:linear-gradient(0deg,var(--paper),rgba(247,248,246,0));
-    pointer-events:none;
-  }
-  .hero .wrap{position:relative;z-index:1;width:100%}
-  .hero .eyebrow{color:#ffb29f}
-  .hero p{color:#dfe7e8;max-width:680px;margin-top:22px}
-  .hero .tags{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
-  .hero .tags span{
-    border:1px solid rgba(255,255,255,.32);
-    color:#f2fbfb;
-    padding:7px 12px;
-    border-radius:var(--r);
-    font-size:.9rem;
-    background:rgba(255,255,255,.07);
-  }
-  .hero .jump{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
-  .hero .jump a{
-    text-decoration:none;
-    font-weight:800;
-    color:#0d2728;
-    background:#fff;
-    border-radius:var(--r);
-    padding:10px 15px;
-  }
-  .hero .jump a:last-child{background:#ffd5ca}
-
-  .grid{display:grid;gap:18px}
-  .g2{grid-template-columns:repeat(2,1fr)}
-  .g3{grid-template-columns:repeat(3,1fr)}
-  .g4{grid-template-columns:repeat(4,1fr)}
-  @media(max-width:880px){.g2,.g3,.g4{grid-template-columns:1fr}}
-
-  .metric{
-    background:var(--panel);
-    border:1px solid var(--line);
-    border-radius:var(--r);
-    padding:22px;
-    min-height:154px;
-  }
-  .metric .num{font-size:2.35rem;line-height:1;font-weight:950;color:var(--teal)}
-  .metric .label{font-weight:850;margin-top:10px;color:var(--ink)}
-  .metric .src{font-size:.82rem;color:var(--muted);margin-top:8px}
-
-  .card{
-    background:var(--panel);
-    border:1px solid var(--line);
-    border-radius:var(--r);
-    padding:24px;
-  }
-  .card.accent{border-top:4px solid var(--teal)}
-  .card.coral{border-top-color:var(--coral)}
-  .card.amber{border-top-color:var(--amber)}
-  .card.blue{border-top-color:var(--blue)}
-  .card .k{display:inline-block;font-size:.83rem;font-weight:850;color:var(--teal);margin-bottom:8px}
-
-  .band{background:#eef5f2}
-  .dark{background:#152026;color:#fff;border-bottom:none}
-  .dark p{color:#c8d2d3}
-  .dark h2,.dark h3,.dark strong{color:#fff}
-  .dark .card{background:#1d2b32;border-color:#32434a}
-  .dark .small{color:#aebabc}
-
-  .two-col{
-    display:grid;
-    grid-template-columns:minmax(0,1fr) 380px;
-    gap:34px;
-    align-items:start;
-  }
-  @media(max-width:920px){.two-col{grid-template-columns:1fr}}
-
-  .phone{
-    background:#111820;
-    border-radius:28px;
-    padding:14px;
-    box-shadow:0 18px 46px rgba(15,35,38,.22);
-  }
-  .screen{
-    background:#f8fbfa;
-    border-radius:20px;
-    min-height:590px;
-    overflow:hidden;
-    border:1px solid rgba(255,255,255,.18);
-  }
-  .screen .top{background:var(--teal);color:#fff;padding:18px}
-  .screen .top b{display:block;font-size:1.15rem}
-  .screen .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
-  .screen .chips span{background:rgba(255,255,255,.18);border-radius:999px;padding:3px 9px;font-size:.78rem}
-  .screen .body{padding:16px}
-  .bubble{
-    background:#fff;
-    border:1px solid #e3e9e6;
-    border-radius:14px;
-    padding:13px 14px;
-    margin-bottom:12px;
-  }
-  .bubble.user{background:#e6f3ef;border-color:#cfe4de;margin-left:36px}
-  .bubble .meta{font-size:.78rem;font-weight:850;color:var(--coral);margin-bottom:5px}
-  .action{
-    display:grid;
-    grid-template-columns:42px 1fr;
-    gap:12px;
-    align-items:center;
-    padding:12px;
-    border:1px solid #e3e9e6;
-    border-radius:var(--r);
-    margin-top:10px;
-    background:#fff;
-  }
-  .action .icon{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:#e9f4f1;color:var(--teal);font-weight:950}
-
-  table{width:100%;border-collapse:collapse;margin-top:18px;background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
-  th,td{padding:13px 15px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
-  th{background:#14232b;color:#fff;font-weight:750}
-  tr:last-child td{border-bottom:none}
-  td.good{background:#edf7f4;color:var(--teal-dark);font-weight:850}
-
-  .steps{display:grid;gap:12px;margin-top:20px}
-  .step{
-    display:grid;
-    grid-template-columns:44px 1fr;
-    gap:14px;
-    align-items:start;
-    background:#fff;
-    border:1px solid var(--line);
-    border-radius:var(--r);
-    padding:16px;
-  }
-  .step .n{width:44px;height:44px;background:var(--ink);color:#fff;display:grid;place-items:center;border-radius:50%;font-weight:900}
-
-  .sources a{display:block;color:var(--teal-dark);font-size:.95rem;margin:8px 0;word-break:break-word}
-  footer{padding:38px 0;text-align:center;color:var(--muted);font-size:.9rem}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="島語通 DaoTalk AI 團隊成果入口：最新計畫書、正式互動 Demo、3 分 20 秒影片、訪談素材與驗收狀態。">
+  <meta name="theme-color" content="#0d3837">
+  <title>島語通 DaoTalk AI｜團隊成果入口</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">跳到主要內容</a>
 
-<section class="hero">
-  <div class="wrap">
-    <div class="eyebrow">IEC2026 臺灣數創大賞｜初賽題目初版</div>
-    <h1>島語通</h1>
-    <p class="lead">面向移工與新住民的 AI 多語生活導航。不是再做一個通用翻譯器，而是把契約、居留、醫療、交通、求職與申訴情境轉成「看得懂、做得到、找得到人」的生活流程。</p>
-    <div class="tags">
-      <span>數位+組</span>
-      <span>移工／新住民</span>
-      <span>中文、越南語、印尼語、菲律賓語、泰語</span>
-      <span>輕量 Demo 可截圖</span>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="回到島語通團隊成果入口頂端">
+        <span class="brand-mark" aria-hidden="true">島</span>
+        <span>
+          <strong>DaoTalk AI</strong>
+          <small>團隊成果入口</small>
+        </span>
+      </a>
+      <nav aria-label="主要導覽">
+        <a href="#deliverables">最新成果</a>
+        <a href="#status">完成狀態</a>
+        <a href="#validation">驗證數據</a>
+        <a href="#history">策略歷程</a>
+      </nav>
     </div>
-    <div class="jump">
-      <a href="#problem">看問題</a>
-      <a href="#solution">看方案</a>
-      <a href="#contest">初賽交付</a>
-    </div>
-  </div>
-</section>
+  </header>
 
-<section id="facts">
-  <div class="wrap">
-    <div class="eyebrow">WHY THIS TOPIC</div>
-    <h2>題目夠大，但切口夠窄</h2>
-    <p class="lead">在台移工與新住民不是小眾議題；真正缺的是把多語資訊、生活任務和官方轉介串成一個能每天用的入口。</p>
-    <div class="grid g4" style="margin-top:26px">
-      <div class="metric">
-        <div class="num">88.7萬</div>
-        <div class="label">引進移工在臺總計</div>
-        <p class="src">勞動部 2026 年 5 月底，含有效聘僱與聘僱許可失效移工。</p>
-      </div>
-      <div class="metric">
-        <div class="num">78.7萬</div>
-        <div class="label">有效聘僱許可移工</div>
-        <p class="src">同月有效聘僱許可，其中產業移工 55.7 萬、社福移工 23.0 萬。</p>
-      </div>
-      <div class="metric">
-        <div class="num">62.1萬</div>
-        <div class="label">新住民配偶累計</div>
-        <p class="src">移民署 76 年 1 月至 115 年 5 月統計；含外裔、外籍與大陸港澳配偶。</p>
-      </div>
-      <div class="metric">
-        <div class="num">17.1萬</div>
-        <div class="label">台中可做試點</div>
-        <p class="src">台中有效聘僱移工 10.4 萬，新住民配偶 6.7 萬，具在地展示性。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="problem" class="band">
-  <div class="wrap">
-    <div class="eyebrow">PROBLEM</div>
-    <h2>問題不是「不會翻譯」，而是「不知道下一步」</h2>
-    <div class="grid g3" style="margin-top:24px">
-      <div class="card accent">
-        <span class="k">生活文件</span>
-        <h3>看懂字，但不懂後果</h3>
-        <p>勞動契約、租屋條款、健保、居留、罰單或通知單常有專有名詞。通用翻譯可以翻字，卻不會告訴使用者風險、期限和該準備的文件。</p>
-      </div>
-      <div class="card coral">
-        <span class="k">求助入口</span>
-        <h3>政府資源存在，但分散</h3>
-        <p>1955、1990、地方服務站、NGO 都能提供協助，但使用者常不知道自己的問題該找誰、怎麼描述、哪些情況需要立刻求助。</p>
-      </div>
-      <div class="card amber">
-        <span class="k">求職與轉職</span>
-        <h3>資訊靠熟人，容易不透明</h3>
-        <p>移工與新住民找工作、轉職、申請文件時常仰賴仲介或社群口耳相傳。資訊不透明時，容易出現誤解、延誤或被不合理收費。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="solution">
-  <div class="wrap two-col">
-    <div>
-      <div class="eyebrow">SOLUTION</div>
-      <h2>島語通：一個把多語生活問題變成行動清單的入口</h2>
-      <p class="lead">核心不是取代 1955 或 1990，而是在求助前先分流、整理問題、翻譯情境，必要時一鍵轉接官方或社福資源。</p>
-      <div class="grid g2" style="margin-top:24px">
-        <div class="card accent">
-          <h3>掃描文件</h3>
-          <p>手機拍契約、通知單、薪資單，AI 擷取重點，轉成母語摘要、期限、風險和要問的問題。</p>
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-grid shell">
+        <div class="hero-copy">
+          <div class="eyebrow-row">
+            <span class="eyebrow">IEC2026 臺灣數創大賞</span>
+            <span class="sync-label"><span class="live-dot" aria-hidden="true"></span>同步於 <time datetime="2026-07-11">2026-07-11</time></span>
+          </div>
+          <p class="status-chip">最新正式工作版 · 送件證據待補</p>
+          <h1>島語通 <span>DaoTalk AI</span></h1>
+          <p class="hero-lead">把看不懂的臺灣職場文件，變成母語重點、可核對證據、能執行的下一步，以及找得到的真人協助。</p>
+          <p class="hero-note">目前主軸已收斂為「在臺移工的職場文件 AI 行動導航」。本頁以專案的 <code>交付成果/README.md</code> 為最新索引，不再沿用早期的廣義生活導航敘事。</p>
+          <div class="hero-actions">
+            <a class="button primary" href="deliverables/demo/index.html" target="_blank" rel="noopener">開啟正式互動 Demo <span aria-hidden="true">↗</span></a>
+            <a class="button secondary" href="deliverables/plan/DaoTalk-AI-plan.pdf" target="_blank" rel="noopener">閱讀最新計畫書 PDF</a>
+          </div>
+          <p class="boundary"><strong>展示界線：</strong>GitHub Pages 可操作合成範例與前端備援；自訂圖片、PDF 或文字的 live AI 分析仍需 FastAPI 後端與正式 API 設定。</p>
         </div>
-        <div class="card blue">
-          <h3>情境問答</h3>
-          <p>用生活情境問，而不是用法條問。例：想換工作、看病、孩子入學、租屋押金、薪資扣款。</p>
+
+        <figure class="hero-preview">
+          <div class="browser-bar" aria-hidden="true">
+            <span></span><span></span><span></span>
+            <em>正式產品介面</em>
+          </div>
+          <a href="deliverables/demo/index.html" target="_blank" rel="noopener">
+            <img src="deliverables/previews/product-home.png" alt="島語通正式產品首頁，提供職場文件上傳與合成範例分析入口" width="1440" height="900">
+          </a>
+          <figcaption>點擊畫面開啟最新版正式 Demo 鏡像</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="metrics" aria-label="最新成果摘要">
+      <div class="metric-grid shell">
+        <div class="metric">
+          <strong>11</strong>
+          <span>頁最新計畫書</span>
+          <small>A4 版面已驗證</small>
         </div>
-        <div class="card coral">
-          <h3>任務清單</h3>
-          <p>把回答拆成下一步：要帶什麼文件、去哪裡、何時前完成、哪些句子可以直接拿去問。</p>
+        <div class="metric">
+          <strong>28/28</strong>
+          <span>後端測試通過</span>
+          <small>程式涵蓋率 87%</small>
         </div>
-        <div class="card amber">
-          <h3>官方轉介</h3>
-          <p>高風險事件直接顯示 1955、1990、地方移民署服務站、勞工局或合作 NGO 的聯絡入口。</p>
+        <div class="metric">
+          <strong>18/18</strong>
+          <span>離線案例完成</span>
+          <small>API error 0</small>
+        </div>
+        <div class="metric">
+          <strong>13 幕</strong>
+          <span>正式影片動畫</span>
+          <small>全長 200 秒</small>
         </div>
       </div>
-    </div>
-    <div class="phone" aria-label="島語通原型示意">
-      <div class="screen">
-        <div class="top">
-          <b>島語通 DaoTalk</b>
-          <div class="chips"><span>Tiếng Việt</span><span>Indonesia</span><span>ไทย</span><span>中文</span></div>
+    </section>
+
+    <section class="section shell" id="deliverables">
+      <div class="section-heading">
+        <div>
+          <p class="kicker">Latest deliverables</p>
+          <h2>組員可直接查看的最新成果</h2>
         </div>
-        <div class="body">
-          <div class="bubble user">
-            <div class="meta">使用者</div>
-            我收到一張扣款通知，看不懂是不是合理。
+        <p>下列檔案已鏡像進網站儲存庫，部署到 GitHub Pages 後不會依賴本機的上層資料夾。</p>
+      </div>
+
+      <div class="deliverable-grid">
+        <article class="deliverable-card plan-card">
+          <a class="card-media" href="deliverables/plan/DaoTalk-AI-plan.pdf" target="_blank" rel="noopener" aria-label="開啟最新計畫書 PDF">
+            <img src="deliverables/previews/plan-contact-sheet.png" alt="島語通 AI 正式版計畫書 11 頁版面總覽" loading="lazy" width="1800" height="1165">
+          </a>
+          <div class="card-body">
+            <div class="card-meta"><span class="tag current">最新工作版</span><span>PDF · DOCX</span></div>
+            <h3>AI 正式版創業計畫書</h3>
+            <p>A4 共 11 頁，已同步正式產品架構、官方文件範本、透明的離線驗證結果與待補證據。</p>
+            <div class="card-actions">
+              <a href="deliverables/plan/DaoTalk-AI-plan.pdf" target="_blank" rel="noopener">線上閱讀 PDF</a>
+              <a href="deliverables/plan/DaoTalk-AI-plan.docx" download>下載 DOCX</a>
+              <a href="deliverables/previews/plan-contact-sheet.png" target="_blank" rel="noopener">查看版面總覽</a>
+            </div>
           </div>
-          <div class="bubble">
-            <div class="meta">AI 生活導航</div>
-            這份文件看起來和薪資扣款有關。請先確認三件事：扣款項目、扣款金額、是否有事先書面同意。
+        </article>
+
+        <article class="deliverable-card demo-card">
+          <a class="card-media split-media" href="deliverables/demo/index.html" target="_blank" rel="noopener" aria-label="開啟正式互動 Demo">
+            <img src="deliverables/previews/product-home.png" alt="島語通正式 Demo 首頁" loading="lazy" width="1440" height="900">
+            <img src="deliverables/previews/product-result.png" alt="島語通正式 Demo 的文件分析結果頁" loading="lazy" width="1440" height="900">
+          </a>
+          <div class="card-body">
+            <div class="card-meta"><span class="tag current">正式前端</span><span>可操作合成示範</span></div>
+            <h3>職場文件互動 Demo</h3>
+            <p>最新版介面支援圖片、PDF、文字與多語行動卡。本站可直接走完清楚標示的合成備援；live 分析需另行啟動後端。</p>
+            <div class="card-actions">
+              <a href="deliverables/demo/index.html" target="_blank" rel="noopener">開啟 Demo</a>
+              <a href="deliverables/sample_documents/synthetic-payroll.pdf" target="_blank" rel="noopener">查看合成薪資單</a>
+            </div>
           </div>
-          <div class="action">
-            <div class="icon">1</div>
-            <div><strong>拍照翻譯</strong><p class="small">擷取金額、日期、雇主名稱與扣款原因。</p></div>
+        </article>
+
+        <article class="deliverable-card video-card">
+          <a class="card-media" href="deliverables/video/index.html?autoplay=1" target="_blank" rel="noopener" aria-label="播放 3 分 20 秒正式版動畫">
+            <img src="deliverables/previews/video-contact-sheet.png" alt="島語通正式版影片 13 幕畫面總覽" loading="lazy" width="1920" height="1080">
+          </a>
+          <div class="card-body">
+            <div class="card-meta"><span class="tag current">正式版</span><span>13 幕 · 200 秒</span></div>
+            <h3>3:20 正式版影片動畫</h3>
+            <p>完整呈現使用者情境、多模態架構、雙語結果、安全分流、規則基線與尚待完成的 live 驗證。</p>
+            <div class="card-actions">
+              <a href="deliverables/video/index.html?autoplay=1" target="_blank" rel="noopener">播放動畫</a>
+              <a href="https://github.com/lplpp163/shuchuang26/blob/main/deliverables/video/narration.md" target="_blank" rel="noopener noreferrer">查看旁白稿</a>
+              <a href="deliverables/previews/video-contact-sheet.png" target="_blank" rel="noopener">查看 13 幕總覽</a>
+            </div>
           </div>
-          <div class="action">
-            <div class="icon">2</div>
-            <div><strong>產生詢問句</strong><p class="small">輸出中文與母語對照，方便詢問雇主或仲介。</p></div>
+        </article>
+
+        <article class="deliverable-card interview-card">
+          <a class="card-media" href="deliverables/interview/index.html" target="_blank" rel="noopener" aria-label="開啟移工訪談素材列印版">
+            <img src="deliverables/previews/interview.png" alt="移工訪談素材列印版預覽" loading="lazy" width="1440" height="900">
+          </a>
+          <div class="card-body">
+            <div class="card-meta"><span class="tag support">執行素材</span><span>可離線列印</span></div>
+            <h3>移工訪談與任務測試包</h3>
+            <p>整合同意說明、主持流程、情境卡、任務觀察與紀錄欄位，供團隊補齊第一手使用者證據。</p>
+            <div class="card-actions">
+              <a href="deliverables/interview/index.html" target="_blank" rel="noopener">開啟訪談素材</a>
+            </div>
           </div>
-          <div class="action">
-            <div class="icon">3</div>
-            <div><strong>需要協助時轉接</strong><p class="small">顯示 1955 勞工諮詢申訴專線與所在地勞工局。</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section status-section" id="status">
+      <div class="shell">
+        <div class="section-heading light-heading">
+          <div>
+            <p class="kicker">Scope &amp; status</p>
+            <h2>哪些已完成，哪些還不能說完成</h2>
           </div>
-          <div class="bubble" style="margin-top:14px">
-            <div class="meta">提醒</div>
-            我可以整理問題，但不能替代官方法律判定；若涉及人身安全或重大扣款，請直接求助。
-          </div>
+          <p>所有狀態沿用正式驗收報告的界線，避免把 mock、合成資料或待執行目標寫成 live 成果。</p>
+        </div>
+
+        <div class="status-grid">
+          <article class="status-panel done-panel">
+            <div class="panel-title">
+              <span class="panel-icon" aria-hidden="true">✓</span>
+              <div><p>Ready</p><h3>目前可展示與送審</h3></div>
+            </div>
+            <ul>
+              <li>圖片、PDF、TXT 與貼文字的輸入介面與 API 路徑</li>
+              <li>結構化輸出、證據欄位、本地風險與提示注入防線</li>
+              <li>正式前端、合成中越薪資單、18 份案例與可重跑評測</li>
+              <li>11 頁計畫書、13 幕影片與訪談執行素材</li>
+              <li>沒有後端時會誠實顯示非 AI 備援，不假裝辨識圖片</li>
+            </ul>
+          </article>
+
+          <article class="status-panel pending-panel">
+            <div class="panel-title">
+              <span class="panel-icon" aria-hidden="true">!</span>
+              <div><p>Pending</p><h3>送件前最高優先</h3></div>
+            </div>
+            <ol>
+              <li><strong>Live 多模態評測：</strong>用競賽專用金鑰跑固定影像／PDF 資料集。</li>
+              <li><strong>至少 5 位移工：</strong>完成同版文件任務並保留完成率與時間。</li>
+              <li><strong>母語人工審閱：</strong>首波至少完成越南語正式檢核紀錄。</li>
+              <li><strong>正式 HTTPS：</strong>部署固定網址、後端、secret manager 與濫用控制。</li>
+              <li><strong>最後一致性：</strong>網站、影片、計畫書與評測數字同步凍結。</li>
+            </ol>
+          </article>
         </div>
       </div>
+    </section>
+
+    <section class="section shell" id="validation">
+      <div class="section-heading">
+        <div>
+          <p class="kicker">Verification</p>
+          <h2>目前可核對的驗證數據</h2>
+        </div>
+        <p>以下是 2026-07-11 的正式版內部驗收，不是主辦單位評分，也不是 live OCR／LLM 準確率。</p>
+      </div>
+
+      <div class="validation-layout">
+        <div class="score-card">
+          <p>內部嚴格評分</p>
+          <div class="score"><strong>78</strong><span>/100</span></div>
+          <div class="score-bar" aria-label="內部嚴格評分 78 分（滿分 100 分）"><span style="width:78%"></span></div>
+          <small>離線作品與送審素材通過；live AI 與第一手使用者證據仍待補。</small>
+        </div>
+
+        <dl class="validation-list">
+          <div><dt>後端測試</dt><dd><strong>28/28</strong><span>通過</span></dd></div>
+          <div><dt>程式涵蓋率</dt><dd><strong>87%</strong><span>通過</span></dd></div>
+          <div><dt>Offline mock</dt><dd><strong>18/18</strong><span>API error 0</span></dd></div>
+          <div><dt>細碼風險召回</dt><dd><strong>100%</strong><span>規則基線</span></dd></div>
+          <div><dt>欄位 exact match</dt><dd><strong>41.2%</strong><span>規則基線，未達門檻</span></dd></div>
+          <div><dt>可評分幻覺率</dt><dd><strong>0%</strong><span>規則基線</span></dd></div>
+        </dl>
+      </div>
+
+      <div class="document-links" aria-label="驗證與技術文件">
+        <a href="https://github.com/lplpp163/shuchuang26/blob/main/deliverables/docs/acceptance-report.md" target="_blank" rel="noopener noreferrer"><span>01</span><strong>正式版嚴格驗收報告</strong><small>結論、實測、缺口與 Go／No-Go</small></a>
+        <a href="https://github.com/lplpp163/shuchuang26/blob/main/deliverables/docs/technical-architecture.md" target="_blank" rel="noopener noreferrer"><span>02</span><strong>正式版技術架構</strong><small>前後端、模型、安全與資料流</small></a>
+        <a href="https://github.com/lplpp163/shuchuang26/blob/main/deliverables/docs/evaluation-spec.md" target="_blank" rel="noopener noreferrer"><span>03</span><strong>AI 評估規格</strong><small>指標、門檻與不可誤用的數據</small></a>
+        <a href="https://github.com/lplpp163/shuchuang26/blob/main/deliverables/docs/offline-mock-report.md" target="_blank" rel="noopener noreferrer"><span>04</span><strong>Offline mock 報告</strong><small>18 份案例的透明規則基線</small></a>
+      </div>
+    </section>
+
+    <section class="section history-section" id="history">
+      <div class="shell history-grid">
+        <div>
+          <p class="kicker">Decision history</p>
+          <h2>早期策略與版本歷程已封存</h2>
+          <p>7/7 的「移工／新住民多語生活導航」首頁與三份初稿仍完整保留，方便回查定位如何從生活導航收斂為職場文件行動導航；它們不再代表目前成果。</p>
+        </div>
+        <div class="history-actions">
+          <a class="button dark" href="archive/2026-07-07/index.html" target="_blank" rel="noopener">查看 7/7 早期提案頁</a>
+          <a class="text-link" href="https://github.com/lplpp163/shuchuang26/tree/main/archive/2026-07-07" target="_blank" rel="noopener noreferrer">查看完整封存資料與草稿 <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footer-grid">
+      <div>
+        <strong>島語通 DaoTalk AI</strong>
+        <p>IEC2026 臺灣數創大賞｜團隊成果入口</p>
+      </div>
+      <div class="footer-links">
+        <a href="deliverables/manifest.json" target="_blank" rel="noopener">同步清單</a>
+        <a href="https://github.com/lplpp163/shuchuang26" target="_blank" rel="noopener noreferrer">GitHub 儲存庫</a>
+        <a href="#top">回到頂端</a>
+      </div>
     </div>
-  </div>
-</section>
-
-<section id="market" class="band">
-  <div class="wrap">
-    <div class="eyebrow">MARKET & BUSINESS</div>
-    <h2>商業模式：個人免費，向機構收費</h2>
-    <p class="lead">評審看的是能不能落地。這個題目不能只做公益敘事，初版商業模式先走 B2B/B2G：工廠、仲介、長照機構、地方政府、NGO 用後台降低溝通成本與案件風險。</p>
-    <table>
-      <tr><th>層級</th><th>對象</th><th>價值</th><th>收入假設</th></tr>
-      <tr><td><strong>TAM</strong></td><td>移工、新住民與接觸他們的雇主/服務機構</td><td>全台約 88.7 萬移工與 62.1 萬新住民配偶累計資料可支撐需求規模</td><td>先不直接向個人收費，避免降低可近性</td></tr>
-      <tr><td><strong>SAM</strong></td><td>支援越南、印尼、菲律賓/英語、泰語的生活與勞動情境</td><td>四大移工來源語言幾乎涵蓋有效聘僱移工主體</td><td>機構月費 1,500-6,000 元，依帳號數與功能分級</td></tr>
-      <tr><td><strong>SOM</strong></td><td>台中試點：工業區、長照雇主、服務站、社福單位</td><td>台中有效聘僱移工 10.4 萬、新住民 6.7 萬，有足夠在地展示面</td><td>先以 20-50 個機構試用，驗證使用率與案件節省時間</td></tr>
-    </table>
-  </div>
-</section>
-
-<section id="edge">
-  <div class="wrap">
-    <div class="eyebrow">POSITIONING</div>
-    <h2>不是跟官方熱線競爭，而是補上「求助前」的空白</h2>
-    <div class="grid g3" style="margin-top:24px">
-      <div class="card accent">
-        <h3>相較通用翻譯</h3>
-        <p>多了情境分類、風險提示、文件清單和官方轉介；翻譯只是入口，行動建議才是核心。</p>
-      </div>
-      <div class="card blue">
-        <h3>相較 1955 / 1990</h3>
-        <p>官方熱線負責諮詢與轉介；島語通先幫使用者整理問題、準備雙語描述，降低求助門檻。</p>
-      </div>
-      <div class="card coral">
-        <h3>相較社群與仲介</h3>
-        <p>資訊來源可追溯到官方資料與合作機構，降低以訛傳訛與資訊不透明的風險。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="contest" class="dark">
-  <div class="wrap">
-    <div class="eyebrow" style="color:#ffb29f">PRELIMINARY ROUND</div>
-    <h2>初賽交付：計畫書、簡報內容、可截圖 Demo</h2>
-    <div class="steps">
-      <div class="step">
-        <div class="n">1</div>
-        <div><h3>計畫書主軸</h3><p>用「多語生活導航」包住痛點、市場、社會價值與商業模式，避免只像一個翻譯 App。</p></div>
-      </div>
-      <div class="step">
-        <div class="n">2</div>
-        <div><h3>Demo 畫面</h3><p>先做手機網頁原型：語言切換、文件掃描結果、情境問答、轉接 1955/1990、機構後台簡版。</p></div>
-      </div>
-      <div class="step">
-        <div class="n">3</div>
-        <div><h3>評分對應</h3><p>創新性：被忽略族群 + 情境化 AI；市場價值：百萬級受眾 + 機構付費；技術成熟：OCR、RAG、LLM、PWA 都可用現成工具快速完成。</p></div>
-      </div>
-      <div class="step">
-        <div class="n">4</div>
-        <div><h3>接下來三天</h3><p>補 3 個真實情境案例、列競品、畫 5 張 Demo 截圖、把初賽計畫書壓成官方 PDF 篇幅。</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="sources">
-  <div class="wrap">
-    <div class="eyebrow">SOURCES</div>
-    <h2>初版引用資料</h2>
-    <p class="lead">數字先用官方資料，計畫書定稿前再補新聞案例、訪談或問卷。</p>
-    <div class="sources" style="margin-top:18px">
-      <a href="https://statdb.mol.gov.tw/html/mon/212010.htm" target="_blank" rel="noopener noreferrer">勞動部統計資料庫：表 12-1 引進移工在臺人數－按開放項目分</a>
-      <a href="https://statdb.mol.gov.tw/html/mon/212030.htm" target="_blank" rel="noopener noreferrer">勞動部統計資料庫：表 12-3 引進移工在臺人數－按國籍分</a>
-      <a href="https://statdb.mol.gov.tw/html/mon/213170.htm" target="_blank" rel="noopener noreferrer">勞動部統計資料庫：表 13-17 有效聘僱許可移工人數－按地區及國籍分</a>
-      <a href="https://www.immigration.gov.tw/5385/7344/70395/143257/" target="_blank" rel="noopener noreferrer">內政部移民署：新住民打造多元文化社會</a>
-      <a href="https://www.immigration.gov.tw/5385/7344/7350/8887/?alias=settledown" target="_blank" rel="noopener noreferrer">內政部移民署：外籍配偶人數與大陸（含港澳）配偶人數統計</a>
-      <a href="https://www.wda.gov.tw/News_Content.aspx?n=277&s=18960" target="_blank" rel="noopener noreferrer">勞動部勞動力發展署：1955 勞工諮詢申訴專線</a>
-      <a href="https://www.immigration.gov.tw/5385/7445/7910/204893/" target="_blank" rel="noopener noreferrer">內政部移民署：外來人士在臺生活諮詢服務熱線 1990</a>
-    </div>
-  </div>
-</section>
-
-<footer>
-  IEC2026 臺灣數創大賞｜島語通初賽初版｜簡報文字見「初賽簡報內容.md」，計畫書見「初賽計畫書初版.md」
-</footer>
-
+  </footer>
 </body>
 </html>
