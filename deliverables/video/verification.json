@@ -1,0 +1,1019 @@
+{
+  "schemaVersion": 3,
+  "generatedAt": "2026-07-14T04:10:49.7714824+08:00",
+  "outputs": [
+    {
+      "role": "submission_1080p",
+      "file": "傳家話_正式初審影片.mp4",
+      "bytes": 52590880,
+      "sha256": "33D6FE8D4BF914D047023C9F82ACA4A2A6860BA278FC1A5C222BA1B7EA7C85E4",
+      "container": "mov,mp4,m4a,3gp,3g2,mj2",
+      "durationSeconds": 173.9,
+      "video": {
+        "codec": "h264",
+        "profile": "High",
+        "width": 1920,
+        "height": 1080,
+        "pixelFormat": "yuv420p",
+        "averageFrameRate": "30/1",
+        "bitrate": 2216383
+      },
+      "audio": {
+        "codec": "aac",
+        "profile": "LC",
+        "sampleRate": 48000,
+        "channels": 2,
+        "channelLayout": "stereo",
+        "bitrate": 194169,
+        "loudness": {
+          "standard": "EBU R128 / ITU-R BS.1770 (FFmpeg loudnorm analysis)",
+          "fullProgramme": {
+            "startSeconds": 0.0,
+            "durationSeconds": null,
+            "integratedLufs": -14.61,
+            "truePeakDbtp": -1.82,
+            "loudnessRangeLu": 16.0,
+            "thresholdLufs": -26.22,
+            "finite": true
+          },
+          "slides": [
+            {
+              "startSeconds": 0.1,
+              "durationSeconds": 8.15,
+              "integratedLufs": -15.01,
+              "truePeakDbtp": -1.88,
+              "loudnessRangeLu": 19.3,
+              "thresholdLufs": -28.0,
+              "finite": true,
+              "slide": 1,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 8.45,
+              "durationSeconds": 10.15,
+              "integratedLufs": -14.59,
+              "truePeakDbtp": -1.97,
+              "loudnessRangeLu": 17.8,
+              "thresholdLufs": -27.71,
+              "finite": true,
+              "slide": 2,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 18.8,
+              "durationSeconds": 10.15,
+              "integratedLufs": -14.89,
+              "truePeakDbtp": -1.84,
+              "loudnessRangeLu": 7.0,
+              "thresholdLufs": -25.09,
+              "finite": true,
+              "slide": 3,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 29.15,
+              "durationSeconds": 11.15,
+              "integratedLufs": -15.42,
+              "truePeakDbtp": -1.97,
+              "loudnessRangeLu": 8.4,
+              "thresholdLufs": -26.84,
+              "finite": true,
+              "slide": 4,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 40.5,
+              "durationSeconds": 12.15,
+              "integratedLufs": -16.29,
+              "truePeakDbtp": -1.98,
+              "loudnessRangeLu": 17.6,
+              "thresholdLufs": -27.69,
+              "finite": true,
+              "slide": 5,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 52.85,
+              "durationSeconds": 13.15,
+              "integratedLufs": -14.72,
+              "truePeakDbtp": -1.97,
+              "loudnessRangeLu": 8.5,
+              "thresholdLufs": -26.34,
+              "finite": true,
+              "slide": 6,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 66.2,
+              "durationSeconds": 10.15,
+              "integratedLufs": -16.84,
+              "truePeakDbtp": -1.93,
+              "loudnessRangeLu": 14.8,
+              "thresholdLufs": -27.95,
+              "finite": true,
+              "slide": 7,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 76.55,
+              "durationSeconds": 12.15,
+              "integratedLufs": -14.65,
+              "truePeakDbtp": -1.94,
+              "loudnessRangeLu": 22.5,
+              "thresholdLufs": -26.85,
+              "finite": true,
+              "slide": 8,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 88.9,
+              "durationSeconds": 11.15,
+              "integratedLufs": -15.29,
+              "truePeakDbtp": -1.85,
+              "loudnessRangeLu": 16.2,
+              "thresholdLufs": -26.88,
+              "finite": true,
+              "slide": 9,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 100.25,
+              "durationSeconds": 12.15,
+              "integratedLufs": -15.62,
+              "truePeakDbtp": -1.96,
+              "loudnessRangeLu": 20.3,
+              "thresholdLufs": -27.66,
+              "finite": true,
+              "slide": 10,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 112.6,
+              "durationSeconds": 11.15,
+              "integratedLufs": -15.65,
+              "truePeakDbtp": -1.96,
+              "loudnessRangeLu": 16.7,
+              "thresholdLufs": -27.33,
+              "finite": true,
+              "slide": 11,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 123.95,
+              "durationSeconds": 12.15,
+              "integratedLufs": -13.31,
+              "truePeakDbtp": -1.96,
+              "loudnessRangeLu": 18.6,
+              "thresholdLufs": -25.4,
+              "finite": true,
+              "slide": 12,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 136.3,
+              "durationSeconds": 11.15,
+              "integratedLufs": -13.95,
+              "truePeakDbtp": -1.98,
+              "loudnessRangeLu": 6.9,
+              "thresholdLufs": -25.05,
+              "finite": true,
+              "slide": 13,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 147.65,
+              "durationSeconds": 12.15,
+              "integratedLufs": -15.46,
+              "truePeakDbtp": -1.93,
+              "loudnessRangeLu": 16.4,
+              "thresholdLufs": -26.96,
+              "finite": true,
+              "slide": 14,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 160.0,
+              "durationSeconds": 13.8,
+              "integratedLufs": -15.85,
+              "truePeakDbtp": -1.97,
+              "loudnessRangeLu": 15.2,
+              "thresholdLufs": -28.22,
+              "finite": true,
+              "slide": 15,
+              "validation": "PASS"
+            }
+          ],
+          "speechWindows": [
+            {
+              "startSeconds": 1.0,
+              "durationSeconds": 4.393,
+              "integratedLufs": -14.43,
+              "truePeakDbtp": -1.88,
+              "loudnessRangeLu": 3.0,
+              "thresholdLufs": -25.19,
+              "finite": true,
+              "kind": "narration",
+              "slide": 1,
+              "label": "narration-01",
+              "speechToBedLu": 11.73,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 9.0,
+              "durationSeconds": 5.292,
+              "integratedLufs": -13.34,
+              "truePeakDbtp": -1.97,
+              "loudnessRangeLu": 1.2,
+              "thresholdLufs": -23.91,
+              "finite": true,
+              "kind": "narration",
+              "slide": 2,
+              "label": "narration-02",
+              "speechToBedLu": 12.82,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 19.0,
+              "durationSeconds": 7.739,
+              "integratedLufs": -13.02,
+              "truePeakDbtp": -1.84,
+              "loudnessRangeLu": 0.4,
+              "thresholdLufs": -23.18,
+              "finite": true,
+              "kind": "narration",
+              "slide": 3,
+              "label": "narration-03",
+              "speechToBedLu": 13.14,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 30.0,
+              "durationSeconds": 5.188,
+              "integratedLufs": -13.9,
+              "truePeakDbtp": -1.97,
+              "loudnessRangeLu": 2.1,
+              "thresholdLufs": -24.72,
+              "finite": true,
+              "kind": "narration",
+              "slide": 4,
+              "label": "narration-04",
+              "speechToBedLu": 12.26,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 41.0,
+              "durationSeconds": 5.631,
+              "integratedLufs": -13.57,
+              "truePeakDbtp": -1.98,
+              "loudnessRangeLu": 1.5,
+              "thresholdLufs": -24.06,
+              "finite": true,
+              "kind": "narration",
+              "slide": 5,
+              "label": "narration-05",
+              "speechToBedLu": 12.59,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 53.0,
+              "durationSeconds": 6.283,
+              "integratedLufs": -13.35,
+              "truePeakDbtp": -1.97,
+              "loudnessRangeLu": 0.6,
+              "thresholdLufs": -23.49,
+              "finite": true,
+              "kind": "narration",
+              "slide": 6,
+              "label": "narration-06",
+              "speechToBedLu": 12.81,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 67.0,
+              "durationSeconds": 4.774,
+              "integratedLufs": -13.92,
+              "truePeakDbtp": -1.93,
+              "loudnessRangeLu": 2.7,
+              "thresholdLufs": -24.76,
+              "finite": true,
+              "kind": "narration",
+              "slide": 7,
+              "label": "narration-07",
+              "speechToBedLu": 12.24,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 77.0,
+              "durationSeconds": 6.901,
+              "integratedLufs": -13.47,
+              "truePeakDbtp": -1.94,
+              "loudnessRangeLu": 2.2,
+              "thresholdLufs": -23.83,
+              "finite": true,
+              "kind": "narration",
+              "slide": 8,
+              "label": "narration-08",
+              "speechToBedLu": 12.69,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 89.0,
+              "durationSeconds": 6.135,
+              "integratedLufs": -13.19,
+              "truePeakDbtp": -1.85,
+              "loudnessRangeLu": 0.5,
+              "thresholdLufs": -23.29,
+              "finite": true,
+              "kind": "narration",
+              "slide": 9,
+              "label": "narration-09",
+              "speechToBedLu": 12.97,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 101.0,
+              "durationSeconds": 5.897,
+              "integratedLufs": -13.51,
+              "truePeakDbtp": -1.96,
+              "loudnessRangeLu": 2.0,
+              "thresholdLufs": -24.2,
+              "finite": true,
+              "kind": "narration",
+              "slide": 10,
+              "label": "narration-10",
+              "speechToBedLu": 12.65,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 113.0,
+              "durationSeconds": 6.183,
+              "integratedLufs": -13.87,
+              "truePeakDbtp": -1.96,
+              "loudnessRangeLu": 1.7,
+              "thresholdLufs": -24.22,
+              "finite": true,
+              "kind": "narration",
+              "slide": 11,
+              "label": "narration-11",
+              "speechToBedLu": 12.29,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 124.0,
+              "durationSeconds": 9.21,
+              "integratedLufs": -13.25,
+              "truePeakDbtp": -1.96,
+              "loudnessRangeLu": 1.2,
+              "thresholdLufs": -23.36,
+              "finite": true,
+              "kind": "narration",
+              "slide": 12,
+              "label": "narration-12",
+              "speechToBedLu": 12.91,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 137.0,
+              "durationSeconds": 9.228,
+              "integratedLufs": -13.52,
+              "truePeakDbtp": -1.98,
+              "loudnessRangeLu": 2.3,
+              "thresholdLufs": -23.97,
+              "finite": true,
+              "kind": "narration",
+              "slide": 13,
+              "label": "narration-13",
+              "speechToBedLu": 12.64,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 148.0,
+              "durationSeconds": 6.406,
+              "integratedLufs": -13.39,
+              "truePeakDbtp": -1.93,
+              "loudnessRangeLu": 1.2,
+              "thresholdLufs": -23.58,
+              "finite": true,
+              "kind": "narration",
+              "slide": 14,
+              "label": "narration-14",
+              "speechToBedLu": 12.77,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 160.0,
+              "durationSeconds": 6.13,
+              "integratedLufs": -13.91,
+              "truePeakDbtp": -1.97,
+              "loudnessRangeLu": 1.4,
+              "thresholdLufs": -24.12,
+              "finite": true,
+              "kind": "narration",
+              "slide": 15,
+              "label": "narration-15",
+              "speechToBedLu": 12.25,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 38.0,
+              "durationSeconds": 0.939,
+              "integratedLufs": -12.93,
+              "truePeakDbtp": -1.99,
+              "loudnessRangeLu": 0.0,
+              "thresholdLufs": -22.93,
+              "finite": true,
+              "kind": "piper_product_demo",
+              "slide": 4,
+              "label": "Cháu về rồi ạ.",
+              "speechToBedLu": 13.23,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 63.0,
+              "durationSeconds": 1.357,
+              "integratedLufs": -14.33,
+              "truePeakDbtp": -1.99,
+              "loudnessRangeLu": 0.0,
+              "thresholdLufs": -24.84,
+              "finite": true,
+              "kind": "piper_product_demo",
+              "slide": 6,
+              "label": "Bà nhớ cháu quá!",
+              "speechToBedLu": 11.83,
+              "validation": "PASS"
+            }
+          ],
+          "gates": {
+            "fullProgrammeLufs": "-19..-14",
+            "maxTruePeakDbtp": -1.0,
+            "slideLufs": "-22..-12",
+            "speechWindowLufs": "-22..-12",
+            "minimumSpeechToBedLu": 8.0
+          },
+          "validation": "PASS"
+        }
+      },
+      "limits": {
+        "durationSeconds": 180.0,
+        "sizeBytes": 314572800,
+        "sizeRelation": "strictly_less_than",
+        "remainingBytes": 261981920
+      },
+      "metadata": {
+        "anonymous": true,
+        "localAbsolutePathScan": "PASS",
+        "formatTags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "title": "Chuan Jia Hua - Submission Video",
+          "encoder": "Lavf62.12.100",
+          "comment": "Current interface evidence; synthetic Mandarin narration; procedural music bed; Piper product demo speech; no real-user testimony."
+        },
+        "streamTags": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "tags": {
+              "language": "und",
+              "handler_name": "VideoHandler"
+            }
+          },
+          {
+            "index": 1,
+            "codecType": "audio",
+            "tags": {
+              "language": "und",
+              "handler_name": "SoundHandler"
+            }
+          }
+        ]
+      },
+      "validation": "PASS"
+    },
+    {
+      "role": "web_preview_720p",
+      "file": "傳家話_網頁預覽.mp4",
+      "bytes": 21433106,
+      "sha256": "0D86FAE761214CB40EBB8D7571CD1343216A901F94EA5A821C4219F5BE22BD39",
+      "container": "mov,mp4,m4a,3gp,3g2,mj2",
+      "durationSeconds": 173.9,
+      "video": {
+        "codec": "h264",
+        "profile": "High",
+        "width": 1280,
+        "height": 720,
+        "pixelFormat": "yuv420p",
+        "averageFrameRate": "30/1",
+        "bitrate": 848277
+      },
+      "audio": {
+        "codec": "aac",
+        "profile": "LC",
+        "sampleRate": 48000,
+        "channels": 2,
+        "channelLayout": "stereo",
+        "bitrate": 128899,
+        "loudness": {
+          "standard": "EBU R128 / ITU-R BS.1770 (FFmpeg loudnorm analysis)",
+          "fullProgramme": {
+            "startSeconds": 0.0,
+            "durationSeconds": null,
+            "integratedLufs": -14.62,
+            "truePeakDbtp": -1.64,
+            "loudnessRangeLu": 15.9,
+            "thresholdLufs": -26.24,
+            "finite": true
+          },
+          "slides": [
+            {
+              "startSeconds": 0.1,
+              "durationSeconds": 8.15,
+              "integratedLufs": -15.04,
+              "truePeakDbtp": -1.92,
+              "loudnessRangeLu": 19.3,
+              "thresholdLufs": -28.03,
+              "finite": true,
+              "slide": 1,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 8.45,
+              "durationSeconds": 10.15,
+              "integratedLufs": -14.6,
+              "truePeakDbtp": -1.93,
+              "loudnessRangeLu": 17.8,
+              "thresholdLufs": -27.72,
+              "finite": true,
+              "slide": 2,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 18.8,
+              "durationSeconds": 10.15,
+              "integratedLufs": -14.91,
+              "truePeakDbtp": -1.8,
+              "loudnessRangeLu": 6.9,
+              "thresholdLufs": -25.11,
+              "finite": true,
+              "slide": 3,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 29.15,
+              "durationSeconds": 11.15,
+              "integratedLufs": -15.45,
+              "truePeakDbtp": -1.91,
+              "loudnessRangeLu": 8.3,
+              "thresholdLufs": -26.87,
+              "finite": true,
+              "slide": 4,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 40.5,
+              "durationSeconds": 12.15,
+              "integratedLufs": -16.33,
+              "truePeakDbtp": -1.89,
+              "loudnessRangeLu": 17.6,
+              "thresholdLufs": -27.72,
+              "finite": true,
+              "slide": 5,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 52.85,
+              "durationSeconds": 13.15,
+              "integratedLufs": -14.73,
+              "truePeakDbtp": -1.9,
+              "loudnessRangeLu": 8.5,
+              "thresholdLufs": -26.36,
+              "finite": true,
+              "slide": 6,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 66.2,
+              "durationSeconds": 10.15,
+              "integratedLufs": -16.87,
+              "truePeakDbtp": -1.91,
+              "loudnessRangeLu": 14.8,
+              "thresholdLufs": -27.97,
+              "finite": true,
+              "slide": 7,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 76.55,
+              "durationSeconds": 12.15,
+              "integratedLufs": -14.67,
+              "truePeakDbtp": -1.91,
+              "loudnessRangeLu": 22.5,
+              "thresholdLufs": -26.87,
+              "finite": true,
+              "slide": 8,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 88.9,
+              "durationSeconds": 11.15,
+              "integratedLufs": -15.32,
+              "truePeakDbtp": -1.8,
+              "loudnessRangeLu": 16.2,
+              "thresholdLufs": -26.91,
+              "finite": true,
+              "slide": 9,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 100.25,
+              "durationSeconds": 12.15,
+              "integratedLufs": -15.65,
+              "truePeakDbtp": -1.87,
+              "loudnessRangeLu": 20.2,
+              "thresholdLufs": -27.69,
+              "finite": true,
+              "slide": 10,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 112.6,
+              "durationSeconds": 11.15,
+              "integratedLufs": -15.66,
+              "truePeakDbtp": -1.98,
+              "loudnessRangeLu": 16.7,
+              "thresholdLufs": -27.35,
+              "finite": true,
+              "slide": 11,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 123.95,
+              "durationSeconds": 12.15,
+              "integratedLufs": -13.33,
+              "truePeakDbtp": -1.9,
+              "loudnessRangeLu": 18.7,
+              "thresholdLufs": -25.42,
+              "finite": true,
+              "slide": 12,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 136.3,
+              "durationSeconds": 11.15,
+              "integratedLufs": -13.97,
+              "truePeakDbtp": -1.9,
+              "loudnessRangeLu": 6.9,
+              "thresholdLufs": -25.06,
+              "finite": true,
+              "slide": 13,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 147.65,
+              "durationSeconds": 12.15,
+              "integratedLufs": -15.47,
+              "truePeakDbtp": -1.62,
+              "loudnessRangeLu": 16.4,
+              "thresholdLufs": -26.97,
+              "finite": true,
+              "slide": 14,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 160.0,
+              "durationSeconds": 13.8,
+              "integratedLufs": -15.87,
+              "truePeakDbtp": -1.9,
+              "loudnessRangeLu": 15.2,
+              "thresholdLufs": -28.24,
+              "finite": true,
+              "slide": 15,
+              "validation": "PASS"
+            }
+          ],
+          "speechWindows": [
+            {
+              "startSeconds": 1.0,
+              "durationSeconds": 4.393,
+              "integratedLufs": -14.47,
+              "truePeakDbtp": -1.92,
+              "loudnessRangeLu": 2.9,
+              "thresholdLufs": -25.23,
+              "finite": true,
+              "kind": "narration",
+              "slide": 1,
+              "label": "narration-01",
+              "speechToBedLu": 11.69,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 9.0,
+              "durationSeconds": 5.292,
+              "integratedLufs": -13.36,
+              "truePeakDbtp": -1.93,
+              "loudnessRangeLu": 1.2,
+              "thresholdLufs": -23.94,
+              "finite": true,
+              "kind": "narration",
+              "slide": 2,
+              "label": "narration-02",
+              "speechToBedLu": 12.8,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 19.0,
+              "durationSeconds": 7.739,
+              "integratedLufs": -13.04,
+              "truePeakDbtp": -1.8,
+              "loudnessRangeLu": 0.5,
+              "thresholdLufs": -23.2,
+              "finite": true,
+              "kind": "narration",
+              "slide": 3,
+              "label": "narration-03",
+              "speechToBedLu": 13.12,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 30.0,
+              "durationSeconds": 5.188,
+              "integratedLufs": -13.93,
+              "truePeakDbtp": -1.87,
+              "loudnessRangeLu": 2.2,
+              "thresholdLufs": -24.75,
+              "finite": true,
+              "kind": "narration",
+              "slide": 4,
+              "label": "narration-04",
+              "speechToBedLu": 12.23,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 41.0,
+              "durationSeconds": 5.631,
+              "integratedLufs": -13.6,
+              "truePeakDbtp": -1.89,
+              "loudnessRangeLu": 1.5,
+              "thresholdLufs": -24.09,
+              "finite": true,
+              "kind": "narration",
+              "slide": 5,
+              "label": "narration-05",
+              "speechToBedLu": 12.56,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 53.0,
+              "durationSeconds": 6.283,
+              "integratedLufs": -13.36,
+              "truePeakDbtp": -1.9,
+              "loudnessRangeLu": 0.6,
+              "thresholdLufs": -23.51,
+              "finite": true,
+              "kind": "narration",
+              "slide": 6,
+              "label": "narration-06",
+              "speechToBedLu": 12.8,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 67.0,
+              "durationSeconds": 4.774,
+              "integratedLufs": -13.94,
+              "truePeakDbtp": -1.91,
+              "loudnessRangeLu": 2.6,
+              "thresholdLufs": -24.79,
+              "finite": true,
+              "kind": "narration",
+              "slide": 7,
+              "label": "narration-07",
+              "speechToBedLu": 12.22,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 77.0,
+              "durationSeconds": 6.901,
+              "integratedLufs": -13.49,
+              "truePeakDbtp": -1.91,
+              "loudnessRangeLu": 2.2,
+              "thresholdLufs": -23.85,
+              "finite": true,
+              "kind": "narration",
+              "slide": 8,
+              "label": "narration-08",
+              "speechToBedLu": 12.67,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 89.0,
+              "durationSeconds": 6.135,
+              "integratedLufs": -13.23,
+              "truePeakDbtp": -1.8,
+              "loudnessRangeLu": 0.5,
+              "thresholdLufs": -23.33,
+              "finite": true,
+              "kind": "narration",
+              "slide": 9,
+              "label": "narration-09",
+              "speechToBedLu": 12.93,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 101.0,
+              "durationSeconds": 5.897,
+              "integratedLufs": -13.53,
+              "truePeakDbtp": -1.87,
+              "loudnessRangeLu": 2.0,
+              "thresholdLufs": -24.22,
+              "finite": true,
+              "kind": "narration",
+              "slide": 10,
+              "label": "narration-10",
+              "speechToBedLu": 12.63,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 113.0,
+              "durationSeconds": 6.183,
+              "integratedLufs": -13.88,
+              "truePeakDbtp": -1.98,
+              "loudnessRangeLu": 1.7,
+              "thresholdLufs": -24.23,
+              "finite": true,
+              "kind": "narration",
+              "slide": 11,
+              "label": "narration-11",
+              "speechToBedLu": 12.28,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 124.0,
+              "durationSeconds": 9.21,
+              "integratedLufs": -13.25,
+              "truePeakDbtp": -1.9,
+              "loudnessRangeLu": 1.3,
+              "thresholdLufs": -23.38,
+              "finite": true,
+              "kind": "narration",
+              "slide": 12,
+              "label": "narration-12",
+              "speechToBedLu": 12.91,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 137.0,
+              "durationSeconds": 9.228,
+              "integratedLufs": -13.54,
+              "truePeakDbtp": -1.9,
+              "loudnessRangeLu": 2.2,
+              "thresholdLufs": -23.99,
+              "finite": true,
+              "kind": "narration",
+              "slide": 13,
+              "label": "narration-13",
+              "speechToBedLu": 12.62,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 148.0,
+              "durationSeconds": 6.406,
+              "integratedLufs": -13.41,
+              "truePeakDbtp": -1.61,
+              "loudnessRangeLu": 1.1,
+              "thresholdLufs": -23.6,
+              "finite": true,
+              "kind": "narration",
+              "slide": 14,
+              "label": "narration-14",
+              "speechToBedLu": 12.75,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 160.0,
+              "durationSeconds": 6.13,
+              "integratedLufs": -13.94,
+              "truePeakDbtp": -1.9,
+              "loudnessRangeLu": 1.4,
+              "thresholdLufs": -24.14,
+              "finite": true,
+              "kind": "narration",
+              "slide": 15,
+              "label": "narration-15",
+              "speechToBedLu": 12.22,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 38.0,
+              "durationSeconds": 0.939,
+              "integratedLufs": -12.95,
+              "truePeakDbtp": -2.01,
+              "loudnessRangeLu": 0.0,
+              "thresholdLufs": -22.95,
+              "finite": true,
+              "kind": "piper_product_demo",
+              "slide": 4,
+              "label": "Cháu về rồi ạ.",
+              "speechToBedLu": 13.21,
+              "validation": "PASS"
+            },
+            {
+              "startSeconds": 63.0,
+              "durationSeconds": 1.357,
+              "integratedLufs": -14.33,
+              "truePeakDbtp": -1.96,
+              "loudnessRangeLu": 0.0,
+              "thresholdLufs": -24.84,
+              "finite": true,
+              "kind": "piper_product_demo",
+              "slide": 6,
+              "label": "Bà nhớ cháu quá!",
+              "speechToBedLu": 11.83,
+              "validation": "PASS"
+            }
+          ],
+          "gates": {
+            "fullProgrammeLufs": "-19..-14",
+            "maxTruePeakDbtp": -1.0,
+            "slideLufs": "-22..-12",
+            "speechWindowLufs": "-22..-12",
+            "minimumSpeechToBedLu": 8.0
+          },
+          "validation": "PASS"
+        }
+      },
+      "limits": {
+        "durationSeconds": 180.0,
+        "sizeBytes": 26214400,
+        "sizeRelation": "strictly_less_than",
+        "remainingBytes": 4781294
+      },
+      "metadata": {
+        "anonymous": true,
+        "localAbsolutePathScan": "PASS",
+        "formatTags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "title": "Chuan Jia Hua - Web Preview",
+          "encoder": "Lavf62.12.100",
+          "comment": "Anonymous competition prototype; synthetic Mandarin narration; procedural audio; Piper product demo speech."
+        },
+        "streamTags": [
+          {
+            "index": 0,
+            "codecType": "video",
+            "tags": {
+              "language": "und",
+              "handler_name": "VideoHandler",
+              "encoder": "Lavc62.28.100 libx264"
+            }
+          },
+          {
+            "index": 1,
+            "codecType": "audio",
+            "tags": {
+              "language": "und",
+              "handler_name": "SoundHandler"
+            }
+          }
+        ]
+      },
+      "validation": "PASS"
+    }
+  ],
+  "derivation": {
+    "source": "submission_1080p",
+    "derived": "web_preview_720p",
+    "method": "Two-pass H.264 transcode with Lanczos 1280x720 scaling and AAC audio; audio is remeasured after preview encoding."
+  },
+  "evidence": {
+    "slideCount": 15,
+    "screenshotDirectory": "正式版/flutter_app/test-results",
+    "imageDirectory": "正式版/flutter_app/assets/images",
+    "audioCueCount": 2,
+    "narrationCount": 15,
+    "musicSource": "Procedurally synthesized by FFmpeg aevalsrc; no third-party music or sound effects.",
+    "narration": "Synthetic Traditional Chinese narration generated locally with Windows SAPI voice Microsoft Hanhan Desktop.",
+    "productSpeech": "Pinned Piper synthetic Vietnamese demonstration files from the current app manifest.",
+    "humanTestimony": false
+  },
+  "audioMix": {
+    "programmeTargetLufs": -16.0,
+    "programmeFixedGainDb": 2.0,
+    "programmeTruePeakTargetDbtp": -2.0,
+    "backgroundTargetLufs": -28.0,
+    "backgroundMeasuredBeforeProgrammeGainLufs": -28.16,
+    "backgroundBaselineAfterProgrammeGainLufs": -26.16,
+    "narrationTargetLufs": -14.0,
+    "productSpeechTargetLufs": -15.0,
+    "sidechainDucking": "8:1 compression of the bed while narration or product speech is active.",
+    "validation": "PASS"
+  },
+  "metadataPolicy": {
+    "anonymous": true,
+    "localAbsolutePathsAllowed": false,
+    "validation": "PASS"
+  },
+  "validation": "PASS"
+}

@@ -1,0 +1,4877 @@
+{
+  "schema": "our-family-says/native-review-context/v1",
+  "manifestSha256": "BB9F460F2C6CB030EA11263DFF3C87201B8B2F5891A6302F600D0E518DA59426",
+  "sourceSha256": {
+    "lib/models/conversation_episode.dart": "05F4EE083810E21F0F9EF16744DBD0FFD2F81EEFD939A8EC075DCB995730E915",
+    "lib/services/app_store.dart": "03E63F0B2E9D6A872D0487EBBA619778E4EB15D301B07A0E57A2C3F7483B4C0E"
+  },
+  "audioPathCount": 119,
+  "usageCount": 204,
+  "unknownRelationshipPathCount": 28,
+  "records": [
+    {
+      "path": "assets/audio/theater_0002441ff184.mp3",
+      "text": "Dễ thương quá!",
+      "intendedMeaningsZh": [
+        "真可愛！"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_0002441ff184.mp3",
+          "targetText": "Dễ thương quá!",
+          "translationZh": "真可愛！",
+          "episodeId": "theater-garden",
+          "episodeTitleZh": "陽台澆花",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-garden-3-after-hold-can-little-flower",
+          "choiceId": "bean-name",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "叫它小豆豆。新的家庭成員住進陽台。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_0002441ff184.mp3",
+          "targetText": "Dễ thương quá!",
+          "translationZh": "真可愛！",
+          "episodeId": "theater-garden",
+          "episodeTitleZh": "陽台澆花",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-garden-3-after-hold-can-new-leaf",
+          "choiceId": "bean-name",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "叫它小豆豆。新的家庭成員住進陽台。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_0002441ff184.mp3",
+          "targetText": "Dễ thương quá!",
+          "translationZh": "真可愛！",
+          "episodeId": "theater-garden",
+          "episodeTitleZh": "陽台澆花",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-garden-3-after-water-plants-little-flower",
+          "choiceId": "bean-name",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "叫它小豆豆。新的家庭成員住進陽台。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_0002441ff184.mp3",
+          "targetText": "Dễ thương quá!",
+          "translationZh": "真可愛！",
+          "episodeId": "theater-garden",
+          "episodeTitleZh": "陽台澆花",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-garden-3-after-water-plants-new-leaf",
+          "choiceId": "bean-name",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "叫它小豆豆。新的家庭成員住進陽台。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_05466780a811.mp3",
+      "text": "Chào buổi sáng!",
+      "intendedMeaningsZh": [
+        "早安！"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_05466780a811.mp3",
+          "targetText": "Chào buổi sáng!",
+          "translationZh": "早安！",
+          "episodeId": "theater-morning",
+          "episodeTitleZh": "早安！起床囉",
+          "act": 1,
+          "lessonStage": null,
+          "promptId": "theater-morning-1",
+          "choiceId": "awake",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "我起床了。陽光跑進房間。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_05cd52fd3f69.mp3",
+      "text": "Mình chờ một chút nhé.",
+      "intendedMeaningsZh": [
+        "我們等一下再吃。"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_05cd52fd3f69.mp3",
+          "targetText": "Mình chờ một chút nhé.",
+          "translationZh": "我們等一下再吃。",
+          "episodeId": "theater-mealtime",
+          "episodeTitleZh": "一起準備晚餐",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "theater-mealtime-2-after-bowls",
+          "choiceId": "a-bit-hot",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "有一點燙。外婆和你一起耐心等。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_05cd52fd3f69.mp3",
+          "targetText": "Mình chờ một chút nhé.",
+          "translationZh": "我們等一下再吃。",
+          "episodeId": "theater-mealtime",
+          "episodeTitleZh": "一起準備晚餐",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "theater-mealtime-2-after-chopsticks",
+          "choiceId": "a-bit-hot",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "有一點燙。外婆和你一起耐心等。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_072af085a512.mp3",
+      "text": "Mình tưới cây nhé?",
+      "intendedMeaningsZh": [
+        "我們來澆花，好嗎？"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_072af085a512.mp3",
+          "targetText": "Mình tưới cây nhé?",
+          "translationZh": "我們來澆花，好嗎？",
+          "episodeId": "theater-garden",
+          "episodeTitleZh": "陽台澆花",
+          "act": 1,
+          "lessonStage": null,
+          "promptId": "theater-garden-1",
+          "choiceId": null,
+          "usageType": "elder_prompt",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "告訴外婆你想怎麼幫忙。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_08d85703a885.mp3",
+      "text": "Sáng như mặt trời! Cháu muốn ăn gì?",
+      "intendedMeaningsZh": [
+        "像太陽一樣亮！ 你想吃什麼？"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_08d85703a885.mp3",
+          "targetText": "Sáng như mặt trời! Cháu muốn ăn gì?",
+          "translationZh": "像太陽一樣亮！ 你想吃什麼？",
+          "episodeId": "theater-morning",
+          "episodeTitleZh": "早安！起床囉",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-morning-3-after-awake-yellow-shirt",
+          "choiceId": null,
+          "usageType": "elder_prompt",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "窗簾拉開了，換上太陽色上衣，幫今天的早餐做決定。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_08d85703a885.mp3",
+          "targetText": "Sáng như mặt trời! Cháu muốn ăn gì?",
+          "translationZh": "像太陽一樣亮！ 你想吃什麼？",
+          "episodeId": "theater-morning",
+          "episodeTitleZh": "早安！起床囉",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-morning-3-after-sleepy-yellow-shirt",
+          "choiceId": null,
+          "usageType": "elder_prompt",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "一起伸個懶腰，換上太陽色上衣，幫今天的早餐做決定。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_0b7b27acb7b7.mp3",
+      "text": "Có hoa nhỏ ạ.",
+      "intendedMeaningsZh": [
+        "有一朵小花。"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_0b7b27acb7b7.mp3",
+          "targetText": "Có hoa nhỏ ạ.",
+          "translationZh": "有一朵小花。",
+          "episodeId": "theater-garden",
+          "episodeTitleZh": "陽台澆花",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "theater-garden-2-after-hold-can",
+          "choiceId": "little-flower",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "兩個人一起拿水壺，找找植物今天的新變化。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_0b7b27acb7b7.mp3",
+          "targetText": "Có hoa nhỏ ạ.",
+          "translationZh": "有一朵小花。",
+          "episodeId": "theater-garden",
+          "episodeTitleZh": "陽台澆花",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "theater-garden-2-after-water-plants",
+          "choiceId": "little-flower",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "小水珠落在土裡，找找植物今天的新變化。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_0cad1b245cf2.mp3",
+      "text": "Thơm lắm ạ.",
+      "intendedMeaningsZh": [
+        "好香。"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_0cad1b245cf2.mp3",
+          "targetText": "Thơm lắm ạ.",
+          "translationZh": "好香。",
+          "episodeId": "theater-mealtime",
+          "episodeTitleZh": "一起準備晚餐",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "theater-mealtime-2-after-bowls",
+          "choiceId": "smells-good",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "碗排好隊了，聞聞看，告訴外婆你的感覺。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_0cad1b245cf2.mp3",
+          "targetText": "Thơm lắm ạ.",
+          "translationZh": "好香。",
+          "episodeId": "theater-mealtime",
+          "episodeTitleZh": "一起準備晚餐",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "theater-mealtime-2-after-chopsticks",
+          "choiceId": "smells-good",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "筷子找到位置，聞聞看，告訴外婆你的感覺。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_0edae7e6ea8f.mp3",
+      "text": "Cháu dậy rồi ạ.",
+      "intendedMeaningsZh": [
+        "我起床了。"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_0edae7e6ea8f.mp3",
+          "targetText": "Cháu dậy rồi ạ.",
+          "translationZh": "我起床了。",
+          "episodeId": "theater-morning",
+          "episodeTitleZh": "早安！起床囉",
+          "act": 1,
+          "lessonStage": null,
+          "promptId": "theater-morning-1",
+          "choiceId": "awake",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "告訴外婆你醒了，或還有一點想睡。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_0f21d13f9fb7.mp3",
+      "text": "Cháu ôm bà trước ạ.",
+      "intendedMeaningsZh": [
+        "我想先抱抱外婆。"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_0f21d13f9fb7.mp3",
+          "targetText": "Cháu ôm bà trước ạ.",
+          "translationZh": "我想先抱抱外婆。",
+          "episodeId": "theater-homecoming",
+          "episodeTitleZh": "放學回家",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "home-final-after-happy-today",
+          "choiceId": "hug-first",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "今天的快樂還在房間裡閃亮。 為今天選一個溫暖的結尾。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_0f21d13f9fb7.mp3",
+          "targetText": "Cháu ôm bà trước ạ.",
+          "translationZh": "我想先抱抱外婆。",
+          "episodeId": "theater-homecoming",
+          "episodeTitleZh": "放學回家",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "home-final-after-new-friend",
+          "choiceId": "hug-first",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "新朋友已經被畫進今天的家庭故事。 為今天選一個溫暖的結尾。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_0f21d13f9fb7.mp3",
+          "targetText": "Cháu ôm bà trước ạ.",
+          "translationZh": "我想先抱抱外婆。",
+          "episodeId": "theater-homecoming",
+          "episodeTitleZh": "放學回家",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "home-final-after-want-rest",
+          "choiceId": "hug-first",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "軟枕頭還在陪你慢慢恢復力氣。 為今天選一個溫暖的結尾。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_0f21d13f9fb7.mp3",
+          "targetText": "Cháu ôm bà trước ạ.",
+          "translationZh": "我想先抱抱外婆。",
+          "episodeId": "theater-homecoming",
+          "episodeTitleZh": "放學回家",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "home-final-after-want-water",
+          "choiceId": "hug-first",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "那杯水讓你舒服多了。 為今天選一個溫暖的結尾。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_0fe50f465307.mp3",
+      "text": "Bà kể chuyện nhé.",
+      "intendedMeaningsZh": [
+        "外婆說故事吧。"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_0fe50f465307.mp3",
+          "targetText": "Bà kể chuyện nhé.",
+          "translationZh": "外婆說故事吧。",
+          "episodeId": "theater-bedtime",
+          "episodeTitleZh": "睡前故事",
+          "act": 1,
+          "lessonStage": null,
+          "promptId": "theater-bedtime-1",
+          "choiceId": "story-first",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "告訴外婆，你想先做什麼。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_175dd0f8e30c.mp3",
+      "text": "Đến giờ đi ngủ rồi.",
+      "intendedMeaningsZh": [
+        "睡覺時間到了。"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_175dd0f8e30c.mp3",
+          "targetText": "Đến giờ đi ngủ rồi.",
+          "translationZh": "睡覺時間到了。",
+          "episodeId": "theater-bedtime",
+          "episodeTitleZh": "睡前故事",
+          "act": 1,
+          "lessonStage": null,
+          "promptId": "theater-bedtime-1",
+          "choiceId": null,
+          "usageType": "elder_prompt",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "告訴外婆，你想先做什麼。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_18f300f75d32.mp3",
+      "text": "Bà cũng thấy vậy!",
+      "intendedMeaningsZh": [
+        "外婆也這麼覺得！"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_18f300f75d32.mp3",
+          "targetText": "Bà cũng thấy vậy!",
+          "translationZh": "外婆也這麼覺得！",
+          "episodeId": "theater-mealtime",
+          "episodeTitleZh": "一起準備晚餐",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "theater-mealtime-2-after-bowls",
+          "choiceId": "smells-good",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "好香。大家都忍不住靠近餐桌。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_18f300f75d32.mp3",
+          "targetText": "Bà cũng thấy vậy!",
+          "translationZh": "外婆也這麼覺得！",
+          "episodeId": "theater-mealtime",
+          "episodeTitleZh": "一起準備晚餐",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "theater-mealtime-2-after-chopsticks",
+          "choiceId": "smells-good",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "好香。大家都忍不住靠近餐桌。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_197f785c0dbb.mp3",
+      "text": "Nắng vào phòng rồi. Cháu muốn mặc áo màu nào?",
+      "intendedMeaningsZh": [
+        "陽光已經跑進房間了。 你想穿哪個顏色？"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_197f785c0dbb.mp3",
+          "targetText": "Nắng vào phòng rồi. Cháu muốn mặc áo màu nào?",
+          "translationZh": "陽光已經跑進房間了。 你想穿哪個顏色？",
+          "episodeId": "theater-morning",
+          "episodeTitleZh": "早安！起床囉",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "theater-morning-2-after-awake",
+          "choiceId": null,
+          "usageType": "elder_prompt",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "窗簾拉開了，選一件今天想穿的衣服。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_1d6178ff57de.mp3",
+      "text": "Cháu muốn nghỉ hay uống nước?",
+      "intendedMeaningsZh": [
+        "你想休息，還是喝水？"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_1d6178ff57de.mp3",
+          "targetText": "Cháu muốn nghỉ hay uống nước?",
+          "translationZh": "你想休息，還是喝水？",
+          "episodeId": "theater-homecoming",
+          "episodeTitleZh": "放學回家",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "home-comfort",
+          "choiceId": null,
+          "usageType": "elder_prompt",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "告訴外婆，現在什麼會讓你舒服一點。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_21533f901813.mp3",
+      "text": "Cháu lấy đũa ạ.",
+      "intendedMeaningsZh": [
+        "我來拿筷子。"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_21533f901813.mp3",
+          "targetText": "Cháu lấy đũa ạ.",
+          "translationZh": "我來拿筷子。",
+          "episodeId": "theater-mealtime",
+          "episodeTitleZh": "一起準備晚餐",
+          "act": 1,
+          "lessonStage": null,
+          "promptId": "theater-mealtime-1",
+          "choiceId": "chopsticks",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "選一件你想幫忙的事。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_271e3afdddb7.mp3",
+      "text": "Cháu tưới cây ạ.",
+      "intendedMeaningsZh": [
+        "我來澆花。"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_271e3afdddb7.mp3",
+          "targetText": "Cháu tưới cây ạ.",
+          "translationZh": "我來澆花。",
+          "episodeId": "theater-garden",
+          "episodeTitleZh": "陽台澆花",
+          "act": 1,
+          "lessonStage": null,
+          "promptId": "theater-garden-1",
+          "choiceId": "water-plants",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "告訴外婆你想怎麼幫忙。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_2d5d7661bded.mp3",
+      "text": "Mình cùng làm nhé!",
+      "intendedMeaningsZh": [
+        "我們一起來！"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_2d5d7661bded.mp3",
+          "targetText": "Mình cùng làm nhé!",
+          "translationZh": "我們一起來！",
+          "episodeId": "theater-garden",
+          "episodeTitleZh": "陽台澆花",
+          "act": 1,
+          "lessonStage": null,
+          "promptId": "theater-garden-1",
+          "choiceId": "hold-can",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "我來拿澆水壺。水壺變得一點也不重。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_2d964b43ce6c.mp3",
+      "text": "Bát đã sẵn sàng rồi. Thơm không?",
+      "intendedMeaningsZh": [
+        "碗都準備好了。 香不香？"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_2d964b43ce6c.mp3",
+          "targetText": "Bát đã sẵn sàng rồi. Thơm không?",
+          "translationZh": "碗都準備好了。 香不香？",
+          "episodeId": "theater-mealtime",
+          "episodeTitleZh": "一起準備晚餐",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "theater-mealtime-2-after-bowls",
+          "choiceId": null,
+          "usageType": "elder_prompt",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "碗排好隊了，聞聞看，告訴外婆你的感覺。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_307061800647.mp3",
+      "text": "Cháu chưa buồn ngủ ạ.",
+      "intendedMeaningsZh": [
+        "我還不睏。"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_307061800647.mp3",
+          "targetText": "Cháu chưa buồn ngủ ạ.",
+          "translationZh": "我還不睏。",
+          "episodeId": "theater-bedtime",
+          "episodeTitleZh": "睡前故事",
+          "act": 1,
+          "lessonStage": null,
+          "promptId": "theater-bedtime-1",
+          "choiceId": "not-sleepy",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "告訴外婆，你想先做什麼。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_35edc7ea04fb.mp3",
+      "text": "Hôm nay vui không?",
+      "intendedMeaningsZh": [
+        "今天開心嗎？"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_35edc7ea04fb.mp3",
+          "targetText": "Hôm nay vui không?",
+          "translationZh": "今天開心嗎？",
+          "episodeId": "theater-homecoming",
+          "episodeTitleZh": "放學回家",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "home-happy-day",
+          "choiceId": null,
+          "usageType": "elder_prompt",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "選一件今天想告訴外婆的事。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_381eacf95bd3.mp3",
+      "text": "Cháu giúp bà nhé?",
+      "intendedMeaningsZh": [
+        "你來幫外婆好嗎？"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_381eacf95bd3.mp3",
+          "targetText": "Cháu giúp bà nhé?",
+          "translationZh": "你來幫外婆好嗎？",
+          "episodeId": "theater-mealtime",
+          "episodeTitleZh": "一起準備晚餐",
+          "act": 1,
+          "lessonStage": null,
+          "promptId": "theater-mealtime-1",
+          "choiceId": null,
+          "usageType": "elder_prompt",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "選一件你想幫忙的事。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_387aa14325b1.mp3",
+      "text": "Cháu muốn nghỉ ạ.",
+      "intendedMeaningsZh": [
+        "我想休息。"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_387aa14325b1.mp3",
+          "targetText": "Cháu muốn nghỉ ạ.",
+          "translationZh": "我想休息。",
+          "episodeId": "theater-homecoming",
+          "episodeTitleZh": "放學回家",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "home-comfort",
+          "choiceId": "want-rest",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "告訴外婆，現在什麼會讓你舒服一點。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_3f3c9cb4ce52.mp3",
+      "text": "Cháu quan sát giỏi quá! Đặt tên cho cây nhé?",
+      "intendedMeaningsZh": [
+        "你觀察得真仔細！ 幫植物取名字，好嗎？"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_3f3c9cb4ce52.mp3",
+          "targetText": "Cháu quan sát giỏi quá! Đặt tên cho cây nhé?",
+          "translationZh": "你觀察得真仔細！ 幫植物取名字，好嗎？",
+          "episodeId": "theater-garden",
+          "episodeTitleZh": "陽台澆花",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-garden-3-after-hold-can-new-leaf",
+          "choiceId": null,
+          "usageType": "elder_prompt",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "兩個人一起拿水壺，新葉子探出頭，為這位綠色朋友選一個名字。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_3f3c9cb4ce52.mp3",
+          "targetText": "Cháu quan sát giỏi quá! Đặt tên cho cây nhé?",
+          "translationZh": "你觀察得真仔細！ 幫植物取名字，好嗎？",
+          "episodeId": "theater-garden",
+          "episodeTitleZh": "陽台澆花",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-garden-3-after-water-plants-new-leaf",
+          "choiceId": null,
+          "usageType": "elder_prompt",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "小水珠落在土裡，新葉子探出頭，為這位綠色朋友選一個名字。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_4070c329567f.mp3",
+      "text": "Cháu muốn ăn trái cây ạ.",
+      "intendedMeaningsZh": [
+        "我想吃水果。"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_4070c329567f.mp3",
+          "targetText": "Cháu muốn ăn trái cây ạ.",
+          "translationZh": "我想吃水果。",
+          "episodeId": "theater-morning",
+          "episodeTitleZh": "早安！起床囉",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-morning-3-after-awake-blue-shirt",
+          "choiceId": "fruit",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "窗簾拉開了，換上藍色上衣，幫今天的早餐做決定。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_4070c329567f.mp3",
+          "targetText": "Cháu muốn ăn trái cây ạ.",
+          "translationZh": "我想吃水果。",
+          "episodeId": "theater-morning",
+          "episodeTitleZh": "早安！起床囉",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-morning-3-after-awake-yellow-shirt",
+          "choiceId": "fruit",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "窗簾拉開了，換上太陽色上衣，幫今天的早餐做決定。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_4070c329567f.mp3",
+          "targetText": "Cháu muốn ăn trái cây ạ.",
+          "translationZh": "我想吃水果。",
+          "episodeId": "theater-morning",
+          "episodeTitleZh": "早安！起床囉",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-morning-3-after-sleepy-blue-shirt",
+          "choiceId": "fruit",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "一起伸個懶腰，換上藍色上衣，幫今天的早餐做決定。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_4070c329567f.mp3",
+          "targetText": "Cháu muốn ăn trái cây ạ.",
+          "translationZh": "我想吃水果。",
+          "episodeId": "theater-morning",
+          "episodeTitleZh": "早安！起床囉",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-morning-3-after-sleepy-yellow-shirt",
+          "choiceId": "fruit",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "一起伸個懶腰，換上太陽色上衣，幫今天的早餐做決定。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_4152cf240b9b.mp3",
+      "text": "Vâng ạ!",
+      "intendedMeaningsZh": [
+        "好呀！"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_4152cf240b9b.mp3",
+          "targetText": "Vâng ạ!",
+          "translationZh": "好呀！",
+          "episodeId": "theater-homecoming",
+          "episodeTitleZh": "放學回家",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "home-final-after-happy-today",
+          "choiceId": "wash-hands",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "今天的快樂還在房間裡閃亮。 為今天選一個溫暖的結尾。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_4152cf240b9b.mp3",
+          "targetText": "Vâng ạ!",
+          "translationZh": "好呀！",
+          "episodeId": "theater-homecoming",
+          "episodeTitleZh": "放學回家",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "home-final-after-new-friend",
+          "choiceId": "wash-hands",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "新朋友已經被畫進今天的家庭故事。 為今天選一個溫暖的結尾。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_4152cf240b9b.mp3",
+          "targetText": "Vâng ạ!",
+          "translationZh": "好呀！",
+          "episodeId": "theater-homecoming",
+          "episodeTitleZh": "放學回家",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "home-final-after-want-rest",
+          "choiceId": "wash-hands",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "軟枕頭還在陪你慢慢恢復力氣。 為今天選一個溫暖的結尾。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_4152cf240b9b.mp3",
+          "targetText": "Vâng ạ!",
+          "translationZh": "好呀！",
+          "episodeId": "theater-homecoming",
+          "episodeTitleZh": "放學回家",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "home-final-after-want-water",
+          "choiceId": "wash-hands",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "那杯水讓你舒服多了。 為今天選一個溫暖的結尾。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_4586e910cdac.mp3",
+      "text": "Cùng ăn thôi!",
+      "intendedMeaningsZh": [
+        "一起吃吧！"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_4586e910cdac.mp3",
+          "targetText": "Cùng ăn thôi!",
+          "translationZh": "一起吃吧！",
+          "episodeId": "theater-mealtime",
+          "episodeTitleZh": "一起準備晚餐",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-mealtime-3-after-bowls-a-bit-hot",
+          "choiceId": "invite-family",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "請大家吃飯。這句話讓晚餐正式開始。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_4586e910cdac.mp3",
+          "targetText": "Cùng ăn thôi!",
+          "translationZh": "一起吃吧！",
+          "episodeId": "theater-mealtime",
+          "episodeTitleZh": "一起準備晚餐",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-mealtime-3-after-bowls-smells-good",
+          "choiceId": "invite-family",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "請大家吃飯。這句話讓晚餐正式開始。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_4586e910cdac.mp3",
+          "targetText": "Cùng ăn thôi!",
+          "translationZh": "一起吃吧！",
+          "episodeId": "theater-mealtime",
+          "episodeTitleZh": "一起準備晚餐",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-mealtime-3-after-chopsticks-a-bit-hot",
+          "choiceId": "invite-family",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "請大家吃飯。這句話讓晚餐正式開始。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_4586e910cdac.mp3",
+          "targetText": "Cùng ăn thôi!",
+          "translationZh": "一起吃吧！",
+          "episodeId": "theater-mealtime",
+          "episodeTitleZh": "一起準備晚餐",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-mealtime-3-after-chopsticks-smells-good",
+          "choiceId": "invite-family",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "請大家吃飯。這句話讓晚餐正式開始。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_463c5a74a5c8.mp3",
+      "text": "Được, cháu chọn nhé.",
+      "intendedMeaningsZh": [
+        "好，你來選。"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_463c5a74a5c8.mp3",
+          "targetText": "Được, cháu chọn nhé.",
+          "translationZh": "好，你來選。",
+          "episodeId": "theater-bedtime",
+          "episodeTitleZh": "睡前故事",
+          "act": 1,
+          "lessonStage": null,
+          "promptId": "theater-bedtime-1",
+          "choiceId": "story-first",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "外婆說故事吧。月光也湊過來聽。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_46a39f0771be.mp3",
+      "text": "Chuyện con hổ ạ.",
+      "intendedMeaningsZh": [
+        "老虎的故事。"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_46a39f0771be.mp3",
+          "targetText": "Chuyện con hổ ạ.",
+          "translationZh": "老虎的故事。",
+          "episodeId": "theater-bedtime",
+          "episodeTitleZh": "睡前故事",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "theater-bedtime-2-after-not-sleepy",
+          "choiceId": "tiger-story",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "小熊也坐上床，今晚由你決定故事會去哪裡。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_46a39f0771be.mp3",
+          "targetText": "Chuyện con hổ ạ.",
+          "translationZh": "老虎的故事。",
+          "episodeId": "theater-bedtime",
+          "episodeTitleZh": "睡前故事",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "theater-bedtime-2-after-story-first",
+          "choiceId": "tiger-story",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "故事書打開了，今晚由你決定故事會去哪裡。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_4ac7ac2e1418.mp3",
+      "text": "Khéo quá!",
+      "intendedMeaningsZh": [
+        "好能幹！"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_4ac7ac2e1418.mp3",
+          "targetText": "Khéo quá!",
+          "translationZh": "好能幹！",
+          "episodeId": "theater-mealtime",
+          "episodeTitleZh": "一起準備晚餐",
+          "act": 1,
+          "lessonStage": null,
+          "promptId": "theater-mealtime-1",
+          "choiceId": "chopsticks",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "我來拿筷子。每個座位都準備好了。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_4d3c1ac975f7.mp3",
+      "text": "Hơi nóng ạ.",
+      "intendedMeaningsZh": [
+        "有一點燙。"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_4d3c1ac975f7.mp3",
+          "targetText": "Hơi nóng ạ.",
+          "translationZh": "有一點燙。",
+          "episodeId": "theater-mealtime",
+          "episodeTitleZh": "一起準備晚餐",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "theater-mealtime-2-after-bowls",
+          "choiceId": "a-bit-hot",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "碗排好隊了，聞聞看，告訴外婆你的感覺。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_4d3c1ac975f7.mp3",
+          "targetText": "Hơi nóng ạ.",
+          "translationZh": "有一點燙。",
+          "episodeId": "theater-mealtime",
+          "episodeTitleZh": "一起準備晚餐",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "theater-mealtime-2-after-chopsticks",
+          "choiceId": "a-bit-hot",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "筷子找到位置，聞聞看，告訴外婆你的感覺。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_4e2b2fbaf617.mp3",
+      "text": "Nghe cháu vui, bà cũng vui. Mình rửa tay rồi ăn cơm nhé?",
+      "intendedMeaningsZh": [
+        "聽見你開心，外婆也好開心。 我們洗手再吃飯，好嗎？"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_4e2b2fbaf617.mp3",
+          "targetText": "Nghe cháu vui, bà cũng vui. Mình rửa tay rồi ăn cơm nhé?",
+          "translationZh": "聽見你開心，外婆也好開心。 我們洗手再吃飯，好嗎？",
+          "episodeId": "theater-homecoming",
+          "episodeTitleZh": "放學回家",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "home-final-after-happy-today",
+          "choiceId": null,
+          "usageType": "elder_prompt",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "今天的快樂還在房間裡閃亮。 為今天選一個溫暖的結尾。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_4e7f7b9324f0.mp3",
+      "text": "Mình cùng chọn nhé!",
+      "intendedMeaningsZh": [
+        "我們一起選！"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_4e7f7b9324f0.mp3",
+          "targetText": "Mình cùng chọn nhé!",
+          "translationZh": "我們一起選！",
+          "episodeId": "theater-morning",
+          "episodeTitleZh": "早安！起床囉",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-morning-3-after-awake-blue-shirt",
+          "choiceId": "fruit",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "我想吃水果。今天從甜甜的水果開始。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_4e7f7b9324f0.mp3",
+          "targetText": "Mình cùng chọn nhé!",
+          "translationZh": "我們一起選！",
+          "episodeId": "theater-morning",
+          "episodeTitleZh": "早安！起床囉",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-morning-3-after-awake-yellow-shirt",
+          "choiceId": "fruit",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "我想吃水果。今天從甜甜的水果開始。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_4e7f7b9324f0.mp3",
+          "targetText": "Mình cùng chọn nhé!",
+          "translationZh": "我們一起選！",
+          "episodeId": "theater-morning",
+          "episodeTitleZh": "早安！起床囉",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-morning-3-after-sleepy-blue-shirt",
+          "choiceId": "fruit",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "我想吃水果。今天從甜甜的水果開始。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_4e7f7b9324f0.mp3",
+          "targetText": "Mình cùng chọn nhé!",
+          "translationZh": "我們一起選！",
+          "episodeId": "theater-morning",
+          "episodeTitleZh": "早安！起床囉",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-morning-3-after-sleepy-yellow-shirt",
+          "choiceId": "fruit",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "我想吃水果。今天從甜甜的水果開始。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_5542ee88b804.mp3",
+      "text": "Đẹp quá!",
+      "intendedMeaningsZh": [
+        "真好看！"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_5542ee88b804.mp3",
+          "targetText": "Đẹp quá!",
+          "translationZh": "真好看！",
+          "episodeId": "theater-morning",
+          "episodeTitleZh": "早安！起床囉",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "theater-morning-2-after-awake",
+          "choiceId": "blue-shirt",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "藍色的衣服。像把天空穿在身上。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_5542ee88b804.mp3",
+          "targetText": "Đẹp quá!",
+          "translationZh": "真好看！",
+          "episodeId": "theater-morning",
+          "episodeTitleZh": "早安！起床囉",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "theater-morning-2-after-sleepy",
+          "choiceId": "blue-shirt",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "藍色的衣服。像把天空穿在身上。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_644711fdd85a.mp3",
+      "text": "Mình vào rừng nhé! Chúc cháu ngủ ngon.",
+      "intendedMeaningsZh": [
+        "我們進森林吧！ 祝你睡得香甜。"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_644711fdd85a.mp3",
+          "targetText": "Mình vào rừng nhé! Chúc cháu ngủ ngon.",
+          "translationZh": "我們進森林吧！ 祝你睡得香甜。",
+          "episodeId": "theater-bedtime",
+          "episodeTitleZh": "睡前故事",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-bedtime-3-after-not-sleepy-tiger-story",
+          "choiceId": null,
+          "usageType": "elder_prompt",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "小熊也坐上床，棉被變成森林，把最後一句晚安送回給外婆。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_644711fdd85a.mp3",
+          "targetText": "Mình vào rừng nhé! Chúc cháu ngủ ngon.",
+          "translationZh": "我們進森林吧！ 祝你睡得香甜。",
+          "episodeId": "theater-bedtime",
+          "episodeTitleZh": "睡前故事",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-bedtime-3-after-story-first-tiger-story",
+          "choiceId": null,
+          "usageType": "elder_prompt",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "故事書打開了，棉被變成森林，把最後一句晚安送回給外婆。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_6982d36adffb.mp3",
+      "text": "Uống nước xong rồi mình đi nhé. Mình rửa tay rồi ăn cơm nhé?",
+      "intendedMeaningsZh": [
+        "喝完水，我們再一起走。 我們洗手再吃飯，好嗎？"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_6982d36adffb.mp3",
+          "targetText": "Uống nước xong rồi mình đi nhé. Mình rửa tay rồi ăn cơm nhé?",
+          "translationZh": "喝完水，我們再一起走。 我們洗手再吃飯，好嗎？",
+          "episodeId": "theater-homecoming",
+          "episodeTitleZh": "放學回家",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "home-final-after-want-water",
+          "choiceId": null,
+          "usageType": "elder_prompt",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "那杯水讓你舒服多了。 為今天選一個溫暖的結尾。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_6a5a7c04ea60.mp3",
+      "text": "Lại đây với bà nào!",
+      "intendedMeaningsZh": [
+        "來外婆這裡吧！"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_6a5a7c04ea60.mp3",
+          "targetText": "Lại đây với bà nào!",
+          "translationZh": "來外婆這裡吧！",
+          "episodeId": "theater-homecoming",
+          "episodeTitleZh": "放學回家",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "home-final-after-happy-today",
+          "choiceId": "hug-first",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "你先抱抱外婆，讓今天用想念收尾。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_6a5a7c04ea60.mp3",
+          "targetText": "Lại đây với bà nào!",
+          "translationZh": "來外婆這裡吧！",
+          "episodeId": "theater-homecoming",
+          "episodeTitleZh": "放學回家",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "home-final-after-new-friend",
+          "choiceId": "hug-first",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "你先抱抱外婆，讓今天用想念收尾。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_6a5a7c04ea60.mp3",
+          "targetText": "Lại đây với bà nào!",
+          "translationZh": "來外婆這裡吧！",
+          "episodeId": "theater-homecoming",
+          "episodeTitleZh": "放學回家",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "home-final-after-want-rest",
+          "choiceId": "hug-first",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "你先抱抱外婆，讓今天用想念收尾。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_6a5a7c04ea60.mp3",
+          "targetText": "Lại đây với bà nào!",
+          "translationZh": "來外婆這裡吧！",
+          "episodeId": "theater-homecoming",
+          "episodeTitleZh": "放學回家",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "home-final-after-want-water",
+          "choiceId": "hug-first",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "你先抱抱外婆，讓今天用想念收尾。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_6a7b2794106c.mp3",
+      "text": "Cháu hơi mệt ạ.",
+      "intendedMeaningsZh": [
+        "我有一點累。"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_6a7b2794106c.mp3",
+          "targetText": "Cháu hơi mệt ạ.",
+          "translationZh": "我有一點累。",
+          "episodeId": "theater-homecoming",
+          "episodeTitleZh": "放學回家",
+          "act": 1,
+          "lessonStage": null,
+          "promptId": "home-door",
+          "choiceId": "a-bit-tired",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "告訴外婆：你回來了，或今天有點累。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_6c1f535f8ab8.mp3",
+      "text": "Áo màu xanh ạ.",
+      "intendedMeaningsZh": [
+        "藍色的衣服。"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_6c1f535f8ab8.mp3",
+          "targetText": "Áo màu xanh ạ.",
+          "translationZh": "藍色的衣服。",
+          "episodeId": "theater-morning",
+          "episodeTitleZh": "早安！起床囉",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "theater-morning-2-after-awake",
+          "choiceId": "blue-shirt",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "窗簾拉開了，選一件今天想穿的衣服。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_6c1f535f8ab8.mp3",
+          "targetText": "Áo màu xanh ạ.",
+          "translationZh": "藍色的衣服。",
+          "episodeId": "theater-morning",
+          "episodeTitleZh": "早安！起床囉",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "theater-morning-2-after-sleepy",
+          "choiceId": "blue-shirt",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "一起伸個懶腰，選一件今天想穿的衣服。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_7430a79cd482.mp3",
+      "text": "Kể bà nghe nhé!",
+      "intendedMeaningsZh": [
+        "說給外婆聽吧！"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_7430a79cd482.mp3",
+          "targetText": "Kể bà nghe nhé!",
+          "translationZh": "說給外婆聽吧！",
+          "episodeId": "theater-homecoming",
+          "episodeTitleZh": "放學回家",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "home-happy-day",
+          "choiceId": "happy-today",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "你把今天的快樂帶回家，外婆想聽完整故事。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_7c1953a63d96.mp3",
+      "text": "Cho cháu nước ạ.",
+      "intendedMeaningsZh": [
+        "請給我水。"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_7c1953a63d96.mp3",
+          "targetText": "Cho cháu nước ạ.",
+          "translationZh": "請給我水。",
+          "episodeId": "theater-homecoming",
+          "episodeTitleZh": "放學回家",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "home-comfort",
+          "choiceId": "want-water",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "告訴外婆，現在什麼會讓你舒服一點。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_838e50a4ece9.mp3",
+      "text": "Bà cũng thấy vậy! Mời cả nhà ăn cơm nào!",
+      "intendedMeaningsZh": [
+        "外婆也這麼覺得！ 請大家一起吃飯！"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_838e50a4ece9.mp3",
+          "targetText": "Bà cũng thấy vậy! Mời cả nhà ăn cơm nào!",
+          "translationZh": "外婆也這麼覺得！ 請大家一起吃飯！",
+          "episodeId": "theater-mealtime",
+          "episodeTitleZh": "一起準備晚餐",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-mealtime-3-after-bowls-smells-good",
+          "choiceId": null,
+          "usageType": "elder_prompt",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "碗排好隊了，香氣飄滿廚房，把全家人邀請到餐桌邊。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_838e50a4ece9.mp3",
+          "targetText": "Bà cũng thấy vậy! Mời cả nhà ăn cơm nào!",
+          "translationZh": "外婆也這麼覺得！ 請大家一起吃飯！",
+          "episodeId": "theater-mealtime",
+          "episodeTitleZh": "一起準備晚餐",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-mealtime-3-after-chopsticks-smells-good",
+          "choiceId": null,
+          "usageType": "elder_prompt",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "筷子找到位置，香氣飄滿廚房，把全家人邀請到餐桌邊。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_845fa0acc260.mp3",
+      "text": "Có ngay đây!",
+      "intendedMeaningsZh": [
+        "馬上來！"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_845fa0acc260.mp3",
+          "targetText": "Có ngay đây!",
+          "translationZh": "馬上來！",
+          "episodeId": "theater-morning",
+          "episodeTitleZh": "早安！起床囉",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-morning-3-after-awake-blue-shirt",
+          "choiceId": "bread",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "我想吃麵包。香味叫醒整間屋子。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_845fa0acc260.mp3",
+          "targetText": "Có ngay đây!",
+          "translationZh": "馬上來！",
+          "episodeId": "theater-morning",
+          "episodeTitleZh": "早安！起床囉",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-morning-3-after-awake-yellow-shirt",
+          "choiceId": "bread",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "我想吃麵包。香味叫醒整間屋子。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_845fa0acc260.mp3",
+          "targetText": "Có ngay đây!",
+          "translationZh": "馬上來！",
+          "episodeId": "theater-morning",
+          "episodeTitleZh": "早安！起床囉",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-morning-3-after-sleepy-blue-shirt",
+          "choiceId": "bread",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "我想吃麵包。香味叫醒整間屋子。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_845fa0acc260.mp3",
+          "targetText": "Có ngay đây!",
+          "translationZh": "馬上來！",
+          "episodeId": "theater-morning",
+          "episodeTitleZh": "早安！起床囉",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-morning-3-after-sleepy-yellow-shirt",
+          "choiceId": "bread",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "我想吃麵包。香味叫醒整間屋子。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_8db033064430.mp3",
+      "text": "Tưới nhẹ thôi nhé.",
+      "intendedMeaningsZh": [
+        "輕輕澆就好。"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_8db033064430.mp3",
+          "targetText": "Tưới nhẹ thôi nhé.",
+          "translationZh": "輕輕澆就好。",
+          "episodeId": "theater-garden",
+          "episodeTitleZh": "陽台澆花",
+          "act": 1,
+          "lessonStage": null,
+          "promptId": "theater-garden-1",
+          "choiceId": "water-plants",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "我來澆花。葉子像在跟你說謝謝。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_93bfe10dff1e.mp3",
+      "text": "Có lá mới ạ.",
+      "intendedMeaningsZh": [
+        "有新葉子。"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_93bfe10dff1e.mp3",
+          "targetText": "Có lá mới ạ.",
+          "translationZh": "有新葉子。",
+          "episodeId": "theater-garden",
+          "episodeTitleZh": "陽台澆花",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "theater-garden-2-after-hold-can",
+          "choiceId": "new-leaf",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "兩個人一起拿水壺，找找植物今天的新變化。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_93bfe10dff1e.mp3",
+          "targetText": "Có lá mới ạ.",
+          "translationZh": "有新葉子。",
+          "episodeId": "theater-garden",
+          "episodeTitleZh": "陽台澆花",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "theater-garden-2-after-water-plants",
+          "choiceId": "new-leaf",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "小水珠落在土裡，找找植物今天的新變化。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_9519890f42d7.mp3",
+      "text": "Đây, uống từ từ nhé.",
+      "intendedMeaningsZh": [
+        "來，慢慢喝。"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_9519890f42d7.mp3",
+          "targetText": "Đây, uống từ từ nhé.",
+          "translationZh": "來，慢慢喝。",
+          "episodeId": "theater-homecoming",
+          "episodeTitleZh": "放學回家",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "home-comfort",
+          "choiceId": "want-water",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "你開口說想喝水，外婆馬上拿來一杯。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_970351f426dc.mp3",
+      "text": "Cháu cầm bình ạ.",
+      "intendedMeaningsZh": [
+        "我來拿澆水壺。"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_970351f426dc.mp3",
+          "targetText": "Cháu cầm bình ạ.",
+          "translationZh": "我來拿澆水壺。",
+          "episodeId": "theater-garden",
+          "episodeTitleZh": "陽台澆花",
+          "act": 1,
+          "lessonStage": null,
+          "promptId": "theater-garden-1",
+          "choiceId": "hold-can",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "告訴外婆你想怎麼幫忙。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_9a52b4224f81.mp3",
+      "text": "Áo màu vàng ạ.",
+      "intendedMeaningsZh": [
+        "黃色的衣服。"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_9a52b4224f81.mp3",
+          "targetText": "Áo màu vàng ạ.",
+          "translationZh": "黃色的衣服。",
+          "episodeId": "theater-morning",
+          "episodeTitleZh": "早安！起床囉",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "theater-morning-2-after-awake",
+          "choiceId": "yellow-shirt",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "窗簾拉開了，選一件今天想穿的衣服。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_9a52b4224f81.mp3",
+          "targetText": "Áo màu vàng ạ.",
+          "translationZh": "黃色的衣服。",
+          "episodeId": "theater-morning",
+          "episodeTitleZh": "早安！起床囉",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "theater-morning-2-after-sleepy",
+          "choiceId": "yellow-shirt",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "一起伸個懶腰，選一件今天想穿的衣服。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_9cadf126c39d.mp3",
+      "text": "Hay quá! Lát nữa kể bà nghe nhé.",
+      "intendedMeaningsZh": [
+        "太好了！等等說給外婆聽。"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_9cadf126c39d.mp3",
+          "targetText": "Hay quá! Lát nữa kể bà nghe nhé.",
+          "translationZh": "太好了！等等說給外婆聽。",
+          "episodeId": "theater-homecoming",
+          "episodeTitleZh": "放學回家",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "home-happy-day",
+          "choiceId": "new-friend",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "你把新朋友介紹給外婆，家庭故事多了一位角色。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_9d4a564cde24.mp3",
+      "text": "Cháu về rồi à?",
+      "intendedMeaningsZh": [
+        "你回來啦？"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_9d4a564cde24.mp3",
+          "targetText": "Cháu về rồi à?",
+          "translationZh": "你回來啦？",
+          "episodeId": "theater-homecoming",
+          "episodeTitleZh": "放學回家",
+          "act": 1,
+          "lessonStage": null,
+          "promptId": "home-door",
+          "choiceId": null,
+          "usageType": "elder_prompt",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "告訴外婆：你回來了，或今天有點累。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_9dbcae1ae8e6.mp3",
+      "text": "Bà cảm ơn cháu!",
+      "intendedMeaningsZh": [
+        "外婆謝謝你！"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_9dbcae1ae8e6.mp3",
+          "targetText": "Bà cảm ơn cháu!",
+          "translationZh": "外婆謝謝你！",
+          "episodeId": "theater-mealtime",
+          "episodeTitleZh": "一起準備晚餐",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-mealtime-3-after-bowls-a-bit-hot",
+          "choiceId": "invite-grandma",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "外婆請吃飯。一句貼心的話讓外婆笑了。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_9dbcae1ae8e6.mp3",
+          "targetText": "Bà cảm ơn cháu!",
+          "translationZh": "外婆謝謝你！",
+          "episodeId": "theater-mealtime",
+          "episodeTitleZh": "一起準備晚餐",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-mealtime-3-after-bowls-smells-good",
+          "choiceId": "invite-grandma",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "外婆請吃飯。一句貼心的話讓外婆笑了。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_9dbcae1ae8e6.mp3",
+          "targetText": "Bà cảm ơn cháu!",
+          "translationZh": "外婆謝謝你！",
+          "episodeId": "theater-mealtime",
+          "episodeTitleZh": "一起準備晚餐",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-mealtime-3-after-chopsticks-a-bit-hot",
+          "choiceId": "invite-grandma",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "外婆請吃飯。一句貼心的話讓外婆笑了。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_9dbcae1ae8e6.mp3",
+          "targetText": "Bà cảm ơn cháu!",
+          "translationZh": "外婆謝謝你！",
+          "episodeId": "theater-mealtime",
+          "episodeTitleZh": "一起準備晚餐",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-mealtime-3-after-chopsticks-smells-good",
+          "choiceId": "invite-grandma",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "外婆請吃飯。一句貼心的話讓外婆笑了。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_9f39e7063253.mp3",
+      "text": "Mình đặt bình xuống nhé. Cháu thấy gì?",
+      "intendedMeaningsZh": [
+        "我們把水壺放下來吧。 你看到什麼？"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_9f39e7063253.mp3",
+          "targetText": "Mình đặt bình xuống nhé. Cháu thấy gì?",
+          "translationZh": "我們把水壺放下來吧。 你看到什麼？",
+          "episodeId": "theater-garden",
+          "episodeTitleZh": "陽台澆花",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "theater-garden-2-after-hold-can",
+          "choiceId": null,
+          "usageType": "elder_prompt",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "兩個人一起拿水壺，找找植物今天的新變化。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_a584a212e867.mp3",
+      "text": "Cháu về rồi ạ.",
+      "intendedMeaningsZh": [
+        "我回來了。"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_a584a212e867.mp3",
+          "targetText": "Cháu về rồi ạ.",
+          "translationZh": "我回來了。",
+          "episodeId": "theater-homecoming",
+          "episodeTitleZh": "放學回家",
+          "act": 1,
+          "lessonStage": null,
+          "promptId": "home-door",
+          "choiceId": "came-home",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "告訴外婆：你回來了，或今天有點累。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_a702b25b551e.mp3",
+      "text": "Cháu dậy rồi à?",
+      "intendedMeaningsZh": [
+        "你起床啦？"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_a702b25b551e.mp3",
+          "targetText": "Cháu dậy rồi à?",
+          "translationZh": "你起床啦？",
+          "episodeId": "theater-morning",
+          "episodeTitleZh": "早安！起床囉",
+          "act": 1,
+          "lessonStage": null,
+          "promptId": "theater-morning-1",
+          "choiceId": null,
+          "usageType": "elder_prompt",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "告訴外婆你醒了，或還有一點想睡。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_aaa31c9b2444.mp3",
+      "text": "Cháu còn buồn ngủ ạ.",
+      "intendedMeaningsZh": [
+        "我還想睡。"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_aaa31c9b2444.mp3",
+          "targetText": "Cháu còn buồn ngủ ạ.",
+          "translationZh": "我還想睡。",
+          "episodeId": "theater-morning",
+          "episodeTitleZh": "早安！起床囉",
+          "act": 1,
+          "lessonStage": null,
+          "promptId": "theater-morning-1",
+          "choiceId": "sleepy",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "告訴外婆你醒了，或還有一點想睡。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_b19fc675cece.mp3",
+      "text": "Hôm nay vui ạ.",
+      "intendedMeaningsZh": [
+        "今天很開心。"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_b19fc675cece.mp3",
+          "targetText": "Hôm nay vui ạ.",
+          "translationZh": "今天很開心。",
+          "episodeId": "theater-homecoming",
+          "episodeTitleZh": "放學回家",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "home-happy-day",
+          "choiceId": "happy-today",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "選一件今天想告訴外婆的事。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_b36e620b4508.mp3",
+      "text": "Đẹp quá nhỉ! Đặt tên cho cây nhé?",
+      "intendedMeaningsZh": [
+        "真漂亮呀！ 幫植物取名字，好嗎？"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_b36e620b4508.mp3",
+          "targetText": "Đẹp quá nhỉ! Đặt tên cho cây nhé?",
+          "translationZh": "真漂亮呀！ 幫植物取名字，好嗎？",
+          "episodeId": "theater-garden",
+          "episodeTitleZh": "陽台澆花",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-garden-3-after-hold-can-little-flower",
+          "choiceId": null,
+          "usageType": "elder_prompt",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "兩個人一起拿水壺，小花慢慢打開，為這位綠色朋友選一個名字。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_b36e620b4508.mp3",
+          "targetText": "Đẹp quá nhỉ! Đặt tên cho cây nhé?",
+          "translationZh": "真漂亮呀！ 幫植物取名字，好嗎？",
+          "episodeId": "theater-garden",
+          "episodeTitleZh": "陽台澆花",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-garden-3-after-water-plants-little-flower",
+          "choiceId": null,
+          "usageType": "elder_prompt",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "小水珠落在土裡，小花慢慢打開，為這位綠色朋友選一個名字。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_b66bfe6ce787.mp3",
+      "text": "Mình chờ một chút nhé. Mời cả nhà ăn cơm nào!",
+      "intendedMeaningsZh": [
+        "我們等一下再吃。 請大家一起吃飯！"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_b66bfe6ce787.mp3",
+          "targetText": "Mình chờ một chút nhé. Mời cả nhà ăn cơm nào!",
+          "translationZh": "我們等一下再吃。 請大家一起吃飯！",
+          "episodeId": "theater-mealtime",
+          "episodeTitleZh": "一起準備晚餐",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-mealtime-3-after-bowls-a-bit-hot",
+          "choiceId": null,
+          "usageType": "elder_prompt",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "碗排好隊了，熱湯先吹一吹，把全家人邀請到餐桌邊。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_b66bfe6ce787.mp3",
+          "targetText": "Mình chờ một chút nhé. Mời cả nhà ăn cơm nào!",
+          "translationZh": "我們等一下再吃。 請大家一起吃飯！",
+          "episodeId": "theater-mealtime",
+          "episodeTitleZh": "一起準備晚餐",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-mealtime-3-after-chopsticks-a-bit-hot",
+          "choiceId": null,
+          "usageType": "elder_prompt",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "筷子找到位置，熱湯先吹一吹，把全家人邀請到餐桌邊。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_b7eb148389c6.mp3",
+      "text": "Cháu lấy bát ạ.",
+      "intendedMeaningsZh": [
+        "我來拿碗。"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_b7eb148389c6.mp3",
+          "targetText": "Cháu lấy bát ạ.",
+          "translationZh": "我來拿碗。",
+          "episodeId": "theater-mealtime",
+          "episodeTitleZh": "一起準備晚餐",
+          "act": 1,
+          "lessonStage": null,
+          "promptId": "theater-mealtime-1",
+          "choiceId": "bowls",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "選一件你想幫忙的事。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_b803f411cb17.mp3",
+      "text": "Đẹp quá! Cháu muốn ăn gì?",
+      "intendedMeaningsZh": [
+        "真好看！ 你想吃什麼？"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_b803f411cb17.mp3",
+          "targetText": "Đẹp quá! Cháu muốn ăn gì?",
+          "translationZh": "真好看！ 你想吃什麼？",
+          "episodeId": "theater-morning",
+          "episodeTitleZh": "早安！起床囉",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-morning-3-after-awake-blue-shirt",
+          "choiceId": null,
+          "usageType": "elder_prompt",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "窗簾拉開了，換上藍色上衣，幫今天的早餐做決定。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_b803f411cb17.mp3",
+          "targetText": "Đẹp quá! Cháu muốn ăn gì?",
+          "translationZh": "真好看！ 你想吃什麼？",
+          "episodeId": "theater-morning",
+          "episodeTitleZh": "早安！起床囉",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-morning-3-after-sleepy-blue-shirt",
+          "choiceId": null,
+          "usageType": "elder_prompt",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "一起伸個懶腰，換上藍色上衣，幫今天的早餐做決定。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_bae2b7ddf59e.mp3",
+      "text": "Bà cũng yêu cháu.",
+      "intendedMeaningsZh": [
+        "外婆也愛你。"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_bae2b7ddf59e.mp3",
+          "targetText": "Bà cũng yêu cháu.",
+          "translationZh": "外婆也愛你。",
+          "episodeId": "theater-bedtime",
+          "episodeTitleZh": "睡前故事",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-bedtime-3-after-not-sleepy-moon-story",
+          "choiceId": "love-grandma",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "我愛外婆。今晚的夢被家人的愛抱住。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_bae2b7ddf59e.mp3",
+          "targetText": "Bà cũng yêu cháu.",
+          "translationZh": "外婆也愛你。",
+          "episodeId": "theater-bedtime",
+          "episodeTitleZh": "睡前故事",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-bedtime-3-after-not-sleepy-tiger-story",
+          "choiceId": "love-grandma",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "我愛外婆。今晚的夢被家人的愛抱住。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_bae2b7ddf59e.mp3",
+          "targetText": "Bà cũng yêu cháu.",
+          "translationZh": "外婆也愛你。",
+          "episodeId": "theater-bedtime",
+          "episodeTitleZh": "睡前故事",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-bedtime-3-after-story-first-moon-story",
+          "choiceId": "love-grandma",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "我愛外婆。今晚的夢被家人的愛抱住。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_bae2b7ddf59e.mp3",
+          "targetText": "Bà cũng yêu cháu.",
+          "translationZh": "外婆也愛你。",
+          "episodeId": "theater-bedtime",
+          "episodeTitleZh": "睡前故事",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-bedtime-3-after-story-first-tiger-story",
+          "choiceId": "love-grandma",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "我愛外婆。今晚的夢被家人的愛抱住。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_bc3092d6d656.mp3",
+      "text": "Tên hay quá!",
+      "intendedMeaningsZh": [
+        "好棒的名字！"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_bc3092d6d656.mp3",
+          "targetText": "Tên hay quá!",
+          "translationZh": "好棒的名字！",
+          "episodeId": "theater-garden",
+          "episodeTitleZh": "陽台澆花",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-garden-3-after-hold-can-little-flower",
+          "choiceId": "sun-name",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "叫它小太陽。以後全家都知道怎麼叫它。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_bc3092d6d656.mp3",
+          "targetText": "Tên hay quá!",
+          "translationZh": "好棒的名字！",
+          "episodeId": "theater-garden",
+          "episodeTitleZh": "陽台澆花",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-garden-3-after-hold-can-new-leaf",
+          "choiceId": "sun-name",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "叫它小太陽。以後全家都知道怎麼叫它。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_bc3092d6d656.mp3",
+          "targetText": "Tên hay quá!",
+          "translationZh": "好棒的名字！",
+          "episodeId": "theater-garden",
+          "episodeTitleZh": "陽台澆花",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-garden-3-after-water-plants-little-flower",
+          "choiceId": "sun-name",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "叫它小太陽。以後全家都知道怎麼叫它。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_bc3092d6d656.mp3",
+          "targetText": "Tên hay quá!",
+          "translationZh": "好棒的名字！",
+          "episodeId": "theater-garden",
+          "episodeTitleZh": "陽台澆花",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-garden-3-after-water-plants-new-leaf",
+          "choiceId": "sun-name",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "叫它小太陽。以後全家都知道怎麼叫它。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_bc86b3234045.mp3",
+      "text": "Tên là Mặt Trời ạ.",
+      "intendedMeaningsZh": [
+        "叫它小太陽。"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_bc86b3234045.mp3",
+          "targetText": "Tên là Mặt Trời ạ.",
+          "translationZh": "叫它小太陽。",
+          "episodeId": "theater-garden",
+          "episodeTitleZh": "陽台澆花",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-garden-3-after-hold-can-little-flower",
+          "choiceId": "sun-name",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "兩個人一起拿水壺，小花慢慢打開，為這位綠色朋友選一個名字。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_bc86b3234045.mp3",
+          "targetText": "Tên là Mặt Trời ạ.",
+          "translationZh": "叫它小太陽。",
+          "episodeId": "theater-garden",
+          "episodeTitleZh": "陽台澆花",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-garden-3-after-hold-can-new-leaf",
+          "choiceId": "sun-name",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "兩個人一起拿水壺，新葉子探出頭，為這位綠色朋友選一個名字。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_bc86b3234045.mp3",
+          "targetText": "Tên là Mặt Trời ạ.",
+          "translationZh": "叫它小太陽。",
+          "episodeId": "theater-garden",
+          "episodeTitleZh": "陽台澆花",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-garden-3-after-water-plants-little-flower",
+          "choiceId": "sun-name",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "小水珠落在土裡，小花慢慢打開，為這位綠色朋友選一個名字。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_bc86b3234045.mp3",
+          "targetText": "Tên là Mặt Trời ạ.",
+          "translationZh": "叫它小太陽。",
+          "episodeId": "theater-garden",
+          "episodeTitleZh": "陽台澆花",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-garden-3-after-water-plants-new-leaf",
+          "choiceId": "sun-name",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "小水珠落在土裡，新葉子探出頭，為這位綠色朋友選一個名字。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_bee9797e07fd.mp3",
+      "text": "Cháu tỉnh hơn rồi đấy. Cháu muốn mặc áo màu nào?",
+      "intendedMeaningsZh": [
+        "你已經清醒一點了。 你想穿哪個顏色？"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_bee9797e07fd.mp3",
+          "targetText": "Cháu tỉnh hơn rồi đấy. Cháu muốn mặc áo màu nào?",
+          "translationZh": "你已經清醒一點了。 你想穿哪個顏色？",
+          "episodeId": "theater-morning",
+          "episodeTitleZh": "早安！起床囉",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "theater-morning-2-after-sleepy",
+          "choiceId": null,
+          "usageType": "elder_prompt",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "一起伸個懶腰，選一件今天想穿的衣服。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_c0dcf825b133.mp3",
+      "text": "Bà để gối ở đây nhé.",
+      "intendedMeaningsZh": [
+        "外婆把枕頭放這裡。"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_c0dcf825b133.mp3",
+          "targetText": "Bà để gối ở đây nhé.",
+          "translationZh": "外婆把枕頭放這裡。",
+          "episodeId": "theater-homecoming",
+          "episodeTitleZh": "放學回家",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "home-comfort",
+          "choiceId": "want-rest",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "你說出自己的需要，外婆陪你安靜休息。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_c224f4c19220.mp3",
+      "text": "Cháu có bạn mới ạ.",
+      "intendedMeaningsZh": [
+        "我交了新朋友。"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_c224f4c19220.mp3",
+          "targetText": "Cháu có bạn mới ạ.",
+          "translationZh": "我交了新朋友。",
+          "episodeId": "theater-homecoming",
+          "episodeTitleZh": "放學回家",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "home-happy-day",
+          "choiceId": "new-friend",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "選一件今天想告訴外婆的事。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_c58a5da78c49.mp3",
+      "text": "Cảm ơn cháu!",
+      "intendedMeaningsZh": [
+        "謝謝你！"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_c58a5da78c49.mp3",
+          "targetText": "Cảm ơn cháu!",
+          "translationZh": "謝謝你！",
+          "episodeId": "theater-mealtime",
+          "episodeTitleZh": "一起準備晚餐",
+          "act": 1,
+          "lessonStage": null,
+          "promptId": "theater-mealtime-1",
+          "choiceId": "bowls",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "我來拿碗。桌子準備迎接全家人。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_c924b2311eb1.mp3",
+      "text": "Cháu quan sát giỏi quá!",
+      "intendedMeaningsZh": [
+        "你觀察得真仔細！"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_c924b2311eb1.mp3",
+          "targetText": "Cháu quan sát giỏi quá!",
+          "translationZh": "你觀察得真仔細！",
+          "episodeId": "theater-garden",
+          "episodeTitleZh": "陽台澆花",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "theater-garden-2-after-hold-can",
+          "choiceId": "new-leaf",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "有新葉子。外婆把發現記進家庭日曆。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_c924b2311eb1.mp3",
+          "targetText": "Cháu quan sát giỏi quá!",
+          "translationZh": "你觀察得真仔細！",
+          "episodeId": "theater-garden",
+          "episodeTitleZh": "陽台澆花",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "theater-garden-2-after-water-plants",
+          "choiceId": "new-leaf",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "有新葉子。外婆把發現記進家庭日曆。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_c9492ae023b6.mp3",
+      "text": "Cháu yêu bà ạ.",
+      "intendedMeaningsZh": [
+        "我愛外婆。"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_c9492ae023b6.mp3",
+          "targetText": "Cháu yêu bà ạ.",
+          "translationZh": "我愛外婆。",
+          "episodeId": "theater-bedtime",
+          "episodeTitleZh": "睡前故事",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-bedtime-3-after-not-sleepy-moon-story",
+          "choiceId": "love-grandma",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "小熊也坐上床，床變成月亮船，把最後一句晚安送回給外婆。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_c9492ae023b6.mp3",
+          "targetText": "Cháu yêu bà ạ.",
+          "translationZh": "我愛外婆。",
+          "episodeId": "theater-bedtime",
+          "episodeTitleZh": "睡前故事",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-bedtime-3-after-not-sleepy-tiger-story",
+          "choiceId": "love-grandma",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "小熊也坐上床，棉被變成森林，把最後一句晚安送回給外婆。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_c9492ae023b6.mp3",
+          "targetText": "Cháu yêu bà ạ.",
+          "translationZh": "我愛外婆。",
+          "episodeId": "theater-bedtime",
+          "episodeTitleZh": "睡前故事",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-bedtime-3-after-story-first-moon-story",
+          "choiceId": "love-grandma",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "故事書打開了，床變成月亮船，把最後一句晚安送回給外婆。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_c9492ae023b6.mp3",
+          "targetText": "Cháu yêu bà ạ.",
+          "translationZh": "我愛外婆。",
+          "episodeId": "theater-bedtime",
+          "episodeTitleZh": "睡前故事",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-bedtime-3-after-story-first-tiger-story",
+          "choiceId": "love-grandma",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "故事書打開了，棉被變成森林，把最後一句晚安送回給外婆。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_cc3101767ee6.mp3",
+      "text": "Bà yêu cháu.",
+      "intendedMeaningsZh": [
+        "外婆愛你。"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_cc3101767ee6.mp3",
+          "targetText": "Bà yêu cháu.",
+          "translationZh": "外婆愛你。",
+          "episodeId": "theater-bedtime",
+          "episodeTitleZh": "睡前故事",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-bedtime-3-after-not-sleepy-moon-story",
+          "choiceId": "goodnight-grandma",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "外婆晚安。你們互道晚安，把愛留在夢裡。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_cc3101767ee6.mp3",
+          "targetText": "Bà yêu cháu.",
+          "translationZh": "外婆愛你。",
+          "episodeId": "theater-bedtime",
+          "episodeTitleZh": "睡前故事",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-bedtime-3-after-not-sleepy-tiger-story",
+          "choiceId": "goodnight-grandma",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "外婆晚安。你們互道晚安，把愛留在夢裡。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_cc3101767ee6.mp3",
+          "targetText": "Bà yêu cháu.",
+          "translationZh": "外婆愛你。",
+          "episodeId": "theater-bedtime",
+          "episodeTitleZh": "睡前故事",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-bedtime-3-after-story-first-moon-story",
+          "choiceId": "goodnight-grandma",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "外婆晚安。你們互道晚安，把愛留在夢裡。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_cc3101767ee6.mp3",
+          "targetText": "Bà yêu cháu.",
+          "translationZh": "外婆愛你。",
+          "episodeId": "theater-bedtime",
+          "episodeTitleZh": "睡前故事",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-bedtime-3-after-story-first-tiger-story",
+          "choiceId": "goodnight-grandma",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "外婆晚安。你們互道晚安，把愛留在夢裡。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_cc3919f570b2.mp3",
+      "text": "Ngoan quá, cùng đi thôi!",
+      "intendedMeaningsZh": [
+        "真棒，我們一起去！"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_cc3919f570b2.mp3",
+          "targetText": "Ngoan quá, cùng đi thôi!",
+          "translationZh": "真棒，我們一起去！",
+          "episodeId": "theater-homecoming",
+          "episodeTitleZh": "放學回家",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "home-final-after-happy-today",
+          "choiceId": "wash-hands",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "你和外婆一起洗手，準備分享晚餐。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_cc3919f570b2.mp3",
+          "targetText": "Ngoan quá, cùng đi thôi!",
+          "translationZh": "真棒，我們一起去！",
+          "episodeId": "theater-homecoming",
+          "episodeTitleZh": "放學回家",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "home-final-after-new-friend",
+          "choiceId": "wash-hands",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "你和外婆一起洗手，準備分享晚餐。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_cc3919f570b2.mp3",
+          "targetText": "Ngoan quá, cùng đi thôi!",
+          "translationZh": "真棒，我們一起去！",
+          "episodeId": "theater-homecoming",
+          "episodeTitleZh": "放學回家",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "home-final-after-want-rest",
+          "choiceId": "wash-hands",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "你和外婆一起洗手，準備分享晚餐。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_cc3919f570b2.mp3",
+          "targetText": "Ngoan quá, cùng đi thôi!",
+          "translationZh": "真棒，我們一起去！",
+          "episodeId": "theater-homecoming",
+          "episodeTitleZh": "放學回家",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "home-final-after-want-water",
+          "choiceId": "wash-hands",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "你和外婆一起洗手，準備分享晚餐。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_ccb8f8aa6499.mp3",
+      "text": "Cháu nghỉ một chút rồi mình đi nhé. Mình rửa tay rồi ăn cơm nhé?",
+      "intendedMeaningsZh": [
+        "你休息一下，我們再一起走。 我們洗手再吃飯，好嗎？"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_ccb8f8aa6499.mp3",
+          "targetText": "Cháu nghỉ một chút rồi mình đi nhé. Mình rửa tay rồi ăn cơm nhé?",
+          "translationZh": "你休息一下，我們再一起走。 我們洗手再吃飯，好嗎？",
+          "episodeId": "theater-homecoming",
+          "episodeTitleZh": "放學回家",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "home-final-after-want-rest",
+          "choiceId": null,
+          "usageType": "elder_prompt",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "軟枕頭還在陪你慢慢恢復力氣。 為今天選一個溫暖的結尾。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_cdc7305220fc.mp3",
+      "text": "Cháu muốn ăn bánh mì ạ.",
+      "intendedMeaningsZh": [
+        "我想吃麵包。"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_cdc7305220fc.mp3",
+          "targetText": "Cháu muốn ăn bánh mì ạ.",
+          "translationZh": "我想吃麵包。",
+          "episodeId": "theater-morning",
+          "episodeTitleZh": "早安！起床囉",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-morning-3-after-awake-blue-shirt",
+          "choiceId": "bread",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "窗簾拉開了，換上藍色上衣，幫今天的早餐做決定。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_cdc7305220fc.mp3",
+          "targetText": "Cháu muốn ăn bánh mì ạ.",
+          "translationZh": "我想吃麵包。",
+          "episodeId": "theater-morning",
+          "episodeTitleZh": "早安！起床囉",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-morning-3-after-awake-yellow-shirt",
+          "choiceId": "bread",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "窗簾拉開了，換上太陽色上衣，幫今天的早餐做決定。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_cdc7305220fc.mp3",
+          "targetText": "Cháu muốn ăn bánh mì ạ.",
+          "translationZh": "我想吃麵包。",
+          "episodeId": "theater-morning",
+          "episodeTitleZh": "早安！起床囉",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-morning-3-after-sleepy-blue-shirt",
+          "choiceId": "bread",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "一起伸個懶腰，換上藍色上衣，幫今天的早餐做決定。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_cdc7305220fc.mp3",
+          "targetText": "Cháu muốn ăn bánh mì ạ.",
+          "translationZh": "我想吃麵包。",
+          "episodeId": "theater-morning",
+          "episodeTitleZh": "早安！起床囉",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-morning-3-after-sleepy-yellow-shirt",
+          "choiceId": "bread",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "一起伸個懶腰，換上太陽色上衣，幫今天的早餐做決定。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_ce0f31315106.mp3",
+      "text": "Tên là Đậu Nhỏ ạ.",
+      "intendedMeaningsZh": [
+        "叫它小豆豆。"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_ce0f31315106.mp3",
+          "targetText": "Tên là Đậu Nhỏ ạ.",
+          "translationZh": "叫它小豆豆。",
+          "episodeId": "theater-garden",
+          "episodeTitleZh": "陽台澆花",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-garden-3-after-hold-can-little-flower",
+          "choiceId": "bean-name",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "兩個人一起拿水壺，小花慢慢打開，為這位綠色朋友選一個名字。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_ce0f31315106.mp3",
+          "targetText": "Tên là Đậu Nhỏ ạ.",
+          "translationZh": "叫它小豆豆。",
+          "episodeId": "theater-garden",
+          "episodeTitleZh": "陽台澆花",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-garden-3-after-hold-can-new-leaf",
+          "choiceId": "bean-name",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "兩個人一起拿水壺，新葉子探出頭，為這位綠色朋友選一個名字。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_ce0f31315106.mp3",
+          "targetText": "Tên là Đậu Nhỏ ạ.",
+          "translationZh": "叫它小豆豆。",
+          "episodeId": "theater-garden",
+          "episodeTitleZh": "陽台澆花",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-garden-3-after-water-plants-little-flower",
+          "choiceId": "bean-name",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "小水珠落在土裡，小花慢慢打開，為這位綠色朋友選一個名字。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_ce0f31315106.mp3",
+          "targetText": "Tên là Đậu Nhỏ ạ.",
+          "translationZh": "叫它小豆豆。",
+          "episodeId": "theater-garden",
+          "episodeTitleZh": "陽台澆花",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-garden-3-after-water-plants-new-leaf",
+          "choiceId": "bean-name",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "小水珠落在土裡，新葉子探出頭，為這位綠色朋友選一個名字。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_d044e6ba4f24.mp3",
+      "text": "Đất đủ nước rồi. Cháu thấy gì?",
+      "intendedMeaningsZh": [
+        "泥土已經喝飽水了。 你看到什麼？"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_d044e6ba4f24.mp3",
+          "targetText": "Đất đủ nước rồi. Cháu thấy gì?",
+          "translationZh": "泥土已經喝飽水了。 你看到什麼？",
+          "episodeId": "theater-garden",
+          "episodeTitleZh": "陽台澆花",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "theater-garden-2-after-water-plants",
+          "choiceId": null,
+          "usageType": "elder_prompt",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "小水珠落在土裡，找找植物今天的新變化。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_d104bf14508e.mp3",
+      "text": "Mình bay lên trời nhé!",
+      "intendedMeaningsZh": [
+        "我們飛上天空吧！"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_d104bf14508e.mp3",
+          "targetText": "Mình bay lên trời nhé!",
+          "translationZh": "我們飛上天空吧！",
+          "episodeId": "theater-bedtime",
+          "episodeTitleZh": "睡前故事",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "theater-bedtime-2-after-not-sleepy",
+          "choiceId": "moon-story",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "月亮的故事。你和外婆一起飛過星星。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_d104bf14508e.mp3",
+          "targetText": "Mình bay lên trời nhé!",
+          "translationZh": "我們飛上天空吧！",
+          "episodeId": "theater-bedtime",
+          "episodeTitleZh": "睡前故事",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "theater-bedtime-2-after-story-first",
+          "choiceId": "moon-story",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "月亮的故事。你和外婆一起飛過星星。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_d31793672fde.mp3",
+      "text": "Mình vào rừng nhé!",
+      "intendedMeaningsZh": [
+        "我們進森林吧！"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_d31793672fde.mp3",
+          "targetText": "Mình vào rừng nhé!",
+          "translationZh": "我們進森林吧！",
+          "episodeId": "theater-bedtime",
+          "episodeTitleZh": "睡前故事",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "theater-bedtime-2-after-not-sleepy",
+          "choiceId": "tiger-story",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "老虎的故事。一隻溫柔的小老虎來帶路。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_d31793672fde.mp3",
+          "targetText": "Mình vào rừng nhé!",
+          "translationZh": "我們進森林吧！",
+          "episodeId": "theater-bedtime",
+          "episodeTitleZh": "睡前故事",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "theater-bedtime-2-after-story-first",
+          "choiceId": "tiger-story",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "老虎的故事。一隻溫柔的小老虎來帶路。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_d4a29b9d4ba6.mp3",
+      "text": "Mời cả nhà ăn cơm ạ.",
+      "intendedMeaningsZh": [
+        "請大家吃飯。"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_d4a29b9d4ba6.mp3",
+          "targetText": "Mời cả nhà ăn cơm ạ.",
+          "translationZh": "請大家吃飯。",
+          "episodeId": "theater-mealtime",
+          "episodeTitleZh": "一起準備晚餐",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-mealtime-3-after-bowls-a-bit-hot",
+          "choiceId": "invite-family",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "碗排好隊了，熱湯先吹一吹，把全家人邀請到餐桌邊。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_d4a29b9d4ba6.mp3",
+          "targetText": "Mời cả nhà ăn cơm ạ.",
+          "translationZh": "請大家吃飯。",
+          "episodeId": "theater-mealtime",
+          "episodeTitleZh": "一起準備晚餐",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-mealtime-3-after-bowls-smells-good",
+          "choiceId": "invite-family",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "碗排好隊了，香氣飄滿廚房，把全家人邀請到餐桌邊。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_d4a29b9d4ba6.mp3",
+          "targetText": "Mời cả nhà ăn cơm ạ.",
+          "translationZh": "請大家吃飯。",
+          "episodeId": "theater-mealtime",
+          "episodeTitleZh": "一起準備晚餐",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-mealtime-3-after-chopsticks-a-bit-hot",
+          "choiceId": "invite-family",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "筷子找到位置，熱湯先吹一吹，把全家人邀請到餐桌邊。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_d4a29b9d4ba6.mp3",
+          "targetText": "Mời cả nhà ăn cơm ạ.",
+          "translationZh": "請大家吃飯。",
+          "episodeId": "theater-mealtime",
+          "episodeTitleZh": "一起準備晚餐",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-mealtime-3-after-chopsticks-smells-good",
+          "choiceId": "invite-family",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "筷子找到位置，香氣飄滿廚房，把全家人邀請到餐桌邊。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_d53f5ce8d34d.mp3",
+      "text": "Mình vươn vai nhé.",
+      "intendedMeaningsZh": [
+        "我們先伸伸懶腰。"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_d53f5ce8d34d.mp3",
+          "targetText": "Mình vươn vai nhé.",
+          "translationZh": "我們先伸伸懶腰。",
+          "episodeId": "theater-morning",
+          "episodeTitleZh": "早安！起床囉",
+          "act": 1,
+          "lessonStage": null,
+          "promptId": "theater-morning-1",
+          "choiceId": "sleepy",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "我還想睡。身體慢慢醒過來。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_d96e12b5e501.mp3",
+      "text": "Đũa đã có chỗ rồi. Thơm không?",
+      "intendedMeaningsZh": [
+        "筷子也找到位置了。 香不香？"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_d96e12b5e501.mp3",
+          "targetText": "Đũa đã có chỗ rồi. Thơm không?",
+          "translationZh": "筷子也找到位置了。 香不香？",
+          "episodeId": "theater-mealtime",
+          "episodeTitleZh": "一起準備晚餐",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "theater-mealtime-2-after-chopsticks",
+          "choiceId": null,
+          "usageType": "elder_prompt",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "筷子找到位置，聞聞看，告訴外婆你的感覺。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_dc35a64fc235.mp3",
+      "text": "Bà nhớ cháu quá!",
+      "intendedMeaningsZh": [
+        "外婆好想你！"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_dc35a64fc235.mp3",
+          "targetText": "Bà nhớ cháu quá!",
+          "translationZh": "外婆好想你！",
+          "episodeId": "theater-homecoming",
+          "episodeTitleZh": "放學回家",
+          "act": 1,
+          "lessonStage": null,
+          "promptId": "home-door",
+          "choiceId": "came-home",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "你一說「我回來了」，外婆就笑著開門。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_dce13df848f7.mp3",
+      "text": "Chúc bà ngủ ngon ạ.",
+      "intendedMeaningsZh": [
+        "外婆晚安。"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_dce13df848f7.mp3",
+          "targetText": "Chúc bà ngủ ngon ạ.",
+          "translationZh": "外婆晚安。",
+          "episodeId": "theater-bedtime",
+          "episodeTitleZh": "睡前故事",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-bedtime-3-after-not-sleepy-moon-story",
+          "choiceId": "goodnight-grandma",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "小熊也坐上床，床變成月亮船，把最後一句晚安送回給外婆。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_dce13df848f7.mp3",
+          "targetText": "Chúc bà ngủ ngon ạ.",
+          "translationZh": "外婆晚安。",
+          "episodeId": "theater-bedtime",
+          "episodeTitleZh": "睡前故事",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-bedtime-3-after-not-sleepy-tiger-story",
+          "choiceId": "goodnight-grandma",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "小熊也坐上床，棉被變成森林，把最後一句晚安送回給外婆。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_dce13df848f7.mp3",
+          "targetText": "Chúc bà ngủ ngon ạ.",
+          "translationZh": "外婆晚安。",
+          "episodeId": "theater-bedtime",
+          "episodeTitleZh": "睡前故事",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-bedtime-3-after-story-first-moon-story",
+          "choiceId": "goodnight-grandma",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "故事書打開了，床變成月亮船，把最後一句晚安送回給外婆。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_dce13df848f7.mp3",
+          "targetText": "Chúc bà ngủ ngon ạ.",
+          "translationZh": "外婆晚安。",
+          "episodeId": "theater-bedtime",
+          "episodeTitleZh": "睡前故事",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-bedtime-3-after-story-first-tiger-story",
+          "choiceId": "goodnight-grandma",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "故事書打開了，棉被變成森林，把最後一句晚安送回給外婆。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_e08a33467cef.mp3",
+      "text": "Chuyện mặt trăng ạ.",
+      "intendedMeaningsZh": [
+        "月亮的故事。"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_e08a33467cef.mp3",
+          "targetText": "Chuyện mặt trăng ạ.",
+          "translationZh": "月亮的故事。",
+          "episodeId": "theater-bedtime",
+          "episodeTitleZh": "睡前故事",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "theater-bedtime-2-after-not-sleepy",
+          "choiceId": "moon-story",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "小熊也坐上床，今晚由你決定故事會去哪裡。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_e08a33467cef.mp3",
+          "targetText": "Chuyện mặt trăng ạ.",
+          "translationZh": "月亮的故事。",
+          "episodeId": "theater-bedtime",
+          "episodeTitleZh": "睡前故事",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "theater-bedtime-2-after-story-first",
+          "choiceId": "moon-story",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "故事書打開了，今晚由你決定故事會去哪裡。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_e51b86406a34.mp3",
+      "text": "Sáng như mặt trời!",
+      "intendedMeaningsZh": [
+        "像太陽一樣亮！"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_e51b86406a34.mp3",
+          "targetText": "Sáng như mặt trời!",
+          "translationZh": "像太陽一樣亮！",
+          "episodeId": "theater-morning",
+          "episodeTitleZh": "早安！起床囉",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "theater-morning-2-after-awake",
+          "choiceId": "yellow-shirt",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "黃色的衣服。鏡子裡亮晶晶。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_e51b86406a34.mp3",
+          "targetText": "Sáng như mặt trời!",
+          "translationZh": "像太陽一樣亮！",
+          "episodeId": "theater-morning",
+          "episodeTitleZh": "早安！起床囉",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "theater-morning-2-after-sleepy",
+          "choiceId": "yellow-shirt",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "黃色的衣服。鏡子裡亮晶晶。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_e8ad39dc1423.mp3",
+      "text": "Ôi, vào nghỉ một chút nhé.",
+      "intendedMeaningsZh": [
+        "哎呀，進來休息一下吧。"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_e8ad39dc1423.mp3",
+          "targetText": "Ôi, vào nghỉ một chút nhé.",
+          "translationZh": "哎呀，進來休息一下吧。",
+          "episodeId": "theater-homecoming",
+          "episodeTitleZh": "放學回家",
+          "act": 1,
+          "lessonStage": null,
+          "promptId": "home-door",
+          "choiceId": "a-bit-tired",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "你說今天有點累，外婆立刻幫你準備休息的地方。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_ea2a0c24e44e.mp3",
+      "text": "Mình ôm gấu và nghe chuyện nhé.",
+      "intendedMeaningsZh": [
+        "我們抱著小熊聽故事吧。"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_ea2a0c24e44e.mp3",
+          "targetText": "Mình ôm gấu và nghe chuyện nhé.",
+          "translationZh": "我們抱著小熊聽故事吧。",
+          "episodeId": "theater-bedtime",
+          "episodeTitleZh": "睡前故事",
+          "act": 1,
+          "lessonStage": null,
+          "promptId": "theater-bedtime-1",
+          "choiceId": "not-sleepy",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "我還不睏。有小熊陪伴，房間安靜下來。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_efc823225a48.mp3",
+      "text": "Mình bay lên trời nhé! Chúc cháu ngủ ngon.",
+      "intendedMeaningsZh": [
+        "我們飛上天空吧！ 祝你睡得香甜。"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_efc823225a48.mp3",
+          "targetText": "Mình bay lên trời nhé! Chúc cháu ngủ ngon.",
+          "translationZh": "我們飛上天空吧！ 祝你睡得香甜。",
+          "episodeId": "theater-bedtime",
+          "episodeTitleZh": "睡前故事",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-bedtime-3-after-not-sleepy-moon-story",
+          "choiceId": null,
+          "usageType": "elder_prompt",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "小熊也坐上床，床變成月亮船，把最後一句晚安送回給外婆。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_efc823225a48.mp3",
+          "targetText": "Mình bay lên trời nhé! Chúc cháu ngủ ngon.",
+          "translationZh": "我們飛上天空吧！ 祝你睡得香甜。",
+          "episodeId": "theater-bedtime",
+          "episodeTitleZh": "睡前故事",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-bedtime-3-after-story-first-moon-story",
+          "choiceId": null,
+          "usageType": "elder_prompt",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "故事書打開了，床變成月亮船，把最後一句晚安送回給外婆。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_f15b9b60cbd4.mp3",
+      "text": "Đẹp quá nhỉ!",
+      "intendedMeaningsZh": [
+        "真漂亮呀！"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_f15b9b60cbd4.mp3",
+          "targetText": "Đẹp quá nhỉ!",
+          "translationZh": "真漂亮呀！",
+          "episodeId": "theater-garden",
+          "episodeTitleZh": "陽台澆花",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "theater-garden-2-after-hold-can",
+          "choiceId": "little-flower",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "有一朵小花。陽台多了一顆亮亮的小太陽。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_f15b9b60cbd4.mp3",
+          "targetText": "Đẹp quá nhỉ!",
+          "translationZh": "真漂亮呀！",
+          "episodeId": "theater-garden",
+          "episodeTitleZh": "陽台澆花",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "theater-garden-2-after-water-plants",
+          "choiceId": "little-flower",
+          "usageType": "elder_reply",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "有一朵小花。陽台多了一顆亮亮的小太陽。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_f40436327ec0.mp3",
+      "text": "Mai kể bà nghe về bạn mới nhé. Mình rửa tay rồi ăn cơm nhé?",
+      "intendedMeaningsZh": [
+        "明天也要說新朋友的故事給外婆聽。 我們洗手再吃飯，好嗎？"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_f40436327ec0.mp3",
+          "targetText": "Mai kể bà nghe về bạn mới nhé. Mình rửa tay rồi ăn cơm nhé?",
+          "translationZh": "明天也要說新朋友的故事給外婆聽。 我們洗手再吃飯，好嗎？",
+          "episodeId": "theater-homecoming",
+          "episodeTitleZh": "放學回家",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "home-final-after-new-friend",
+          "choiceId": null,
+          "usageType": "elder_prompt",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "新朋友已經被畫進今天的家庭故事。 為今天選一個溫暖的結尾。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_f507867127df.mp3",
+      "text": "Gấu bông cũng sẵn sàng rồi. Cháu chọn chuyện nào?",
+      "intendedMeaningsZh": [
+        "小熊也準備好了。 你選哪一個故事？"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_f507867127df.mp3",
+          "targetText": "Gấu bông cũng sẵn sàng rồi. Cháu chọn chuyện nào?",
+          "translationZh": "小熊也準備好了。 你選哪一個故事？",
+          "episodeId": "theater-bedtime",
+          "episodeTitleZh": "睡前故事",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "theater-bedtime-2-after-not-sleepy",
+          "choiceId": null,
+          "usageType": "elder_prompt",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "小熊也坐上床，今晚由你決定故事會去哪裡。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_f7383aa5fd2a.mp3",
+      "text": "Sách đã mở rồi. Cháu chọn chuyện nào?",
+      "intendedMeaningsZh": [
+        "故事書已經打開了。 你選哪一個故事？"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_f7383aa5fd2a.mp3",
+          "targetText": "Sách đã mở rồi. Cháu chọn chuyện nào?",
+          "translationZh": "故事書已經打開了。 你選哪一個故事？",
+          "episodeId": "theater-bedtime",
+          "episodeTitleZh": "睡前故事",
+          "act": 2,
+          "lessonStage": null,
+          "promptId": "theater-bedtime-2-after-story-first",
+          "choiceId": null,
+          "usageType": "elder_prompt",
+          "semanticSpeakerZh": "外婆",
+          "semanticListenerZh": "孩子／孫輩",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "故事書打開了，今晚由你決定故事會去哪裡。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/theater_fd2a0761b53d.mp3",
+      "text": "Mời bà ăn cơm ạ.",
+      "intendedMeaningsZh": [
+        "外婆請吃飯。"
+      ],
+      "registerReviewScope": "contextual-speaker-listener",
+      "contexts": [
+        {
+          "path": "assets/audio/theater_fd2a0761b53d.mp3",
+          "targetText": "Mời bà ăn cơm ạ.",
+          "translationZh": "外婆請吃飯。",
+          "episodeId": "theater-mealtime",
+          "episodeTitleZh": "一起準備晚餐",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-mealtime-3-after-bowls-a-bit-hot",
+          "choiceId": "invite-grandma",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "碗排好隊了，熱湯先吹一吹，把全家人邀請到餐桌邊。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_fd2a0761b53d.mp3",
+          "targetText": "Mời bà ăn cơm ạ.",
+          "translationZh": "外婆請吃飯。",
+          "episodeId": "theater-mealtime",
+          "episodeTitleZh": "一起準備晚餐",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-mealtime-3-after-bowls-smells-good",
+          "choiceId": "invite-grandma",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "碗排好隊了，香氣飄滿廚房，把全家人邀請到餐桌邊。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_fd2a0761b53d.mp3",
+          "targetText": "Mời bà ăn cơm ạ.",
+          "translationZh": "外婆請吃飯。",
+          "episodeId": "theater-mealtime",
+          "episodeTitleZh": "一起準備晚餐",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-mealtime-3-after-chopsticks-a-bit-hot",
+          "choiceId": "invite-grandma",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "筷子找到位置，熱湯先吹一吹，把全家人邀請到餐桌邊。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        },
+        {
+          "path": "assets/audio/theater_fd2a0761b53d.mp3",
+          "targetText": "Mời bà ăn cơm ạ.",
+          "translationZh": "外婆請吃飯。",
+          "episodeId": "theater-mealtime",
+          "episodeTitleZh": "一起準備晚餐",
+          "act": 3,
+          "lessonStage": null,
+          "promptId": "theater-mealtime-3-after-chopsticks-smells-good",
+          "choiceId": "invite-grandma",
+          "usageType": "child_choice",
+          "semanticSpeakerZh": "孩子／孫輩",
+          "semanticListenerZh": "外婆",
+          "kinshipZh": "外婆",
+          "relationshipKnown": true,
+          "usageContextZh": "筷子找到位置，香氣飄滿廚房，把全家人邀請到餐桌邊。",
+          "sourceReference": "lib/models/conversation_episode.dart"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/vietnamese_chunk_day_la.mp3",
+      "text": "Đây là",
+      "intendedMeaningsZh": [
+        "這是……"
+      ],
+      "registerReviewScope": "explicit-markers-only; speaker/listener not structurally encoded",
+      "contexts": [
+        {
+          "path": "assets/audio/vietnamese_chunk_day_la.mp3",
+          "targetText": "Đây là",
+          "translationZh": "這是……",
+          "episodeId": "nuoc-mam",
+          "episodeTitleZh": "文化加分：外婆的魚露",
+          "act": null,
+          "lessonStage": "segment",
+          "promptId": null,
+          "choiceId": null,
+          "usageType": "lesson_segment",
+          "semanticSpeakerZh": null,
+          "semanticListenerZh": null,
+          "kinshipZh": null,
+          "relationshipKnown": false,
+          "usageContextZh": "餐桌上的魚露｜把這句想成兩塊積木：「這是」＋「魚露」。先各自聽清楚，再把兩塊接起來。",
+          "sourceReference": "lib/services/app_store.dart#nuoc-mam/segment/day-la"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/vietnamese_chunk_nuoc_mam.mp3",
+      "text": "nước mắm",
+      "intendedMeaningsZh": [
+        "魚露"
+      ],
+      "registerReviewScope": "explicit-markers-only; speaker/listener not structurally encoded",
+      "contexts": [
+        {
+          "path": "assets/audio/vietnamese_chunk_nuoc_mam.mp3",
+          "targetText": "nước mắm",
+          "translationZh": "魚露",
+          "episodeId": "nuoc-mam",
+          "episodeTitleZh": "文化加分：外婆的魚露",
+          "act": null,
+          "lessonStage": "segment",
+          "promptId": null,
+          "choiceId": null,
+          "usageType": "lesson_segment",
+          "semanticSpeakerZh": null,
+          "semanticListenerZh": null,
+          "kinshipZh": null,
+          "relationshipKnown": false,
+          "usageContextZh": "餐桌上的魚露｜把這句想成兩塊積木：「這是」＋「魚露」。先各自聽清楚，再把兩塊接起來。",
+          "sourceReference": "lib/services/app_store.dart#nuoc-mam/segment/nuoc-mam"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/vietnamese_delicious_example_canh.mp3",
+      "text": "Canh ngon quá ạ!",
+      "intendedMeaningsZh": [
+        "湯太好喝了！"
+      ],
+      "registerReviewScope": "explicit-markers-only; speaker/listener not structurally encoded",
+      "contexts": [
+        {
+          "path": "assets/audio/vietnamese_delicious_example_canh.mp3",
+          "targetText": "Canh ngon quá ạ!",
+          "translationZh": "湯太好喝了！",
+          "episodeId": "family-delicious",
+          "episodeTitleZh": "外婆煮得真好吃",
+          "act": null,
+          "lessonStage": "pattern_example",
+          "promptId": null,
+          "choiceId": null,
+          "usageType": "lesson_example",
+          "semanticSpeakerZh": null,
+          "semanticListenerZh": null,
+          "kinshipZh": null,
+          "relationshipKnown": false,
+          "usageContextZh": "稱讚家常菜｜某樣食物太好吃了！｜只說 Ngon quá ạ 也很自然；知道食物名稱時，可以放在句首。",
+          "sourceReference": "lib/services/app_store.dart#family-delicious/pattern/food-is-delicious-pattern/0"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/vietnamese_delicious_example_com.mp3",
+      "text": "Cơm ngon quá ạ!",
+      "intendedMeaningsZh": [
+        "飯太好吃了！"
+      ],
+      "registerReviewScope": "explicit-markers-only; speaker/listener not structurally encoded",
+      "contexts": [
+        {
+          "path": "assets/audio/vietnamese_delicious_example_com.mp3",
+          "targetText": "Cơm ngon quá ạ!",
+          "translationZh": "飯太好吃了！",
+          "episodeId": "family-delicious",
+          "episodeTitleZh": "外婆煮得真好吃",
+          "act": null,
+          "lessonStage": "pattern_example",
+          "promptId": null,
+          "choiceId": null,
+          "usageType": "lesson_example",
+          "semanticSpeakerZh": null,
+          "semanticListenerZh": null,
+          "kinshipZh": null,
+          "relationshipKnown": false,
+          "usageContextZh": "稱讚家常菜｜某樣食物太好吃了！｜只說 Ngon quá ạ 也很自然；知道食物名稱時，可以放在句首。",
+          "sourceReference": "lib/services/app_store.dart#family-delicious/pattern/food-is-delicious-pattern/1"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/vietnamese_delicious_example_rau.mp3",
+      "text": "Rau ngon quá ạ!",
+      "intendedMeaningsZh": [
+        "青菜太好吃了！"
+      ],
+      "registerReviewScope": "explicit-markers-only; speaker/listener not structurally encoded",
+      "contexts": [
+        {
+          "path": "assets/audio/vietnamese_delicious_example_rau.mp3",
+          "targetText": "Rau ngon quá ạ!",
+          "translationZh": "青菜太好吃了！",
+          "episodeId": "family-delicious",
+          "episodeTitleZh": "外婆煮得真好吃",
+          "act": null,
+          "lessonStage": "pattern_example",
+          "promptId": null,
+          "choiceId": null,
+          "usageType": "lesson_example",
+          "semanticSpeakerZh": null,
+          "semanticListenerZh": null,
+          "kinshipZh": null,
+          "relationshipKnown": false,
+          "usageContextZh": "稱讚家常菜｜某樣食物太好吃了！｜只說 Ngon quá ạ 也很自然；知道食物名稱時，可以放在句首。",
+          "sourceReference": "lib/services/app_store.dart#family-delicious/pattern/food-is-delicious-pattern/2"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/vietnamese_delicious_full.mp3",
+      "text": "Ngon quá ạ!",
+      "intendedMeaningsZh": [
+        "太好吃了！",
+        "太好吃了（對長輩的禮貌說法）"
+      ],
+      "registerReviewScope": "explicit-markers-only; speaker/listener not structurally encoded",
+      "contexts": [
+        {
+          "path": "assets/audio/vietnamese_delicious_full.mp3",
+          "targetText": "Ngon quá ạ!",
+          "translationZh": "太好吃了！",
+          "episodeId": "family-delicious",
+          "episodeTitleZh": "外婆煮得真好吃",
+          "act": null,
+          "lessonStage": "full_sentence",
+          "promptId": null,
+          "choiceId": null,
+          "usageType": "curriculum_sentence",
+          "semanticSpeakerZh": null,
+          "semanticListenerZh": null,
+          "kinshipZh": null,
+          "relationshipKnown": false,
+          "usageContextZh": "稱讚家常菜｜吃到外婆做的菜，笑著說：「太好吃了！」",
+          "sourceReference": "lib/services/app_store.dart#family-delicious"
+        },
+        {
+          "path": "assets/audio/vietnamese_delicious_full.mp3",
+          "targetText": "Ngon quá ạ",
+          "translationZh": "太好吃了（對長輩的禮貌說法）",
+          "episodeId": "family-delicious",
+          "episodeTitleZh": "外婆煮得真好吃",
+          "act": null,
+          "lessonStage": "segment",
+          "promptId": null,
+          "choiceId": null,
+          "usageType": "lesson_segment",
+          "semanticSpeakerZh": null,
+          "semanticListenerZh": null,
+          "kinshipZh": null,
+          "relationshipKnown": false,
+          "usageContextZh": "稱讚家常菜｜先說清楚「Ngon quá」，最後輕輕加上禮貌詞「ạ」。",
+          "sourceReference": "lib/services/app_store.dart#family-delicious/segment/ngon-qua-a"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/vietnamese_example_com.mp3",
+      "text": "Đây là cơm.",
+      "intendedMeaningsZh": [
+        "這是飯。"
+      ],
+      "registerReviewScope": "explicit-markers-only; speaker/listener not structurally encoded",
+      "contexts": [
+        {
+          "path": "assets/audio/vietnamese_example_com.mp3",
+          "targetText": "Đây là cơm.",
+          "translationZh": "這是飯。",
+          "episodeId": "nuoc-mam",
+          "episodeTitleZh": "文化加分：外婆的魚露",
+          "act": null,
+          "lessonStage": "pattern_example",
+          "promptId": null,
+          "choiceId": null,
+          "usageType": "lesson_example",
+          "semanticSpeakerZh": null,
+          "semanticListenerZh": null,
+          "kinshipZh": null,
+          "relationshipKnown": false,
+          "usageContextZh": "餐桌上的魚露｜這是＋人或東西。｜指著眼前的人或物介紹時很好用；只要替換最後一格。",
+          "sourceReference": "lib/services/app_store.dart#nuoc-mam/pattern/day-la-noun/2"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/vietnamese_example_me.mp3",
+      "text": "Đây là mẹ.",
+      "intendedMeaningsZh": [
+        "這是媽媽。"
+      ],
+      "registerReviewScope": "explicit-markers-only; speaker/listener not structurally encoded",
+      "contexts": [
+        {
+          "path": "assets/audio/vietnamese_example_me.mp3",
+          "targetText": "Đây là mẹ.",
+          "translationZh": "這是媽媽。",
+          "episodeId": "nuoc-mam",
+          "episodeTitleZh": "文化加分：外婆的魚露",
+          "act": null,
+          "lessonStage": "pattern_example",
+          "promptId": null,
+          "choiceId": null,
+          "usageType": "lesson_example",
+          "semanticSpeakerZh": null,
+          "semanticListenerZh": null,
+          "kinshipZh": null,
+          "relationshipKnown": false,
+          "usageContextZh": "餐桌上的魚露｜這是＋人或東西。｜指著眼前的人或物介紹時很好用；只要替換最後一格。",
+          "sourceReference": "lib/services/app_store.dart#nuoc-mam/pattern/day-la-noun/0"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/vietnamese_example_nha.mp3",
+      "text": "Đây là nhà.",
+      "intendedMeaningsZh": [
+        "這是家／房子。"
+      ],
+      "registerReviewScope": "explicit-markers-only; speaker/listener not structurally encoded",
+      "contexts": [
+        {
+          "path": "assets/audio/vietnamese_example_nha.mp3",
+          "targetText": "Đây là nhà.",
+          "translationZh": "這是家／房子。",
+          "episodeId": "nuoc-mam",
+          "episodeTitleZh": "文化加分：外婆的魚露",
+          "act": null,
+          "lessonStage": "pattern_example",
+          "promptId": null,
+          "choiceId": null,
+          "usageType": "lesson_example",
+          "semanticSpeakerZh": null,
+          "semanticListenerZh": null,
+          "kinshipZh": null,
+          "relationshipKnown": false,
+          "usageContextZh": "餐桌上的魚露｜這是＋人或東西。｜指著眼前的人或物介紹時很好用；只要替換最後一格。",
+          "sourceReference": "lib/services/app_store.dart#nuoc-mam/pattern/day-la-noun/1"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/vietnamese_greeting_ba_a.mp3",
+      "text": "bà ạ",
+      "intendedMeaningsZh": [
+        "外婆／奶奶（禮貌語氣）"
+      ],
+      "registerReviewScope": "explicit-markers-only; speaker/listener not structurally encoded",
+      "contexts": [
+        {
+          "path": "assets/audio/vietnamese_greeting_ba_a.mp3",
+          "targetText": "bà ạ",
+          "translationZh": "外婆／奶奶（禮貌語氣）",
+          "episodeId": "family-greeting",
+          "episodeTitleZh": "早安，外婆",
+          "act": null,
+          "lessonStage": "segment",
+          "promptId": null,
+          "choiceId": null,
+          "usageType": "lesson_segment",
+          "semanticSpeakerZh": null,
+          "semanticListenerZh": null,
+          "kinshipZh": null,
+          "relationshipKnown": false,
+          "usageContextZh": "早晨問候｜先看著外婆說「Cháu chào」，最後加上「bà ạ」表達尊敬。",
+          "sourceReference": "lib/services/app_store.dart#family-greeting/segment/ba-a"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/vietnamese_greeting_chau_chao.mp3",
+      "text": "Cháu chào",
+      "intendedMeaningsZh": [
+        "我向……問好"
+      ],
+      "registerReviewScope": "explicit-markers-only; speaker/listener not structurally encoded",
+      "contexts": [
+        {
+          "path": "assets/audio/vietnamese_greeting_chau_chao.mp3",
+          "targetText": "Cháu chào",
+          "translationZh": "我向……問好",
+          "episodeId": "family-greeting",
+          "episodeTitleZh": "早安，外婆",
+          "act": null,
+          "lessonStage": "segment",
+          "promptId": null,
+          "choiceId": null,
+          "usageType": "lesson_segment",
+          "semanticSpeakerZh": null,
+          "semanticListenerZh": null,
+          "kinshipZh": null,
+          "relationshipKnown": false,
+          "usageContextZh": "早晨問候｜先看著外婆說「Cháu chào」，最後加上「bà ạ」表達尊敬。",
+          "sourceReference": "lib/services/app_store.dart#family-greeting/segment/chau-chao"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/vietnamese_greeting_example_chi.mp3",
+      "text": "Em chào chị ạ.",
+      "intendedMeaningsZh": [
+        "姊姊您好。"
+      ],
+      "registerReviewScope": "explicit-markers-only; speaker/listener not structurally encoded",
+      "contexts": [
+        {
+          "path": "assets/audio/vietnamese_greeting_example_chi.mp3",
+          "targetText": "Em chào chị ạ.",
+          "translationZh": "姊姊您好。",
+          "episodeId": "family-greeting",
+          "episodeTitleZh": "早安，外婆",
+          "act": null,
+          "lessonStage": "pattern_example",
+          "promptId": null,
+          "choiceId": null,
+          "usageType": "lesson_example",
+          "semanticSpeakerZh": null,
+          "semanticListenerZh": null,
+          "kinshipZh": null,
+          "relationshipKnown": false,
+          "usageContextZh": "早晨問候｜我向某位家人問好。｜對父母常自稱 con，對祖父母常自稱 cháu；稱謂要跟家庭關係一起換。",
+          "sourceReference": "lib/services/app_store.dart#family-greeting/pattern/family-greeting-pattern/2"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/vietnamese_greeting_example_me.mp3",
+      "text": "Con chào mẹ ạ.",
+      "intendedMeaningsZh": [
+        "媽媽您好。"
+      ],
+      "registerReviewScope": "explicit-markers-only; speaker/listener not structurally encoded",
+      "contexts": [
+        {
+          "path": "assets/audio/vietnamese_greeting_example_me.mp3",
+          "targetText": "Con chào mẹ ạ.",
+          "translationZh": "媽媽您好。",
+          "episodeId": "family-greeting",
+          "episodeTitleZh": "早安，外婆",
+          "act": null,
+          "lessonStage": "pattern_example",
+          "promptId": null,
+          "choiceId": null,
+          "usageType": "lesson_example",
+          "semanticSpeakerZh": null,
+          "semanticListenerZh": null,
+          "kinshipZh": null,
+          "relationshipKnown": false,
+          "usageContextZh": "早晨問候｜我向某位家人問好。｜對父母常自稱 con，對祖父母常自稱 cháu；稱謂要跟家庭關係一起換。",
+          "sourceReference": "lib/services/app_store.dart#family-greeting/pattern/family-greeting-pattern/1"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/vietnamese_greeting_example_ong.mp3",
+      "text": "Cháu chào ông ạ.",
+      "intendedMeaningsZh": [
+        "爺爺／外公您好。"
+      ],
+      "registerReviewScope": "explicit-markers-only; speaker/listener not structurally encoded",
+      "contexts": [
+        {
+          "path": "assets/audio/vietnamese_greeting_example_ong.mp3",
+          "targetText": "Cháu chào ông ạ.",
+          "translationZh": "爺爺／外公您好。",
+          "episodeId": "family-greeting",
+          "episodeTitleZh": "早安，外婆",
+          "act": null,
+          "lessonStage": "pattern_example",
+          "promptId": null,
+          "choiceId": null,
+          "usageType": "lesson_example",
+          "semanticSpeakerZh": null,
+          "semanticListenerZh": null,
+          "kinshipZh": null,
+          "relationshipKnown": false,
+          "usageContextZh": "早晨問候｜我向某位家人問好。｜對父母常自稱 con，對祖父母常自稱 cháu；稱謂要跟家庭關係一起換。",
+          "sourceReference": "lib/services/app_store.dart#family-greeting/pattern/family-greeting-pattern/0"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/vietnamese_greeting_full.mp3",
+      "text": "Cháu chào bà ạ.",
+      "intendedMeaningsZh": [
+        "外婆／奶奶您好。"
+      ],
+      "registerReviewScope": "explicit-markers-only; speaker/listener not structurally encoded",
+      "contexts": [
+        {
+          "path": "assets/audio/vietnamese_greeting_full.mp3",
+          "targetText": "Cháu chào bà ạ.",
+          "translationZh": "外婆／奶奶您好。",
+          "episodeId": "family-greeting",
+          "episodeTitleZh": "早安，外婆",
+          "act": null,
+          "lessonStage": "full_sentence",
+          "promptId": null,
+          "choiceId": null,
+          "usageType": "curriculum_sentence",
+          "semanticSpeakerZh": null,
+          "semanticListenerZh": null,
+          "kinshipZh": null,
+          "relationshipKnown": false,
+          "usageContextZh": "早晨問候｜早上看到外婆，先說一句：「外婆您好。」",
+          "sourceReference": "lib/services/app_store.dart#family-greeting"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/vietnamese_homecoming_chau_ve.mp3",
+      "text": "Cháu về",
+      "intendedMeaningsZh": [
+        "我回來"
+      ],
+      "registerReviewScope": "explicit-markers-only; speaker/listener not structurally encoded",
+      "contexts": [
+        {
+          "path": "assets/audio/vietnamese_homecoming_chau_ve.mp3",
+          "targetText": "Cháu về",
+          "translationZh": "我回來",
+          "episodeId": "family-homecoming",
+          "episodeTitleZh": "我回來了",
+          "act": null,
+          "lessonStage": "segment",
+          "promptId": null,
+          "choiceId": null,
+          "usageType": "lesson_segment",
+          "semanticSpeakerZh": null,
+          "semanticListenerZh": null,
+          "kinshipZh": null,
+          "relationshipKnown": false,
+          "usageContextZh": "放學回家｜先說「Cháu về」，再用「rồi ạ」告訴外婆：現在已經回到家了。",
+          "sourceReference": "lib/services/app_store.dart#family-homecoming/segment/chau-ve"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/vietnamese_homecoming_example_bo.mp3",
+      "text": "Bố về rồi.",
+      "intendedMeaningsZh": [
+        "爸爸回來了。"
+      ],
+      "registerReviewScope": "explicit-markers-only; speaker/listener not structurally encoded",
+      "contexts": [
+        {
+          "path": "assets/audio/vietnamese_homecoming_example_bo.mp3",
+          "targetText": "Bố về rồi.",
+          "translationZh": "爸爸回來了。",
+          "episodeId": "family-homecoming",
+          "episodeTitleZh": "我回來了",
+          "act": null,
+          "lessonStage": "pattern_example",
+          "promptId": null,
+          "choiceId": null,
+          "usageType": "lesson_example",
+          "semanticSpeakerZh": null,
+          "semanticListenerZh": null,
+          "kinshipZh": null,
+          "relationshipKnown": false,
+          "usageContextZh": "放學回家｜我已經回來了。｜對父母把 cháu 換成 con；rồi 放在動作後面，表示事情已經發生。",
+          "sourceReference": "lib/services/app_store.dart#family-homecoming/pattern/family-return-pattern/2"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/vietnamese_homecoming_example_con.mp3",
+      "text": "Con về rồi ạ.",
+      "intendedMeaningsZh": [
+        "爸爸媽媽，我回來了。"
+      ],
+      "registerReviewScope": "explicit-markers-only; speaker/listener not structurally encoded",
+      "contexts": [
+        {
+          "path": "assets/audio/vietnamese_homecoming_example_con.mp3",
+          "targetText": "Con về rồi ạ.",
+          "translationZh": "爸爸媽媽，我回來了。",
+          "episodeId": "family-homecoming",
+          "episodeTitleZh": "我回來了",
+          "act": null,
+          "lessonStage": "pattern_example",
+          "promptId": null,
+          "choiceId": null,
+          "usageType": "lesson_example",
+          "semanticSpeakerZh": null,
+          "semanticListenerZh": null,
+          "kinshipZh": null,
+          "relationshipKnown": false,
+          "usageContextZh": "放學回家｜我已經回來了。｜對父母把 cháu 換成 con；rồi 放在動作後面，表示事情已經發生。",
+          "sourceReference": "lib/services/app_store.dart#family-homecoming/pattern/family-return-pattern/0"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/vietnamese_homecoming_example_me.mp3",
+      "text": "Mẹ về rồi.",
+      "intendedMeaningsZh": [
+        "媽媽回來了。"
+      ],
+      "registerReviewScope": "explicit-markers-only; speaker/listener not structurally encoded",
+      "contexts": [
+        {
+          "path": "assets/audio/vietnamese_homecoming_example_me.mp3",
+          "targetText": "Mẹ về rồi.",
+          "translationZh": "媽媽回來了。",
+          "episodeId": "family-homecoming",
+          "episodeTitleZh": "我回來了",
+          "act": null,
+          "lessonStage": "pattern_example",
+          "promptId": null,
+          "choiceId": null,
+          "usageType": "lesson_example",
+          "semanticSpeakerZh": null,
+          "semanticListenerZh": null,
+          "kinshipZh": null,
+          "relationshipKnown": false,
+          "usageContextZh": "放學回家｜我已經回來了。｜對父母把 cháu 換成 con；rồi 放在動作後面，表示事情已經發生。",
+          "sourceReference": "lib/services/app_store.dart#family-homecoming/pattern/family-return-pattern/1"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/vietnamese_homecoming_full.mp3",
+      "text": "Cháu về rồi ạ.",
+      "intendedMeaningsZh": [
+        "外婆／奶奶，我回來了。"
+      ],
+      "registerReviewScope": "explicit-markers-only; speaker/listener not structurally encoded",
+      "contexts": [
+        {
+          "path": "assets/audio/vietnamese_homecoming_full.mp3",
+          "targetText": "Cháu về rồi ạ.",
+          "translationZh": "外婆／奶奶，我回來了。",
+          "episodeId": "family-homecoming",
+          "episodeTitleZh": "我回來了",
+          "act": null,
+          "lessonStage": "full_sentence",
+          "promptId": null,
+          "choiceId": null,
+          "usageType": "curriculum_sentence",
+          "semanticSpeakerZh": null,
+          "semanticListenerZh": null,
+          "kinshipZh": null,
+          "relationshipKnown": false,
+          "usageContextZh": "放學回家｜放學進門時，跟外婆說：「我回來了。」",
+          "sourceReference": "lib/services/app_store.dart#family-homecoming"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/vietnamese_homecoming_roi_a.mp3",
+      "text": "rồi ạ",
+      "intendedMeaningsZh": [
+        "已經了（禮貌語氣）"
+      ],
+      "registerReviewScope": "explicit-markers-only; speaker/listener not structurally encoded",
+      "contexts": [
+        {
+          "path": "assets/audio/vietnamese_homecoming_roi_a.mp3",
+          "targetText": "rồi ạ",
+          "translationZh": "已經了（禮貌語氣）",
+          "episodeId": "family-homecoming",
+          "episodeTitleZh": "我回來了",
+          "act": null,
+          "lessonStage": "segment",
+          "promptId": null,
+          "choiceId": null,
+          "usageType": "lesson_segment",
+          "semanticSpeakerZh": null,
+          "semanticListenerZh": null,
+          "kinshipZh": null,
+          "relationshipKnown": false,
+          "usageContextZh": "放學回家｜先說「Cháu về」，再用「rồi ạ」告訴外婆：現在已經回到家了。",
+          "sourceReference": "lib/services/app_store.dart#family-homecoming/segment/roi-a"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/vietnamese_mealtime_an_com_a.mp3",
+      "text": "ăn cơm ạ",
+      "intendedMeaningsZh": [
+        "吃飯（禮貌語氣）"
+      ],
+      "registerReviewScope": "explicit-markers-only; speaker/listener not structurally encoded",
+      "contexts": [
+        {
+          "path": "assets/audio/vietnamese_mealtime_an_com_a.mp3",
+          "targetText": "ăn cơm ạ",
+          "translationZh": "吃飯（禮貌語氣）",
+          "episodeId": "family-mealtime",
+          "episodeTitleZh": "開飯前先邀請",
+          "act": null,
+          "lessonStage": "segment",
+          "promptId": null,
+          "choiceId": null,
+          "usageType": "lesson_segment",
+          "semanticSpeakerZh": null,
+          "semanticListenerZh": null,
+          "kinshipZh": null,
+          "relationshipKnown": false,
+          "usageContextZh": "全家吃飯｜這句分成「邀請外婆」和「吃飯」兩塊；先慢慢說，再把兩塊接起來。",
+          "sourceReference": "lib/services/app_store.dart#family-mealtime/segment/an-com-a"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/vietnamese_mealtime_chau_moi_ba.mp3",
+      "text": "Cháu mời bà",
+      "intendedMeaningsZh": [
+        "我邀請外婆／奶奶"
+      ],
+      "registerReviewScope": "explicit-markers-only; speaker/listener not structurally encoded",
+      "contexts": [
+        {
+          "path": "assets/audio/vietnamese_mealtime_chau_moi_ba.mp3",
+          "targetText": "Cháu mời bà",
+          "translationZh": "我邀請外婆／奶奶",
+          "episodeId": "family-mealtime",
+          "episodeTitleZh": "開飯前先邀請",
+          "act": null,
+          "lessonStage": "segment",
+          "promptId": null,
+          "choiceId": null,
+          "usageType": "lesson_segment",
+          "semanticSpeakerZh": null,
+          "semanticListenerZh": null,
+          "kinshipZh": null,
+          "relationshipKnown": false,
+          "usageContextZh": "全家吃飯｜這句分成「邀請外婆」和「吃飯」兩塊；先慢慢說，再把兩塊接起來。",
+          "sourceReference": "lib/services/app_store.dart#family-mealtime/segment/chau-moi-ba"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/vietnamese_mealtime_example_bo_me.mp3",
+      "text": "Con mời bố mẹ ăn cơm ạ.",
+      "intendedMeaningsZh": [
+        "爸爸媽媽，請吃飯。"
+      ],
+      "registerReviewScope": "explicit-markers-only; speaker/listener not structurally encoded",
+      "contexts": [
+        {
+          "path": "assets/audio/vietnamese_mealtime_example_bo_me.mp3",
+          "targetText": "Con mời bố mẹ ăn cơm ạ.",
+          "translationZh": "爸爸媽媽，請吃飯。",
+          "episodeId": "family-mealtime",
+          "episodeTitleZh": "開飯前先邀請",
+          "act": null,
+          "lessonStage": "pattern_example",
+          "promptId": null,
+          "choiceId": null,
+          "usageType": "lesson_example",
+          "semanticSpeakerZh": null,
+          "semanticListenerZh": null,
+          "kinshipZh": null,
+          "relationshipKnown": false,
+          "usageContextZh": "全家吃飯｜請某位家人吃飯。｜換掉自稱和家人稱謂，就能對不同家人自然地說。",
+          "sourceReference": "lib/services/app_store.dart#family-mealtime/pattern/invite-family-to-eat-pattern/0"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/vietnamese_mealtime_example_ca_nha.mp3",
+      "text": "Mời cả nhà ăn cơm ạ.",
+      "intendedMeaningsZh": [
+        "請大家吃飯。"
+      ],
+      "registerReviewScope": "explicit-markers-only; speaker/listener not structurally encoded",
+      "contexts": [
+        {
+          "path": "assets/audio/vietnamese_mealtime_example_ca_nha.mp3",
+          "targetText": "Mời cả nhà ăn cơm ạ.",
+          "translationZh": "請大家吃飯。",
+          "episodeId": "family-mealtime",
+          "episodeTitleZh": "開飯前先邀請",
+          "act": null,
+          "lessonStage": "pattern_example",
+          "promptId": null,
+          "choiceId": null,
+          "usageType": "lesson_example",
+          "semanticSpeakerZh": null,
+          "semanticListenerZh": null,
+          "kinshipZh": null,
+          "relationshipKnown": false,
+          "usageContextZh": "全家吃飯｜請某位家人吃飯。｜換掉自稱和家人稱謂，就能對不同家人自然地說。",
+          "sourceReference": "lib/services/app_store.dart#family-mealtime/pattern/invite-family-to-eat-pattern/2"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/vietnamese_mealtime_example_ong.mp3",
+      "text": "Cháu mời ông ăn cơm ạ.",
+      "intendedMeaningsZh": [
+        "爺爺／外公，請吃飯。"
+      ],
+      "registerReviewScope": "explicit-markers-only; speaker/listener not structurally encoded",
+      "contexts": [
+        {
+          "path": "assets/audio/vietnamese_mealtime_example_ong.mp3",
+          "targetText": "Cháu mời ông ăn cơm ạ.",
+          "translationZh": "爺爺／外公，請吃飯。",
+          "episodeId": "family-mealtime",
+          "episodeTitleZh": "開飯前先邀請",
+          "act": null,
+          "lessonStage": "pattern_example",
+          "promptId": null,
+          "choiceId": null,
+          "usageType": "lesson_example",
+          "semanticSpeakerZh": null,
+          "semanticListenerZh": null,
+          "kinshipZh": null,
+          "relationshipKnown": false,
+          "usageContextZh": "全家吃飯｜請某位家人吃飯。｜換掉自稱和家人稱謂，就能對不同家人自然地說。",
+          "sourceReference": "lib/services/app_store.dart#family-mealtime/pattern/invite-family-to-eat-pattern/1"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/vietnamese_mealtime_full.mp3",
+      "text": "Cháu mời bà ăn cơm ạ.",
+      "intendedMeaningsZh": [
+        "外婆／奶奶，請吃飯。"
+      ],
+      "registerReviewScope": "explicit-markers-only; speaker/listener not structurally encoded",
+      "contexts": [
+        {
+          "path": "assets/audio/vietnamese_mealtime_full.mp3",
+          "targetText": "Cháu mời bà ăn cơm ạ.",
+          "translationZh": "外婆／奶奶，請吃飯。",
+          "episodeId": "family-mealtime",
+          "episodeTitleZh": "開飯前先邀請",
+          "act": null,
+          "lessonStage": "full_sentence",
+          "promptId": null,
+          "choiceId": null,
+          "usageType": "curriculum_sentence",
+          "semanticSpeakerZh": null,
+          "semanticListenerZh": null,
+          "kinshipZh": null,
+          "relationshipKnown": false,
+          "usageContextZh": "全家吃飯｜開飯前，先對外婆說：「請吃飯。」",
+          "sourceReference": "lib/services/app_store.dart#family-mealtime"
+        }
+      ]
+    },
+    {
+      "path": "assets/audio/vietnamese_short_demo.mp3",
+      "text": "Đây là nước mắm.",
+      "intendedMeaningsZh": [
+        "這是魚露。"
+      ],
+      "registerReviewScope": "explicit-markers-only; speaker/listener not structurally encoded",
+      "contexts": [
+        {
+          "path": "assets/audio/vietnamese_short_demo.mp3",
+          "targetText": "Đây là nước mắm.",
+          "translationZh": "這是魚露。",
+          "episodeId": "nuoc-mam",
+          "episodeTitleZh": "文化加分：外婆的魚露",
+          "act": null,
+          "lessonStage": "full_sentence",
+          "promptId": null,
+          "choiceId": null,
+          "usageType": "curriculum_sentence",
+          "semanticSpeakerZh": null,
+          "semanticListenerZh": null,
+          "kinshipZh": null,
+          "relationshipKnown": false,
+          "usageContextZh": "餐桌上的魚露｜完成生活短句後，再來認識餐桌上的文化加分題：「這是魚露。」",
+          "sourceReference": "lib/services/app_store.dart#nuoc-mam"
+        }
+      ]
+    }
+  ],
+  "contextCatalogSha256": "369E5DB0A4A7305B62482716514CD1C74987AAE7AC4C01707923EC7A84D70BDA"
+}

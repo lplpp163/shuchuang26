@@ -1,182 +1,3399 @@
 {
+  "project": "傳家話",
   "source_of_truth": "交付成果/README.md",
-  "synced_at": "2026-07-11T08:39:11.9006578+08:00",
+  "synced_at": "2026-07-14T04:50:30.5630847+08:00",
   "files": [
     {
-      "label": "最新計畫書 PDF",
-      "source": "交付成果/計畫書/2026臺灣數創大賞_數位組創業計畫書_島語通_AI正式版.pdf",
-      "destination": "deliverables/plan/DaoTalk-AI-plan.pdf",
-      "bytes": 607856,
-      "source_modified_at": "2026-07-11T07:01:59.5772665+08:00",
-      "sha256": "73F2996B411D0B06FD05FC058A462FB1ED488342BCBA059AF5679A0DDA4162D1"
+      "label": "『傳家話』計畫書 PDF",
+      "source": "交付成果/計畫書/2026臺灣數創大賞_數位組創業計畫書_傳家話_正式版.pdf",
+      "destination": "deliverables/plan/chuan-jia-hua-plan.pdf",
+      "bytes": 626645,
+      "source_modified_at": "2026-07-14T03:57:28.3468017+08:00",
+      "sha256": "0206A96923B68FF46D11997E873517DE8A3E39858CB5F251121F99F20631E7A7"
     },
     {
-      "label": "最新計畫書 DOCX",
-      "source": "交付成果/計畫書/2026臺灣數創大賞_數位組創業計畫書_島語通_AI正式版.docx",
-      "destination": "deliverables/plan/DaoTalk-AI-plan.docx",
-      "bytes": 249803,
-      "source_modified_at": "2026-07-11T07:01:59.5292483+08:00",
-      "sha256": "CE3CB118CD4BC55F781DDBD7851321B9AE5B6B36A521D563CF484E812E2FD8AA"
+      "label": "『傳家話』計畫書 DOCX",
+      "source": "交付成果/計畫書/2026臺灣數創大賞_數位組創業計畫書_傳家話_正式版.docx",
+      "destination": "deliverables/plan/chuan-jia-hua-plan.docx",
+      "bytes": 1016205,
+      "source_modified_at": "2026-07-14T03:57:28.0997954+08:00",
+      "sha256": "1A3F2F023AFDF3C6168287F3B8B8782FCEA4D2A3D281014D46BBDBCE21B92729"
     },
     {
-      "label": "計畫書版面預覽",
-      "source": "交付成果/計畫書/AI正式版_QA/verified-contact-sheet.png",
-      "destination": "deliverables/previews/plan-contact-sheet.png",
-      "bytes": 2259337,
-      "source_modified_at": "2026-07-11T07:04:20.1184044+08:00",
-      "sha256": "9B3212C31EB014F1C0A3F37692DDE7A6A1605E4DA0B6211436817F13F2E7CD0D"
-    },
-    {
-      "label": "正式 Demo HTML",
-      "source": "正式版/frontend/index.html",
-      "destination": "deliverables/demo/index.html",
-      "bytes": 17537,
-      "source_modified_at": "2026-07-11T06:28:32.3309991+08:00",
-      "sha256": "D2B274D9466FF79835E313B83CEC7FE96FB3ABAE44324CFB10ABFBA429C900B1"
-    },
-    {
-      "label": "正式 Demo CSS",
-      "source": "正式版/frontend/styles.css",
-      "destination": "deliverables/demo/styles.css",
-      "bytes": 29486,
-      "source_modified_at": "2026-07-11T06:28:41.4794029+08:00",
-      "sha256": "D4E84FD818B243A421DCE98210E31CE143F5A8617B4EDED24EC93EECF3C6CFFF"
-    },
-    {
-      "label": "正式 Demo JavaScript",
-      "source": "正式版/frontend/app.js",
-      "destination": "deliverables/demo/app.js",
-      "bytes": 27846,
-      "source_modified_at": "2026-07-11T06:35:01.0703397+08:00",
-      "sha256": "6C584993C71C579132AD8E932824B14AE073BFB70D145DCAF7AE84ACC65B890D"
-    },
-    {
-      "label": "正式影片 HTML",
-      "source": "正式版/video/index.html",
-      "destination": "deliverables/video/index.html",
-      "bytes": 14052,
-      "source_modified_at": "2026-07-11T06:49:27.4123015+08:00",
-      "sha256": "95A226F09BD459CF348BB6F278BE726DD660E3EF7FF783B63610129097A1C5E0"
-    },
-    {
-      "label": "正式影片 CSS",
-      "source": "正式版/video/styles.css",
-      "destination": "deliverables/video/styles.css",
-      "bytes": 25173,
-      "source_modified_at": "2026-07-11T06:52:25.8427937+08:00",
-      "sha256": "D6F7ACC826A9643114FFB9A1C08E2545654F96F7575974AE66DFFB4E6D74FA44"
-    },
-    {
-      "label": "正式影片 JavaScript",
-      "source": "正式版/video/app.js",
-      "destination": "deliverables/video/app.js",
-      "bytes": 6619,
-      "source_modified_at": "2026-07-11T06:53:15.6066476+08:00",
-      "sha256": "2A34D04CE294DA556224B9561C9D628F6750744C4670380770A4C43F3401727E"
-    },
-    {
-      "label": "影片旁白逐字稿",
-      "source": "正式版/video/旁白逐字稿.md",
+      "label": "3 分鐘初審影片分鏡與旁白",
+      "source": "交付成果/影片/傳家話_初審影片分鏡與旁白.md",
       "destination": "deliverables/video/narration.md",
-      "bytes": 5298,
-      "source_modified_at": "2026-07-11T06:54:09.7333791+08:00",
-      "sha256": "80D979724FB2F2EC4669A51DB609757D333448EAFEB718BC53CF020F23664853"
+      "bytes": 5729,
+      "source_modified_at": "2026-07-14T03:55:00.4528253+08:00",
+      "sha256": "D1610278B9B1D5FEDE562C8666425AC5AD865E89BF47582886E8D63F369CF914"
     },
     {
-      "label": "影片合成薪資單圖片",
-      "source": "正式版/sample_documents/合成薪資明細_中越_清晰.png",
-      "destination": "deliverables/sample_documents/合成薪資明細_中越_清晰.png",
-      "bytes": 93354,
-      "source_modified_at": "2026-07-11T06:23:02.6294654+08:00",
-      "sha256": "B3B35BE6691F88916B09037E185E9217485A6D10B89BFD65391CFCD8C505454C"
+      "label": "『傳家話』初審影片 Web 預覽",
+      "source": "交付成果/影片/傳家話_網頁預覽.mp4",
+      "destination": "deliverables/video/chuan-jia-hua-submission.mp4",
+      "bytes": 21433106,
+      "source_modified_at": "2026-07-14T04:10:05.9365013+08:00",
+      "sha256": "0D86FAE761214CB40EBB8D7571CD1343216A901F94EA5A821C4219F5BE22BD39"
     },
     {
-      "label": "合成薪資單 PDF",
-      "source": "正式版/sample_documents/合成薪資明細_中越.pdf",
-      "destination": "deliverables/sample_documents/synthetic-payroll.pdf",
-      "bytes": 477185,
-      "source_modified_at": "2026-07-11T06:22:11.9007624+08:00",
-      "sha256": "17453892821351D5D40529C0F50DC8B19B4DE809369279DDEFCC48E4C1525EEA"
+      "label": "『傳家話』正式初審影片驗證",
+      "source": "交付成果/影片/傳家話_正式初審影片_驗證.json",
+      "destination": "deliverables/video/verification.json",
+      "bytes": 33996,
+      "source_modified_at": "2026-07-14T04:10:49.7871522+08:00",
+      "sha256": "C58D348DAF87BC2B62549A8F762E96CEAEBB45AA6CEA39EBED6805B66F7ACA8C"
     },
     {
-      "label": "訪談素材列印版",
-      "source": "交付成果/移工訪談素材包/訪談素材列印版.html",
-      "destination": "deliverables/interview/index.html",
-      "bytes": 37745,
-      "source_modified_at": "2026-07-11T05:47:34.4016591+08:00",
-      "sha256": "F1A78F30057160A931FF2E2B4A19340DF4523D6BA11337BAE74AD6CF0BA99D62"
+      "label": "『傳家話』正式初審影片內容設定",
+      "source": "交付成果/影片/video_content.json",
+      "destination": "deliverables/video/video_content.json",
+      "bytes": 15021,
+      "source_modified_at": "2026-07-14T03:55:00.4368280+08:00",
+      "sha256": "159A526104287FBBCAB575B92539D6F8CD7E36CD0BB92C378DB068B7D3073AF8"
     },
     {
-      "label": "正式產品首頁預覽",
-      "source": "交付成果/QA截圖/正式版_首頁.png",
-      "destination": "deliverables/previews/product-home.png",
-      "bytes": 902442,
-      "source_modified_at": "2026-07-11T06:39:39.2183586+08:00",
-      "sha256": "296FA0ECF9E624591CF67BFCC50A1CBFD2AC41EFF1A107C5E2B334CECBA94277"
+      "label": "『傳家話』正式初審影片重建腳本",
+      "source": "交付成果/影片/build_submission_video.ps1",
+      "destination": "deliverables/video/build_submission_video.ps1",
+      "bytes": 66905,
+      "source_modified_at": "2026-07-13T23:10:20.8338607+08:00",
+      "sha256": "8A4D7442F004B99D2942FD49E712E433CDCB9A6381D31BFCDCA15CA671A25B7C"
     },
     {
-      "label": "正式產品結果預覽",
-      "source": "交付成果/QA截圖/正式版_結果.png",
-      "destination": "deliverables/previews/product-result.png",
-      "bytes": 216307,
-      "source_modified_at": "2026-07-11T06:39:41.5431011+08:00",
-      "sha256": "32A8B39863D93FB99DE4C7FB89A972E74701A3344AC6F0D23434C2C45FE86CD3"
+      "label": "『傳家話』正式初審影片製作說明",
+      "source": "交付成果/影片/正式影片製作說明.md",
+      "destination": "deliverables/video/production-notes.md",
+      "bytes": 3865,
+      "source_modified_at": "2026-07-14T04:18:03.5299512+08:00",
+      "sha256": "EF60416F183C1E2462FAC4A1C2635C66BE692C3B169EBDC5511CA6A7C372D322"
     },
     {
-      "label": "訪談素材預覽",
-      "source": "交付成果/QA截圖/訪談素材列印版.png",
-      "destination": "deliverables/previews/interview.png",
-      "bytes": 156004,
-      "source_modified_at": "2026-07-11T05:47:53.7459289+08:00",
-      "sha256": "8B59466880978FB9A84F38F657ECCDE45201D063487661FE7AE38737B8E8EA1E"
+      "label": "『傳家話』嚴格驗收報告",
+      "source": "交付成果/嚴格驗收報告.md",
+      "destination": "deliverables/docs/strict-review.md",
+      "bytes": 17119,
+      "source_modified_at": "2026-07-14T04:49:23.7354066+08:00",
+      "sha256": "C828D95DDA69BF2907BE20186FC82AEDB6FC8061250B46B40C68781A8E1489AC"
     },
     {
-      "label": "正式影片 13 幕預覽",
-      "source": "正式版/video/QA/contact-sheet.png",
-      "destination": "deliverables/previews/video-contact-sheet.png",
-      "bytes": 3014417,
-      "source_modified_at": "2026-07-11T06:57:42.6238890+08:00",
-      "sha256": "73064E4EDB5F3813B0AF134B3BA00F852F7A77C3F72C8606458687481B5A0D31"
+      "label": "『傳家話』技術驗證紀錄",
+      "source": "交付成果/作品/傳家話_技術驗證紀錄.md",
+      "destination": "deliverables/docs/technical-validation.md",
+      "bytes": 13473,
+      "source_modified_at": "2026-07-14T04:49:23.7374058+08:00",
+      "sha256": "BA68BE7131999F47E3AC910763C8C38C306D7F9A25B39525ECE1A7493C0164E9"
     },
     {
-      "label": "正式版嚴格驗收報告",
-      "source": "正式版/嚴格驗收報告.md",
-      "destination": "deliverables/docs/acceptance-report.md",
-      "bytes": 8981,
-      "source_modified_at": "2026-07-11T06:59:43.6277540+08:00",
-      "sha256": "6EDF8DA7721C309A7907381C1B74D78F00E8AE7AF2DBCB4EBA7A26974F8B63CB"
+      "label": "『傳家話』家庭需求與試演問卷",
+      "source": "交付成果/問卷/傳家話_新住民家庭需求與試演問卷.md",
+      "destination": "deliverables/docs/family-pilot-questionnaire.md",
+      "bytes": 5628,
+      "source_modified_at": "2026-07-13T21:58:58.8922591+08:00",
+      "sha256": "FCB3D56E5E9E6675B808F24CE45D42865F0009A5697D9DFAA1AAC9B692CD306D"
     },
     {
-      "label": "正式版技術架構",
-      "source": "正式版/docs/正式版技術架構.md",
-      "destination": "deliverables/docs/technical-architecture.md",
-      "bytes": 8219,
-      "source_modified_at": "2026-07-11T06:25:31.6821136+08:00",
-      "sha256": "8C0723FDE90120E34CC4BBC36FC54C8875EE8B2DBF07CEF9ED28FA7A8F3F37CC"
+      "label": "『傳家話』四週教師家庭延伸情境包",
+      "source": "交付成果/導入/傳家話_教師家庭延伸情境包_四週試辦版.pdf",
+      "destination": "deliverables/pilot/teacher-family-extension-pack.pdf",
+      "bytes": 550717,
+      "source_modified_at": "2026-07-14T03:16:13.2442666+08:00",
+      "sha256": "ADDB3D08295ACBBABA90F37A7254D41A79AE6CA633C6759D34BBDB125EAAF51B"
     },
     {
-      "label": "AI 評估規格",
-      "source": "正式版/docs/AI評估規格.md",
-      "destination": "deliverables/docs/evaluation-spec.md",
-      "bytes": 10690,
-      "source_modified_at": "2026-07-11T06:33:45.5971299+08:00",
-      "sha256": "1CC81ACFEDEBAFC8D055A48B01FCEDDA87B4483ABBC8D4A0F5D5F3535A2D4E8B"
+      "label": "『傳家話』四週試辦包重建與證據說明",
+      "source": "交付成果/導入/README.md",
+      "destination": "deliverables/pilot/README.md",
+      "bytes": 1624,
+      "source_modified_at": "2026-07-14T03:16:06.1408016+08:00",
+      "sha256": "0DE3955DBC5CC768EB83ADFE7B9B1A3442370A3A12636BA79D516B7A99E8F1C4"
     },
     {
-      "label": "後端驗證紀錄",
-      "source": "正式版/backend/VALIDATION.md",
-      "destination": "deliverables/docs/backend-validation.md",
-      "bytes": 2082,
-      "source_modified_at": "2026-07-11T06:35:48.2620139+08:00",
-      "sha256": "DC847091B0BC68ED4CAC49DE371A43EF36D700B3BF4C3B9EA57BF02D0F39E01A"
+      "label": "『傳家話』四週試辦包 QA",
+      "source": "交付成果/導入/QA/檢查摘要.json",
+      "destination": "deliverables/pilot/qa-summary.json",
+      "bytes": 3888,
+      "source_modified_at": "2026-07-14T03:16:13.6672462+08:00",
+      "sha256": "5CE6A99A9036BB269FCC64A47E157A29D7EE5032CF041321DBFABA4DF2C7E036"
     },
     {
-      "label": "Offline mock 評測報告",
-      "source": "正式版/evals/reports/backend_offline_mock.md",
-      "destination": "deliverables/docs/offline-mock-report.md",
-      "bytes": 5418,
-      "source_modified_at": "2026-07-11T06:35:24.4758097+08:00",
-      "sha256": "DF419F9C078335CBB9A1284BB3D258E0E5055AAA3DFB0DB529339580BCE9EC3D"
+      "label": "『傳家話』越南語 119 句母語審閱工具",
+      "source": "交付成果/語言審閱/傳家話_越南語119句母語審閱工具.html",
+      "destination": "deliverables/review/index.html",
+      "bytes": 177109,
+      "source_modified_at": "2026-07-14T04:19:59.4516447+08:00",
+      "sha256": "0E334311462E17A183A22FA8A123F5A067CF128237451C2907745488E29A8FEE"
+    },
+    {
+      "label": "『傳家話』越南語母語審閱說明",
+      "source": "交付成果/語言審閱/README.md",
+      "destination": "deliverables/review/README.md",
+      "bytes": 4508,
+      "source_modified_at": "2026-07-13T22:39:23.8376455+08:00",
+      "sha256": "BF24BC7D600EB2417AFA145B6651C5F74C25F4BC61E60346BBFC98E9B4B22CAF"
+    },
+    {
+      "label": "『傳家話』越南語 119 句語境目錄",
+      "source": "交付成果/語言審閱/傳家話_越南語119句語境目錄.json",
+      "destination": "deliverables/review/context-catalog.json",
+      "bytes": 195535,
+      "source_modified_at": "2026-07-14T04:19:59.4526531+08:00",
+      "sha256": "4F5283EAB7BE30E35708B7AA143C56DFC74E440ADA688A1D9EFB53F364A223CA"
+    },
+    {
+      "label": "『傳家話』越南語母語審閱可攜包",
+      "source": "交付成果/語言審閱/傳家話_越南語119句母語審閱可攜包.zip",
+      "destination": "deliverables/review/chuan-jia-hua-native-review-portable.zip",
+      "bytes": 875984,
+      "source_modified_at": "2026-07-14T04:19:59.4986335+08:00",
+      "sha256": "F3115CA1B9AC9909A9D9CBF3F17ACD063BC95D6A6A6EFF9D3EE3EB4D5CCE8696"
+    },
+    {
+      "label": "Flutter README.md",
+      "source": "正式版/flutter_app/README.md",
+      "destination": "deliverables/flutter/source/README.md",
+      "bytes": 22809,
+      "source_modified_at": "2026-07-14T04:49:23.7323995+08:00",
+      "sha256": "6F0A255BCAD005423039714AED051E8A9431365F2D7C8C57D09E52239D258A7F"
+    },
+    {
+      "label": "Flutter QUALITY_SCORECARD.md",
+      "source": "正式版/flutter_app/QUALITY_SCORECARD.md",
+      "destination": "deliverables/flutter/source/QUALITY_SCORECARD.md",
+      "bytes": 24861,
+      "source_modified_at": "2026-07-14T04:49:23.7344043+08:00",
+      "sha256": "0BB67489A4D4A4E3F7DD006B50A746228036093B45D4F23D216D974A65502890"
+    },
+    {
+      "label": "Flutter OPEN_SOURCE_NOTICES.md",
+      "source": "正式版/flutter_app/OPEN_SOURCE_NOTICES.md",
+      "destination": "deliverables/flutter/source/OPEN_SOURCE_NOTICES.md",
+      "bytes": 3001,
+      "source_modified_at": "2026-07-13T22:40:21.4996964+08:00",
+      "sha256": "B92FB3D159CB720E6C178530B7184900DD5005EF2EE2AE32DDA41114BDDA63AC"
+    },
+    {
+      "label": "Flutter pubspec.yaml",
+      "source": "正式版/flutter_app/pubspec.yaml",
+      "destination": "deliverables/flutter/source/pubspec.yaml",
+      "bytes": 1449,
+      "source_modified_at": "2026-07-14T03:56:45.3915289+08:00",
+      "sha256": "45967B305EB19A50D6C61E4D53AA49A8C5F2080E0304E26E0025B08385930EE4"
+    },
+    {
+      "label": "Flutter pubspec.lock",
+      "source": "正式版/flutter_app/pubspec.lock",
+      "destination": "deliverables/flutter/source/pubspec.lock",
+      "bytes": 26264,
+      "source_modified_at": "2026-07-14T03:57:07.1740000+08:00",
+      "sha256": "D803A0D353DD036E3C75E2FC549B96AF5229863824994CC3FDC9F0310641FCB7"
+    },
+    {
+      "label": "Flutter package.json",
+      "source": "正式版/flutter_app/package.json",
+      "destination": "deliverables/flutter/source/package.json",
+      "bytes": 242,
+      "source_modified_at": "2026-07-13T20:52:56.6047885+08:00",
+      "sha256": "938C6C5E033E54A32A8E5E6C5CF0C057441B4ED435163EFD11831ABDA9986E94"
+    },
+    {
+      "label": "Flutter package-lock.json",
+      "source": "正式版/flutter_app/package-lock.json",
+      "destination": "deliverables/flutter/source/package-lock.json",
+      "bytes": 2216,
+      "source_modified_at": "2026-07-13T20:53:09.7810857+08:00",
+      "sha256": "310C0284CE3D3D9D73BB2308C84F9CAD61C37D4C78964D26880189BFC3A5C59F"
+    },
+    {
+      "label": "Flutter analysis_options.yaml",
+      "source": "正式版/flutter_app/analysis_options.yaml",
+      "destination": "deliverables/flutter/source/analysis_options.yaml",
+      "bytes": 156,
+      "source_modified_at": "2026-07-12T04:10:21.8574202+08:00",
+      "sha256": "BB28223F2D07DEE5E9A1C15BF8CAD91696655A1883DADB2B700134E8B13F406A"
+    },
+    {
+      "label": "Flutter .metadata",
+      "source": "正式版/flutter_app/.metadata",
+      "destination": "deliverables/flutter/source/.metadata",
+      "bytes": 964,
+      "source_modified_at": "2026-07-12T04:54:45.4500915+08:00",
+      "sha256": "3A4CFB1569AA19402FB5066819BBDD653A3AE4A2C867D71C048F047388CF2EA6"
+    },
+    {
+      "label": "Flutter .gitignore",
+      "source": "正式版/flutter_app/.gitignore",
+      "destination": "deliverables/flutter/source/.gitignore",
+      "bytes": 224,
+      "source_modified_at": "2026-07-12T11:00:06.1245144+08:00",
+      "sha256": "44812E5FB211235EA15A5F087A196234D3B87A560CABE016903427CB74291294"
+    },
+    {
+      "label": "Flutter lib/app.dart",
+      "source": "正式版/flutter_app/lib/app.dart",
+      "destination": "deliverables/flutter/source/lib/app.dart",
+      "bytes": 48024,
+      "source_modified_at": "2026-07-14T02:56:50.3877719+08:00",
+      "sha256": "AE61B732CAF481320277E2B18C75834E0AD9D1F68F2E3E24A1C5E9AEDE68192D"
+    },
+    {
+      "label": "Flutter lib/main.dart",
+      "source": "正式版/flutter_app/lib/main.dart",
+      "destination": "deliverables/flutter/source/lib/main.dart",
+      "bytes": 662,
+      "source_modified_at": "2026-07-13T02:04:46.3507660+08:00",
+      "sha256": "E55B5B38528DAD5FA4A6C8FCE819DC5AE44341F5EFF3A20A337FF847594B9730"
+    },
+    {
+      "label": "Flutter lib/core/app_theme.dart",
+      "source": "正式版/flutter_app/lib/core/app_theme.dart",
+      "destination": "deliverables/flutter/source/lib/core/app_theme.dart",
+      "bytes": 4237,
+      "source_modified_at": "2026-07-13T03:31:57.3146272+08:00",
+      "sha256": "E52C2A2D9534C05A080A08D7CF5EFAC812636BE11CFDD2B70BC7CC86620CE6CB"
+    },
+    {
+      "label": "Flutter lib/models/conversation_episode.dart",
+      "source": "正式版/flutter_app/lib/models/conversation_episode.dart",
+      "destination": "deliverables/flutter/source/lib/models/conversation_episode.dart",
+      "bytes": 44220,
+      "source_modified_at": "2026-07-13T17:29:45.9415890+08:00",
+      "sha256": "05F4EE083810E21F0F9EF16744DBD0FFD2F81EEFD939A8EC075DCB995730E915"
+    },
+    {
+      "label": "Flutter lib/models/education_opportunity.dart",
+      "source": "正式版/flutter_app/lib/models/education_opportunity.dart",
+      "destination": "deliverables/flutter/source/lib/models/education_opportunity.dart",
+      "bytes": 8183,
+      "source_modified_at": "2026-07-14T03:00:24.1449828+08:00",
+      "sha256": "790FB969991D718A9E0514AEA2E31B3ADF3EE48FC5FC820702132CE718F9E930"
+    },
+    {
+      "label": "Flutter lib/models/family_circle.dart",
+      "source": "正式版/flutter_app/lib/models/family_circle.dart",
+      "destination": "deliverables/flutter/source/lib/models/family_circle.dart",
+      "bytes": 17035,
+      "source_modified_at": "2026-07-14T02:56:01.7236457+08:00",
+      "sha256": "51592C768CBD0698A4A99BBA2EE8AD4FA5D10022EE4CECB813FFECABA8057F24"
+    },
+    {
+      "label": "Flutter lib/models/family_culture_prompt.dart",
+      "source": "正式版/flutter_app/lib/models/family_culture_prompt.dart",
+      "destination": "deliverables/flutter/source/lib/models/family_culture_prompt.dart",
+      "bytes": 746,
+      "source_modified_at": "2026-07-13T04:19:51.6040668+08:00",
+      "sha256": "C9BEE25E0908725BAE8B3A4FB0E4570298E94F8862ED8CC828E4500C9D61EE0F"
+    },
+    {
+      "label": "Flutter lib/models/family_invitation.dart",
+      "source": "正式版/flutter_app/lib/models/family_invitation.dart",
+      "destination": "deliverables/flutter/source/lib/models/family_invitation.dart",
+      "bytes": 11365,
+      "source_modified_at": "2026-07-13T06:52:29.2065206+08:00",
+      "sha256": "D30AE0F686CAD29B9BD234CB44CF47EAD10EFC658CC59EA043FB5BBE5973F214"
+    },
+    {
+      "label": "Flutter lib/models/family_relay.dart",
+      "source": "正式版/flutter_app/lib/models/family_relay.dart",
+      "destination": "deliverables/flutter/source/lib/models/family_relay.dart",
+      "bytes": 5902,
+      "source_modified_at": "2026-07-14T02:56:01.7156415+08:00",
+      "sha256": "8F01A165FA107B324D9255748C6F697A8AC364DE36BB2F3011B70999D9C01CAD"
+    },
+    {
+      "label": "Flutter lib/models/family_story.dart",
+      "source": "正式版/flutter_app/lib/models/family_story.dart",
+      "destination": "deliverables/flutter/source/lib/models/family_story.dart",
+      "bytes": 8452,
+      "source_modified_at": "2026-07-14T02:45:45.3239266+08:00",
+      "sha256": "AD6F2C15D1472D10C64757B7A2A6106C3FE617467A5F1349BE65B667C0D89521"
+    },
+    {
+      "label": "Flutter lib/models/learning_attempt.dart",
+      "source": "正式版/flutter_app/lib/models/learning_attempt.dart",
+      "destination": "deliverables/flutter/source/lib/models/learning_attempt.dart",
+      "bytes": 2653,
+      "source_modified_at": "2026-07-12T20:56:15.7002083+08:00",
+      "sha256": "A1CA381C0A2F5F0F5EF92A34C3B0B4339E00CC0A605D38FDED08233F8CEA36BA"
+    },
+    {
+      "label": "Flutter lib/models/lesson_content.dart",
+      "source": "正式版/flutter_app/lib/models/lesson_content.dart",
+      "destination": "deliverables/flutter/source/lib/models/lesson_content.dart",
+      "bytes": 11252,
+      "source_modified_at": "2026-07-13T01:22:49.5221956+08:00",
+      "sha256": "ADE9F712728DEFE8111B16AD5C319C787B47F5C17B41047BC4E53AFDEADEE8DC"
+    },
+    {
+      "label": "Flutter lib/models/recording_metrics.dart",
+      "source": "正式版/flutter_app/lib/models/recording_metrics.dart",
+      "destination": "deliverables/flutter/source/lib/models/recording_metrics.dart",
+      "bytes": 302,
+      "source_modified_at": "2026-07-12T20:56:59.0656835+08:00",
+      "sha256": "CD0D907867521CEC4A666C7B80FEC0D391C2C76AC9874CAE2A3AFF2AC3DEC261"
+    },
+    {
+      "label": "Flutter lib/models/task_draft.dart",
+      "source": "正式版/flutter_app/lib/models/task_draft.dart",
+      "destination": "deliverables/flutter/source/lib/models/task_draft.dart",
+      "bytes": 386,
+      "source_modified_at": "2026-07-12T04:11:18.9731480+08:00",
+      "sha256": "7B0C4BB44B01965312C2D8E030F16DCE694DCADFED29627C5F3B8F653EB671AE"
+    },
+    {
+      "label": "Flutter lib/screens/conversation_theater_screen.dart",
+      "source": "正式版/flutter_app/lib/screens/conversation_theater_screen.dart",
+      "destination": "deliverables/flutter/source/lib/screens/conversation_theater_screen.dart",
+      "bytes": 85770,
+      "source_modified_at": "2026-07-14T01:16:24.5959420+08:00",
+      "sha256": "8C42BBC05D6A97BCC919A8F6DC5F842943A5291ADD34A538EBFC9EC41BFE7D1E"
+    },
+    {
+      "label": "Flutter lib/screens/create_story_screen.dart",
+      "source": "正式版/flutter_app/lib/screens/create_story_screen.dart",
+      "destination": "deliverables/flutter/source/lib/screens/create_story_screen.dart",
+      "bytes": 22307,
+      "source_modified_at": "2026-07-13T13:12:51.6705505+08:00",
+      "sha256": "49F475DC534400BA11098989AFDBBB0DF1569071EFB51C262C0DECDA6AEB6303"
+    },
+    {
+      "label": "Flutter lib/screens/family_circle_screen.dart",
+      "source": "正式版/flutter_app/lib/screens/family_circle_screen.dart",
+      "destination": "deliverables/flutter/source/lib/screens/family_circle_screen.dart",
+      "bytes": 87401,
+      "source_modified_at": "2026-07-14T02:55:02.7779315+08:00",
+      "sha256": "0E1D56CB6F1F6C7C2E4BB827FC21FAEBB746FCA4AE0DB4D74E386248FD81DE57"
+    },
+    {
+      "label": "Flutter lib/screens/family_relay_reveal_screen.dart",
+      "source": "正式版/flutter_app/lib/screens/family_relay_reveal_screen.dart",
+      "destination": "deliverables/flutter/source/lib/screens/family_relay_reveal_screen.dart",
+      "bytes": 9523,
+      "source_modified_at": "2026-07-14T02:56:01.7616446+08:00",
+      "sha256": "DFF7B0FD699CAD0586A7BA44F63D05C2B735A53A9922CAA7E7F90553D5FBFBFD"
+    },
+    {
+      "label": "Flutter lib/screens/home_screen.dart",
+      "source": "正式版/flutter_app/lib/screens/home_screen.dart",
+      "destination": "deliverables/flutter/source/lib/screens/home_screen.dart",
+      "bytes": 17988,
+      "source_modified_at": "2026-07-13T04:23:26.2243156+08:00",
+      "sha256": "979534F275D320B8EB60446C7721F1699C9FBF5547AB58BFAC894F41F9222AB6"
+    },
+    {
+      "label": "Flutter lib/screens/language_map_screen.dart",
+      "source": "正式版/flutter_app/lib/screens/language_map_screen.dart",
+      "destination": "deliverables/flutter/source/lib/screens/language_map_screen.dart",
+      "bytes": 8333,
+      "source_modified_at": "2026-07-13T18:46:59.3283567+08:00",
+      "sha256": "F8BAD41B37C4D93D3893988D82570D7A650720644D6365DDFD2CE8C688950A62"
+    },
+    {
+      "label": "Flutter lib/screens/learning_flow.dart",
+      "source": "正式版/flutter_app/lib/screens/learning_flow.dart",
+      "destination": "deliverables/flutter/source/lib/screens/learning_flow.dart",
+      "bytes": 2012,
+      "source_modified_at": "2026-07-13T01:14:03.1011393+08:00",
+      "sha256": "D8220DDF086211C1F1A2098B0A1344EA5A7FE5D602F50FAA2F03DD75BE314E96"
+    },
+    {
+      "label": "Flutter lib/screens/practice_hub_screen.dart",
+      "source": "正式版/flutter_app/lib/screens/practice_hub_screen.dart",
+      "destination": "deliverables/flutter/source/lib/screens/practice_hub_screen.dart",
+      "bytes": 34085,
+      "source_modified_at": "2026-07-14T03:00:24.1469885+08:00",
+      "sha256": "4A454F4BFE801F9E145173E370ED1AD8FBE8202AAEB4B839BEB3AB7F32336E0A"
+    },
+    {
+      "label": "Flutter lib/screens/privacy_gate.dart",
+      "source": "正式版/flutter_app/lib/screens/privacy_gate.dart",
+      "destination": "deliverables/flutter/source/lib/screens/privacy_gate.dart",
+      "bytes": 8619,
+      "source_modified_at": "2026-07-13T18:43:42.7071940+08:00",
+      "sha256": "3EE92065606CF7C244FCEC8236EAF926C76A65CDA6CD442CC9A5A9E3DEECDAFE"
+    },
+    {
+      "label": "Flutter lib/screens/quick_challenge_screen.dart",
+      "source": "正式版/flutter_app/lib/screens/quick_challenge_screen.dart",
+      "destination": "deliverables/flutter/source/lib/screens/quick_challenge_screen.dart",
+      "bytes": 55238,
+      "source_modified_at": "2026-07-14T02:52:49.3046096+08:00",
+      "sha256": "6653471C29BE49738CFCED3F2A1844960A0206D1B2FFE869537FA44E1A80C7D6"
+    },
+    {
+      "label": "Flutter lib/screens/scanner_screen.dart",
+      "source": "正式版/flutter_app/lib/screens/scanner_screen.dart",
+      "destination": "deliverables/flutter/source/lib/screens/scanner_screen.dart",
+      "bytes": 4276,
+      "source_modified_at": "2026-07-12T08:00:51.4519694+08:00",
+      "sha256": "61A138A042303935742E65760D9382E52BD979C27E008E47900A8541533227F8"
+    },
+    {
+      "label": "Flutter lib/screens/scene_game_screen.dart",
+      "source": "正式版/flutter_app/lib/screens/scene_game_screen.dart",
+      "destination": "deliverables/flutter/source/lib/screens/scene_game_screen.dart",
+      "bytes": 51921,
+      "source_modified_at": "2026-07-14T00:47:57.3643834+08:00",
+      "sha256": "31A16567D195862F796B8E99659B35BA2EB86431E3FAB1F0E0156270A62248AF"
+    },
+    {
+      "label": "Flutter lib/screens/story_detail_screen.dart",
+      "source": "正式版/flutter_app/lib/screens/story_detail_screen.dart",
+      "destination": "deliverables/flutter/source/lib/screens/story_detail_screen.dart",
+      "bytes": 64926,
+      "source_modified_at": "2026-07-14T02:54:08.1039553+08:00",
+      "sha256": "498B1914262A4B4E49895D086DD3A5A1CE1AE0FE8F1E136ECE754C31FD6D3DC0"
+    },
+    {
+      "label": "Flutter lib/screens/theater_preview_screen.dart",
+      "source": "正式版/flutter_app/lib/screens/theater_preview_screen.dart",
+      "destination": "deliverables/flutter/source/lib/screens/theater_preview_screen.dart",
+      "bytes": 21169,
+      "source_modified_at": "2026-07-14T01:08:49.6528934+08:00",
+      "sha256": "97D205E3930BA3C1520F95059FCB17136986CE46D41D1968F10DE4C0D0F048A7"
+    },
+    {
+      "label": "Flutter lib/services/app_store.dart",
+      "source": "正式版/flutter_app/lib/services/app_store.dart",
+      "destination": "deliverables/flutter/source/lib/services/app_store.dart",
+      "bytes": 53827,
+      "source_modified_at": "2026-07-14T03:11:32.9380090+08:00",
+      "sha256": "03E63F0B2E9D6A872D0487EBBA619778E4EB15D301B07A0E57A2C3F7483B4C0E"
+    },
+    {
+      "label": "Flutter lib/services/device_speech_service.dart",
+      "source": "正式版/flutter_app/lib/services/device_speech_service.dart",
+      "destination": "deliverables/flutter/source/lib/services/device_speech_service.dart",
+      "bytes": 10057,
+      "source_modified_at": "2026-07-13T13:37:19.3744937+08:00",
+      "sha256": "E2C61CFE6FB31999BEE04058B5D849DC075A2E8F1FEFBA1C36C6F82778740301"
+    },
+    {
+      "label": "Flutter lib/services/family_circle_store.dart",
+      "source": "正式版/flutter_app/lib/services/family_circle_store.dart",
+      "destination": "deliverables/flutter/source/lib/services/family_circle_store.dart",
+      "bytes": 54976,
+      "source_modified_at": "2026-07-13T07:51:02.0905680+08:00",
+      "sha256": "01892A4F2B6C12BD08705E538A5FD20DDFF176FE8DE566805AF00B9E93DAF8C3"
+    },
+    {
+      "label": "Flutter lib/services/family_invitation_crypto.dart",
+      "source": "正式版/flutter_app/lib/services/family_invitation_crypto.dart",
+      "destination": "deliverables/flutter/source/lib/services/family_invitation_crypto.dart",
+      "bytes": 6779,
+      "source_modified_at": "2026-07-13T06:58:36.0903951+08:00",
+      "sha256": "94E58E3DCE4A44CA7BCBB5920E09D7F46321E08A6B5F1A8391F282E185D5B5B0"
+    },
+    {
+      "label": "Flutter lib/services/local_media_service.dart",
+      "source": "正式版/flutter_app/lib/services/local_media_service.dart",
+      "destination": "deliverables/flutter/source/lib/services/local_media_service.dart",
+      "bytes": 6409,
+      "source_modified_at": "2026-07-13T13:10:48.4320713+08:00",
+      "sha256": "33147E51320FD2395C5A7740F50F6E4302885C72529DB53AEE0F1B81374F7361"
+    },
+    {
+      "label": "Flutter lib/services/local_task_engine.dart",
+      "source": "正式版/flutter_app/lib/services/local_task_engine.dart",
+      "destination": "deliverables/flutter/source/lib/services/local_task_engine.dart",
+      "bytes": 2344,
+      "source_modified_at": "2026-07-12T10:23:24.0582084+08:00",
+      "sha256": "6133CBC9C936C351D57A258C6510F364D8AF9B36FB28E7A81155AB2C67223B75"
+    },
+    {
+      "label": "Flutter lib/services/media_blob_store_base.dart",
+      "source": "正式版/flutter_app/lib/services/media_blob_store_base.dart",
+      "destination": "deliverables/flutter/source/lib/services/media_blob_store_base.dart",
+      "bytes": 312,
+      "source_modified_at": "2026-07-12T10:13:20.4890355+08:00",
+      "sha256": "7F352E7F7EB1A402AB74FF1D5CECF7959F4487B1543A2FD9CEADFF15F87F5474"
+    },
+    {
+      "label": "Flutter lib/services/media_blob_store_stub.dart",
+      "source": "正式版/flutter_app/lib/services/media_blob_store_stub.dart",
+      "destination": "deliverables/flutter/source/lib/services/media_blob_store_stub.dart",
+      "bytes": 572,
+      "source_modified_at": "2026-07-12T10:23:24.0601977+08:00",
+      "sha256": "475AACEB29200F59737D0378B80E57F7DA253ADF9EF9DDA3FD3CAB38C6D6F003"
+    },
+    {
+      "label": "Flutter lib/services/media_blob_store_web.dart",
+      "source": "正式版/flutter_app/lib/services/media_blob_store_web.dart",
+      "destination": "deliverables/flutter/source/lib/services/media_blob_store_web.dart",
+      "bytes": 3385,
+      "source_modified_at": "2026-07-12T10:24:44.3238222+08:00",
+      "sha256": "46A79553DF9810FF7657F3DD85F1C5023E39262FCF66CFBC576A597A66520D07"
+    },
+    {
+      "label": "Flutter lib/services/media_blob_store.dart",
+      "source": "正式版/flutter_app/lib/services/media_blob_store.dart",
+      "destination": "deliverables/flutter/source/lib/services/media_blob_store.dart",
+      "bytes": 272,
+      "source_modified_at": "2026-07-12T10:13:20.4900143+08:00",
+      "sha256": "E4BCACC93358B2DC0410D182E8501B9AADE411329F42382890DDFCED5AB7B0B6"
+    },
+    {
+      "label": "Flutter lib/services/pronunciation_coach.dart",
+      "source": "正式版/flutter_app/lib/services/pronunciation_coach.dart",
+      "destination": "deliverables/flutter/source/lib/services/pronunciation_coach.dart",
+      "bytes": 3486,
+      "source_modified_at": "2026-07-12T22:51:24.4377125+08:00",
+      "sha256": "927C096E731A5661282C1CFAFF58CD55F756B88A9F4AFFFD4D422EE6800589A1"
+    },
+    {
+      "label": "Flutter lib/services/review_planner.dart",
+      "source": "正式版/flutter_app/lib/services/review_planner.dart",
+      "destination": "deliverables/flutter/source/lib/services/review_planner.dart",
+      "bytes": 4049,
+      "source_modified_at": "2026-07-12T10:23:07.8671236+08:00",
+      "sha256": "9685FC0FDEBECE754DB076FF7C05EA3DF5BB73EA6B026D1B20560820BBCC9A9B"
+    },
+    {
+      "label": "Flutter lib/services/transcript_coach.dart",
+      "source": "正式版/flutter_app/lib/services/transcript_coach.dart",
+      "destination": "deliverables/flutter/source/lib/services/transcript_coach.dart",
+      "bytes": 4557,
+      "source_modified_at": "2026-07-13T04:03:41.1686293+08:00",
+      "sha256": "E813F85C0794BE51356EA55D7396A0E14C3444786270D4BE9EA993268F2B7914"
+    },
+    {
+      "label": "Flutter lib/widgets/adult_pin_gate.dart",
+      "source": "正式版/flutter_app/lib/widgets/adult_pin_gate.dart",
+      "destination": "deliverables/flutter/source/lib/widgets/adult_pin_gate.dart",
+      "bytes": 2978,
+      "source_modified_at": "2026-07-13T07:20:27.4099091+08:00",
+      "sha256": "53B7C1B7008B33ECDC998BE1ADA5CC7D7FAEAFC08A3FBF1A7DE3FA28B560BD9F"
+    },
+    {
+      "label": "Flutter lib/widgets/brand_mark.dart",
+      "source": "正式版/flutter_app/lib/widgets/brand_mark.dart",
+      "destination": "deliverables/flutter/source/lib/widgets/brand_mark.dart",
+      "bytes": 1671,
+      "source_modified_at": "2026-07-13T22:00:43.1467633+08:00",
+      "sha256": "0FBDA08057887C59EBB52D7B0BA0C32A11DB5B3B02CB55043EE9CE034702A7C4"
+    },
+    {
+      "label": "Flutter lib/widgets/confidence_badge.dart",
+      "source": "正式版/flutter_app/lib/widgets/confidence_badge.dart",
+      "destination": "deliverables/flutter/source/lib/widgets/confidence_badge.dart",
+      "bytes": 1928,
+      "source_modified_at": "2026-07-12T08:20:02.9131232+08:00",
+      "sha256": "A6D1DDABAAAFF453DA39B46CB094DFA378DA9062150F0F936A1958955A33B264"
+    },
+    {
+      "label": "Flutter lib/widgets/family_invitation_acceptance.dart",
+      "source": "正式版/flutter_app/lib/widgets/family_invitation_acceptance.dart",
+      "destination": "deliverables/flutter/source/lib/widgets/family_invitation_acceptance.dart",
+      "bytes": 12244,
+      "source_modified_at": "2026-07-13T07:57:36.5545525+08:00",
+      "sha256": "72AFE086253661B794B032DFDD8D02F5E76E2869D9EC591671066703421B86D5"
+    },
+    {
+      "label": "Flutter lib/widgets/privacy_center_sheet.dart",
+      "source": "正式版/flutter_app/lib/widgets/privacy_center_sheet.dart",
+      "destination": "deliverables/flutter/source/lib/widgets/privacy_center_sheet.dart",
+      "bytes": 8321,
+      "source_modified_at": "2026-07-14T03:11:15.6004980+08:00",
+      "sha256": "7D19D7B56E3FC15FEC356F86295763130212331EF7ADA14C7B2F59FAFEEA8FD0"
+    },
+    {
+      "label": "Flutter lib/widgets/recording_control.dart",
+      "source": "正式版/flutter_app/lib/widgets/recording_control.dart",
+      "destination": "deliverables/flutter/source/lib/widgets/recording_control.dart",
+      "bytes": 10362,
+      "source_modified_at": "2026-07-12T21:10:14.1645083+08:00",
+      "sha256": "5D907AAE33AF10D867928927FBEC72BFCD3C3022A89BF384635AABE25D95DCCC"
+    },
+    {
+      "label": "Flutter lib/widgets/story_tile.dart",
+      "source": "正式版/flutter_app/lib/widgets/story_tile.dart",
+      "destination": "deliverables/flutter/source/lib/widgets/story_tile.dart",
+      "bytes": 5033,
+      "source_modified_at": "2026-07-12T21:09:37.6335917+08:00",
+      "sha256": "9C46914749590854B62F7BCEFCEC6FF45BE9785FE0CD5BC1BA2102079A412446"
+    },
+    {
+      "label": "Flutter test/app_store_test.dart",
+      "source": "正式版/flutter_app/test/app_store_test.dart",
+      "destination": "deliverables/flutter/source/test/app_store_test.dart",
+      "bytes": 26203,
+      "source_modified_at": "2026-07-14T03:15:03.4772485+08:00",
+      "sha256": "74DB8F807893AE4CFE7043BA4439DF179518169000E397A474B990E5CAB89FF8"
+    },
+    {
+      "label": "Flutter test/conversation_audio_assets_test.dart",
+      "source": "正式版/flutter_app/test/conversation_audio_assets_test.dart",
+      "destination": "deliverables/flutter/source/test/conversation_audio_assets_test.dart",
+      "bytes": 1485,
+      "source_modified_at": "2026-07-13T17:25:12.4157344+08:00",
+      "sha256": "A6E932D4419CD05CE8D888186F4DCDBEEB9CC2522DF4D9E405E5F5F595D1033A"
+    },
+    {
+      "label": "Flutter test/conversation_theater_screen_test.dart",
+      "source": "正式版/flutter_app/test/conversation_theater_screen_test.dart",
+      "destination": "deliverables/flutter/source/test/conversation_theater_screen_test.dart",
+      "bytes": 34104,
+      "source_modified_at": "2026-07-13T20:14:32.8509281+08:00",
+      "sha256": "F77C4EACABC691637154A86D884EE1AAEE83E0BD0F553A4BD3311F23886EBD07"
+    },
+    {
+      "label": "Flutter test/device_speech_service_test.dart",
+      "source": "正式版/flutter_app/test/device_speech_service_test.dart",
+      "destination": "deliverables/flutter/source/test/device_speech_service_test.dart",
+      "bytes": 8123,
+      "source_modified_at": "2026-07-13T13:37:19.3754891+08:00",
+      "sha256": "800BFBE51794E057E4A0107809E201016CFD4893BA9AFFADD912AB57DEFAA102"
+    },
+    {
+      "label": "Flutter test/education_opportunity_test.dart",
+      "source": "正式版/flutter_app/test/education_opportunity_test.dart",
+      "destination": "deliverables/flutter/source/test/education_opportunity_test.dart",
+      "bytes": 2596,
+      "source_modified_at": "2026-07-14T03:04:53.2420113+08:00",
+      "sha256": "7E3DED95BA302A9213D88AAD276E79B3F204ABAD86D427F4E5593FBA2F514C42"
+    },
+    {
+      "label": "Flutter test/family_circle_screen_test.dart",
+      "source": "正式版/flutter_app/test/family_circle_screen_test.dart",
+      "destination": "deliverables/flutter/source/test/family_circle_screen_test.dart",
+      "bytes": 17582,
+      "source_modified_at": "2026-07-13T07:39:55.2179683+08:00",
+      "sha256": "0243FCA3043219057AFBBF6D37BE6D08D3EAC13B20EFAE97EAE714B80210A378"
+    },
+    {
+      "label": "Flutter test/family_circle_store_test.dart",
+      "source": "正式版/flutter_app/test/family_circle_store_test.dart",
+      "destination": "deliverables/flutter/source/test/family_circle_store_test.dart",
+      "bytes": 20707,
+      "source_modified_at": "2026-07-14T03:09:31.1099432+08:00",
+      "sha256": "4255E5450C7B4718EDF81E13AFAFD1E910F1D18BDADDAB9F5056303EC66FC2E6"
+    },
+    {
+      "label": "Flutter test/family_culture_prompt_test.dart",
+      "source": "正式版/flutter_app/test/family_culture_prompt_test.dart",
+      "destination": "deliverables/flutter/source/test/family_culture_prompt_test.dart",
+      "bytes": 574,
+      "source_modified_at": "2026-07-13T04:20:00.8313333+08:00",
+      "sha256": "23465909FEDA22F16C0CED88E2CA02B0FE618598E48631B6427823D9A89294E3"
+    },
+    {
+      "label": "Flutter test/family_invitation_test.dart",
+      "source": "正式版/flutter_app/test/family_invitation_test.dart",
+      "destination": "deliverables/flutter/source/test/family_invitation_test.dart",
+      "bytes": 19397,
+      "source_modified_at": "2026-07-13T07:51:33.9457324+08:00",
+      "sha256": "F6869192284BD311E55BF465550E8BBE5D9EC9AD162E7C2C8D8631B139ED3D26"
+    },
+    {
+      "label": "Flutter test/family_invitation_widget_test.dart",
+      "source": "正式版/flutter_app/test/family_invitation_widget_test.dart",
+      "destination": "deliverables/flutter/source/test/family_invitation_widget_test.dart",
+      "bytes": 3932,
+      "source_modified_at": "2026-07-13T07:58:14.1131871+08:00",
+      "sha256": "9C815D5554ADDAC523BBF1CEECAB3682BD5AC6F414E365F0C3F6D099B43FC59D"
+    },
+    {
+      "label": "Flutter test/family_relay_test.dart",
+      "source": "正式版/flutter_app/test/family_relay_test.dart",
+      "destination": "deliverables/flutter/source/test/family_relay_test.dart",
+      "bytes": 3382,
+      "source_modified_at": "2026-07-14T03:03:28.1692679+08:00",
+      "sha256": "87AA1DBC3A299CD14C650A16E3425BC115B773038AFBE089C6C65AC9EA2837CC"
+    },
+    {
+      "label": "Flutter test/lesson_content_test.dart",
+      "source": "正式版/flutter_app/test/lesson_content_test.dart",
+      "destination": "deliverables/flutter/source/test/lesson_content_test.dart",
+      "bytes": 5320,
+      "source_modified_at": "2026-07-13T13:11:09.7501364+08:00",
+      "sha256": "E775A529C3D186447BF23CCA9279025DCF85DACA3B7AF9B4A2EFA469AFBB02D2"
+    },
+    {
+      "label": "Flutter test/local_task_engine_test.dart",
+      "source": "正式版/flutter_app/test/local_task_engine_test.dart",
+      "destination": "deliverables/flutter/source/test/local_task_engine_test.dart",
+      "bytes": 1714,
+      "source_modified_at": "2026-07-12T08:00:51.5479733+08:00",
+      "sha256": "CE62D84A40B50CD9B055F141496C698E2306B2FC1BD6B16FD80E502192717C6B"
+    },
+    {
+      "label": "Flutter test/practice_hub_screen_test.dart",
+      "source": "正式版/flutter_app/test/practice_hub_screen_test.dart",
+      "destination": "deliverables/flutter/source/test/practice_hub_screen_test.dart",
+      "bytes": 8089,
+      "source_modified_at": "2026-07-14T03:07:44.2991372+08:00",
+      "sha256": "18E7BE51F3BFF04AB2B6DC1E07354EF873876399A2DFB5886555A1351DC32FB1"
+    },
+    {
+      "label": "Flutter test/privacy_center_sheet_test.dart",
+      "source": "正式版/flutter_app/test/privacy_center_sheet_test.dart",
+      "destination": "deliverables/flutter/source/test/privacy_center_sheet_test.dart",
+      "bytes": 3823,
+      "source_modified_at": "2026-07-14T03:14:06.2017842+08:00",
+      "sha256": "90D0A5206678811B7C7B4F29CA184BA299DB1EE5C786BB01B94C33497DE61114"
+    },
+    {
+      "label": "Flutter test/pronunciation_coach_test.dart",
+      "source": "正式版/flutter_app/test/pronunciation_coach_test.dart",
+      "destination": "deliverables/flutter/source/test/pronunciation_coach_test.dart",
+      "bytes": 1719,
+      "source_modified_at": "2026-07-12T22:53:08.6525030+08:00",
+      "sha256": "FFAC39649C1AFF7F6953D3856B8C87DF62C20858B1817EBD508744975423BD4A"
+    },
+    {
+      "label": "Flutter test/quick_challenge_screen_test.dart",
+      "source": "正式版/flutter_app/test/quick_challenge_screen_test.dart",
+      "destination": "deliverables/flutter/source/test/quick_challenge_screen_test.dart",
+      "bytes": 10099,
+      "source_modified_at": "2026-07-14T03:04:53.2430044+08:00",
+      "sha256": "851141C1F2CA8D97ABBCC8565DF613FD44C146F89DEE8967BFF58EEE1C04D1B6"
+    },
+    {
+      "label": "Flutter test/review_planner_test.dart",
+      "source": "正式版/flutter_app/test/review_planner_test.dart",
+      "destination": "deliverables/flutter/source/test/review_planner_test.dart",
+      "bytes": 4542,
+      "source_modified_at": "2026-07-12T10:26:33.4664910+08:00",
+      "sha256": "0892737571959037B967336091A5D33DA8625D28D5282622EE10FF8C5BA34F3D"
+    },
+    {
+      "label": "Flutter test/scene_game_screen_test.dart",
+      "source": "正式版/flutter_app/test/scene_game_screen_test.dart",
+      "destination": "deliverables/flutter/source/test/scene_game_screen_test.dart",
+      "bytes": 7299,
+      "source_modified_at": "2026-07-13T13:11:33.4046463+08:00",
+      "sha256": "43274114DF766B28F8E3C67B86929DD258F5F82E38476FC62A9B4E90617DF241"
+    },
+    {
+      "label": "Flutter test/story_detail_test.dart",
+      "source": "正式版/flutter_app/test/story_detail_test.dart",
+      "destination": "deliverables/flutter/source/test/story_detail_test.dart",
+      "bytes": 9549,
+      "source_modified_at": "2026-07-13T21:12:16.5612312+08:00",
+      "sha256": "42BC8D6800CB9D1917C2BC5F3B1F6459DBA5818D271B358AB8A48985848CB136"
+    },
+    {
+      "label": "Flutter test/transcript_coach_test.dart",
+      "source": "正式版/flutter_app/test/transcript_coach_test.dart",
+      "destination": "deliverables/flutter/source/test/transcript_coach_test.dart",
+      "bytes": 1580,
+      "source_modified_at": "2026-07-13T04:03:41.1796743+08:00",
+      "sha256": "AFCC61B70237BE3975B6C2D8B01E7BD989234B2F16B1EB17FE402345A2EFBC30"
+    },
+    {
+      "label": "Flutter test/widget_test.dart",
+      "source": "正式版/flutter_app/test/widget_test.dart",
+      "destination": "deliverables/flutter/source/test/widget_test.dart",
+      "bytes": 24472,
+      "source_modified_at": "2026-07-14T03:07:14.7723891+08:00",
+      "sha256": "F1E1706212FE7232425B17916404BE9F72F53D5D15B0A65AE1A7808EA538EDA8"
+    },
+    {
+      "label": "Flutter tool/build_web_relative.ps1",
+      "source": "正式版/flutter_app/tool/build_web_relative.ps1",
+      "destination": "deliverables/flutter/source/tool/build_web_relative.ps1",
+      "bytes": 1542,
+      "source_modified_at": "2026-07-13T18:51:12.1876973+08:00",
+      "sha256": "75C7C9F1FB6CA5CCC007BAB6C1E292C1ECF749A29A35EB764F0CAF07FF80A9D0"
+    },
+    {
+      "label": "Flutter tool/bundled_audio_catalog.dart",
+      "source": "正式版/flutter_app/tool/bundled_audio_catalog.dart",
+      "destination": "deliverables/flutter/source/tool/bundled_audio_catalog.dart",
+      "bytes": 3586,
+      "source_modified_at": "2026-07-13T18:43:42.8521992+08:00",
+      "sha256": "5869A53E3A1A5B6A2FB43EDD6BBCDCFC9C21F0FB35694F045D27668F4A1FEF73"
+    },
+    {
+      "label": "Flutter tool/conversation_audio_catalog.dart",
+      "source": "正式版/flutter_app/tool/conversation_audio_catalog.dart",
+      "destination": "deliverables/flutter/source/tool/conversation_audio_catalog.dart",
+      "bytes": 1379,
+      "source_modified_at": "2026-07-13T17:35:38.0133542+08:00",
+      "sha256": "77B43C25CCFB227D1EB383EF9FC99578E740508B428D0745CDA77FF6C246E76D"
+    },
+    {
+      "label": "Flutter tool/deliverables_media.spec.js",
+      "source": "正式版/flutter_app/tool/deliverables_media.spec.js",
+      "destination": "deliverables/flutter/source/tool/deliverables_media.spec.js",
+      "bytes": 4091,
+      "source_modified_at": "2026-07-13T23:42:53.7268767+08:00",
+      "sha256": "D48175585DD6031233F4538CD970FFD3DD4E933F576F1F5EEAEF6D44DD9C67B2"
+    },
+    {
+      "label": "Flutter tool/generate_bundled_audio.ps1",
+      "source": "正式版/flutter_app/tool/generate_bundled_audio.ps1",
+      "destination": "deliverables/flutter/source/tool/generate_bundled_audio.ps1",
+      "bytes": 4783,
+      "source_modified_at": "2026-07-13T18:23:43.9690555+08:00",
+      "sha256": "43E649E11BE9B66F8E4D4167D6A60F306BC8DA3046700C8C9140AA55307B33F6"
+    },
+    {
+      "label": "Flutter tool/generate_native_review_packet.py",
+      "source": "正式版/flutter_app/tool/generate_native_review_packet.py",
+      "destination": "deliverables/flutter/source/tool/generate_native_review_packet.py",
+      "bytes": 52455,
+      "source_modified_at": "2026-07-13T22:00:43.1657701+08:00",
+      "sha256": "E930DA1ED60E24B9DC377059E2278BEF2F12FFF13DAABDB9AC09A241A62920F4"
+    },
+    {
+      "label": "Flutter tool/native_review.spec.js",
+      "source": "正式版/flutter_app/tool/native_review.spec.js",
+      "destination": "deliverables/flutter/source/tool/native_review.spec.js",
+      "bytes": 8519,
+      "source_modified_at": "2026-07-14T04:29:51.6869426+08:00",
+      "sha256": "5270A3C8491297B61B06AF26C0427C55713EE4CA070E639EE02948CC48D377C5"
+    },
+    {
+      "label": "Flutter tool/playwright.config.js",
+      "source": "正式版/flutter_app/tool/playwright.config.js",
+      "destination": "deliverables/flutter/source/tool/playwright.config.js",
+      "bytes": 692,
+      "source_modified_at": "2026-07-13T21:32:12.5315514+08:00",
+      "sha256": "8332AB34E73F541B9BF4FE364DA7C278DA7EA3AE69F0DA44C4EB11B0AC2B06E3"
+    },
+    {
+      "label": "Flutter tool/quality_gate.ps1",
+      "source": "正式版/flutter_app/tool/quality_gate.ps1",
+      "destination": "deliverables/flutter/source/tool/quality_gate.ps1",
+      "bytes": 1542,
+      "source_modified_at": "2026-07-13T05:00:20.1409140+08:00",
+      "sha256": "9DB1D70E278F78E0E0326DEBD30DA9FB4F46A8F55ACC68EAF0F2E759D80587FE"
+    },
+    {
+      "label": "Flutter tool/visual_audit.spec.js",
+      "source": "正式版/flutter_app/tool/visual_audit.spec.js",
+      "destination": "deliverables/flutter/source/tool/visual_audit.spec.js",
+      "bytes": 18823,
+      "source_modified_at": "2026-07-14T03:44:36.8210358+08:00",
+      "sha256": "D749D93F4D7FD91B3AC1F6B5F568A4F3412D3D31A91FA2391C50F535A6B011FE"
+    },
+    {
+      "label": "Flutter tool/web_smoke.spec.js",
+      "source": "正式版/flutter_app/tool/web_smoke.spec.js",
+      "destination": "deliverables/flutter/source/tool/web_smoke.spec.js",
+      "bytes": 29009,
+      "source_modified_at": "2026-07-14T03:44:36.8180331+08:00",
+      "sha256": "B2C431CB039103B59B4760F6FF896209FDFD908D51F965A81EFA7F5316CF3468"
+    },
+    {
+      "label": "Flutter assets/audio/piper_generation_manifest.json",
+      "source": "正式版/flutter_app/assets/audio/piper_generation_manifest.json",
+      "destination": "deliverables/flutter/source/assets/audio/piper_generation_manifest.json",
+      "bytes": 27108,
+      "source_modified_at": "2026-07-13T18:25:22.5328162+08:00",
+      "sha256": "BB9F460F2C6CB030EA11263DFF3C87201B8B2F5891A6302F600D0E518DA59426"
+    },
+    {
+      "label": "Flutter assets/audio/README.md",
+      "source": "正式版/flutter_app/assets/audio/README.md",
+      "destination": "deliverables/flutter/source/assets/audio/README.md",
+      "bytes": 3501,
+      "source_modified_at": "2026-07-13T18:31:38.9740748+08:00",
+      "sha256": "6C7F3FD31269E3F0FA152BA819D2CE37B4EC09518670E62404DB3F32B063054B"
+    },
+    {
+      "label": "Flutter assets/audio/theater_0002441ff184.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_0002441ff184.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_0002441ff184.mp3",
+      "bytes": 5562,
+      "source_modified_at": "2026-07-13T18:24:07.3868385+08:00",
+      "sha256": "AB36DD28CAF2DD34F4CC4D8C3720EDD34079F0195756E6E5C863EE3D7EDD97E0"
+    },
+    {
+      "label": "Flutter assets/audio/theater_05466780a811.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_05466780a811.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_05466780a811.mp3",
+      "bytes": 4729,
+      "source_modified_at": "2026-07-13T18:24:08.0128433+08:00",
+      "sha256": "70C8C99EFEF421B2A96301F47B8113E7E3F78D9585C8649CA5B06A193018F45E"
+    },
+    {
+      "label": "Flutter assets/audio/theater_05cd52fd3f69.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_05cd52fd3f69.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_05cd52fd3f69.mp3",
+      "bytes": 7641,
+      "source_modified_at": "2026-07-13T18:24:08.6928697+08:00",
+      "sha256": "4C3A408790B8062054B39612CB59193EED188543A6C9D770C690C21BEFD3224C"
+    },
+    {
+      "label": "Flutter assets/audio/theater_072af085a512.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_072af085a512.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_072af085a512.mp3",
+      "bytes": 5536,
+      "source_modified_at": "2026-07-13T18:24:09.4201264+08:00",
+      "sha256": "A74AD4053E6B9090B1711C0D40446CC691175CE515C8C9AC28CAE473E2527AA6"
+    },
+    {
+      "label": "Flutter assets/audio/theater_08d85703a885.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_08d85703a885.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_08d85703a885.mp3",
+      "bytes": 12505,
+      "source_modified_at": "2026-07-13T18:24:10.3297905+08:00",
+      "sha256": "2D36AA00D80EE623CFA36DA7F2549813DB737B81BD0B5938022EFE2809514620"
+    },
+    {
+      "label": "Flutter assets/audio/theater_0b7b27acb7b7.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_0b7b27acb7b7.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_0b7b27acb7b7.mp3",
+      "bytes": 6470,
+      "source_modified_at": "2026-07-13T18:24:11.0017854+08:00",
+      "sha256": "EF895AC5BA1F206CC0B6970A033A2152E1CC542BB8CA48C12DA17728F2CA1DEA"
+    },
+    {
+      "label": "Flutter assets/audio/theater_0cad1b245cf2.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_0cad1b245cf2.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_0cad1b245cf2.mp3",
+      "bytes": 3844,
+      "source_modified_at": "2026-07-13T18:24:11.6427982+08:00",
+      "sha256": "0443D5767A4F89F8E741B831C1A0BB1F75B20BDE4271ACD2DAE8308B232097B3"
+    },
+    {
+      "label": "Flutter assets/audio/theater_0edae7e6ea8f.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_0edae7e6ea8f.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_0edae7e6ea8f.mp3",
+      "bytes": 3713,
+      "source_modified_at": "2026-07-13T18:24:12.3867838+08:00",
+      "sha256": "787AD7AE0DD108BFED796065831AECF5E31152BA97F87E95B71F14B9025D97DF"
+    },
+    {
+      "label": "Flutter assets/audio/theater_0f21d13f9fb7.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_0f21d13f9fb7.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_0f21d13f9fb7.mp3",
+      "bytes": 5743,
+      "source_modified_at": "2026-07-13T18:24:13.1591778+08:00",
+      "sha256": "0683CFCBA18AC9240E2E3B846D9A86866D32CA1BBB5C4D99482F337A242FEFF6"
+    },
+    {
+      "label": "Flutter assets/audio/theater_0fe50f465307.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_0fe50f465307.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_0fe50f465307.mp3",
+      "bytes": 5795,
+      "source_modified_at": "2026-07-13T18:24:13.7921776+08:00",
+      "sha256": "481C1D6CDC5BD0BA64006818EB972F8272BF64BD622E07137F28F65F45AACB7C"
+    },
+    {
+      "label": "Flutter assets/audio/theater_175dd0f8e30c.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_175dd0f8e30c.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_175dd0f8e30c.mp3",
+      "bytes": 7305,
+      "source_modified_at": "2026-07-13T18:24:14.4123248+08:00",
+      "sha256": "C866556C741C34FE781848D3ACE7526961F4D04884DBF7ECE7DCAB355F3CE0C8"
+    },
+    {
+      "label": "Flutter assets/audio/theater_18f300f75d32.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_18f300f75d32.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_18f300f75d32.mp3",
+      "bytes": 6471,
+      "source_modified_at": "2026-07-13T18:24:15.0007971+08:00",
+      "sha256": "5C183F859D8BE94E579F7F1A2A521C1D86D3D86F3F79670D468B78F70F524B5D"
+    },
+    {
+      "label": "Flutter assets/audio/theater_197f785c0dbb.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_197f785c0dbb.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_197f785c0dbb.mp3",
+      "bytes": 12974,
+      "source_modified_at": "2026-07-13T18:24:15.6728676+08:00",
+      "sha256": "2E8996516CC31A96B2F40096A84F6E80434C737D22641E8AC1A510752C7EA609"
+    },
+    {
+      "label": "Flutter assets/audio/theater_1d6178ff57de.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_1d6178ff57de.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_1d6178ff57de.mp3",
+      "bytes": 9178,
+      "source_modified_at": "2026-07-13T18:24:16.3428626+08:00",
+      "sha256": "46A52F6E813FE5E2F0DA1F6EEB92C43AC1E37115621F1A1FC47601CB64EC34D9"
+    },
+    {
+      "label": "Flutter assets/audio/theater_21533f901813.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_21533f901813.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_21533f901813.mp3",
+      "bytes": 3531,
+      "source_modified_at": "2026-07-13T18:24:16.9168876+08:00",
+      "sha256": "6AB919DFED6B10379B5D2398974C590AC4F4EB46DB5D4A481319750A75EB1E77"
+    },
+    {
+      "label": "Flutter assets/audio/theater_271e3afdddb7.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_271e3afdddb7.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_271e3afdddb7.mp3",
+      "bytes": 3794,
+      "source_modified_at": "2026-07-13T18:24:17.4639622+08:00",
+      "sha256": "6AB63ECF89C846DE15668E5F57A864EBE56C589FBC3FA90A3A2CF73145661F6A"
+    },
+    {
+      "label": "Flutter assets/audio/theater_2d5d7661bded.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_2d5d7661bded.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_2d5d7661bded.mp3",
+      "bytes": 5460,
+      "source_modified_at": "2026-07-13T18:24:18.1466226+08:00",
+      "sha256": "AF572992BF81C83ED80BFA4F0E788E899F6375D18EF791DFE3D94F77783FB8C2"
+    },
+    {
+      "label": "Flutter assets/audio/theater_2d964b43ce6c.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_2d964b43ce6c.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_2d964b43ce6c.mp3",
+      "bytes": 8918,
+      "source_modified_at": "2026-07-13T18:24:18.7902076+08:00",
+      "sha256": "A8E189996376794EF8C0F5E0B9AAA29CB59D72AC71F97672DC7E8620C3309FEB"
+    },
+    {
+      "label": "Flutter assets/audio/theater_307061800647.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_307061800647.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_307061800647.mp3",
+      "bytes": 8006,
+      "source_modified_at": "2026-07-13T18:24:19.5352322+08:00",
+      "sha256": "FC5F30670E77B358932429477C9BFEF3F85468EBD4EF3B904DC4AB2ABFBD8F94"
+    },
+    {
+      "label": "Flutter assets/audio/theater_35edc7ea04fb.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_35edc7ea04fb.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_35edc7ea04fb.mp3",
+      "bytes": 4883,
+      "source_modified_at": "2026-07-13T18:24:20.1172285+08:00",
+      "sha256": "DFF5F2EF1D973BA2B921432E76CC60A5BC39BD81C9162C5C2229E6B67B730D38"
+    },
+    {
+      "label": "Flutter assets/audio/theater_381eacf95bd3.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_381eacf95bd3.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_381eacf95bd3.mp3",
+      "bytes": 5771,
+      "source_modified_at": "2026-07-13T18:24:20.7102439+08:00",
+      "sha256": "54F16163A953CA30F142C1455262BFADBC89B311297A5FDF6544416D9C760977"
+    },
+    {
+      "label": "Flutter assets/audio/theater_387aa14325b1.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_387aa14325b1.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_387aa14325b1.mp3",
+      "bytes": 5717,
+      "source_modified_at": "2026-07-13T18:24:21.2868405+08:00",
+      "sha256": "39B20EEDBEC9D0E90642962A6EF1227A9AE9AD95DA33F424F4D45C4C92B069BD"
+    },
+    {
+      "label": "Flutter assets/audio/theater_3f3c9cb4ce52.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_3f3c9cb4ce52.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_3f3c9cb4ce52.mp3",
+      "bytes": 12821,
+      "source_modified_at": "2026-07-13T18:24:21.9716403+08:00",
+      "sha256": "EF43CA0164AD328A8502EE0B8135584370E3F60AE41EBD0103211EC50C8F92AB"
+    },
+    {
+      "label": "Flutter assets/audio/theater_4070c329567f.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_4070c329567f.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_4070c329567f.mp3",
+      "bytes": 7278,
+      "source_modified_at": "2026-07-13T18:24:22.5581636+08:00",
+      "sha256": "1506AC46D55C67A0DD052928C729A1759164D9593ED2CB87408FD0E482604573"
+    },
+    {
+      "label": "Flutter assets/audio/theater_4152cf240b9b.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_4152cf240b9b.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_4152cf240b9b.mp3",
+      "bytes": 2336,
+      "source_modified_at": "2026-07-13T18:24:23.0951877+08:00",
+      "sha256": "E3454FE4D7FF7D63EA749CB927691E07CD31798A06C8F91265C00F203DD757F9"
+    },
+    {
+      "label": "Flutter assets/audio/theater_4586e910cdac.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_4586e910cdac.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_4586e910cdac.mp3",
+      "bytes": 5301,
+      "source_modified_at": "2026-07-13T18:24:23.6672117+08:00",
+      "sha256": "B73149C873E8880F4359807E964F806CB081598B903EAF33B49CAB680C0624EE"
+    },
+    {
+      "label": "Flutter assets/audio/theater_463c5a74a5c8.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_463c5a74a5c8.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_463c5a74a5c8.mp3",
+      "bytes": 6940,
+      "source_modified_at": "2026-07-13T18:24:24.2852119+08:00",
+      "sha256": "5A620E4B03BF1295429185CBF944B6087857141C75313188DB73AE3EAF01F746"
+    },
+    {
+      "label": "Flutter assets/audio/theater_46a39f0771be.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_46a39f0771be.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_46a39f0771be.mp3",
+      "bytes": 4183,
+      "source_modified_at": "2026-07-13T18:24:24.8532270+08:00",
+      "sha256": "7F3ADA8833A80FDC2F74085DC9F2462A1FC782FC794E0F4EF2872280614DEAD1"
+    },
+    {
+      "label": "Flutter assets/audio/theater_4ac7ac2e1418.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_4ac7ac2e1418.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_4ac7ac2e1418.mp3",
+      "bytes": 3272,
+      "source_modified_at": "2026-07-13T18:24:25.4087102+08:00",
+      "sha256": "E267CA7358FBB75D6DE246D23539DC7BEBB8571D31995ECE39CC2CEEDD1D2D2B"
+    },
+    {
+      "label": "Flutter assets/audio/theater_4d3c1ac975f7.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_4d3c1ac975f7.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_4d3c1ac975f7.mp3",
+      "bytes": 3560,
+      "source_modified_at": "2026-07-13T18:24:25.9517247+08:00",
+      "sha256": "4509E618755A128C9ABE60AF04714132E11E0B47D53FFF6A0AA13FF15C919219"
+    },
+    {
+      "label": "Flutter assets/audio/theater_4e2b2fbaf617.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_4e2b2fbaf617.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_4e2b2fbaf617.mp3",
+      "bytes": 17946,
+      "source_modified_at": "2026-07-13T18:24:26.7157974+08:00",
+      "sha256": "F6E88530F6B72CDAEEEACF928287FFC40CAF8C31A62538A02AA8FD5B42B73245"
+    },
+    {
+      "label": "Flutter assets/audio/theater_4e7f7b9324f0.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_4e7f7b9324f0.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_4e7f7b9324f0.mp3",
+      "bytes": 6603,
+      "source_modified_at": "2026-07-13T18:24:27.4130587+08:00",
+      "sha256": "072FF97EACD7DE5773D59B68934892B4602157447FD82A8B69E4874DEBF4949F"
+    },
+    {
+      "label": "Flutter assets/audio/theater_5542ee88b804.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_5542ee88b804.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_5542ee88b804.mp3",
+      "bytes": 3221,
+      "source_modified_at": "2026-07-13T18:24:27.9520564+08:00",
+      "sha256": "530CCB3CBD306BF5E0B6ADBCA2F32E5DDCA91DD7697F359E14E5AAA27FCD4B68"
+    },
+    {
+      "label": "Flutter assets/audio/theater_644711fdd85a.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_644711fdd85a.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_644711fdd85a.mp3",
+      "bytes": 13394,
+      "source_modified_at": "2026-07-13T18:24:28.6510897+08:00",
+      "sha256": "BF987E0DBBA98BEDDC69A7AC7E7F05B3F8BF9B11CAB2D1033BAC1E276F9D5845"
+    },
+    {
+      "label": "Flutter assets/audio/theater_6982d36adffb.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_6982d36adffb.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_6982d36adffb.mp3",
+      "bytes": 18631,
+      "source_modified_at": "2026-07-13T18:24:29.4000900+08:00",
+      "sha256": "D01E20ED6619811615A04BFD1D552159F01C8A3261E8FD7BA1ED7D4ACF4C52A5"
+    },
+    {
+      "label": "Flutter assets/audio/theater_6a5a7c04ea60.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_6a5a7c04ea60.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_6a5a7c04ea60.mp3",
+      "bytes": 6186,
+      "source_modified_at": "2026-07-13T18:24:30.0061358+08:00",
+      "sha256": "4E18B8314BEF122816BBA6DFC566AAA0EFEA4C47B1C8F68988CB375386637AF1"
+    },
+    {
+      "label": "Flutter assets/audio/theater_6a7b2794106c.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_6a7b2794106c.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_6a7b2794106c.mp3",
+      "bytes": 3739,
+      "source_modified_at": "2026-07-13T18:24:30.5641353+08:00",
+      "sha256": "4CBD979CAA9B82E7B2CED4973B32AE468899EBEE8EEA41D976CFB5E51F10DC7E"
+    },
+    {
+      "label": "Flutter assets/audio/theater_6c1f535f8ab8.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_6c1f535f8ab8.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_6c1f535f8ab8.mp3",
+      "bytes": 4000,
+      "source_modified_at": "2026-07-13T18:24:31.2508006+08:00",
+      "sha256": "943214BCCEB4155CD5B8441F9758ECB24E7208BE5852642E8795F4E201D1E52F"
+    },
+    {
+      "label": "Flutter assets/audio/theater_7430a79cd482.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_7430a79cd482.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_7430a79cd482.mp3",
+      "bytes": 5588,
+      "source_modified_at": "2026-07-13T18:24:31.8358006+08:00",
+      "sha256": "8C7839464891E7050C72D1BA4A6E6EFD7E406CAAE890AE6922450CC74CEBDBBE"
+    },
+    {
+      "label": "Flutter assets/audio/theater_7c1953a63d96.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_7c1953a63d96.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_7c1953a63d96.mp3",
+      "bytes": 4572,
+      "source_modified_at": "2026-07-13T18:24:32.3968048+08:00",
+      "sha256": "47C4D2BEC25EEED2E7D285C429FE4F7CD5F092CC69CD049E3FD6D28F68D03A5F"
+    },
+    {
+      "label": "Flutter assets/audio/theater_838e50a4ece9.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_838e50a4ece9.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_838e50a4ece9.mp3",
+      "bytes": 13965,
+      "source_modified_at": "2026-07-13T18:24:33.1408606+08:00",
+      "sha256": "76EAE72AEC85CF54BE9F16039C0F02E8DC4ACA038F1C84249C5DD7386EBE02A9"
+    },
+    {
+      "label": "Flutter assets/audio/theater_845fa0acc260.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_845fa0acc260.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_845fa0acc260.mp3",
+      "bytes": 3558,
+      "source_modified_at": "2026-07-13T18:24:33.7218628+08:00",
+      "sha256": "B4DBA410D3F902BCCCC54401BB8D603C381008E6EF437B179CDAAFA1D7F8DB88"
+    },
+    {
+      "label": "Flutter assets/audio/theater_8db033064430.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_8db033064430.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_8db033064430.mp3",
+      "bytes": 6056,
+      "source_modified_at": "2026-07-13T18:24:34.3559718+08:00",
+      "sha256": "46A85F5684BA6F5BE38124AC572B1ACD6DF5C7665CA8B7043D3C4F4EF4A2C502"
+    },
+    {
+      "label": "Flutter assets/audio/theater_93bfe10dff1e.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_93bfe10dff1e.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_93bfe10dff1e.mp3",
+      "bytes": 3479,
+      "source_modified_at": "2026-07-13T18:24:34.9545083+08:00",
+      "sha256": "8CCBBAE89DB86537D09B20E2A0ADB97ED6CED01E800BAE63FFE02C84DD3CCA2A"
+    },
+    {
+      "label": "Flutter assets/audio/theater_9519890f42d7.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_9519890f42d7.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_9519890f42d7.mp3",
+      "bytes": 7177,
+      "source_modified_at": "2026-07-13T18:24:35.5555073+08:00",
+      "sha256": "4CCA677F46D910FC602AB9E87EAA1E3BB22CA9DBE57898D347E0BE4C412ABAE4"
+    },
+    {
+      "label": "Flutter assets/audio/theater_970351f426dc.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_970351f426dc.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_970351f426dc.mp3",
+      "bytes": 4156,
+      "source_modified_at": "2026-07-13T18:24:36.1215269+08:00",
+      "sha256": "53901E2A3977FC87572C530A53752DF28DA87EFCC8988FC815931B290D191CC0"
+    },
+    {
+      "label": "Flutter assets/audio/theater_9a52b4224f81.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_9a52b4224f81.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_9a52b4224f81.mp3",
+      "bytes": 3401,
+      "source_modified_at": "2026-07-13T18:24:36.6925204+08:00",
+      "sha256": "7FAE26C1AEECC4DB3BE279A8DBB588FCF188B695029B19610AE5311860D35103"
+    },
+    {
+      "label": "Flutter assets/audio/theater_9cadf126c39d.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_9cadf126c39d.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_9cadf126c39d.mp3",
+      "bytes": 9930,
+      "source_modified_at": "2026-07-13T18:24:37.4135554+08:00",
+      "sha256": "BC3A2AF0230FDC9E3AD9A6355E79A93A13FA4F38DB1E58B2B8965205A345AC58"
+    },
+    {
+      "label": "Flutter assets/audio/theater_9d4a564cde24.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_9d4a564cde24.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_9d4a564cde24.mp3",
+      "bytes": 5433,
+      "source_modified_at": "2026-07-13T18:24:37.9976033+08:00",
+      "sha256": "D7C85C634F32C23404E006CCA18FD03717A4EF350359435789FA0CFD38195C5E"
+    },
+    {
+      "label": "Flutter assets/audio/theater_9dbcae1ae8e6.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_9dbcae1ae8e6.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_9dbcae1ae8e6.mp3",
+      "bytes": 6395,
+      "source_modified_at": "2026-07-13T18:24:38.6477586+08:00",
+      "sha256": "904954EAE2C516AE392F9139667528871AF7D4A88215B0BFCF2E26E8A76A0C64"
+    },
+    {
+      "label": "Flutter assets/audio/theater_9f39e7063253.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_9f39e7063253.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_9f39e7063253.mp3",
+      "bytes": 10403,
+      "source_modified_at": "2026-07-13T18:24:39.3445058+08:00",
+      "sha256": "677BF7794A54DE7B35B2EE74BDC81591B18336B8A159C06ADA2C624310F013DB"
+    },
+    {
+      "label": "Flutter assets/audio/theater_a584a212e867.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_a584a212e867.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_a584a212e867.mp3",
+      "bytes": 4443,
+      "source_modified_at": "2026-07-13T18:24:39.9535281+08:00",
+      "sha256": "DB1D00AE4BF68CF18CF70F2723E298336F6D6B4BE7A530711EFFA4371FCA934C"
+    },
+    {
+      "label": "Flutter assets/audio/theater_a702b25b551e.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_a702b25b551e.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_a702b25b551e.mp3",
+      "bytes": 3999,
+      "source_modified_at": "2026-07-13T18:24:40.7125386+08:00",
+      "sha256": "10F4F3F0CD4C9CC453D1E0529829B4E1115E85F5FBA5C8196CE422CF31F16F1F"
+    },
+    {
+      "label": "Flutter assets/audio/theater_aaa31c9b2444.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_aaa31c9b2444.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_aaa31c9b2444.mp3",
+      "bytes": 6473,
+      "source_modified_at": "2026-07-13T18:24:41.3455731+08:00",
+      "sha256": "28EA253695E258C6BC6D11AB42FBB7520E81B2BC2EC3BCE09F0B012B04F62EBF"
+    },
+    {
+      "label": "Flutter assets/audio/theater_b19fc675cece.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_b19fc675cece.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_b19fc675cece.mp3",
+      "bytes": 3792,
+      "source_modified_at": "2026-07-13T18:24:41.9386049+08:00",
+      "sha256": "F61152705F749EEEBAC7E26BC810CEECACE0190EBDEB63F0E5BB64EFFE70EC45"
+    },
+    {
+      "label": "Flutter assets/audio/theater_b36e620b4508.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_b36e620b4508.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_b36e620b4508.mp3",
+      "bytes": 11316,
+      "source_modified_at": "2026-07-13T18:24:42.5966143+08:00",
+      "sha256": "2B677875ED42562CE499A69FD952D51477EC88C5DCBB94CAC985532FC8A49C0D"
+    },
+    {
+      "label": "Flutter assets/audio/theater_b66bfe6ce787.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_b66bfe6ce787.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_b66bfe6ce787.mp3",
+      "bytes": 15240,
+      "source_modified_at": "2026-07-13T18:24:43.3206089+08:00",
+      "sha256": "22C3BC5621FFB4EE2900BA14B48A970D052EF06AF3C2EC042D1EABB1CAC423EE"
+    },
+    {
+      "label": "Flutter assets/audio/theater_b7eb148389c6.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_b7eb148389c6.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_b7eb148389c6.mp3",
+      "bytes": 3662,
+      "source_modified_at": "2026-07-13T18:24:43.8969814+08:00",
+      "sha256": "20E6F97A227321CDF7E905DD2FEF58CE377539146D5B74C12EA65D5FB45CF82D"
+    },
+    {
+      "label": "Flutter assets/audio/theater_b803f411cb17.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_b803f411cb17.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_b803f411cb17.mp3",
+      "bytes": 7120,
+      "source_modified_at": "2026-07-13T18:24:44.6103663+08:00",
+      "sha256": "5CFFDE95A270E8B56CCF3DD043BFEDE21202391EFBD4FB778EA2D4B2F9BFE04F"
+    },
+    {
+      "label": "Flutter assets/audio/theater_bae2b7ddf59e.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_bae2b7ddf59e.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_bae2b7ddf59e.mp3",
+      "bytes": 5665,
+      "source_modified_at": "2026-07-13T18:24:45.2048863+08:00",
+      "sha256": "E1757491D88F58E5E2CF6247BC489CD88A86FACA0A14DE9677769E39F6CE7FF0"
+    },
+    {
+      "label": "Flutter assets/audio/theater_bc3092d6d656.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_bc3092d6d656.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_bc3092d6d656.mp3",
+      "bytes": 4548,
+      "source_modified_at": "2026-07-13T18:24:45.8780717+08:00",
+      "sha256": "641106DAFDFC6130DE5ECCCD010EFAE4632AD8E1A1635DE564FEE076592FD9E4"
+    },
+    {
+      "label": "Flutter assets/audio/theater_bc86b3234045.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_bc86b3234045.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_bc86b3234045.mp3",
+      "bytes": 6943,
+      "source_modified_at": "2026-07-13T18:24:46.4820908+08:00",
+      "sha256": "BA0AFB93FA4A27C7B2E32BDCD329F9D2B7E6BB0B0D735AA2A21F058023C9EB00"
+    },
+    {
+      "label": "Flutter assets/audio/theater_bee9797e07fd.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_bee9797e07fd.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_bee9797e07fd.mp3",
+      "bytes": 13445,
+      "source_modified_at": "2026-07-13T18:24:47.1630836+08:00",
+      "sha256": "41A3F7F4054DC3ABE42DD91EC8346856708825B318BBDD2B256C3209D6E4F9F7"
+    },
+    {
+      "label": "Flutter assets/audio/theater_c0dcf825b133.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_c0dcf825b133.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_c0dcf825b133.mp3",
+      "bytes": 6525,
+      "source_modified_at": "2026-07-13T18:24:47.7478375+08:00",
+      "sha256": "9338E3104ED2C5546D3CF62691EE01880032D1A7AC40E4C821D6EA37AB628A4C"
+    },
+    {
+      "label": "Flutter assets/audio/theater_c224f4c19220.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_c224f4c19220.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_c224f4c19220.mp3",
+      "bytes": 4833,
+      "source_modified_at": "2026-07-13T18:24:48.3338328+08:00",
+      "sha256": "49F950979CF4075F2EB174D36D489657CABBEB41134729C0E4F5D6B4884F8D92"
+    },
+    {
+      "label": "Flutter assets/audio/theater_c58a5da78c49.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_c58a5da78c49.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_c58a5da78c49.mp3",
+      "bytes": 5276,
+      "source_modified_at": "2026-07-13T18:24:48.9158845+08:00",
+      "sha256": "909003C84CC519C654E3BA9BA98F5B3467D0CE6A9668BB0499C1B061464DF221"
+    },
+    {
+      "label": "Flutter assets/audio/theater_c924b2311eb1.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_c924b2311eb1.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_c924b2311eb1.mp3",
+      "bytes": 6575,
+      "source_modified_at": "2026-07-13T18:24:49.5118465+08:00",
+      "sha256": "CE9C728AA079E79AB554758F7028E789D96B1C8B50E900F82905359D3D95CF70"
+    },
+    {
+      "label": "Flutter assets/audio/theater_c9492ae023b6.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_c9492ae023b6.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_c9492ae023b6.mp3",
+      "bytes": 3766,
+      "source_modified_at": "2026-07-13T18:24:50.0598745+08:00",
+      "sha256": "156E00F0F44FDEF189C4554335CE3A82D8A8647C0E7759FCD9BFD081BD60EEEF"
+    },
+    {
+      "label": "Flutter assets/audio/theater_cc3101767ee6.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_cc3101767ee6.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_cc3101767ee6.mp3",
+      "bytes": 4132,
+      "source_modified_at": "2026-07-13T18:24:50.6236401+08:00",
+      "sha256": "5E814073D809125EC8ECE6FB67B109664E710DE3FC13F3325AA3BD5CC5557E90"
+    },
+    {
+      "label": "Flutter assets/audio/theater_cc3919f570b2.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_cc3919f570b2.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_cc3919f570b2.mp3",
+      "bytes": 8187,
+      "source_modified_at": "2026-07-13T18:24:51.3499164+08:00",
+      "sha256": "BB707126D836FDADC34A24203E2982EB4A0D772B825D5A4162E7360D774732C7"
+    },
+    {
+      "label": "Flutter assets/audio/theater_ccb8f8aa6499.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_ccb8f8aa6499.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_ccb8f8aa6499.mp3",
+      "bytes": 20339,
+      "source_modified_at": "2026-07-13T18:24:52.2379732+08:00",
+      "sha256": "1662561665B2C52E0E198CC01C94E68F8751DAAC22622F2E3C9837EE044B1A01"
+    },
+    {
+      "label": "Flutter assets/audio/theater_cdc7305220fc.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_cdc7305220fc.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_cdc7305220fc.mp3",
+      "bytes": 6759,
+      "source_modified_at": "2026-07-13T18:24:53.1129960+08:00",
+      "sha256": "51DFE71BE2A15E4D02A8DB155CBAEB3FB4BE75FD81EF810D0FE250DA43F37A27"
+    },
+    {
+      "label": "Flutter assets/audio/theater_ce0f31315106.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_ce0f31315106.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_ce0f31315106.mp3",
+      "bytes": 5977,
+      "source_modified_at": "2026-07-13T18:24:53.8069957+08:00",
+      "sha256": "DE15987C6399CA368E73A658F69D27F1C027DB1532673FD683582598BDEAD53D"
+    },
+    {
+      "label": "Flutter assets/audio/theater_d044e6ba4f24.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_d044e6ba4f24.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_d044e6ba4f24.mp3",
+      "bytes": 8943,
+      "source_modified_at": "2026-07-13T18:24:54.5373946+08:00",
+      "sha256": "CF243A73AEF7AA1FB85196883CB379BBAC5EFAFF1CA5B872BD483A33CA235358"
+    },
+    {
+      "label": "Flutter assets/audio/theater_d104bf14508e.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_d104bf14508e.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_d104bf14508e.mp3",
+      "bytes": 7410,
+      "source_modified_at": "2026-07-13T18:24:55.2893960+08:00",
+      "sha256": "C56832A043E9FFD63B6B1610002CFAEF28ED155F45577C30E535F4A386289764"
+    },
+    {
+      "label": "Flutter assets/audio/theater_d31793672fde.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_d31793672fde.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_d31793672fde.mp3",
+      "bytes": 6604,
+      "source_modified_at": "2026-07-13T18:24:55.8814069+08:00",
+      "sha256": "9E5A441EED87B45EEA0AC1FCF926FA2CD8332D4879C749484465F06E23613064"
+    },
+    {
+      "label": "Flutter assets/audio/theater_d4a29b9d4ba6.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_d4a29b9d4ba6.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_d4a29b9d4ba6.mp3",
+      "bytes": 7227,
+      "source_modified_at": "2026-07-13T18:24:56.5314060+08:00",
+      "sha256": "A81646C118CD7AA1504ECFEDBB3245BAC51E2DD4121FF755B1C67F5B6040A995"
+    },
+    {
+      "label": "Flutter assets/audio/theater_d53f5ce8d34d.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_d53f5ce8d34d.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_d53f5ce8d34d.mp3",
+      "bytes": 5484,
+      "source_modified_at": "2026-07-13T18:24:57.1104215+08:00",
+      "sha256": "853BC9294157B7098E4D4BC2DC918ED05902AB6512B64E1FBE5A83CFE90C9509"
+    },
+    {
+      "label": "Flutter assets/audio/theater_d96e12b5e501.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_d96e12b5e501.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_d96e12b5e501.mp3",
+      "bytes": 9203,
+      "source_modified_at": "2026-07-13T18:24:57.7444208+08:00",
+      "sha256": "D401B110704CAF35DF1EB2558B8CBCCC1E49CE9845016F476B7E8FD1E0E03E55"
+    },
+    {
+      "label": "Flutter assets/audio/theater_dc35a64fc235.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_dc35a64fc235.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_dc35a64fc235.mp3",
+      "bytes": 7176,
+      "source_modified_at": "2026-07-13T18:24:58.3550782+08:00",
+      "sha256": "F77DC96499681D80CFAB2D3D0FB5A9C40D120C950B37344B5649BA8F8951DF7D"
+    },
+    {
+      "label": "Flutter assets/audio/theater_dce13df848f7.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_dce13df848f7.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_dce13df848f7.mp3",
+      "bytes": 7462,
+      "source_modified_at": "2026-07-13T18:24:58.9820370+08:00",
+      "sha256": "AC8029313E80A9AB0D420C2C542D605C64FD03A09114725A469D0BA265DD9392"
+    },
+    {
+      "label": "Flutter assets/audio/theater_e08a33467cef.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_e08a33467cef.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_e08a33467cef.mp3",
+      "bytes": 6004,
+      "source_modified_at": "2026-07-13T18:24:59.5810427+08:00",
+      "sha256": "23F8EE13A4C19E1F106D9D2D70784FD0AA73779AD934065F53554FEBA67D9730"
+    },
+    {
+      "label": "Flutter assets/audio/theater_e51b86406a34.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_e51b86406a34.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_e51b86406a34.mp3",
+      "bytes": 9025,
+      "source_modified_at": "2026-07-13T18:25:00.3354277+08:00",
+      "sha256": "534C1019FDC5DBC668CB06A2B97E6B13BFE9607662624C0F7B430A4AE6159500"
+    },
+    {
+      "label": "Flutter assets/audio/theater_e8ad39dc1423.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_e8ad39dc1423.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_e8ad39dc1423.mp3",
+      "bytes": 11233,
+      "source_modified_at": "2026-07-13T18:25:01.0194448+08:00",
+      "sha256": "E583817273EC949016F998C57B16FDCA52789BB61FD29E5C97B2C95EA68E5C79"
+    },
+    {
+      "label": "Flutter assets/audio/theater_ea2a0c24e44e.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_ea2a0c24e44e.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_ea2a0c24e44e.mp3",
+      "bytes": 9206,
+      "source_modified_at": "2026-07-13T18:25:01.6567727+08:00",
+      "sha256": "59BFDF59EFA551C9B4F517CE797F1097CCBAC9568579DBB6DDDD0B39F677788B"
+    },
+    {
+      "label": "Flutter assets/audio/theater_efc823225a48.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_efc823225a48.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_efc823225a48.mp3",
+      "bytes": 14204,
+      "source_modified_at": "2026-07-13T18:25:02.3857719+08:00",
+      "sha256": "097B7BD61A4E445A33FB2ADB7ED00E45DD4516C477123A7298933CC1F6FC05E1"
+    },
+    {
+      "label": "Flutter assets/audio/theater_f15b9b60cbd4.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_f15b9b60cbd4.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_f15b9b60cbd4.mp3",
+      "bytes": 5067,
+      "source_modified_at": "2026-07-13T18:25:03.0537864+08:00",
+      "sha256": "F8DC9A974F8A96B9DD3B31D733CD54FA40CF3A9E3130F896F37CC7EFEB58FF8E"
+    },
+    {
+      "label": "Flutter assets/audio/theater_f40436327ec0.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_f40436327ec0.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_f40436327ec0.mp3",
+      "bytes": 18905,
+      "source_modified_at": "2026-07-13T18:25:03.9143338+08:00",
+      "sha256": "566E4DA740176C677329CC52AAC8FB9F9832CC8F51EE585CD823D4D6150CFD80"
+    },
+    {
+      "label": "Flutter assets/audio/theater_f507867127df.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_f507867127df.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_f507867127df.mp3",
+      "bytes": 13835,
+      "source_modified_at": "2026-07-13T18:25:04.6371028+08:00",
+      "sha256": "F86616F5EED06759E07DFCD27BD0D321688186C5F3CB4F80C58C5C7A00E1AD4D"
+    },
+    {
+      "label": "Flutter assets/audio/theater_f7383aa5fd2a.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_f7383aa5fd2a.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_f7383aa5fd2a.mp3",
+      "bytes": 12094,
+      "source_modified_at": "2026-07-13T18:25:05.3051353+08:00",
+      "sha256": "E10C94C57F73F14BF990170B75CBB48ADCAD655DF52A53174FB1316D2E9550CC"
+    },
+    {
+      "label": "Flutter assets/audio/theater_fd2a0761b53d.mp3",
+      "source": "正式版/flutter_app/assets/audio/theater_fd2a0761b53d.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/theater_fd2a0761b53d.mp3",
+      "bytes": 5667,
+      "source_modified_at": "2026-07-13T18:25:05.8921781+08:00",
+      "sha256": "8D93843821B45A0384A13887734E21D51B46D03D5FECCBE14272B16D09ABB20A"
+    },
+    {
+      "label": "Flutter assets/audio/vietnamese_chunk_day_la.mp3",
+      "source": "正式版/flutter_app/assets/audio/vietnamese_chunk_day_la.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/vietnamese_chunk_day_la.mp3",
+      "bytes": 2751,
+      "source_modified_at": "2026-07-13T18:25:06.4522066+08:00",
+      "sha256": "5E20A0D6FEE21257C70A49691492F9C52230520903F13E3E9761E912F811DB14"
+    },
+    {
+      "label": "Flutter assets/audio/vietnamese_chunk_nuoc_mam.mp3",
+      "source": "正式版/flutter_app/assets/audio/vietnamese_chunk_nuoc_mam.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/vietnamese_chunk_nuoc_mam.mp3",
+      "bytes": 3817,
+      "source_modified_at": "2026-07-13T18:25:07.0210118+08:00",
+      "sha256": "ACAAA123FF07F06A54A69DAEC339B99ECC65E2FD56FA5DB176557D7C9781CE9B"
+    },
+    {
+      "label": "Flutter assets/audio/vietnamese_delicious_example_canh.mp3",
+      "source": "正式版/flutter_app/assets/audio/vietnamese_delicious_example_canh.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/vietnamese_delicious_example_canh.mp3",
+      "bytes": 4753,
+      "source_modified_at": "2026-07-13T18:25:07.5859997+08:00",
+      "sha256": "CD13787259C343A897BE69FF959721CA88ABDB81EBB45595E6B49BC06CDA2FE7"
+    },
+    {
+      "label": "Flutter assets/audio/vietnamese_delicious_example_com.mp3",
+      "source": "正式版/flutter_app/assets/audio/vietnamese_delicious_example_com.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/vietnamese_delicious_example_com.mp3",
+      "bytes": 4962,
+      "source_modified_at": "2026-07-13T18:25:08.1619985+08:00",
+      "sha256": "9C86E689647023E8CA0639EA1B11F5C9E823399FE843A25137BD4A2301978E4A"
+    },
+    {
+      "label": "Flutter assets/audio/vietnamese_delicious_example_rau.mp3",
+      "source": "正式版/flutter_app/assets/audio/vietnamese_delicious_example_rau.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/vietnamese_delicious_example_rau.mp3",
+      "bytes": 4570,
+      "source_modified_at": "2026-07-13T18:25:08.7770043+08:00",
+      "sha256": "C83AFAD62ADB0D1953D0281E62DB2137F839A6BB1AAAC85A85784023BC116AF4"
+    },
+    {
+      "label": "Flutter assets/audio/vietnamese_delicious_full.mp3",
+      "source": "正式版/flutter_app/assets/audio/vietnamese_delicious_full.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/vietnamese_delicious_full.mp3",
+      "bytes": 3611,
+      "source_modified_at": "2026-07-13T18:25:09.4015431+08:00",
+      "sha256": "04D33C824784B42C5F3DD37F3153EF970D895954514CF65B513B6474EE088624"
+    },
+    {
+      "label": "Flutter assets/audio/vietnamese_example_com.mp3",
+      "source": "正式版/flutter_app/assets/audio/vietnamese_example_com.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/vietnamese_example_com.mp3",
+      "bytes": 3506,
+      "source_modified_at": "2026-07-13T18:25:10.0242100+08:00",
+      "sha256": "836DB6E7E89BC29E0A7AC667DFAECF886558204B684C1C4197F8654876AAD26C"
+    },
+    {
+      "label": "Flutter assets/audio/vietnamese_example_me.mp3",
+      "source": "正式版/flutter_app/assets/audio/vietnamese_example_me.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/vietnamese_example_me.mp3",
+      "bytes": 4181,
+      "source_modified_at": "2026-07-13T18:25:10.7573732+08:00",
+      "sha256": "058AE181686620A042D3852768346D0652660A43B6A85432783AA16C2A87A005"
+    },
+    {
+      "label": "Flutter assets/audio/vietnamese_example_nha.mp3",
+      "source": "正式版/flutter_app/assets/audio/vietnamese_example_nha.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/vietnamese_example_nha.mp3",
+      "bytes": 3765,
+      "source_modified_at": "2026-07-13T18:25:11.3243682+08:00",
+      "sha256": "C34F9E22342DDB6FE6B6229A4A1F12B09CE1554B124CE0DB8DCBB0B7D123854E"
+    },
+    {
+      "label": "Flutter assets/audio/vietnamese_greeting_ba_a.mp3",
+      "source": "正式版/flutter_app/assets/audio/vietnamese_greeting_ba_a.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/vietnamese_greeting_ba_a.mp3",
+      "bytes": 2285,
+      "source_modified_at": "2026-07-13T18:25:11.8614457+08:00",
+      "sha256": "ADB94D148A82425AF6ED56F5EAB7E659EFF486DEA0CAAB7117E7034584F93EE0"
+    },
+    {
+      "label": "Flutter assets/audio/vietnamese_greeting_chau_chao.mp3",
+      "source": "正式版/flutter_app/assets/audio/vietnamese_greeting_chau_chao.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/vietnamese_greeting_chau_chao.mp3",
+      "bytes": 3167,
+      "source_modified_at": "2026-07-13T18:25:12.5232707+08:00",
+      "sha256": "F53D76FC1A44687C7FA874425DC71A42FB2A55327FE637B4F0FEE3FEBA309C59"
+    },
+    {
+      "label": "Flutter assets/audio/vietnamese_greeting_example_chi.mp3",
+      "source": "正式版/flutter_app/assets/audio/vietnamese_greeting_example_chi.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/vietnamese_greeting_example_chi.mp3",
+      "bytes": 4728,
+      "source_modified_at": "2026-07-13T18:25:13.1082920+08:00",
+      "sha256": "559F2A5D25CB991AC1FA14C6C85E1670FC02BEA33A807E3CE708CE328CC8177F"
+    },
+    {
+      "label": "Flutter assets/audio/vietnamese_greeting_example_me.mp3",
+      "source": "正式版/flutter_app/assets/audio/vietnamese_greeting_example_me.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/vietnamese_greeting_example_me.mp3",
+      "bytes": 5691,
+      "source_modified_at": "2026-07-13T18:25:13.6954236+08:00",
+      "sha256": "86370FD7CD41D06CF59454392B1646156D3F6CE1892B82F888F24F9520AA65D2"
+    },
+    {
+      "label": "Flutter assets/audio/vietnamese_greeting_example_ong.mp3",
+      "source": "正式版/flutter_app/assets/audio/vietnamese_greeting_example_ong.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/vietnamese_greeting_example_ong.mp3",
+      "bytes": 4521,
+      "source_modified_at": "2026-07-13T18:25:14.2734243+08:00",
+      "sha256": "78DCBB744082AB675C5291F747152D966FA38C76E6A66C96E43EBB3988729516"
+    },
+    {
+      "label": "Flutter assets/audio/vietnamese_greeting_full.mp3",
+      "source": "正式版/flutter_app/assets/audio/vietnamese_greeting_full.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/vietnamese_greeting_full.mp3",
+      "bytes": 4677,
+      "source_modified_at": "2026-07-13T18:25:14.8494630+08:00",
+      "sha256": "0F0677501C9298982163409131588FCAD7AA677BD7F91B7FC32EFE695A226C7D"
+    },
+    {
+      "label": "Flutter assets/audio/vietnamese_homecoming_chau_ve.mp3",
+      "source": "正式版/flutter_app/assets/audio/vietnamese_homecoming_chau_ve.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/vietnamese_homecoming_chau_ve.mp3",
+      "bytes": 2933,
+      "source_modified_at": "2026-07-13T18:25:15.4014741+08:00",
+      "sha256": "F46972FEC850DEBD0B33C26EB7CEFA44909B1323BE7DBF978223059F7FF76EEF"
+    },
+    {
+      "label": "Flutter assets/audio/vietnamese_homecoming_example_bo.mp3",
+      "source": "正式版/flutter_app/assets/audio/vietnamese_homecoming_example_bo.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/vietnamese_homecoming_example_bo.mp3",
+      "bytes": 5433,
+      "source_modified_at": "2026-07-13T18:25:16.0015441+08:00",
+      "sha256": "68199A30C01B2A5E3F6BAE82AE8C2A9602E1D611B0A1D0F7739BAD1CA9A07507"
+    },
+    {
+      "label": "Flutter assets/audio/vietnamese_homecoming_example_con.mp3",
+      "source": "正式版/flutter_app/assets/audio/vietnamese_homecoming_example_con.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/vietnamese_homecoming_example_con.mp3",
+      "bytes": 4288,
+      "source_modified_at": "2026-07-13T18:25:16.5601012+08:00",
+      "sha256": "54DF725152364FFDDF5DCC961367FE46D7C3F353DD607EB9C83DA65839FACDE2"
+    },
+    {
+      "label": "Flutter assets/audio/vietnamese_homecoming_example_me.mp3",
+      "source": "正式版/flutter_app/assets/audio/vietnamese_homecoming_example_me.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/vietnamese_homecoming_example_me.mp3",
+      "bytes": 5537,
+      "source_modified_at": "2026-07-13T18:25:17.2421776+08:00",
+      "sha256": "C63152AE79078B5105BA89700143D9D05E418C8F6D6D1A7D0B46981EBC05DDF7"
+    },
+    {
+      "label": "Flutter assets/audio/vietnamese_homecoming_full.mp3",
+      "source": "正式版/flutter_app/assets/audio/vietnamese_homecoming_full.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/vietnamese_homecoming_full.mp3",
+      "bytes": 4391,
+      "source_modified_at": "2026-07-13T18:25:17.7952488+08:00",
+      "sha256": "CD24FAF8BF0856847BAC03C202EB244DBA2313A2E939E9F0B18BAC97208B7191"
+    },
+    {
+      "label": "Flutter assets/audio/vietnamese_homecoming_roi_a.mp3",
+      "source": "正式版/flutter_app/assets/audio/vietnamese_homecoming_roi_a.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/vietnamese_homecoming_roi_a.mp3",
+      "bytes": 1919,
+      "source_modified_at": "2026-07-13T18:25:18.3287949+08:00",
+      "sha256": "E21CDB4D91D65145637417A9B00EAFD3E10A84172A70C0EAD99246F8FC350893"
+    },
+    {
+      "label": "Flutter assets/audio/vietnamese_mealtime_an_com_a.mp3",
+      "source": "正式版/flutter_app/assets/audio/vietnamese_mealtime_an_com_a.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/vietnamese_mealtime_an_com_a.mp3",
+      "bytes": 3427,
+      "source_modified_at": "2026-07-13T18:25:18.9017861+08:00",
+      "sha256": "14E7BCCB920962F7DC13F33BB9C89249E25C87F81DE3E9A9849EB72AD596E479"
+    },
+    {
+      "label": "Flutter assets/audio/vietnamese_mealtime_chau_moi_ba.mp3",
+      "source": "正式版/flutter_app/assets/audio/vietnamese_mealtime_chau_moi_ba.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/vietnamese_mealtime_chau_moi_ba.mp3",
+      "bytes": 3402,
+      "source_modified_at": "2026-07-13T18:25:19.4670527+08:00",
+      "sha256": "1D5BD2C6E3718A6124CAFADA6090D811E51D7ADDD29E61B2FF6F3318A2BC3833"
+    },
+    {
+      "label": "Flutter assets/audio/vietnamese_mealtime_example_bo_me.mp3",
+      "source": "正式版/flutter_app/assets/audio/vietnamese_mealtime_example_bo_me.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/vietnamese_mealtime_example_bo_me.mp3",
+      "bytes": 9412,
+      "source_modified_at": "2026-07-13T18:25:20.1160723+08:00",
+      "sha256": "0AAECBB527800652E4410E9002260D8795F88EC95FBBC6A5F8CAC77BEDC1435E"
+    },
+    {
+      "label": "Flutter assets/audio/vietnamese_mealtime_example_ca_nha.mp3",
+      "source": "正式版/flutter_app/assets/audio/vietnamese_mealtime_example_ca_nha.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/vietnamese_mealtime_example_ca_nha.mp3",
+      "bytes": 7124,
+      "source_modified_at": "2026-07-13T18:25:20.7143817+08:00",
+      "sha256": "067AC7628F85AB1755D37420AA9170519952507DB54CEBE09588A8256C348FCA"
+    },
+    {
+      "label": "Flutter assets/audio/vietnamese_mealtime_example_ong.mp3",
+      "source": "正式版/flutter_app/assets/audio/vietnamese_mealtime_example_ong.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/vietnamese_mealtime_example_ong.mp3",
+      "bytes": 7017,
+      "source_modified_at": "2026-07-13T18:25:21.3037999+08:00",
+      "sha256": "5318104CE60247D6E08ADD40CACDFFC4A999050A309ABE990DC48447CC717771"
+    },
+    {
+      "label": "Flutter assets/audio/vietnamese_mealtime_full.mp3",
+      "source": "正式版/flutter_app/assets/audio/vietnamese_mealtime_full.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/vietnamese_mealtime_full.mp3",
+      "bytes": 6757,
+      "source_modified_at": "2026-07-13T18:25:21.9117954+08:00",
+      "sha256": "EED30FFD2832F1B32564245EC14EBA617596D031423C96E88B57C1C1A87B649C"
+    },
+    {
+      "label": "Flutter assets/audio/vietnamese_short_demo.mp3",
+      "source": "正式版/flutter_app/assets/audio/vietnamese_short_demo.mp3",
+      "destination": "deliverables/flutter/source/assets/audio/vietnamese_short_demo.mp3",
+      "bytes": 5846,
+      "source_modified_at": "2026-07-13T18:25:22.5028202+08:00",
+      "sha256": "323903FEAC73DBDD9C400F925B51F46191F9C431D23526EFCEAD855E9203422F"
+    },
+    {
+      "label": "Flutter assets/fonts/NotoSansTC-VF.ttf",
+      "source": "正式版/flutter_app/assets/fonts/NotoSansTC-VF.ttf",
+      "destination": "deliverables/flutter/source/assets/fonts/NotoSansTC-VF.ttf",
+      "bytes": 11942800,
+      "source_modified_at": "2026-07-12T21:32:01.9369734+08:00",
+      "sha256": "AC091CC8CD19E848202AFC8FE6D3809B4526C8FDBDB4BE82DA20C4F785949591"
+    },
+    {
+      "label": "Flutter assets/fonts/OFL-NotoSansCJK.txt",
+      "source": "正式版/flutter_app/assets/fonts/OFL-NotoSansCJK.txt",
+      "destination": "deliverables/flutter/source/assets/fonts/OFL-NotoSansCJK.txt",
+      "bytes": 4301,
+      "source_modified_at": "2026-07-12T21:32:02.2562089+08:00",
+      "sha256": "6A73F9541C2DE74158C0E7CF6B0A58EF774F5A780BF191F2D7EC9CC53EFE2BF2"
+    },
+    {
+      "label": "Flutter assets/images/family-bedtime-theater-v1.png",
+      "source": "正式版/flutter_app/assets/images/family-bedtime-theater-v1.png",
+      "destination": "deliverables/flutter/source/assets/images/family-bedtime-theater-v1.png",
+      "bytes": 2010515,
+      "source_modified_at": "2026-07-13T02:57:16.0612197+08:00",
+      "sha256": "9BBEB732FCAC790E7EE7384A18715174705872F63F865C2DED370F87614283D1"
+    },
+    {
+      "label": "Flutter assets/images/family-garden-theater-v1.png",
+      "source": "正式版/flutter_app/assets/images/family-garden-theater-v1.png",
+      "destination": "deliverables/flutter/source/assets/images/family-garden-theater-v1.png",
+      "bytes": 2204040,
+      "source_modified_at": "2026-07-13T02:54:09.1094267+08:00",
+      "sha256": "8943686DD50A330DE5B874861B843359CA349D3ABDB0ED643AA27C41C8F03054"
+    },
+    {
+      "label": "Flutter assets/images/family-homecoming-game-v1.webp",
+      "source": "正式版/flutter_app/assets/images/family-homecoming-game-v1.webp",
+      "destination": "deliverables/flutter/source/assets/images/family-homecoming-game-v1.webp",
+      "bytes": 152872,
+      "source_modified_at": "2026-07-13T01:15:27.2819155+08:00",
+      "sha256": "A4E5022337E6E7FB2BB75E36A0CBB3EE07DE88EDA471E63CFF43125B895FE2F3"
+    },
+    {
+      "label": "Flutter assets/images/family-homecoming-theater-v2.png",
+      "source": "正式版/flutter_app/assets/images/family-homecoming-theater-v2.png",
+      "destination": "deliverables/flutter/source/assets/images/family-homecoming-theater-v2.png",
+      "bytes": 2071447,
+      "source_modified_at": "2026-07-13T04:26:31.7804822+08:00",
+      "sha256": "91C58B71D436F6681DC908AB1BA1E38C658A96A7A192BC9FC844220E81C2BAE1"
+    },
+    {
+      "label": "Flutter assets/images/family-kitchen-game-v2.webp",
+      "source": "正式版/flutter_app/assets/images/family-kitchen-game-v2.webp",
+      "destination": "deliverables/flutter/source/assets/images/family-kitchen-game-v2.webp",
+      "bytes": 172488,
+      "source_modified_at": "2026-07-12T23:38:50.5669325+08:00",
+      "sha256": "62DDA9C1D1C8788573175847161C0437796F2815D04C8E4DF854CCF51A691D36"
+    },
+    {
+      "label": "Flutter assets/images/family-meal-lesson.png",
+      "source": "正式版/flutter_app/assets/images/family-meal-lesson.png",
+      "destination": "deliverables/flutter/source/assets/images/family-meal-lesson.png",
+      "bytes": 2503761,
+      "source_modified_at": "2026-07-12T20:49:56.8160345+08:00",
+      "sha256": "4D93170DC0C216743D4C9103D120D9557DC4869BCCE6D67D861DA26FCC3EB2F7"
+    },
+    {
+      "label": "Flutter assets/images/family-meal-lesson.webp",
+      "source": "正式版/flutter_app/assets/images/family-meal-lesson.webp",
+      "destination": "deliverables/flutter/source/assets/images/family-meal-lesson.webp",
+      "bytes": 120778,
+      "source_modified_at": "2026-07-12T20:55:08.5970559+08:00",
+      "sha256": "50085BB1B4BF5319F892BEBFAB78382BE120F6CFD5C8A2D8F7359DE16A34A792"
+    },
+    {
+      "label": "Flutter assets/images/family-mealtime-game-v1.webp",
+      "source": "正式版/flutter_app/assets/images/family-mealtime-game-v1.webp",
+      "destination": "deliverables/flutter/source/assets/images/family-mealtime-game-v1.webp",
+      "bytes": 206280,
+      "source_modified_at": "2026-07-13T01:15:27.6305741+08:00",
+      "sha256": "0A382B82344CBA09EBB79DBA8F65F0376781F509BA19781FD516C4BF589868B5"
+    },
+    {
+      "label": "Flutter assets/images/family-mealtime-theater-v2.png",
+      "source": "正式版/flutter_app/assets/images/family-mealtime-theater-v2.png",
+      "destination": "deliverables/flutter/source/assets/images/family-mealtime-theater-v2.png",
+      "bytes": 2091643,
+      "source_modified_at": "2026-07-13T04:20:47.6509419+08:00",
+      "sha256": "DD532767916199490BDC15A079FA402B7C7A75D5B04B4DD20D3085BF29875B95"
+    },
+    {
+      "label": "Flutter assets/images/family-morning-game-v1.webp",
+      "source": "正式版/flutter_app/assets/images/family-morning-game-v1.webp",
+      "destination": "deliverables/flutter/source/assets/images/family-morning-game-v1.webp",
+      "bytes": 140222,
+      "source_modified_at": "2026-07-13T01:15:27.0472892+08:00",
+      "sha256": "20A192047B36FB9675A9C3100CEED0DC80CC8C59FB45EA522EA31F08DB82C33F"
+    },
+    {
+      "label": "Flutter assets/images/family-stage-duo-v1.png",
+      "source": "正式版/flutter_app/assets/images/family-stage-duo-v1.png",
+      "destination": "deliverables/flutter/source/assets/images/family-stage-duo-v1.png",
+      "bytes": 614884,
+      "source_modified_at": "2026-07-13T06:00:22.4663392+08:00",
+      "sha256": "9881463BA16E2F2638AC0AEB4A09F600453BC7C577A87FD2E60ABB0626912AF4"
+    },
+    {
+      "label": "Flutter assets/images/provenance_manifest.json",
+      "source": "正式版/flutter_app/assets/images/provenance_manifest.json",
+      "destination": "deliverables/flutter/source/assets/images/provenance_manifest.json",
+      "bytes": 11385,
+      "source_modified_at": "2026-07-14T02:49:56.3756519+08:00",
+      "sha256": "3F1F6503E5103C08896BBB17954BAE4F7D24ED8EDDC4337FA2A12FE3E367E41B"
+    },
+    {
+      "label": "Flutter assets/images/README.md",
+      "source": "正式版/flutter_app/assets/images/README.md",
+      "destination": "deliverables/flutter/source/assets/images/README.md",
+      "bytes": 2857,
+      "source_modified_at": "2026-07-14T02:54:29.8881518+08:00",
+      "sha256": "688A48914D4CD875157AEB7BFBE0F92288971A484EEA12964640D9D9CB2C6459"
+    },
+    {
+      "label": "Flutter web/favicon.png",
+      "source": "正式版/flutter_app/web/favicon.png",
+      "destination": "deliverables/flutter/source/web/favicon.png",
+      "bytes": 917,
+      "source_modified_at": "2026-07-12T04:25:05.1559315+08:00",
+      "sha256": "7AB2525F4B86B65D3E4C70358A17E5A1AAF6F437F99CBCC046DAD73D59BB9015"
+    },
+    {
+      "label": "Flutter web/index.html",
+      "source": "正式版/flutter_app/web/index.html",
+      "destination": "deliverables/flutter/source/web/index.html",
+      "bytes": 3346,
+      "source_modified_at": "2026-07-13T22:00:43.1517703+08:00",
+      "sha256": "B80E447EC1416E58E38522AB9E541D631642AFC099D11DB6B647EDB3206F5F77"
+    },
+    {
+      "label": "Flutter web/manifest.json",
+      "source": "正式版/flutter_app/web/manifest.json",
+      "destination": "deliverables/flutter/source/web/manifest.json",
+      "bytes": 958,
+      "source_modified_at": "2026-07-13T22:00:43.1527660+08:00",
+      "sha256": "B0134A9C2AB7D661964CCC1486DE93A5482EB6332167D96800DC203079C2B924"
+    },
+    {
+      "label": "Flutter web/icons/Icon-192.png",
+      "source": "正式版/flutter_app/web/icons/Icon-192.png",
+      "destination": "deliverables/flutter/source/web/icons/Icon-192.png",
+      "bytes": 5292,
+      "source_modified_at": "2026-07-12T04:25:05.1559315+08:00",
+      "sha256": "3DCE99077602F70421C1C6B2A240BC9B83D64D86681D45F2154143310C980BE3"
+    },
+    {
+      "label": "Flutter web/icons/Icon-512.png",
+      "source": "正式版/flutter_app/web/icons/Icon-512.png",
+      "destination": "deliverables/flutter/source/web/icons/Icon-512.png",
+      "bytes": 8252,
+      "source_modified_at": "2026-07-12T04:25:05.1569308+08:00",
+      "sha256": "BACCB205AE45F0B421BE1657259B4943AC40C95094AB877F3BCBE12CD544DCBE"
+    },
+    {
+      "label": "Flutter web/icons/Icon-maskable-192.png",
+      "source": "正式版/flutter_app/web/icons/Icon-maskable-192.png",
+      "destination": "deliverables/flutter/source/web/icons/Icon-maskable-192.png",
+      "bytes": 5594,
+      "source_modified_at": "2026-07-12T04:28:06.1919791+08:00",
+      "sha256": "D2C842E22A9F4EC9D996B23373A905C88D9A203B220C5C151885AD621F974B5C"
+    },
+    {
+      "label": "Flutter web/icons/Icon-maskable-512.png",
+      "source": "正式版/flutter_app/web/icons/Icon-maskable-512.png",
+      "destination": "deliverables/flutter/source/web/icons/Icon-maskable-512.png",
+      "bytes": 20998,
+      "source_modified_at": "2026-07-12T04:28:06.1839829+08:00",
+      "sha256": "6AEE06CDCAB6B2AEF74B1734C4778F4421D2DA100B0FF9E52B21B55240202929"
+    },
+    {
+      "label": "Flutter Web .last_build_id",
+      "source": "正式版/flutter_app/build/web/.last_build_id",
+      "destination": "deliverables/app/.last_build_id",
+      "bytes": 32,
+      "source_modified_at": "2026-07-13T17:41:43.2529195+08:00",
+      "sha256": "F61959DFF0DD0EB68DC84B430B3C3CE5B9EC58C169CA300AB531BAAA57971EEE"
+    },
+    {
+      "label": "Flutter Web favicon.png",
+      "source": "正式版/flutter_app/build/web/favicon.png",
+      "destination": "deliverables/app/favicon.png",
+      "bytes": 917,
+      "source_modified_at": "2026-07-12T04:25:05.1559315+08:00",
+      "sha256": "7AB2525F4B86B65D3E4C70358A17E5A1AAF6F437F99CBCC046DAD73D59BB9015"
+    },
+    {
+      "label": "Flutter Web flutter_bootstrap.js",
+      "source": "正式版/flutter_app/build/web/flutter_bootstrap.js",
+      "destination": "deliverables/app/flutter_bootstrap.js",
+      "bytes": 9808,
+      "source_modified_at": "2026-07-14T04:03:35.5895999+08:00",
+      "sha256": "87B1FEAFA6ACEDF8A1AFF59A04FD0B169051206398C8C26813795028F5A61C8F"
+    },
+    {
+      "label": "Flutter Web flutter_service_worker.js",
+      "source": "正式版/flutter_app/build/web/flutter_service_worker.js",
+      "destination": "deliverables/app/flutter_service_worker.js",
+      "bytes": 0,
+      "source_modified_at": "2026-07-14T04:04:57.8346118+08:00",
+      "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "label": "Flutter Web flutter.js",
+      "source": "正式版/flutter_app/build/web/flutter.js",
+      "destination": "deliverables/app/flutter.js",
+      "bytes": 9553,
+      "source_modified_at": "2026-07-12T04:55:08.8266449+08:00",
+      "sha256": "A483FD28F51ED2FADD0DA3FADE5B672EBA56310D549D736CE62EABF624A6A578"
+    },
+    {
+      "label": "Flutter Web index.html",
+      "source": "正式版/flutter_app/build/web/index.html",
+      "destination": "deliverables/app/index.html",
+      "bytes": 3330,
+      "source_modified_at": "2026-07-14T04:04:58.3807654+08:00",
+      "sha256": "A202B1A11050B66309808C6B989F053F9E60ACCDF2690AA7D71F220C34F28973"
+    },
+    {
+      "label": "Flutter Web main.dart.js",
+      "source": "正式版/flutter_app/build/web/main.dart.js",
+      "destination": "deliverables/app/main.dart.js",
+      "bytes": 3627631,
+      "source_modified_at": "2026-07-14T04:04:35.3763959+08:00",
+      "sha256": "61DC877360042D5EE07C77C92251D3CA3D9E7806A3AB227118E397CA06D5F17E"
+    },
+    {
+      "label": "Flutter Web manifest.json",
+      "source": "正式版/flutter_app/build/web/manifest.json",
+      "destination": "deliverables/app/manifest.json",
+      "bytes": 958,
+      "source_modified_at": "2026-07-13T22:00:43.1527660+08:00",
+      "sha256": "B0134A9C2AB7D661964CCC1486DE93A5482EB6332167D96800DC203079C2B924"
+    },
+    {
+      "label": "Flutter Web version.json",
+      "source": "正式版/flutter_app/build/web/version.json",
+      "destination": "deliverables/app/version.json",
+      "bytes": 100,
+      "source_modified_at": "2026-07-14T04:04:48.4541257+08:00",
+      "sha256": "86184D2435BD0B42B92F6DA3BB857EB7F80E3025CC7600FD1CEE250F68086467"
+    },
+    {
+      "label": "Flutter Web assets/AssetManifest.bin",
+      "source": "正式版/flutter_app/build/web/assets/AssetManifest.bin",
+      "destination": "deliverables/app/assets/AssetManifest.bin",
+      "bytes": 12500,
+      "source_modified_at": "2026-07-14T04:04:49.2441240+08:00",
+      "sha256": "7D24E48548FE00A8462034AE9A1A9EA9E55907A514643904D399FB42B591BF12"
+    },
+    {
+      "label": "Flutter Web assets/AssetManifest.bin.json",
+      "source": "正式版/flutter_app/build/web/assets/AssetManifest.bin.json",
+      "destination": "deliverables/app/assets/AssetManifest.bin.json",
+      "bytes": 16670,
+      "source_modified_at": "2026-07-14T04:04:49.2441240+08:00",
+      "sha256": "F4F2D8BD44893A04DE9DF41571F92BAF52EC35AB7E19A3C07FE7EE2883933B72"
+    },
+    {
+      "label": "Flutter Web assets/FontManifest.json",
+      "source": "正式版/flutter_app/build/web/assets/FontManifest.json",
+      "destination": "deliverables/app/assets/FontManifest.json",
+      "bytes": 285,
+      "source_modified_at": "2026-07-14T04:04:49.2441240+08:00",
+      "sha256": "729EEFFD9326BBF3FEA62A8D9357A8C3A4FD3356152BC1DE9E1149B3F5BED741"
+    },
+    {
+      "label": "Flutter Web assets/NOTICES",
+      "source": "正式版/flutter_app/build/web/assets/NOTICES",
+      "destination": "deliverables/app/assets/NOTICES",
+      "bytes": 1401008,
+      "source_modified_at": "2026-07-14T04:04:49.2471320+08:00",
+      "sha256": "B7914067957C0DC93789358E718CA5CAACD6B4D8625A772F0191FF68452A564A"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/piper_generation_manifest.json",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/piper_generation_manifest.json",
+      "destination": "deliverables/app/assets/assets/audio/piper_generation_manifest.json",
+      "bytes": 27108,
+      "source_modified_at": "2026-07-13T18:25:22.5328162+08:00",
+      "sha256": "BB9F460F2C6CB030EA11263DFF3C87201B8B2F5891A6302F600D0E518DA59426"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/README.md",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/README.md",
+      "destination": "deliverables/app/assets/assets/audio/README.md",
+      "bytes": 3501,
+      "source_modified_at": "2026-07-13T18:31:38.9740748+08:00",
+      "sha256": "6C7F3FD31269E3F0FA152BA819D2CE37B4EC09518670E62404DB3F32B063054B"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_0002441ff184.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_0002441ff184.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_0002441ff184.mp3",
+      "bytes": 5562,
+      "source_modified_at": "2026-07-13T18:24:07.3868385+08:00",
+      "sha256": "AB36DD28CAF2DD34F4CC4D8C3720EDD34079F0195756E6E5C863EE3D7EDD97E0"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_05466780a811.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_05466780a811.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_05466780a811.mp3",
+      "bytes": 4729,
+      "source_modified_at": "2026-07-13T18:24:08.0128433+08:00",
+      "sha256": "70C8C99EFEF421B2A96301F47B8113E7E3F78D9585C8649CA5B06A193018F45E"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_05cd52fd3f69.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_05cd52fd3f69.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_05cd52fd3f69.mp3",
+      "bytes": 7641,
+      "source_modified_at": "2026-07-13T18:24:08.6928697+08:00",
+      "sha256": "4C3A408790B8062054B39612CB59193EED188543A6C9D770C690C21BEFD3224C"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_072af085a512.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_072af085a512.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_072af085a512.mp3",
+      "bytes": 5536,
+      "source_modified_at": "2026-07-13T18:24:09.4201264+08:00",
+      "sha256": "A74AD4053E6B9090B1711C0D40446CC691175CE515C8C9AC28CAE473E2527AA6"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_08d85703a885.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_08d85703a885.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_08d85703a885.mp3",
+      "bytes": 12505,
+      "source_modified_at": "2026-07-13T18:24:10.3297905+08:00",
+      "sha256": "2D36AA00D80EE623CFA36DA7F2549813DB737B81BD0B5938022EFE2809514620"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_0b7b27acb7b7.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_0b7b27acb7b7.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_0b7b27acb7b7.mp3",
+      "bytes": 6470,
+      "source_modified_at": "2026-07-13T18:24:11.0017854+08:00",
+      "sha256": "EF895AC5BA1F206CC0B6970A033A2152E1CC542BB8CA48C12DA17728F2CA1DEA"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_0cad1b245cf2.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_0cad1b245cf2.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_0cad1b245cf2.mp3",
+      "bytes": 3844,
+      "source_modified_at": "2026-07-13T18:24:11.6427982+08:00",
+      "sha256": "0443D5767A4F89F8E741B831C1A0BB1F75B20BDE4271ACD2DAE8308B232097B3"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_0edae7e6ea8f.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_0edae7e6ea8f.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_0edae7e6ea8f.mp3",
+      "bytes": 3713,
+      "source_modified_at": "2026-07-13T18:24:12.3867838+08:00",
+      "sha256": "787AD7AE0DD108BFED796065831AECF5E31152BA97F87E95B71F14B9025D97DF"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_0f21d13f9fb7.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_0f21d13f9fb7.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_0f21d13f9fb7.mp3",
+      "bytes": 5743,
+      "source_modified_at": "2026-07-13T18:24:13.1591778+08:00",
+      "sha256": "0683CFCBA18AC9240E2E3B846D9A86866D32CA1BBB5C4D99482F337A242FEFF6"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_0fe50f465307.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_0fe50f465307.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_0fe50f465307.mp3",
+      "bytes": 5795,
+      "source_modified_at": "2026-07-13T18:24:13.7921776+08:00",
+      "sha256": "481C1D6CDC5BD0BA64006818EB972F8272BF64BD622E07137F28F65F45AACB7C"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_175dd0f8e30c.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_175dd0f8e30c.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_175dd0f8e30c.mp3",
+      "bytes": 7305,
+      "source_modified_at": "2026-07-13T18:24:14.4123248+08:00",
+      "sha256": "C866556C741C34FE781848D3ACE7526961F4D04884DBF7ECE7DCAB355F3CE0C8"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_18f300f75d32.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_18f300f75d32.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_18f300f75d32.mp3",
+      "bytes": 6471,
+      "source_modified_at": "2026-07-13T18:24:15.0007971+08:00",
+      "sha256": "5C183F859D8BE94E579F7F1A2A521C1D86D3D86F3F79670D468B78F70F524B5D"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_197f785c0dbb.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_197f785c0dbb.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_197f785c0dbb.mp3",
+      "bytes": 12974,
+      "source_modified_at": "2026-07-13T18:24:15.6728676+08:00",
+      "sha256": "2E8996516CC31A96B2F40096A84F6E80434C737D22641E8AC1A510752C7EA609"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_1d6178ff57de.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_1d6178ff57de.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_1d6178ff57de.mp3",
+      "bytes": 9178,
+      "source_modified_at": "2026-07-13T18:24:16.3428626+08:00",
+      "sha256": "46A52F6E813FE5E2F0DA1F6EEB92C43AC1E37115621F1A1FC47601CB64EC34D9"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_21533f901813.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_21533f901813.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_21533f901813.mp3",
+      "bytes": 3531,
+      "source_modified_at": "2026-07-13T18:24:16.9168876+08:00",
+      "sha256": "6AB919DFED6B10379B5D2398974C590AC4F4EB46DB5D4A481319750A75EB1E77"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_271e3afdddb7.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_271e3afdddb7.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_271e3afdddb7.mp3",
+      "bytes": 3794,
+      "source_modified_at": "2026-07-13T18:24:17.4639622+08:00",
+      "sha256": "6AB63ECF89C846DE15668E5F57A864EBE56C589FBC3FA90A3A2CF73145661F6A"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_2d5d7661bded.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_2d5d7661bded.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_2d5d7661bded.mp3",
+      "bytes": 5460,
+      "source_modified_at": "2026-07-13T18:24:18.1466226+08:00",
+      "sha256": "AF572992BF81C83ED80BFA4F0E788E899F6375D18EF791DFE3D94F77783FB8C2"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_2d964b43ce6c.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_2d964b43ce6c.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_2d964b43ce6c.mp3",
+      "bytes": 8918,
+      "source_modified_at": "2026-07-13T18:24:18.7902076+08:00",
+      "sha256": "A8E189996376794EF8C0F5E0B9AAA29CB59D72AC71F97672DC7E8620C3309FEB"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_307061800647.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_307061800647.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_307061800647.mp3",
+      "bytes": 8006,
+      "source_modified_at": "2026-07-13T18:24:19.5352322+08:00",
+      "sha256": "FC5F30670E77B358932429477C9BFEF3F85468EBD4EF3B904DC4AB2ABFBD8F94"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_35edc7ea04fb.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_35edc7ea04fb.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_35edc7ea04fb.mp3",
+      "bytes": 4883,
+      "source_modified_at": "2026-07-13T18:24:20.1172285+08:00",
+      "sha256": "DFF5F2EF1D973BA2B921432E76CC60A5BC39BD81C9162C5C2229E6B67B730D38"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_381eacf95bd3.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_381eacf95bd3.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_381eacf95bd3.mp3",
+      "bytes": 5771,
+      "source_modified_at": "2026-07-13T18:24:20.7102439+08:00",
+      "sha256": "54F16163A953CA30F142C1455262BFADBC89B311297A5FDF6544416D9C760977"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_387aa14325b1.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_387aa14325b1.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_387aa14325b1.mp3",
+      "bytes": 5717,
+      "source_modified_at": "2026-07-13T18:24:21.2868405+08:00",
+      "sha256": "39B20EEDBEC9D0E90642962A6EF1227A9AE9AD95DA33F424F4D45C4C92B069BD"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_3f3c9cb4ce52.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_3f3c9cb4ce52.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_3f3c9cb4ce52.mp3",
+      "bytes": 12821,
+      "source_modified_at": "2026-07-13T18:24:21.9716403+08:00",
+      "sha256": "EF43CA0164AD328A8502EE0B8135584370E3F60AE41EBD0103211EC50C8F92AB"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_4070c329567f.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_4070c329567f.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_4070c329567f.mp3",
+      "bytes": 7278,
+      "source_modified_at": "2026-07-13T18:24:22.5581636+08:00",
+      "sha256": "1506AC46D55C67A0DD052928C729A1759164D9593ED2CB87408FD0E482604573"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_4152cf240b9b.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_4152cf240b9b.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_4152cf240b9b.mp3",
+      "bytes": 2336,
+      "source_modified_at": "2026-07-13T18:24:23.0951877+08:00",
+      "sha256": "E3454FE4D7FF7D63EA749CB927691E07CD31798A06C8F91265C00F203DD757F9"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_4586e910cdac.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_4586e910cdac.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_4586e910cdac.mp3",
+      "bytes": 5301,
+      "source_modified_at": "2026-07-13T18:24:23.6672117+08:00",
+      "sha256": "B73149C873E8880F4359807E964F806CB081598B903EAF33B49CAB680C0624EE"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_463c5a74a5c8.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_463c5a74a5c8.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_463c5a74a5c8.mp3",
+      "bytes": 6940,
+      "source_modified_at": "2026-07-13T18:24:24.2852119+08:00",
+      "sha256": "5A620E4B03BF1295429185CBF944B6087857141C75313188DB73AE3EAF01F746"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_46a39f0771be.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_46a39f0771be.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_46a39f0771be.mp3",
+      "bytes": 4183,
+      "source_modified_at": "2026-07-13T18:24:24.8532270+08:00",
+      "sha256": "7F3ADA8833A80FDC2F74085DC9F2462A1FC782FC794E0F4EF2872280614DEAD1"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_4ac7ac2e1418.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_4ac7ac2e1418.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_4ac7ac2e1418.mp3",
+      "bytes": 3272,
+      "source_modified_at": "2026-07-13T18:24:25.4087102+08:00",
+      "sha256": "E267CA7358FBB75D6DE246D23539DC7BEBB8571D31995ECE39CC2CEEDD1D2D2B"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_4d3c1ac975f7.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_4d3c1ac975f7.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_4d3c1ac975f7.mp3",
+      "bytes": 3560,
+      "source_modified_at": "2026-07-13T18:24:25.9517247+08:00",
+      "sha256": "4509E618755A128C9ABE60AF04714132E11E0B47D53FFF6A0AA13FF15C919219"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_4e2b2fbaf617.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_4e2b2fbaf617.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_4e2b2fbaf617.mp3",
+      "bytes": 17946,
+      "source_modified_at": "2026-07-13T18:24:26.7157974+08:00",
+      "sha256": "F6E88530F6B72CDAEEEACF928287FFC40CAF8C31A62538A02AA8FD5B42B73245"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_4e7f7b9324f0.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_4e7f7b9324f0.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_4e7f7b9324f0.mp3",
+      "bytes": 6603,
+      "source_modified_at": "2026-07-13T18:24:27.4130587+08:00",
+      "sha256": "072FF97EACD7DE5773D59B68934892B4602157447FD82A8B69E4874DEBF4949F"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_5542ee88b804.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_5542ee88b804.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_5542ee88b804.mp3",
+      "bytes": 3221,
+      "source_modified_at": "2026-07-13T18:24:27.9520564+08:00",
+      "sha256": "530CCB3CBD306BF5E0B6ADBCA2F32E5DDCA91DD7697F359E14E5AAA27FCD4B68"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_644711fdd85a.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_644711fdd85a.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_644711fdd85a.mp3",
+      "bytes": 13394,
+      "source_modified_at": "2026-07-13T18:24:28.6510897+08:00",
+      "sha256": "BF987E0DBBA98BEDDC69A7AC7E7F05B3F8BF9B11CAB2D1033BAC1E276F9D5845"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_6982d36adffb.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_6982d36adffb.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_6982d36adffb.mp3",
+      "bytes": 18631,
+      "source_modified_at": "2026-07-13T18:24:29.4000900+08:00",
+      "sha256": "D01E20ED6619811615A04BFD1D552159F01C8A3261E8FD7BA1ED7D4ACF4C52A5"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_6a5a7c04ea60.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_6a5a7c04ea60.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_6a5a7c04ea60.mp3",
+      "bytes": 6186,
+      "source_modified_at": "2026-07-13T18:24:30.0061358+08:00",
+      "sha256": "4E18B8314BEF122816BBA6DFC566AAA0EFEA4C47B1C8F68988CB375386637AF1"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_6a7b2794106c.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_6a7b2794106c.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_6a7b2794106c.mp3",
+      "bytes": 3739,
+      "source_modified_at": "2026-07-13T18:24:30.5641353+08:00",
+      "sha256": "4CBD979CAA9B82E7B2CED4973B32AE468899EBEE8EEA41D976CFB5E51F10DC7E"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_6c1f535f8ab8.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_6c1f535f8ab8.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_6c1f535f8ab8.mp3",
+      "bytes": 4000,
+      "source_modified_at": "2026-07-13T18:24:31.2508006+08:00",
+      "sha256": "943214BCCEB4155CD5B8441F9758ECB24E7208BE5852642E8795F4E201D1E52F"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_7430a79cd482.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_7430a79cd482.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_7430a79cd482.mp3",
+      "bytes": 5588,
+      "source_modified_at": "2026-07-13T18:24:31.8358006+08:00",
+      "sha256": "8C7839464891E7050C72D1BA4A6E6EFD7E406CAAE890AE6922450CC74CEBDBBE"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_7c1953a63d96.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_7c1953a63d96.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_7c1953a63d96.mp3",
+      "bytes": 4572,
+      "source_modified_at": "2026-07-13T18:24:32.3968048+08:00",
+      "sha256": "47C4D2BEC25EEED2E7D285C429FE4F7CD5F092CC69CD049E3FD6D28F68D03A5F"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_838e50a4ece9.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_838e50a4ece9.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_838e50a4ece9.mp3",
+      "bytes": 13965,
+      "source_modified_at": "2026-07-13T18:24:33.1408606+08:00",
+      "sha256": "76EAE72AEC85CF54BE9F16039C0F02E8DC4ACA038F1C84249C5DD7386EBE02A9"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_845fa0acc260.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_845fa0acc260.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_845fa0acc260.mp3",
+      "bytes": 3558,
+      "source_modified_at": "2026-07-13T18:24:33.7218628+08:00",
+      "sha256": "B4DBA410D3F902BCCCC54401BB8D603C381008E6EF437B179CDAAFA1D7F8DB88"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_8db033064430.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_8db033064430.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_8db033064430.mp3",
+      "bytes": 6056,
+      "source_modified_at": "2026-07-13T18:24:34.3559718+08:00",
+      "sha256": "46A85F5684BA6F5BE38124AC572B1ACD6DF5C7665CA8B7043D3C4F4EF4A2C502"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_93bfe10dff1e.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_93bfe10dff1e.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_93bfe10dff1e.mp3",
+      "bytes": 3479,
+      "source_modified_at": "2026-07-13T18:24:34.9545083+08:00",
+      "sha256": "8CCBBAE89DB86537D09B20E2A0ADB97ED6CED01E800BAE63FFE02C84DD3CCA2A"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_9519890f42d7.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_9519890f42d7.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_9519890f42d7.mp3",
+      "bytes": 7177,
+      "source_modified_at": "2026-07-13T18:24:35.5555073+08:00",
+      "sha256": "4CCA677F46D910FC602AB9E87EAA1E3BB22CA9DBE57898D347E0BE4C412ABAE4"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_970351f426dc.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_970351f426dc.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_970351f426dc.mp3",
+      "bytes": 4156,
+      "source_modified_at": "2026-07-13T18:24:36.1215269+08:00",
+      "sha256": "53901E2A3977FC87572C530A53752DF28DA87EFCC8988FC815931B290D191CC0"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_9a52b4224f81.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_9a52b4224f81.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_9a52b4224f81.mp3",
+      "bytes": 3401,
+      "source_modified_at": "2026-07-13T18:24:36.6925204+08:00",
+      "sha256": "7FAE26C1AEECC4DB3BE279A8DBB588FCF188B695029B19610AE5311860D35103"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_9cadf126c39d.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_9cadf126c39d.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_9cadf126c39d.mp3",
+      "bytes": 9930,
+      "source_modified_at": "2026-07-13T18:24:37.4135554+08:00",
+      "sha256": "BC3A2AF0230FDC9E3AD9A6355E79A93A13FA4F38DB1E58B2B8965205A345AC58"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_9d4a564cde24.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_9d4a564cde24.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_9d4a564cde24.mp3",
+      "bytes": 5433,
+      "source_modified_at": "2026-07-13T18:24:37.9976033+08:00",
+      "sha256": "D7C85C634F32C23404E006CCA18FD03717A4EF350359435789FA0CFD38195C5E"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_9dbcae1ae8e6.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_9dbcae1ae8e6.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_9dbcae1ae8e6.mp3",
+      "bytes": 6395,
+      "source_modified_at": "2026-07-13T18:24:38.6477586+08:00",
+      "sha256": "904954EAE2C516AE392F9139667528871AF7D4A88215B0BFCF2E26E8A76A0C64"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_9f39e7063253.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_9f39e7063253.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_9f39e7063253.mp3",
+      "bytes": 10403,
+      "source_modified_at": "2026-07-13T18:24:39.3445058+08:00",
+      "sha256": "677BF7794A54DE7B35B2EE74BDC81591B18336B8A159C06ADA2C624310F013DB"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_a584a212e867.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_a584a212e867.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_a584a212e867.mp3",
+      "bytes": 4443,
+      "source_modified_at": "2026-07-13T18:24:39.9535281+08:00",
+      "sha256": "DB1D00AE4BF68CF18CF70F2723E298336F6D6B4BE7A530711EFFA4371FCA934C"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_a702b25b551e.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_a702b25b551e.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_a702b25b551e.mp3",
+      "bytes": 3999,
+      "source_modified_at": "2026-07-13T18:24:40.7125386+08:00",
+      "sha256": "10F4F3F0CD4C9CC453D1E0529829B4E1115E85F5FBA5C8196CE422CF31F16F1F"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_aaa31c9b2444.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_aaa31c9b2444.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_aaa31c9b2444.mp3",
+      "bytes": 6473,
+      "source_modified_at": "2026-07-13T18:24:41.3455731+08:00",
+      "sha256": "28EA253695E258C6BC6D11AB42FBB7520E81B2BC2EC3BCE09F0B012B04F62EBF"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_b19fc675cece.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_b19fc675cece.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_b19fc675cece.mp3",
+      "bytes": 3792,
+      "source_modified_at": "2026-07-13T18:24:41.9386049+08:00",
+      "sha256": "F61152705F749EEEBAC7E26BC810CEECACE0190EBDEB63F0E5BB64EFFE70EC45"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_b36e620b4508.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_b36e620b4508.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_b36e620b4508.mp3",
+      "bytes": 11316,
+      "source_modified_at": "2026-07-13T18:24:42.5966143+08:00",
+      "sha256": "2B677875ED42562CE499A69FD952D51477EC88C5DCBB94CAC985532FC8A49C0D"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_b66bfe6ce787.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_b66bfe6ce787.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_b66bfe6ce787.mp3",
+      "bytes": 15240,
+      "source_modified_at": "2026-07-13T18:24:43.3206089+08:00",
+      "sha256": "22C3BC5621FFB4EE2900BA14B48A970D052EF06AF3C2EC042D1EABB1CAC423EE"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_b7eb148389c6.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_b7eb148389c6.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_b7eb148389c6.mp3",
+      "bytes": 3662,
+      "source_modified_at": "2026-07-13T18:24:43.8969814+08:00",
+      "sha256": "20E6F97A227321CDF7E905DD2FEF58CE377539146D5B74C12EA65D5FB45CF82D"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_b803f411cb17.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_b803f411cb17.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_b803f411cb17.mp3",
+      "bytes": 7120,
+      "source_modified_at": "2026-07-13T18:24:44.6103663+08:00",
+      "sha256": "5CFFDE95A270E8B56CCF3DD043BFEDE21202391EFBD4FB778EA2D4B2F9BFE04F"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_bae2b7ddf59e.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_bae2b7ddf59e.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_bae2b7ddf59e.mp3",
+      "bytes": 5665,
+      "source_modified_at": "2026-07-13T18:24:45.2048863+08:00",
+      "sha256": "E1757491D88F58E5E2CF6247BC489CD88A86FACA0A14DE9677769E39F6CE7FF0"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_bc3092d6d656.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_bc3092d6d656.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_bc3092d6d656.mp3",
+      "bytes": 4548,
+      "source_modified_at": "2026-07-13T18:24:45.8780717+08:00",
+      "sha256": "641106DAFDFC6130DE5ECCCD010EFAE4632AD8E1A1635DE564FEE076592FD9E4"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_bc86b3234045.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_bc86b3234045.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_bc86b3234045.mp3",
+      "bytes": 6943,
+      "source_modified_at": "2026-07-13T18:24:46.4820908+08:00",
+      "sha256": "BA0AFB93FA4A27C7B2E32BDCD329F9D2B7E6BB0B0D735AA2A21F058023C9EB00"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_bee9797e07fd.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_bee9797e07fd.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_bee9797e07fd.mp3",
+      "bytes": 13445,
+      "source_modified_at": "2026-07-13T18:24:47.1630836+08:00",
+      "sha256": "41A3F7F4054DC3ABE42DD91EC8346856708825B318BBDD2B256C3209D6E4F9F7"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_c0dcf825b133.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_c0dcf825b133.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_c0dcf825b133.mp3",
+      "bytes": 6525,
+      "source_modified_at": "2026-07-13T18:24:47.7478375+08:00",
+      "sha256": "9338E3104ED2C5546D3CF62691EE01880032D1A7AC40E4C821D6EA37AB628A4C"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_c224f4c19220.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_c224f4c19220.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_c224f4c19220.mp3",
+      "bytes": 4833,
+      "source_modified_at": "2026-07-13T18:24:48.3338328+08:00",
+      "sha256": "49F950979CF4075F2EB174D36D489657CABBEB41134729C0E4F5D6B4884F8D92"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_c58a5da78c49.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_c58a5da78c49.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_c58a5da78c49.mp3",
+      "bytes": 5276,
+      "source_modified_at": "2026-07-13T18:24:48.9158845+08:00",
+      "sha256": "909003C84CC519C654E3BA9BA98F5B3467D0CE6A9668BB0499C1B061464DF221"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_c924b2311eb1.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_c924b2311eb1.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_c924b2311eb1.mp3",
+      "bytes": 6575,
+      "source_modified_at": "2026-07-13T18:24:49.5118465+08:00",
+      "sha256": "CE9C728AA079E79AB554758F7028E789D96B1C8B50E900F82905359D3D95CF70"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_c9492ae023b6.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_c9492ae023b6.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_c9492ae023b6.mp3",
+      "bytes": 3766,
+      "source_modified_at": "2026-07-13T18:24:50.0598745+08:00",
+      "sha256": "156E00F0F44FDEF189C4554335CE3A82D8A8647C0E7759FCD9BFD081BD60EEEF"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_cc3101767ee6.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_cc3101767ee6.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_cc3101767ee6.mp3",
+      "bytes": 4132,
+      "source_modified_at": "2026-07-13T18:24:50.6236401+08:00",
+      "sha256": "5E814073D809125EC8ECE6FB67B109664E710DE3FC13F3325AA3BD5CC5557E90"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_cc3919f570b2.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_cc3919f570b2.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_cc3919f570b2.mp3",
+      "bytes": 8187,
+      "source_modified_at": "2026-07-13T18:24:51.3499164+08:00",
+      "sha256": "BB707126D836FDADC34A24203E2982EB4A0D772B825D5A4162E7360D774732C7"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_ccb8f8aa6499.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_ccb8f8aa6499.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_ccb8f8aa6499.mp3",
+      "bytes": 20339,
+      "source_modified_at": "2026-07-13T18:24:52.2379732+08:00",
+      "sha256": "1662561665B2C52E0E198CC01C94E68F8751DAAC22622F2E3C9837EE044B1A01"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_cdc7305220fc.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_cdc7305220fc.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_cdc7305220fc.mp3",
+      "bytes": 6759,
+      "source_modified_at": "2026-07-13T18:24:53.1129960+08:00",
+      "sha256": "51DFE71BE2A15E4D02A8DB155CBAEB3FB4BE75FD81EF810D0FE250DA43F37A27"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_ce0f31315106.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_ce0f31315106.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_ce0f31315106.mp3",
+      "bytes": 5977,
+      "source_modified_at": "2026-07-13T18:24:53.8069957+08:00",
+      "sha256": "DE15987C6399CA368E73A658F69D27F1C027DB1532673FD683582598BDEAD53D"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_d044e6ba4f24.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_d044e6ba4f24.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_d044e6ba4f24.mp3",
+      "bytes": 8943,
+      "source_modified_at": "2026-07-13T18:24:54.5373946+08:00",
+      "sha256": "CF243A73AEF7AA1FB85196883CB379BBAC5EFAFF1CA5B872BD483A33CA235358"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_d104bf14508e.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_d104bf14508e.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_d104bf14508e.mp3",
+      "bytes": 7410,
+      "source_modified_at": "2026-07-13T18:24:55.2893960+08:00",
+      "sha256": "C56832A043E9FFD63B6B1610002CFAEF28ED155F45577C30E535F4A386289764"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_d31793672fde.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_d31793672fde.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_d31793672fde.mp3",
+      "bytes": 6604,
+      "source_modified_at": "2026-07-13T18:24:55.8814069+08:00",
+      "sha256": "9E5A441EED87B45EEA0AC1FCF926FA2CD8332D4879C749484465F06E23613064"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_d4a29b9d4ba6.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_d4a29b9d4ba6.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_d4a29b9d4ba6.mp3",
+      "bytes": 7227,
+      "source_modified_at": "2026-07-13T18:24:56.5314060+08:00",
+      "sha256": "A81646C118CD7AA1504ECFEDBB3245BAC51E2DD4121FF755B1C67F5B6040A995"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_d53f5ce8d34d.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_d53f5ce8d34d.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_d53f5ce8d34d.mp3",
+      "bytes": 5484,
+      "source_modified_at": "2026-07-13T18:24:57.1104215+08:00",
+      "sha256": "853BC9294157B7098E4D4BC2DC918ED05902AB6512B64E1FBE5A83CFE90C9509"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_d96e12b5e501.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_d96e12b5e501.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_d96e12b5e501.mp3",
+      "bytes": 9203,
+      "source_modified_at": "2026-07-13T18:24:57.7444208+08:00",
+      "sha256": "D401B110704CAF35DF1EB2558B8CBCCC1E49CE9845016F476B7E8FD1E0E03E55"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_dc35a64fc235.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_dc35a64fc235.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_dc35a64fc235.mp3",
+      "bytes": 7176,
+      "source_modified_at": "2026-07-13T18:24:58.3550782+08:00",
+      "sha256": "F77DC96499681D80CFAB2D3D0FB5A9C40D120C950B37344B5649BA8F8951DF7D"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_dce13df848f7.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_dce13df848f7.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_dce13df848f7.mp3",
+      "bytes": 7462,
+      "source_modified_at": "2026-07-13T18:24:58.9820370+08:00",
+      "sha256": "AC8029313E80A9AB0D420C2C542D605C64FD03A09114725A469D0BA265DD9392"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_e08a33467cef.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_e08a33467cef.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_e08a33467cef.mp3",
+      "bytes": 6004,
+      "source_modified_at": "2026-07-13T18:24:59.5810427+08:00",
+      "sha256": "23F8EE13A4C19E1F106D9D2D70784FD0AA73779AD934065F53554FEBA67D9730"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_e51b86406a34.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_e51b86406a34.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_e51b86406a34.mp3",
+      "bytes": 9025,
+      "source_modified_at": "2026-07-13T18:25:00.3354277+08:00",
+      "sha256": "534C1019FDC5DBC668CB06A2B97E6B13BFE9607662624C0F7B430A4AE6159500"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_e8ad39dc1423.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_e8ad39dc1423.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_e8ad39dc1423.mp3",
+      "bytes": 11233,
+      "source_modified_at": "2026-07-13T18:25:01.0194448+08:00",
+      "sha256": "E583817273EC949016F998C57B16FDCA52789BB61FD29E5C97B2C95EA68E5C79"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_ea2a0c24e44e.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_ea2a0c24e44e.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_ea2a0c24e44e.mp3",
+      "bytes": 9206,
+      "source_modified_at": "2026-07-13T18:25:01.6567727+08:00",
+      "sha256": "59BFDF59EFA551C9B4F517CE797F1097CCBAC9568579DBB6DDDD0B39F677788B"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_efc823225a48.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_efc823225a48.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_efc823225a48.mp3",
+      "bytes": 14204,
+      "source_modified_at": "2026-07-13T18:25:02.3857719+08:00",
+      "sha256": "097B7BD61A4E445A33FB2ADB7ED00E45DD4516C477123A7298933CC1F6FC05E1"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_f15b9b60cbd4.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_f15b9b60cbd4.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_f15b9b60cbd4.mp3",
+      "bytes": 5067,
+      "source_modified_at": "2026-07-13T18:25:03.0537864+08:00",
+      "sha256": "F8DC9A974F8A96B9DD3B31D733CD54FA40CF3A9E3130F896F37CC7EFEB58FF8E"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_f40436327ec0.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_f40436327ec0.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_f40436327ec0.mp3",
+      "bytes": 18905,
+      "source_modified_at": "2026-07-13T18:25:03.9143338+08:00",
+      "sha256": "566E4DA740176C677329CC52AAC8FB9F9832CC8F51EE585CD823D4D6150CFD80"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_f507867127df.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_f507867127df.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_f507867127df.mp3",
+      "bytes": 13835,
+      "source_modified_at": "2026-07-13T18:25:04.6371028+08:00",
+      "sha256": "F86616F5EED06759E07DFCD27BD0D321688186C5F3CB4F80C58C5C7A00E1AD4D"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_f7383aa5fd2a.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_f7383aa5fd2a.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_f7383aa5fd2a.mp3",
+      "bytes": 12094,
+      "source_modified_at": "2026-07-13T18:25:05.3051353+08:00",
+      "sha256": "E10C94C57F73F14BF990170B75CBB48ADCAD655DF52A53174FB1316D2E9550CC"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/theater_fd2a0761b53d.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/theater_fd2a0761b53d.mp3",
+      "destination": "deliverables/app/assets/assets/audio/theater_fd2a0761b53d.mp3",
+      "bytes": 5667,
+      "source_modified_at": "2026-07-13T18:25:05.8921781+08:00",
+      "sha256": "8D93843821B45A0384A13887734E21D51B46D03D5FECCBE14272B16D09ABB20A"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/vietnamese_chunk_day_la.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/vietnamese_chunk_day_la.mp3",
+      "destination": "deliverables/app/assets/assets/audio/vietnamese_chunk_day_la.mp3",
+      "bytes": 2751,
+      "source_modified_at": "2026-07-13T18:25:06.4522066+08:00",
+      "sha256": "5E20A0D6FEE21257C70A49691492F9C52230520903F13E3E9761E912F811DB14"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/vietnamese_chunk_nuoc_mam.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/vietnamese_chunk_nuoc_mam.mp3",
+      "destination": "deliverables/app/assets/assets/audio/vietnamese_chunk_nuoc_mam.mp3",
+      "bytes": 3817,
+      "source_modified_at": "2026-07-13T18:25:07.0210118+08:00",
+      "sha256": "ACAAA123FF07F06A54A69DAEC339B99ECC65E2FD56FA5DB176557D7C9781CE9B"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/vietnamese_delicious_example_canh.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/vietnamese_delicious_example_canh.mp3",
+      "destination": "deliverables/app/assets/assets/audio/vietnamese_delicious_example_canh.mp3",
+      "bytes": 4753,
+      "source_modified_at": "2026-07-13T18:25:07.5859997+08:00",
+      "sha256": "CD13787259C343A897BE69FF959721CA88ABDB81EBB45595E6B49BC06CDA2FE7"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/vietnamese_delicious_example_com.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/vietnamese_delicious_example_com.mp3",
+      "destination": "deliverables/app/assets/assets/audio/vietnamese_delicious_example_com.mp3",
+      "bytes": 4962,
+      "source_modified_at": "2026-07-13T18:25:08.1619985+08:00",
+      "sha256": "9C86E689647023E8CA0639EA1B11F5C9E823399FE843A25137BD4A2301978E4A"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/vietnamese_delicious_example_rau.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/vietnamese_delicious_example_rau.mp3",
+      "destination": "deliverables/app/assets/assets/audio/vietnamese_delicious_example_rau.mp3",
+      "bytes": 4570,
+      "source_modified_at": "2026-07-13T18:25:08.7770043+08:00",
+      "sha256": "C83AFAD62ADB0D1953D0281E62DB2137F839A6BB1AAAC85A85784023BC116AF4"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/vietnamese_delicious_full.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/vietnamese_delicious_full.mp3",
+      "destination": "deliverables/app/assets/assets/audio/vietnamese_delicious_full.mp3",
+      "bytes": 3611,
+      "source_modified_at": "2026-07-13T18:25:09.4015431+08:00",
+      "sha256": "04D33C824784B42C5F3DD37F3153EF970D895954514CF65B513B6474EE088624"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/vietnamese_example_com.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/vietnamese_example_com.mp3",
+      "destination": "deliverables/app/assets/assets/audio/vietnamese_example_com.mp3",
+      "bytes": 3506,
+      "source_modified_at": "2026-07-13T18:25:10.0242100+08:00",
+      "sha256": "836DB6E7E89BC29E0A7AC667DFAECF886558204B684C1C4197F8654876AAD26C"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/vietnamese_example_me.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/vietnamese_example_me.mp3",
+      "destination": "deliverables/app/assets/assets/audio/vietnamese_example_me.mp3",
+      "bytes": 4181,
+      "source_modified_at": "2026-07-13T18:25:10.7573732+08:00",
+      "sha256": "058AE181686620A042D3852768346D0652660A43B6A85432783AA16C2A87A005"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/vietnamese_example_nha.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/vietnamese_example_nha.mp3",
+      "destination": "deliverables/app/assets/assets/audio/vietnamese_example_nha.mp3",
+      "bytes": 3765,
+      "source_modified_at": "2026-07-13T18:25:11.3243682+08:00",
+      "sha256": "C34F9E22342DDB6FE6B6229A4A1F12B09CE1554B124CE0DB8DCBB0B7D123854E"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/vietnamese_greeting_ba_a.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/vietnamese_greeting_ba_a.mp3",
+      "destination": "deliverables/app/assets/assets/audio/vietnamese_greeting_ba_a.mp3",
+      "bytes": 2285,
+      "source_modified_at": "2026-07-13T18:25:11.8614457+08:00",
+      "sha256": "ADB94D148A82425AF6ED56F5EAB7E659EFF486DEA0CAAB7117E7034584F93EE0"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/vietnamese_greeting_chau_chao.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/vietnamese_greeting_chau_chao.mp3",
+      "destination": "deliverables/app/assets/assets/audio/vietnamese_greeting_chau_chao.mp3",
+      "bytes": 3167,
+      "source_modified_at": "2026-07-13T18:25:12.5232707+08:00",
+      "sha256": "F53D76FC1A44687C7FA874425DC71A42FB2A55327FE637B4F0FEE3FEBA309C59"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/vietnamese_greeting_example_chi.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/vietnamese_greeting_example_chi.mp3",
+      "destination": "deliverables/app/assets/assets/audio/vietnamese_greeting_example_chi.mp3",
+      "bytes": 4728,
+      "source_modified_at": "2026-07-13T18:25:13.1082920+08:00",
+      "sha256": "559F2A5D25CB991AC1FA14C6C85E1670FC02BEA33A807E3CE708CE328CC8177F"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/vietnamese_greeting_example_me.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/vietnamese_greeting_example_me.mp3",
+      "destination": "deliverables/app/assets/assets/audio/vietnamese_greeting_example_me.mp3",
+      "bytes": 5691,
+      "source_modified_at": "2026-07-13T18:25:13.6954236+08:00",
+      "sha256": "86370FD7CD41D06CF59454392B1646156D3F6CE1892B82F888F24F9520AA65D2"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/vietnamese_greeting_example_ong.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/vietnamese_greeting_example_ong.mp3",
+      "destination": "deliverables/app/assets/assets/audio/vietnamese_greeting_example_ong.mp3",
+      "bytes": 4521,
+      "source_modified_at": "2026-07-13T18:25:14.2734243+08:00",
+      "sha256": "78DCBB744082AB675C5291F747152D966FA38C76E6A66C96E43EBB3988729516"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/vietnamese_greeting_full.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/vietnamese_greeting_full.mp3",
+      "destination": "deliverables/app/assets/assets/audio/vietnamese_greeting_full.mp3",
+      "bytes": 4677,
+      "source_modified_at": "2026-07-13T18:25:14.8494630+08:00",
+      "sha256": "0F0677501C9298982163409131588FCAD7AA677BD7F91B7FC32EFE695A226C7D"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/vietnamese_homecoming_chau_ve.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/vietnamese_homecoming_chau_ve.mp3",
+      "destination": "deliverables/app/assets/assets/audio/vietnamese_homecoming_chau_ve.mp3",
+      "bytes": 2933,
+      "source_modified_at": "2026-07-13T18:25:15.4014741+08:00",
+      "sha256": "F46972FEC850DEBD0B33C26EB7CEFA44909B1323BE7DBF978223059F7FF76EEF"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/vietnamese_homecoming_example_bo.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/vietnamese_homecoming_example_bo.mp3",
+      "destination": "deliverables/app/assets/assets/audio/vietnamese_homecoming_example_bo.mp3",
+      "bytes": 5433,
+      "source_modified_at": "2026-07-13T18:25:16.0015441+08:00",
+      "sha256": "68199A30C01B2A5E3F6BAE82AE8C2A9602E1D611B0A1D0F7739BAD1CA9A07507"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/vietnamese_homecoming_example_con.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/vietnamese_homecoming_example_con.mp3",
+      "destination": "deliverables/app/assets/assets/audio/vietnamese_homecoming_example_con.mp3",
+      "bytes": 4288,
+      "source_modified_at": "2026-07-13T18:25:16.5601012+08:00",
+      "sha256": "54DF725152364FFDDF5DCC961367FE46D7C3F353DD607EB9C83DA65839FACDE2"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/vietnamese_homecoming_example_me.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/vietnamese_homecoming_example_me.mp3",
+      "destination": "deliverables/app/assets/assets/audio/vietnamese_homecoming_example_me.mp3",
+      "bytes": 5537,
+      "source_modified_at": "2026-07-13T18:25:17.2421776+08:00",
+      "sha256": "C63152AE79078B5105BA89700143D9D05E418C8F6D6D1A7D0B46981EBC05DDF7"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/vietnamese_homecoming_full.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/vietnamese_homecoming_full.mp3",
+      "destination": "deliverables/app/assets/assets/audio/vietnamese_homecoming_full.mp3",
+      "bytes": 4391,
+      "source_modified_at": "2026-07-13T18:25:17.7952488+08:00",
+      "sha256": "CD24FAF8BF0856847BAC03C202EB244DBA2313A2E939E9F0B18BAC97208B7191"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/vietnamese_homecoming_roi_a.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/vietnamese_homecoming_roi_a.mp3",
+      "destination": "deliverables/app/assets/assets/audio/vietnamese_homecoming_roi_a.mp3",
+      "bytes": 1919,
+      "source_modified_at": "2026-07-13T18:25:18.3287949+08:00",
+      "sha256": "E21CDB4D91D65145637417A9B00EAFD3E10A84172A70C0EAD99246F8FC350893"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/vietnamese_mealtime_an_com_a.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/vietnamese_mealtime_an_com_a.mp3",
+      "destination": "deliverables/app/assets/assets/audio/vietnamese_mealtime_an_com_a.mp3",
+      "bytes": 3427,
+      "source_modified_at": "2026-07-13T18:25:18.9017861+08:00",
+      "sha256": "14E7BCCB920962F7DC13F33BB9C89249E25C87F81DE3E9A9849EB72AD596E479"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/vietnamese_mealtime_chau_moi_ba.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/vietnamese_mealtime_chau_moi_ba.mp3",
+      "destination": "deliverables/app/assets/assets/audio/vietnamese_mealtime_chau_moi_ba.mp3",
+      "bytes": 3402,
+      "source_modified_at": "2026-07-13T18:25:19.4670527+08:00",
+      "sha256": "1D5BD2C6E3718A6124CAFADA6090D811E51D7ADDD29E61B2FF6F3318A2BC3833"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/vietnamese_mealtime_example_bo_me.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/vietnamese_mealtime_example_bo_me.mp3",
+      "destination": "deliverables/app/assets/assets/audio/vietnamese_mealtime_example_bo_me.mp3",
+      "bytes": 9412,
+      "source_modified_at": "2026-07-13T18:25:20.1160723+08:00",
+      "sha256": "0AAECBB527800652E4410E9002260D8795F88EC95FBBC6A5F8CAC77BEDC1435E"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/vietnamese_mealtime_example_ca_nha.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/vietnamese_mealtime_example_ca_nha.mp3",
+      "destination": "deliverables/app/assets/assets/audio/vietnamese_mealtime_example_ca_nha.mp3",
+      "bytes": 7124,
+      "source_modified_at": "2026-07-13T18:25:20.7143817+08:00",
+      "sha256": "067AC7628F85AB1755D37420AA9170519952507DB54CEBE09588A8256C348FCA"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/vietnamese_mealtime_example_ong.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/vietnamese_mealtime_example_ong.mp3",
+      "destination": "deliverables/app/assets/assets/audio/vietnamese_mealtime_example_ong.mp3",
+      "bytes": 7017,
+      "source_modified_at": "2026-07-13T18:25:21.3037999+08:00",
+      "sha256": "5318104CE60247D6E08ADD40CACDFFC4A999050A309ABE990DC48447CC717771"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/vietnamese_mealtime_full.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/vietnamese_mealtime_full.mp3",
+      "destination": "deliverables/app/assets/assets/audio/vietnamese_mealtime_full.mp3",
+      "bytes": 6757,
+      "source_modified_at": "2026-07-13T18:25:21.9117954+08:00",
+      "sha256": "EED30FFD2832F1B32564245EC14EBA617596D031423C96E88B57C1C1A87B649C"
+    },
+    {
+      "label": "Flutter Web assets/assets/audio/vietnamese_short_demo.mp3",
+      "source": "正式版/flutter_app/build/web/assets/assets/audio/vietnamese_short_demo.mp3",
+      "destination": "deliverables/app/assets/assets/audio/vietnamese_short_demo.mp3",
+      "bytes": 5846,
+      "source_modified_at": "2026-07-13T18:25:22.5028202+08:00",
+      "sha256": "323903FEAC73DBDD9C400F925B51F46191F9C431D23526EFCEAD855E9203422F"
+    },
+    {
+      "label": "Flutter Web assets/assets/fonts/NotoSansTC-VF.ttf",
+      "source": "正式版/flutter_app/build/web/assets/assets/fonts/NotoSansTC-VF.ttf",
+      "destination": "deliverables/app/assets/assets/fonts/NotoSansTC-VF.ttf",
+      "bytes": 11942800,
+      "source_modified_at": "2026-07-12T21:32:01.9369734+08:00",
+      "sha256": "AC091CC8CD19E848202AFC8FE6D3809B4526C8FDBDB4BE82DA20C4F785949591"
+    },
+    {
+      "label": "Flutter Web assets/assets/images/family-bedtime-theater-v1.png",
+      "source": "正式版/flutter_app/build/web/assets/assets/images/family-bedtime-theater-v1.png",
+      "destination": "deliverables/app/assets/assets/images/family-bedtime-theater-v1.png",
+      "bytes": 2010515,
+      "source_modified_at": "2026-07-13T02:57:16.0612197+08:00",
+      "sha256": "9BBEB732FCAC790E7EE7384A18715174705872F63F865C2DED370F87614283D1"
+    },
+    {
+      "label": "Flutter Web assets/assets/images/family-garden-theater-v1.png",
+      "source": "正式版/flutter_app/build/web/assets/assets/images/family-garden-theater-v1.png",
+      "destination": "deliverables/app/assets/assets/images/family-garden-theater-v1.png",
+      "bytes": 2204040,
+      "source_modified_at": "2026-07-13T02:54:09.1094267+08:00",
+      "sha256": "8943686DD50A330DE5B874861B843359CA349D3ABDB0ED643AA27C41C8F03054"
+    },
+    {
+      "label": "Flutter Web assets/assets/images/family-homecoming-theater-v2.png",
+      "source": "正式版/flutter_app/build/web/assets/assets/images/family-homecoming-theater-v2.png",
+      "destination": "deliverables/app/assets/assets/images/family-homecoming-theater-v2.png",
+      "bytes": 2071447,
+      "source_modified_at": "2026-07-13T04:26:31.7804822+08:00",
+      "sha256": "91C58B71D436F6681DC908AB1BA1E38C658A96A7A192BC9FC844220E81C2BAE1"
+    },
+    {
+      "label": "Flutter Web assets/assets/images/family-kitchen-game-v2.webp",
+      "source": "正式版/flutter_app/build/web/assets/assets/images/family-kitchen-game-v2.webp",
+      "destination": "deliverables/app/assets/assets/images/family-kitchen-game-v2.webp",
+      "bytes": 172488,
+      "source_modified_at": "2026-07-12T23:38:50.5669325+08:00",
+      "sha256": "62DDA9C1D1C8788573175847161C0437796F2815D04C8E4DF854CCF51A691D36"
+    },
+    {
+      "label": "Flutter Web assets/assets/images/family-meal-lesson.webp",
+      "source": "正式版/flutter_app/build/web/assets/assets/images/family-meal-lesson.webp",
+      "destination": "deliverables/app/assets/assets/images/family-meal-lesson.webp",
+      "bytes": 120778,
+      "source_modified_at": "2026-07-12T20:55:08.5970559+08:00",
+      "sha256": "50085BB1B4BF5319F892BEBFAB78382BE120F6CFD5C8A2D8F7359DE16A34A792"
+    },
+    {
+      "label": "Flutter Web assets/assets/images/family-mealtime-theater-v2.png",
+      "source": "正式版/flutter_app/build/web/assets/assets/images/family-mealtime-theater-v2.png",
+      "destination": "deliverables/app/assets/assets/images/family-mealtime-theater-v2.png",
+      "bytes": 2091643,
+      "source_modified_at": "2026-07-13T04:20:47.6509419+08:00",
+      "sha256": "DD532767916199490BDC15A079FA402B7C7A75D5B04B4DD20D3085BF29875B95"
+    },
+    {
+      "label": "Flutter Web assets/assets/images/family-morning-game-v1.webp",
+      "source": "正式版/flutter_app/build/web/assets/assets/images/family-morning-game-v1.webp",
+      "destination": "deliverables/app/assets/assets/images/family-morning-game-v1.webp",
+      "bytes": 140222,
+      "source_modified_at": "2026-07-13T01:15:27.0472892+08:00",
+      "sha256": "20A192047B36FB9675A9C3100CEED0DC80CC8C59FB45EA522EA31F08DB82C33F"
+    },
+    {
+      "label": "Flutter Web assets/assets/images/family-stage-duo-v1.png",
+      "source": "正式版/flutter_app/build/web/assets/assets/images/family-stage-duo-v1.png",
+      "destination": "deliverables/app/assets/assets/images/family-stage-duo-v1.png",
+      "bytes": 614884,
+      "source_modified_at": "2026-07-13T06:00:22.4663392+08:00",
+      "sha256": "9881463BA16E2F2638AC0AEB4A09F600453BC7C577A87FD2E60ABB0626912AF4"
+    },
+    {
+      "label": "Flutter Web assets/assets/images/provenance_manifest.json",
+      "source": "正式版/flutter_app/build/web/assets/assets/images/provenance_manifest.json",
+      "destination": "deliverables/app/assets/assets/images/provenance_manifest.json",
+      "bytes": 11385,
+      "source_modified_at": "2026-07-14T02:49:56.3756519+08:00",
+      "sha256": "3F1F6503E5103C08896BBB17954BAE4F7D24ED8EDDC4337FA2A12FE3E367E41B"
+    },
+    {
+      "label": "Flutter Web assets/fonts/MaterialIcons-Regular.otf",
+      "source": "正式版/flutter_app/build/web/assets/fonts/MaterialIcons-Regular.otf",
+      "destination": "deliverables/app/assets/fonts/MaterialIcons-Regular.otf",
+      "bytes": 31064,
+      "source_modified_at": "2026-07-14T04:04:52.9016063+08:00",
+      "sha256": "4ABF835FC0AF9C4E2896BA7B171E987D0DD2A3102F7EB49A8F2D9DAC686C819D"
+    },
+    {
+      "label": "Flutter Web assets/packages/cupertino_icons/assets/CupertinoIcons.ttf",
+      "source": "正式版/flutter_app/build/web/assets/packages/cupertino_icons/assets/CupertinoIcons.ttf",
+      "destination": "deliverables/app/assets/packages/cupertino_icons/assets/CupertinoIcons.ttf",
+      "bytes": 1472,
+      "source_modified_at": "2026-07-14T04:04:52.8916050+08:00",
+      "sha256": "3D90C370AA4CF00DC57EE2B902F6652147C0F81E03E483DF584A9C08B1687C9D"
+    },
+    {
+      "label": "Flutter Web assets/packages/record_web/assets/js/record.fixwebmduration.js",
+      "source": "正式版/flutter_app/build/web/assets/packages/record_web/assets/js/record.fixwebmduration.js",
+      "destination": "deliverables/app/assets/packages/record_web/assets/js/record.fixwebmduration.js",
+      "bytes": 23286,
+      "source_modified_at": "2026-07-12T04:32:19.4194498+08:00",
+      "sha256": "C345AD5D2FFFB357ADA647B9B690693452A2001BC5912F1E9066876CE016399B"
+    },
+    {
+      "label": "Flutter Web assets/packages/record_web/assets/js/record.worklet.js",
+      "source": "正式版/flutter_app/build/web/assets/packages/record_web/assets/js/record.worklet.js",
+      "destination": "deliverables/app/assets/packages/record_web/assets/js/record.worklet.js",
+      "bytes": 11803,
+      "source_modified_at": "2026-07-12T04:32:19.3734533+08:00",
+      "sha256": "BA7E0F4C841480EE78C0B54E7EADD44455B916FEFDB07410EE46159D82DCC08E"
+    },
+    {
+      "label": "Flutter Web assets/shaders/ink_sparkle.frag",
+      "source": "正式版/flutter_app/build/web/assets/shaders/ink_sparkle.frag",
+      "destination": "deliverables/app/assets/shaders/ink_sparkle.frag",
+      "bytes": 8890,
+      "source_modified_at": "2026-07-14T04:04:49.7371212+08:00",
+      "sha256": "2DCA5AB93D4EC29E963F996F3916320BA60825E9537DFB149A68008C7A16B026"
+    },
+    {
+      "label": "Flutter Web assets/shaders/stretch_effect.frag",
+      "source": "正式版/flutter_app/build/web/assets/shaders/stretch_effect.frag",
+      "destination": "deliverables/app/assets/shaders/stretch_effect.frag",
+      "bytes": 6737,
+      "source_modified_at": "2026-07-14T04:04:49.7431220+08:00",
+      "sha256": "AB412F07A5B9B50B67A885B24DBE16929738AE28630407D6490C924CAF0A3220"
+    },
+    {
+      "label": "Flutter Web canvaskit/canvaskit.js",
+      "source": "正式版/flutter_app/build/web/canvaskit/canvaskit.js",
+      "destination": "deliverables/app/canvaskit/canvaskit.js",
+      "bytes": 86859,
+      "source_modified_at": "2026-07-12T04:55:08.4216365+08:00",
+      "sha256": "7361B744487F98262F77AC507006B3EAE37830430048AB7811A626B79F34A52C"
+    },
+    {
+      "label": "Flutter Web canvaskit/canvaskit.js.symbols",
+      "source": "正式版/flutter_app/build/web/canvaskit/canvaskit.js.symbols",
+      "destination": "deliverables/app/canvaskit/canvaskit.js.symbols",
+      "bytes": 1357066,
+      "source_modified_at": "2026-07-12T04:55:08.4296368+08:00",
+      "sha256": "43DD0E78DFB29B1E3826C4FF987E9C5C982E51E1D28F40753F693F412DD1B298"
+    },
+    {
+      "label": "Flutter Web canvaskit/canvaskit.wasm",
+      "source": "正式版/flutter_app/build/web/canvaskit/canvaskit.wasm",
+      "destination": "deliverables/app/canvaskit/canvaskit.wasm",
+      "bytes": 7229467,
+      "source_modified_at": "2026-07-12T04:55:08.4926459+08:00",
+      "sha256": "6BDFAA51C76845C02EA90153D44F56F99DA51DE44A7EE0EA15CCAEB33ED8F476"
+    },
+    {
+      "label": "Flutter Web canvaskit/skwasm_heavy.js",
+      "source": "正式版/flutter_app/build/web/canvaskit/skwasm_heavy.js",
+      "destination": "deliverables/app/canvaskit/skwasm_heavy.js",
+      "bytes": 63429,
+      "source_modified_at": "2026-07-12T04:55:08.6856342+08:00",
+      "sha256": "FBF1C3374CD28B38EA4C48F8189012263C40E78E0A55323A557443C97A58C58C"
+    },
+    {
+      "label": "Flutter Web canvaskit/skwasm_heavy.js.symbols",
+      "source": "正式版/flutter_app/build/web/canvaskit/skwasm_heavy.js.symbols",
+      "destination": "deliverables/app/canvaskit/skwasm_heavy.js.symbols",
+      "bytes": 1666301,
+      "source_modified_at": "2026-07-12T04:55:08.6976429+08:00",
+      "sha256": "5DBCC8BC79D9AF9ABA141A682AC0378F17242AE62B2338BE2B979361694C8CA2"
+    },
+    {
+      "label": "Flutter Web canvaskit/skwasm_heavy.wasm",
+      "source": "正式版/flutter_app/build/web/canvaskit/skwasm_heavy.wasm",
+      "destination": "deliverables/app/canvaskit/skwasm_heavy.wasm",
+      "bytes": 5172643,
+      "source_modified_at": "2026-07-12T04:55:08.7456443+08:00",
+      "sha256": "8B8279650B1847D8259AD4591C5CB7CB635B513134EC7565F85B1AA4271D896C"
+    },
+    {
+      "label": "Flutter Web canvaskit/skwasm.js",
+      "source": "正式版/flutter_app/build/web/canvaskit/skwasm.js",
+      "destination": "deliverables/app/canvaskit/skwasm.js",
+      "bytes": 63316,
+      "source_modified_at": "2026-07-12T04:55:08.6116367+08:00",
+      "sha256": "E0316A798A929008CF9221D9AE0E8A4E0A5F07869FF2C0AD68A71F56AB9998A4"
+    },
+    {
+      "label": "Flutter Web canvaskit/skwasm.js.symbols",
+      "source": "正式版/flutter_app/build/web/canvaskit/skwasm.js.symbols",
+      "destination": "deliverables/app/canvaskit/skwasm.js.symbols",
+      "bytes": 1541208,
+      "source_modified_at": "2026-07-12T04:55:08.6286351+08:00",
+      "sha256": "5E13D39DB7315F06E6EDD2CD3F4BF3A970BBF0CF33D128A38B6FCCF4D25FEC8B"
+    },
+    {
+      "label": "Flutter Web canvaskit/skwasm.wasm",
+      "source": "正式版/flutter_app/build/web/canvaskit/skwasm.wasm",
+      "destination": "deliverables/app/canvaskit/skwasm.wasm",
+      "bytes": 3580947,
+      "source_modified_at": "2026-07-12T04:55:08.6836301+08:00",
+      "sha256": "084A99454E405AD9E396803F5C02369562C92210AD9FF83A053CA68A1047A8F4"
+    },
+    {
+      "label": "Flutter Web canvaskit/wimp.js",
+      "source": "正式版/flutter_app/build/web/canvaskit/wimp.js",
+      "destination": "deliverables/app/canvaskit/wimp.js",
+      "bytes": 58396,
+      "source_modified_at": "2026-07-12T04:55:08.7476311+08:00",
+      "sha256": "3F2CC5AE040789508B6914897A9858389A496B3A7CADCC71EF120CCA99F70586"
+    },
+    {
+      "label": "Flutter Web canvaskit/wimp.js.symbols",
+      "source": "正式版/flutter_app/build/web/canvaskit/wimp.js.symbols",
+      "destination": "deliverables/app/canvaskit/wimp.js.symbols",
+      "bytes": 1801519,
+      "source_modified_at": "2026-07-12T04:55:08.7626388+08:00",
+      "sha256": "F86BA748D1F9C522E9EEFFE39DB4E1EF32605BEAF52D2A87BC51A9368E772017"
+    },
+    {
+      "label": "Flutter Web canvaskit/wimp.wasm",
+      "source": "正式版/flutter_app/build/web/canvaskit/wimp.wasm",
+      "destination": "deliverables/app/canvaskit/wimp.wasm",
+      "bytes": 3514226,
+      "source_modified_at": "2026-07-12T04:55:08.8026342+08:00",
+      "sha256": "5C34D37553D9FF2CF4BE0DE2288914B524FAE40588AEADAA51FACB1EC6D7EAB4"
+    },
+    {
+      "label": "Flutter Web canvaskit/chromium/canvaskit.js",
+      "source": "正式版/flutter_app/build/web/canvaskit/chromium/canvaskit.js",
+      "destination": "deliverables/app/canvaskit/chromium/canvaskit.js",
+      "bytes": 86496,
+      "source_modified_at": "2026-07-12T04:55:08.4966416+08:00",
+      "sha256": "D2ACEB0E24EAD163AB289A165CA0E26A36FA26D7118F5A295B8854D59D892896"
+    },
+    {
+      "label": "Flutter Web canvaskit/chromium/canvaskit.js.symbols",
+      "source": "正式版/flutter_app/build/web/canvaskit/chromium/canvaskit.js.symbols",
+      "destination": "deliverables/app/canvaskit/chromium/canvaskit.js.symbols",
+      "bytes": 1274971,
+      "source_modified_at": "2026-07-12T04:55:08.5056323+08:00",
+      "sha256": "23A68C0F21677D699EAF86516FB2081556B313D1E429D61C4CB7FBFEB84D9986"
+    },
+    {
+      "label": "Flutter Web canvaskit/chromium/canvaskit.wasm",
+      "source": "正式版/flutter_app/build/web/canvaskit/chromium/canvaskit.wasm",
+      "destination": "deliverables/app/canvaskit/chromium/canvaskit.wasm",
+      "bytes": 5760502,
+      "source_modified_at": "2026-07-12T04:55:08.5586324+08:00",
+      "sha256": "C2FC2864763540922C71D464E983BEBF97B3A5312FD01C6A8988969747D13314"
+    },
+    {
+      "label": "Flutter Web canvaskit/experimental_webparagraph/canvaskit.js",
+      "source": "正式版/flutter_app/build/web/canvaskit/experimental_webparagraph/canvaskit.js",
+      "destination": "deliverables/app/canvaskit/experimental_webparagraph/canvaskit.js",
+      "bytes": 76497,
+      "source_modified_at": "2026-07-12T04:55:08.5626341+08:00",
+      "sha256": "803F7BAB5F280FB6793495573BC83E6F70110916F75878A79C41E30B86585DF8"
+    },
+    {
+      "label": "Flutter Web canvaskit/experimental_webparagraph/canvaskit.js.symbols",
+      "source": "正式版/flutter_app/build/web/canvaskit/experimental_webparagraph/canvaskit.js.symbols",
+      "destination": "deliverables/app/canvaskit/experimental_webparagraph/canvaskit.js.symbols",
+      "bytes": 1004464,
+      "source_modified_at": "2026-07-12T04:55:08.5686316+08:00",
+      "sha256": "5746D266932128F390441E40139649B186E2C80322BE100867B0AEF69B34DB0E"
+    },
+    {
+      "label": "Flutter Web canvaskit/experimental_webparagraph/canvaskit.wasm",
+      "source": "正式版/flutter_app/build/web/canvaskit/experimental_webparagraph/canvaskit.wasm",
+      "destination": "deliverables/app/canvaskit/experimental_webparagraph/canvaskit.wasm",
+      "bytes": 4138344,
+      "source_modified_at": "2026-07-12T04:55:08.6096322+08:00",
+      "sha256": "6B916E684369558B9A4FDD774FEDF2717D7481CF0B7DFFB28E084129512BBD3F"
+    },
+    {
+      "label": "Flutter Web icons/Icon-192.png",
+      "source": "正式版/flutter_app/build/web/icons/Icon-192.png",
+      "destination": "deliverables/app/icons/Icon-192.png",
+      "bytes": 5292,
+      "source_modified_at": "2026-07-12T04:25:05.1559315+08:00",
+      "sha256": "3DCE99077602F70421C1C6B2A240BC9B83D64D86681D45F2154143310C980BE3"
+    },
+    {
+      "label": "Flutter Web icons/Icon-512.png",
+      "source": "正式版/flutter_app/build/web/icons/Icon-512.png",
+      "destination": "deliverables/app/icons/Icon-512.png",
+      "bytes": 8252,
+      "source_modified_at": "2026-07-12T04:25:05.1569308+08:00",
+      "sha256": "BACCB205AE45F0B421BE1657259B4943AC40C95094AB877F3BCBE12CD544DCBE"
+    },
+    {
+      "label": "Flutter Web icons/Icon-maskable-192.png",
+      "source": "正式版/flutter_app/build/web/icons/Icon-maskable-192.png",
+      "destination": "deliverables/app/icons/Icon-maskable-192.png",
+      "bytes": 5594,
+      "source_modified_at": "2026-07-12T04:28:06.1919791+08:00",
+      "sha256": "D2C842E22A9F4EC9D996B23373A905C88D9A203B220C5C151885AD621F974B5C"
+    },
+    {
+      "label": "Flutter Web icons/Icon-maskable-512.png",
+      "source": "正式版/flutter_app/build/web/icons/Icon-maskable-512.png",
+      "destination": "deliverables/app/icons/Icon-maskable-512.png",
+      "bytes": 20998,
+      "source_modified_at": "2026-07-12T04:28:06.1839829+08:00",
+      "sha256": "6AEE06CDCAB6B2AEF74B1734C4778F4421D2DA100B0FF9E52B21B55240202929"
     }
   ]
 }

@@ -1,0 +1,336 @@
+{
+  "schema": "hometongue.image-provenance.v1",
+  "project": "傳家話",
+  "compiledAtUtc": "2026-07-13T18:47:32Z",
+  "scope": {
+    "finalAssetCount": 11,
+    "generationCount": 10
+  },
+  "generatorEvidence": {
+    "tool": "image_gen__imagegen",
+    "claimGenerator": "OpenAI Media Service API",
+    "softwareAgent": {
+      "name": "gpt-image",
+      "version": "2.0"
+    },
+    "digitalSourceType": "http://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMedia",
+    "c2paStatus": "embedded-claim-markers-present-signature-not-validated"
+  },
+  "generations": [
+    {
+      "generationId": "exec-f9491fee-3490-45f1-8cd2-4e44563aa9c4",
+      "callId": "call_KH6v9d04wQNICdtKdGUsjP6G",
+      "startedAtUtc": "2026-07-12T12:48:46.014Z",
+      "completedAtUtc": "2026-07-12T12:49:56.825Z",
+      "promptSha256": "C0447ADF9F90AF244A9FADC2A1D87EDCF07EF2DA2CD9BFF7444B8093EF363AA8",
+      "references": [],
+      "source": {
+        "sha256": "4D93170DC0C216743D4C9103D120D9557DC4869BCCE6D67D861DA26FCC3EB2F7",
+        "bytes": 2503761,
+        "width": 1448,
+        "height": 1086
+      },
+      "finalAssets": [
+        "family-meal-lesson.png",
+        "family-meal-lesson.webp"
+      ]
+    },
+    {
+      "generationId": "exec-14231e72-9d1a-4cf8-baa7-8d840496d9e2",
+      "callId": "call_Hli4O3AETTaZI1vEZpCJgFPi",
+      "startedAtUtc": "2026-07-12T15:37:25.300Z",
+      "completedAtUtc": "2026-07-12T15:38:21.512Z",
+      "promptSha256": "DA00174B0438247F4FED8E0F1322F4DB515A487E2FEDA093002D89A7C007021B",
+      "references": [],
+      "source": {
+        "sha256": "F51DF5D26BBC66F004E6115AFAC77B7E9E2B288C95A99DA9A694ACC8405A7170",
+        "bytes": 2303558,
+        "width": 1448,
+        "height": 1086
+      },
+      "finalAssets": [
+        "family-kitchen-game-v2.webp"
+      ]
+    },
+    {
+      "generationId": "exec-a9f573c3-8d7f-4172-af98-d1f939740c72",
+      "callId": "call_KDfzhR6R03tohkwrkzTefORT",
+      "startedAtUtc": "2026-07-12T17:11:46.376Z",
+      "completedAtUtc": "2026-07-12T17:12:40.286Z",
+      "promptSha256": "1AA7BCF9CA4E59677BA5DF339F67E82D5739159A5D259C027B21678440B8F488",
+      "references": [],
+      "source": {
+        "sha256": "CF531D50FDBB41817E3A6602CEFA09DB2F011F665D18DC773BA3CB3D189EEB0C",
+        "bytes": 2026143,
+        "width": 1448,
+        "height": 1086
+      },
+      "finalAssets": [
+        "family-morning-game-v1.webp"
+      ]
+    },
+    {
+      "generationId": "exec-af7c458e-1dbf-43b9-8310-6a4441c81205",
+      "callId": "call_qD4RgX2XsWHScetr5aWRLY2p",
+      "startedAtUtc": "2026-07-12T17:12:56.927Z",
+      "completedAtUtc": "2026-07-12T17:13:50.858Z",
+      "promptSha256": "216976F4C8880AAE8A51017AA3DBE88A0D65BBDEB154F55CB1874D31DCF24A65",
+      "references": [],
+      "source": {
+        "sha256": "978E34EBEBDAB06E3A45334F19CE2B3A6BBE19E16F03782D91F35ABCF40419B9",
+        "bytes": 2236298,
+        "width": 1448,
+        "height": 1086
+      },
+      "finalAssets": [
+        "family-homecoming-game-v1.webp"
+      ]
+    },
+    {
+      "generationId": "exec-df433f36-74ae-4f05-8f76-2769e592858d",
+      "callId": "call_P0IIPGVfwz3oGnfvle0R5Vc4",
+      "startedAtUtc": "2026-07-12T17:14:06.122Z",
+      "completedAtUtc": "2026-07-12T17:14:58.592Z",
+      "promptSha256": "156751B5189F8778AB6C423FBE88B7F5C0AB0650F5ED89C586487FCE859E4A4A",
+      "references": [],
+      "source": {
+        "sha256": "5A8BD7CACA1392440AD222142D9AB835CED93AF6DFE073C8FE53FF058B22D90F",
+        "bytes": 2435907,
+        "width": 1448,
+        "height": 1086
+      },
+      "finalAssets": [
+        "family-mealtime-game-v1.webp"
+      ]
+    },
+    {
+      "generationId": "exec-4178d29b-efbc-40a2-af7c-b22a519fc947",
+      "callId": "call_bZMWWHo7m8cQ5L7PhAV17cR4",
+      "startedAtUtc": "2026-07-12T18:53:13.451Z",
+      "completedAtUtc": "2026-07-12T18:54:09.116Z",
+      "promptSha256": "F09D9CB3DF382F1DE834FEBB3F9E35E0881C9DD78F16BC66D1F1F36D118AC37F",
+      "references": [
+        "family-homecoming-game-v1.webp",
+        "family-morning-game-v1.webp"
+      ],
+      "source": {
+        "sha256": "8943686DD50A330DE5B874861B843359CA349D3ABDB0ED643AA27C41C8F03054",
+        "bytes": 2204040,
+        "width": 1448,
+        "height": 1086
+      },
+      "finalAssets": [
+        "family-garden-theater-v1.png"
+      ]
+    },
+    {
+      "generationId": "exec-18f93c26-a4f6-458d-9887-982169143af7",
+      "callId": "call_ISWH8WbIPYwrfLWyqZnVseIV",
+      "startedAtUtc": "2026-07-12T18:55:02.553Z",
+      "completedAtUtc": "2026-07-12T18:57:16.067Z",
+      "promptSha256": "64071F39BFF0B82E9B6E64F07CDC164625183D25645E04F38EF847FB60EC5D69",
+      "references": [
+        "family-garden-theater-v1.png",
+        "family-morning-game-v1.webp"
+      ],
+      "source": {
+        "sha256": "9BBEB732FCAC790E7EE7384A18715174705872F63F865C2DED370F87614283D1",
+        "bytes": 2010515,
+        "width": 1448,
+        "height": 1086
+      },
+      "finalAssets": [
+        "family-bedtime-theater-v1.png"
+      ]
+    },
+    {
+      "generationId": "exec-a3302f18-8a39-48a9-a761-f9a7d58290f9",
+      "callId": "call_Yp9srpTd4Wfl49VrkemgdAST",
+      "startedAtUtc": "2026-07-12T20:19:40.674Z",
+      "completedAtUtc": "2026-07-12T20:20:47.661Z",
+      "promptSha256": "06A90368AF91270B2AE4B655E3F8A40C624332022B6C0C1BB3BEE5A7EF7B0E31",
+      "references": [
+        "family-homecoming-game-v1.webp",
+        "family-morning-game-v1.webp",
+        "family-garden-theater-v1.png",
+        "family-bedtime-theater-v1.png"
+      ],
+      "source": {
+        "sha256": "DD532767916199490BDC15A079FA402B7C7A75D5B04B4DD20D3085BF29875B95",
+        "bytes": 2091643,
+        "width": 1672,
+        "height": 941
+      },
+      "finalAssets": [
+        "family-mealtime-theater-v2.png"
+      ]
+    },
+    {
+      "generationId": "exec-6244b08d-d0a3-48cd-b462-3bce9eebd388",
+      "callId": "call_6XcTZDPgVSRuXvsfBgc7UrBG",
+      "startedAtUtc": "2026-07-12T20:25:31.290Z",
+      "completedAtUtc": "2026-07-12T20:26:31.787Z",
+      "promptSha256": "6A532F042026A4F415488CA5AFD9F874BAE20F83EEF6D1DFECEC83652589FFFD",
+      "references": [
+        "family-mealtime-theater-v2.png",
+        "family-morning-game-v1.webp",
+        "family-garden-theater-v1.png",
+        "family-bedtime-theater-v1.png"
+      ],
+      "source": {
+        "sha256": "91C58B71D436F6681DC908AB1BA1E38C658A96A7A192BC9FC844220E81C2BAE1",
+        "bytes": 2071447,
+        "width": 1672,
+        "height": 941
+      },
+      "finalAssets": [
+        "family-homecoming-theater-v2.png"
+      ]
+    },
+    {
+      "generationId": "exec-e368726d-5e26-4ba1-b7de-a7ff43814a0a",
+      "callId": "call_n6qgVf0HEsUkLPNwazyimNKy",
+      "startedAtUtc": "2026-07-12T21:59:03.480Z",
+      "completedAtUtc": "2026-07-12T21:59:48.098Z",
+      "promptSha256": "111A070D199EBCB6843366C3E100DD15D62E28891DD553F6FBEE3F2F303489D4",
+      "references": [
+        "family-homecoming-theater-v2.png"
+      ],
+      "source": {
+        "sha256": "8AB29B57BDFDAF7B61B2B5763FA10F16CE14C72AEC03F4D5A8B5BF76A1F8CA64",
+        "bytes": 1347258,
+        "width": 1672,
+        "height": 941
+      },
+      "finalAssets": [
+        "family-stage-duo-v1.png"
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "file": "family-bedtime-theater-v1.png",
+      "bytes": 2010515,
+      "sha256": "9BBEB732FCAC790E7EE7384A18715174705872F63F865C2DED370F87614283D1",
+      "width": 1448,
+      "height": 1086,
+      "generationId": "exec-18f93c26-a4f6-458d-9887-982169143af7",
+      "transformId": "copy-bedtime-png"
+    },
+    {
+      "file": "family-garden-theater-v1.png",
+      "bytes": 2204040,
+      "sha256": "8943686DD50A330DE5B874861B843359CA349D3ABDB0ED643AA27C41C8F03054",
+      "width": 1448,
+      "height": 1086,
+      "generationId": "exec-4178d29b-efbc-40a2-af7c-b22a519fc947",
+      "transformId": "copy-garden-png"
+    },
+    {
+      "file": "family-homecoming-game-v1.webp",
+      "bytes": 152872,
+      "sha256": "A4E5022337E6E7FB2BB75E36A0CBB3EE07DE88EDA471E63CFF43125B895FE2F3",
+      "width": 1448,
+      "height": 1086,
+      "generationId": "exec-af7c458e-1dbf-43b9-8310-6a4441c81205",
+      "transformId": "encode-homecoming-game-webp"
+    },
+    {
+      "file": "family-homecoming-theater-v2.png",
+      "bytes": 2071447,
+      "sha256": "91C58B71D436F6681DC908AB1BA1E38C658A96A7A192BC9FC844220E81C2BAE1",
+      "width": 1672,
+      "height": 941,
+      "generationId": "exec-6244b08d-d0a3-48cd-b462-3bce9eebd388",
+      "transformId": "copy-homecoming-theater-png"
+    },
+    {
+      "file": "family-kitchen-game-v2.webp",
+      "bytes": 172488,
+      "sha256": "62DDA9C1D1C8788573175847161C0437796F2815D04C8E4DF854CCF51A691D36",
+      "width": 1448,
+      "height": 1086,
+      "generationId": "exec-14231e72-9d1a-4cf8-baa7-8d840496d9e2",
+      "transformId": "encode-kitchen-webp"
+    },
+    {
+      "file": "family-meal-lesson.png",
+      "bytes": 2503761,
+      "sha256": "4D93170DC0C216743D4C9103D120D9557DC4869BCCE6D67D861DA26FCC3EB2F7",
+      "width": 1448,
+      "height": 1086,
+      "generationId": "exec-f9491fee-3490-45f1-8cd2-4e44563aa9c4",
+      "transformId": "copy-meal-png"
+    },
+    {
+      "file": "family-meal-lesson.webp",
+      "bytes": 120778,
+      "sha256": "50085BB1B4BF5319F892BEBFAB78382BE120F6CFD5C8A2D8F7359DE16A34A792",
+      "width": 1200,
+      "height": 900,
+      "generationId": "exec-f9491fee-3490-45f1-8cd2-4e44563aa9c4",
+      "transformId": "encode-meal-webp"
+    },
+    {
+      "file": "family-mealtime-game-v1.webp",
+      "bytes": 206280,
+      "sha256": "0A382B82344CBA09EBB79DBA8F65F0376781F509BA19781FD516C4BF589868B5",
+      "width": 1448,
+      "height": 1086,
+      "generationId": "exec-df433f36-74ae-4f05-8f76-2769e592858d",
+      "transformId": "encode-mealtime-game-webp"
+    },
+    {
+      "file": "family-mealtime-theater-v2.png",
+      "bytes": 2091643,
+      "sha256": "DD532767916199490BDC15A079FA402B7C7A75D5B04B4DD20D3085BF29875B95",
+      "width": 1672,
+      "height": 941,
+      "generationId": "exec-a3302f18-8a39-48a9-a761-f9a7d58290f9",
+      "transformId": "copy-mealtime-theater-png"
+    },
+    {
+      "file": "family-morning-game-v1.webp",
+      "bytes": 140222,
+      "sha256": "20A192047B36FB9675A9C3100CEED0DC80CC8C59FB45EA522EA31F08DB82C33F",
+      "width": 1448,
+      "height": 1086,
+      "generationId": "exec-a9f573c3-8d7f-4172-af98-d1f939740c72",
+      "transformId": "encode-morning-webp"
+    },
+    {
+      "file": "family-stage-duo-v1.png",
+      "bytes": 614884,
+      "sha256": "9881463BA16E2F2638AC0AEB4A09F600453BC7C577A87FD2E60ABB0626912AF4",
+      "width": 1672,
+      "height": 941,
+      "generationId": "exec-e368726d-5e26-4ba1-b7de-a7ff43814a0a",
+      "transformId": "remove-stage-chroma"
+    }
+  ],
+  "rightsBoundary": {
+    "proves": [
+      "current final asset integrity",
+      "archived source-output integrity",
+      "prompt hash",
+      "tool-call timestamps",
+      "reference-image lineage",
+      "declared transformation mapping"
+    ],
+    "doesNotProve": [
+      "account authority",
+      "rights to inputs",
+      "copyrightability or exclusivity",
+      "non-infringement",
+      "competition or commercial-use authorization",
+      "cryptographic validity of the embedded C2PA claim"
+    ],
+    "humanAttestationRequired": true
+  },
+  "privacy": {
+    "containsAccountIdentifier": false,
+    "containsAbsolutePath": false,
+    "containsSessionTranscript": false
+  }
+}
+

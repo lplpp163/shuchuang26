@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f2e9">
+  <title>Flutter 原始碼｜傳家話</title>
+  <style>
+    :root{--paper:#f7f2e9;--white:#fffdf9;--ink:#25231f;--muted:#6f685e;--line:#d8cec0;--red:#79271d}
+    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:"Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif;line-height:1.75}.shell{width:min(820px,calc(100% - 32px));margin:auto}header{padding:22px 0;border-bottom:1px solid var(--line)}header a{color:var(--red);font-weight:800}main{padding:68px 0 90px}h1{margin:0;font-family:"DFKai-SB","BiauKai",serif;font-size:clamp(38px,7vw,60px);font-weight:500;line-height:1.25}.lead{max-width:700px;margin:22px 0 0;color:var(--muted)}.links{margin-top:42px;border-top:1px solid var(--ink)}.links a{display:grid;grid-template-columns:1fr auto;gap:20px;padding:20px 0;border-bottom:1px solid var(--line);color:var(--ink);font-weight:800;text-decoration:none}.links a span:last-child{color:var(--red)}section{margin-top:52px}h2{font-size:20px}.tree{padding:20px;border:1px solid var(--line);background:var(--white);font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:13px;white-space:pre-wrap}.note{margin-top:28px;padding-left:15px;border-left:2px solid var(--line);color:var(--muted);font-size:13px}@media(max-width:560px){main{padding-top:48px}.links a{grid-template-columns:1fr}.tree{font-size:12px;overflow:auto}}
+  </style>
+</head>
+<body>
+  <header><div class="shell"><a href="../../index.html">← 回團隊成果入口</a></div></header>
+  <main class="shell">
+    <p>作品原始碼</p>
+    <h1>傳家話 Flutter 專案</h1>
+    <p class="lead">此目錄是主專案 `正式版/flutter_app/` 的初賽送審鏡像。Flutter Web 是本次主要可操作作品；這裡另收原始碼、設定、測試與說明，不收編譯快取或私人環境檔。</p>
+
+    <div class="links">
+      <a href="../app/index.html"><span>直接操作 Flutter Web 初賽作品</span><span>開啟 App →</span></a>
+      <a href="source/README.md"><span>啟動、功能與實測狀態</span><span>README →</span></a>
+      <a href="source/pubspec.yaml"><span>免費套件與專案設定</span><span>pubspec.yaml →</span></a>
+      <a href="source/OPEN_SOURCE_NOTICES.md"><span>直接相依套件與授權</span><span>授權 →</span></a>
+      <a href="../docs/technical-validation.md"><span>技術驗證紀錄</span><span>驗證 →</span></a>
+      <a href="source/lib/main.dart"><span>應用入口</span><span>main.dart →</span></a>
+      <a href="source/lib/services/local_task_engine.dart"><span>本地任務引擎</span><span>local_task_engine.dart →</span></a>
+      <a href="source/test/local_task_engine_test.dart"><span>本地任務引擎測試</span><span>test →</span></a>
+    </div>
+
+    <section>
+      <h2>鏡像結構</h2>
+      <div class="tree">source/
+├── lib/               Flutter 應用原始碼
+├── test/              可重跑的測試
+├── pubspec.yaml       套件與資源
+├── pubspec.lock       實際鎖定版本
+├── OPEN_SOURCE_NOTICES.md
+├── analysis_options.yaml
+└── README.md          操作、邊界與驗證</div>
+    </section>
+
+    <p class="note">鏡像由 `scripts/sync-deliverables.ps1` 自動建立。如果本頁任一連結尚未存在，代表最新 Flutter 版本尚未同步，不以舊作品代替。功能是否通過分析與測試，以鏡像 README 和嚴格驗收報告為準。</p>
+  </main>
+</body>
+</html>
