@@ -540,6 +540,8 @@ void main() {
 
     expect(decoded['schema'], 'hometongue-pilot-summary-v1');
     expect(decoded['privacyNote'], contains('只含彙總計數與平均時間'));
+    expect(decoded.containsKey('generatedAt'), isFalse);
+    expect(encoded, isNot(contains(requestedAt.toIso8601String())));
     expect(totals, {
       'started': 6,
       'adultCompleted': 4,

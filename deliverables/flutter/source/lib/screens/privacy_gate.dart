@@ -140,8 +140,10 @@ class _PreviewInvitation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textScale = MediaQuery.textScalerOf(context).scale(1);
+    final previewHeight = 240.0 + ((textScale - 1).clamp(0.0, 1.0) * 150.0);
     return Container(
-      height: 230,
+      height: previewHeight,
       clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(28),
@@ -178,7 +180,7 @@ class _PreviewInvitation extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 const Text(
-                  '先看一句話怎麼讓故事改變',
+                  '約 30 秒看懂「傳家話」怎麼把一句話傳回家',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 20,
@@ -187,7 +189,7 @@ class _PreviewInvitation extends StatelessWidget {
                 ),
                 const SizedBox(height: 3),
                 const Text(
-                  '不錄音、不儲存，也不用先填家庭資料。',
+                  '先選意思、看舞台改變，再看家人的版本怎麼傳回孩子；不錄音、不儲存。',
                   style: TextStyle(
                       color: Colors.white, fontWeight: FontWeight.w600),
                 ),
@@ -200,7 +202,7 @@ class _PreviewInvitation extends StatelessWidget {
                     foregroundColor: AppColors.ink,
                   ),
                   icon: const Icon(Icons.theater_comedy_rounded),
-                  label: const Text('先試演 30 秒'),
+                  label: const Text('先試演約 30 秒'),
                 ),
               ],
             ),

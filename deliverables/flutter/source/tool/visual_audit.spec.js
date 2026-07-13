@@ -13,6 +13,10 @@ async function typeFlutterText(page, locator, value) {
   await page.keyboard.press('Control+A');
   await page.keyboard.press('Backspace');
   await locator.pressSequentially(value, { delay: 35 });
+  if (await locator.inputValue() !== value) {
+    await locator.fill(value);
+  }
+  await expect(locator).toHaveValue(value);
   await page.keyboard.press('Tab');
   await afterPaint(page);
 }
@@ -138,9 +142,9 @@ async function establishFamilyCircle(page, errors) {
   await waitForDecodedImages(page);
 }
 
-async function scrollUntilAttached(page, locator) {
+async function scrollUntilAttached(page, locator, deltaY = 430) {
   for (let index = 0; index < 18 && !(await locator.count()); index += 1) {
-    await page.mouse.wheel(0, 430);
+    await page.mouse.wheel(0, deltaY);
     await afterPaint(page);
   }
   await expect(locator).toBeAttached();
@@ -255,8 +259,12 @@ async function completeClubFamilyRelayVisual(page, errors) {
     'lần',
     'đầu',
   ]) {
-    const word = page.getByText(token, { exact: true }).last();
-    await word.scrollIntoViewIfNeeded();
+    // Flutter's Edge semantics tree can prefix nearby Chinese labels to the
+    // first token (for example, "次參加社團ôm"). Match the token at the end of
+    // the button name so the audit still clicks the actual word control.
+    const tokenName = token === 'Hôm' ? /(?:H)?ôm$/u : new RegExp(`${token}$`, 'u');
+    const word = page.getByRole('button', { name: tokenName }).last();
+    await scrollUntilAttached(page, word, -430);
     await word.click();
   }
   await expect(page.getByText(/句子排好了/)).toBeVisible();
@@ -320,7 +328,7 @@ test('Pixel 7 cold-start, beginner theater, story card, and family-response audi
     errors.push(error.stack || `${error.name}: ${error.message}`));
 
   await openColdApp(page, errors);
-  await page.getByRole('button', { name: '先試演 30 秒' }).click();
+  await page.getByRole('button', { name: '先試演約 30 秒' }).click();
   await captureReady(
     page,
     page.getByRole('button', { name: '點一下聽這一句' }),
@@ -334,7 +342,39 @@ test('Pixel 7 cold-start, beginner theater, story card, and family-response audi
     'test-results/theater-preview-outcome-pixel7.png',
     errors,
   );
-  await page.getByRole('button', { name: '建立我們家的故事' }).click();
+  const openRelayPreview = page.getByRole('button', {
+    name: '看這句怎麼傳回家',
+  });
+  await scrollUntilAttached(page, openRelayPreview);
+  await openRelayPreview.click();
+  await expect(page.getByText('3 / 3')).toBeVisible();
+  await expect(page.getByText('原來，一句話會這樣傳下來')).toBeVisible();
+  await expect(page.getByText('孩子帶回', { exact: true })).toBeVisible();
+  await expect(page.getByText('家人傳下', { exact: true })).toBeVisible();
+  await expect(page.getByText('孩子接住', { exact: true })).toBeVisible();
+  await captureReady(
+    page,
+    page.getByText('原來，一句話會這樣傳下來'),
+    'test-results/theater-preview-relay-pixel7.png',
+    errors,
+  );
+  const relayAudio = page.getByRole('button', {
+    name: '聽合成的家語示範',
+  });
+  await relayAudio.click();
+  await expect(page.getByRole('button', {
+    name: '聽合成的家語示範',
+  })).toBeVisible();
+  const relayDisclosure = page.getByText(
+    /Piper 合成操作示範.*不是真人原音.*未使用、建立或保存任何家庭資料/,
+  );
+  await scrollUntilAttached(page, relayDisclosure);
+  await expect(relayDisclosure).toBeVisible();
+  const finishPreview = page.getByRole('button', {
+    name: '同意後建立我們家的三棒故事',
+  });
+  await scrollUntilAttached(page, finishPreview);
+  await finishPreview.click();
   await expect(page.getByText('先取得家人的同意')).toBeVisible();
   await establishFamilyCircle(page, errors);
   await page.getByRole('tab', { name: '選故事' }).click();

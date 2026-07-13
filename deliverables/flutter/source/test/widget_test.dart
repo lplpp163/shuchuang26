@@ -151,18 +151,23 @@ void main() {
     },
   );
 
-  testWidgets('cold launch exposes the 30-second no-storage theater preview',
+  testWidgets('cold launch exposes a zero-data three-act relay preview',
       (tester) async {
     SharedPreferences.setMockInitialValues(<String, Object>{});
     final store = await AppStore.load(adultPinKdf: fastTestPinKdf);
     final media = _SilentMediaService();
+    final storyIdsBefore = store.stories.map((story) => story.id).toList();
+    final attemptIdsBefore =
+        store.attempts.map((attempt) => attempt.id).toList();
+    final relayIdsBefore = store.relays.map((relay) => relay.id).toList();
 
     await tester.pumpWidget(testApp(store, media: media));
     await tester.pumpAndSettle();
 
     final previewCta = find.byKey(const ValueKey('open-theater-preview'));
     expect(find.text('先取得家人的同意'), findsOneWidget);
-    expect(find.text('先試演 30 秒'), findsOneWidget);
+    expect(find.text('先試演約 30 秒'), findsOneWidget);
+    expect(find.textContaining('怎麼把一句話傳回家'), findsOneWidget);
     expect(previewCta, findsOneWidget);
     expect(media.played, isEmpty);
     expect(store.privacyConsent, isFalse);
@@ -170,8 +175,10 @@ void main() {
     await tester.tap(previewCta);
     await tester.pumpAndSettle();
 
-    expect(find.text('30 秒試演'), findsOneWidget);
+    expect(find.text('約 30 秒試演'), findsOneWidget);
     expect(find.text('不錄音・不儲存'), findsOneWidget);
+    expect(find.text('固定合成・零家庭資料'), findsOneWidget);
+    expect(find.text('1 / 3'), findsOneWidget);
     expect(find.byKey(const ValueKey('preview-opening')), findsOneWidget);
     expect(find.byKey(const ValueKey('preview-listen-line')), findsOneWidget);
     expect(
@@ -210,8 +217,121 @@ void main() {
     );
     expect(find.text('✨'), findsNothing);
     expect(find.textContaining('家真正會說的版本或原音'), findsOneWidget);
+    expect(find.text('2 / 3'), findsOneWidget);
+    expect(find.byKey(const ValueKey('preview-to-relay')), findsOneWidget);
     expect(media.played, isNotEmpty);
     expect(store.privacyConsent, isFalse);
+
+    final playedAfterOutcome = media.played.length;
+    await tester.ensureVisible(
+      find.byKey(const ValueKey('preview-to-relay')),
+    );
+    await tester.tap(find.byKey(const ValueKey('preview-to-relay')));
+    await tester.pumpAndSettle();
+
+    expect(find.text('3 / 3'), findsOneWidget);
+    expect(find.byKey(const ValueKey('preview-relay')), findsOneWidget);
+    expect(find.byKey(const ValueKey('preview-relay-baton-1')), findsOneWidget);
+    expect(find.byKey(const ValueKey('preview-relay-baton-2')), findsOneWidget);
+    expect(find.byKey(const ValueKey('preview-relay-baton-3')), findsOneWidget);
+    expect(find.text('孩子帶回'), findsOneWidget);
+    expect(find.text('家人傳下'), findsOneWidget);
+    expect(find.text('孩子接住'), findsOneWidget);
+    expect(find.textContaining('Piper 合成操作示範'), findsOneWidget);
+    expect(find.textContaining('不是真人原音'), findsOneWidget);
+    expect(find.textContaining('未使用、建立或保存任何家庭資料'), findsOneWidget);
+    expect(
+      find.widgetWithText(FilledButton, '同意後建立我們家的三棒故事'),
+      findsOneWidget,
+    );
+
+    await tester.ensureVisible(
+      find.byKey(const ValueKey('preview-replay-outcome')),
+    );
+    await tester.tap(find.byKey(const ValueKey('preview-replay-outcome')));
+    await tester.pumpAndSettle();
+    expect(find.text('2 / 3'), findsOneWidget);
+    expect(
+      find.byKey(const ValueKey('preview-outcome-came-home')),
+      findsOneWidget,
+    );
+    await tester.ensureVisible(
+      find.byKey(const ValueKey('preview-to-relay')),
+    );
+    await tester.tap(find.byKey(const ValueKey('preview-to-relay')));
+    await tester.pumpAndSettle();
+    expect(find.text('3 / 3'), findsOneWidget);
+
+    await tester.ensureVisible(
+      find.byKey(const ValueKey('preview-relay-listen')),
+    );
+    await tester.tap(find.byKey(const ValueKey('preview-relay-listen')));
+    await tester.pumpAndSettle();
+    expect(media.played.length, playedAfterOutcome + 1);
+
+    expect(store.stories.map((story) => story.id).toList(), storyIdsBefore);
+    expect(
+      store.attempts.map((attempt) => attempt.id).toList(),
+      attemptIdsBefore,
+    );
+    expect(store.relays.map((relay) => relay.id).toList(), relayIdsBefore);
+    expect(store.privacyConsent, isFalse);
+
+    await tester.ensureVisible(
+      find.byKey(const ValueKey('finish-theater-preview')),
+    );
+    await tester.tap(find.byKey(const ValueKey('finish-theater-preview')));
+    await tester.pumpAndSettle();
+    expect(find.text('先取得家人的同意'), findsOneWidget);
+    expect(store.stories.map((story) => story.id).toList(), storyIdsBefore);
+    expect(
+      store.attempts.map((attempt) => attempt.id).toList(),
+      attemptIdsBefore,
+    );
+    expect(store.relays.map((relay) => relay.id).toList(), relayIdsBefore);
+  });
+
+  testWidgets('three-act preview stays usable at 320px and 200 percent text',
+      (tester) async {
+    tester.view.physicalSize = const Size(320, 640);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+    SharedPreferences.setMockInitialValues(<String, Object>{});
+    final store = await AppStore.load(adultPinKdf: fastTestPinKdf);
+
+    await tester.pumpWidget(
+      MediaQuery(
+        data: const MediaQueryData(
+          size: Size(320, 640),
+          textScaler: TextScaler.linear(2),
+        ),
+        child: testApp(store),
+      ),
+    );
+    await tester.pumpAndSettle();
+
+    final open = find.byKey(const ValueKey('open-theater-preview'));
+    await tester.ensureVisible(open);
+    await tester.tap(open);
+    await tester.pumpAndSettle();
+    expect(tester.takeException(), isNull);
+
+    final choice = find.byKey(const ValueKey('preview-choice-came-home'));
+    await tester.ensureVisible(choice);
+    await tester.tap(choice);
+    await tester.pumpAndSettle();
+    final relay = find.byKey(const ValueKey('preview-to-relay'));
+    await tester.ensureVisible(relay);
+    await tester.tap(relay);
+    await tester.pumpAndSettle();
+
+    expect(find.byKey(const ValueKey('preview-relay')), findsOneWidget);
+    expect(tester.takeException(), isNull);
+    final finish = find.byKey(const ValueKey('finish-theater-preview'));
+    await tester.ensureVisible(finish);
+    expect(finish, findsOneWidget);
+    expect(tester.takeException(), isNull);
   });
 
   testWidgets('consent never fabricates family members', (tester) async {

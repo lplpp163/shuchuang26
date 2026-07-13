@@ -1,6 +1,6 @@
 # 傳家話｜團隊成果網站
 
-這個目錄是作品的本機展示與交付鏡像。產品有兩條可展示主線：「30 秒無資料試演 → 成人同意與家庭圈 → 五集三幕家庭對話劇場 → 家庭故事卡 → 家人稍後接續」，以及「孩子選第一棒 → 成人 PIN／家人確認 → 看、聽、排、答四關 → 三棒家庭接力作品 → 家人圈重播」。家庭故事護照只在接力完整走完後蓋章，不因選題或成人存檔提前完成。
+這個目錄是作品的本機展示與交付鏡像。產品有兩條可展示主線：「約 30 秒三幕零資料試演（選一句 → 舞台改變 → 三棒傳回家）→ 成人同意與家庭圈 → 五集三幕家庭對話劇場 → 家庭故事卡 → 家人稍後接續」，以及「孩子選第一棒 → 成人 PIN／家人確認 → 看、聽、排、答四階段 → 三棒家庭接力作品 → 家人圈重播」。試演只使用固定 Piper 合成示範，不建立家庭、故事、接力或作答資料；家庭故事護照只在正式接力完整走完後蓋章，不因選題或成人存檔提前完成。
 
 ## 直接瀏覽
 
@@ -13,7 +13,7 @@
 - `deliverables/video/index.html`：影片播放、規格、分鏡與誠實邊界。
 - `deliverables/docs/technical-validation.md`：最新技術驗證紀錄。
 - `deliverables/docs/strict-review.md`：嚴格驗收與外部缺口。
-- `deliverables/docs/family-pilot-questionnaire.md`：家庭需求、30 秒試演與導入端訪談協議；空白模板不等於實證。
+- `deliverables/docs/family-pilot-questionnaire.md`：家庭需求、約 30 秒三幕試演與導入端訪談協議；空白模板不等於實證。
 - [19 頁教師家庭延伸情境包（四週試辦版）](deliverables/pilot/teacher-family-extension-pack.pdf)：可執行的導入工具；尚未有教師採用、成效、合作或採購證據。
 - `deliverables/review/index.html`：逐檔完整播放119個交付音檔，依204個可追溯使用語境作三項是／否判定並匯出v2 JSON／CSV；空白工具不等於審閱完成。
 - `deliverables/review/context-catalog.json`：119路徑的中文意圖、劇集／教案、說話者／聽者與來源雜湊。
@@ -46,6 +46,14 @@
 ```
 
 同步腳本從上層專案複製正式計畫書、影片稿、驗收與技術紀錄、研究協議、Flutter 原始碼及相對路徑 Web build，重建 `deliverables/manifest.json` 並核對 SHA-256。submission gate 另檢查 canonical 名稱與流程、119 個 Piper MP3 的 bytes／hash，以及鏡像與來源完全一致。
+
+Round 13 已把冷啟預覽擴成三幕：第一幕選一句，第二幕看舞台後果，第三幕看「孩子帶回 → 家人傳下 → 孩子接住」三棒示範；第三幕固定標明合成語音、非真人家人原音、尚未經母語者審閱，且整段不建立家庭資料。本輪目前可採信證據如下；下列 Round 12 數字另保留為歷史快照。
+
+- 格式檢查 70 檔 0 變更、`flutter analyze` 0 問題、Flutter 測試 134／134，完整 quality gate 與相對路徑 Web build 通過；Chromium 與 Edge 的 App 回歸各 7／7。
+- 最終同步網站的 Chromium 與 Edge 完整套件各 10／10；Edge 有聲媒體另為 2／2。`-RequireVideo` submission gate 通過 424 筆 manifest、119 音檔／204 語境、解壓後 124 檔可攜包與雙影片實檔核對。
+- Round 13 正式計畫書 PDF／DOCX 皆為 18 頁並通過 QA：PDF 625,480 bytes／`5147F998E9913A9352ADDFA639A595195E0D3C34F16EEBA94EDFF75FB89A329F`；DOCX 946,448 bytes／`0001C5186F46FD92F8C784EE2259557C2E0EA1EC35967AFCD94E3300BE05987B`。19 頁教師包為 551,671 bytes／`6B83F3DB0A478174B8998CC46209D037DFE31E0439E9CC41DA58A6370725B6F5`，QA 通過。
+- Round 13 正式影片為 173.900 秒、52,551,781 bytes、`F45E264DABC1D1D761FBFF5F5D01ADB063925544427230CBCC4815FD4C4496F6`、-14.60 LUFS／-1.85 dBTP；720p 預覽為 21,439,864 bytes、`4367754719C99589F523E72F7B3BF501CD36C3E8D7A381367E040D1D22A00413`、-14.61 LUFS／-1.62 dBTP。15／15 場景與 17／17 語音窗均 PASS，驗證 JSON 為 `7D2E6C393CF196A4975C6F1FEC5AC8F847570828492EB87989069E5811E1FC2C`。
+- 八面向本機平均 8.75／10、一票否決 0、P0 0；沒有新增真人家庭、母語者或買方證據，因此嚴格 IEC 仍為 74／100，市場仍受 16／30 上限。
 
 Round 12 的產品與文件已加入五題材家庭接力、只在完成後蓋章的故事護照、每筆教育資訊的本機主題延伸，以及 19 頁四週教師家庭延伸試辦包。教育延伸均須明示「非官方授權教案」；試辦包不代表已採用、有效、合作或成交。目前已由來源端核對的 Round 12 快照如下，上一輪 121／121、瀏覽器 5／5與舊影片 hash 只作 Round 11 歷史紀錄：
 

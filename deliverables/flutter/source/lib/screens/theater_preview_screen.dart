@@ -23,7 +23,9 @@ class TheaterPreviewScreen extends StatefulWidget {
 class _TheaterPreviewScreenState extends State<TheaterPreviewScreen> {
   late final ConversationEpisode _episode;
   late final ConversationPrompt _prompt;
+  final ScrollController _scrollController = ScrollController();
   ConversationChoice? _choice;
+  bool _showRelay = false;
   bool _playing = false;
   String? _message;
 
@@ -37,7 +39,15 @@ class _TheaterPreviewScreenState extends State<TheaterPreviewScreen> {
   @override
   void dispose() {
     unawaited(widget.media.stopPlayback());
+    _scrollController.dispose();
     super.dispose();
+  }
+
+  void _scrollToActStart() {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!mounted || !_scrollController.hasClients) return;
+      _scrollController.jumpTo(0);
+    });
   }
 
   Future<void> _play(ConversationLine line) async {
@@ -65,43 +75,82 @@ class _TheaterPreviewScreenState extends State<TheaterPreviewScreen> {
 
   void _choose(ConversationChoice choice) {
     if (_playing) return;
-    setState(() => _choice = choice);
+    setState(() {
+      _choice = choice;
+      _showRelay = false;
+    });
+    _scrollToActStart();
     unawaited(_play(choice.line));
+  }
+
+  void _openRelayPreview() {
+    if (_playing || _choice == null) return;
+    setState(() => _showRelay = true);
+    _scrollToActStart();
+  }
+
+  void _returnToOutcome() {
+    if (_playing) return;
+    setState(() => _showRelay = false);
+    _scrollToActStart();
+  }
+
+  void _returnToOpening() {
+    if (_playing) return;
+    setState(() {
+      _choice = null;
+      _showRelay = false;
+    });
+    _scrollToActStart();
   }
 
   @override
   Widget build(BuildContext context) {
     final choice = _choice;
+    final step = choice == null
+        ? 1
+        : _showRelay
+            ? 3
+            : 2;
+    final relay = choice == null
+        ? null
+        : RelayPreviewData(
+            childIntentZh: choice.line.translationZh,
+            familyLine: choice.line,
+            childCompletionZh: '正式使用時，完成看、聽、排、答後，可用錄音或文字留下這一棒。',
+          );
     return Scaffold(
       appBar: AppBar(title: const BrandMark(compact: true)),
       body: SafeArea(
         top: false,
         child: Center(
           child: SingleChildScrollView(
+            controller: _scrollController,
             padding: const EdgeInsets.fromLTRB(18, 16, 18, 30),
             child: ConstrainedBox(
               constraints: const BoxConstraints(maxWidth: 560),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  Row(
+                  Wrap(
+                    spacing: 8,
+                    runSpacing: 8,
                     children: [
                       const _PreviewPill(
                         icon: Icons.visibility_outlined,
-                        label: '30 秒試演',
+                        label: '約 30 秒試演',
                       ),
-                      const SizedBox(width: 8),
                       const _PreviewPill(
                         icon: Icons.no_accounts_outlined,
                         label: '不錄音・不儲存',
                       ),
-                      const Spacer(),
-                      Text(
-                        choice == null ? '1 / 2' : '2 / 2',
-                        style: const TextStyle(
-                          color: AppColors.muted,
-                          fontWeight: FontWeight.w800,
-                        ),
+                      const _PreviewPill(
+                        icon: Icons.science_outlined,
+                        label: '固定合成・零家庭資料',
+                      ),
+                      _PreviewPill(
+                        icon: Icons.theater_comedy_outlined,
+                        label: '$step / 3',
                       ),
                     ],
                   ),
@@ -115,13 +164,20 @@ class _TheaterPreviewScreenState extends State<TheaterPreviewScreen> {
                       onListen: () => unawaited(_play(_prompt.elderLine)),
                       onChoose: _choose,
                     )
-                  else
+                  else if (!_showRelay)
                     _OutcomePreview(
                       key: ValueKey('preview-outcome-${choice.id}'),
                       choice: choice,
                       playing: _playing,
                       onListen: () => unawaited(_play(choice.elderReply)),
-                      onTryOther: () => setState(() => _choice = null),
+                      onTryOther: _returnToOpening,
+                    )
+                  else
+                    _RelayPreview(
+                      key: const ValueKey('preview-relay'),
+                      data: relay!,
+                      playing: _playing,
+                      onListen: () => unawaited(_play(relay.familyLine)),
                     ),
                   if (_message != null) ...[
                     const SizedBox(height: 12),
@@ -135,33 +191,58 @@ class _TheaterPreviewScreenState extends State<TheaterPreviewScreen> {
                     ),
                   ],
                   const SizedBox(height: 16),
-                  Container(
-                    padding: const EdgeInsets.all(15),
-                    decoration: BoxDecoration(
-                      color: AppColors.jadeSoft,
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    child: const Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Icon(Icons.lock_outline_rounded, color: AppColors.jade),
-                        SizedBox(width: 10),
-                        Expanded(
-                          child: Text(
-                            '剛才只是在記憶體裡試一個分支。要錄下家人原音、使用麥克風或保存故事卡時，才會先取得同意。',
-                            style: TextStyle(height: 1.45),
+                  if (!_showRelay)
+                    Container(
+                      padding: const EdgeInsets.all(15),
+                      decoration: BoxDecoration(
+                        color: AppColors.jadeSoft,
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: const Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Icon(Icons.lock_outline_rounded,
+                              color: AppColors.jade),
+                          SizedBox(width: 10),
+                          Expanded(
+                            child: Text(
+                              '剛才只是在記憶體裡試一個分支。要錄下家人原音、使用麥克風或保存故事卡時，才會先取得同意。',
+                              style: TextStyle(height: 1.45),
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
-                  ),
                   const SizedBox(height: 12),
-                  FilledButton.icon(
-                    key: const ValueKey('finish-theater-preview'),
-                    onPressed: () => Navigator.pop(context),
-                    icon: const Icon(Icons.family_restroom_rounded),
-                    label: Text(choice == null ? '回到同意說明' : '建立我們家的故事'),
-                  ),
+                  if (choice == null)
+                    TextButton.icon(
+                      key: const ValueKey('finish-theater-preview'),
+                      onPressed: () => Navigator.pop(context),
+                      icon: const Icon(Icons.arrow_back_rounded),
+                      label: const Text('回到同意說明'),
+                    )
+                  else if (!_showRelay)
+                    FilledButton.icon(
+                      key: const ValueKey('preview-to-relay'),
+                      onPressed: _playing ? null : _openRelayPreview,
+                      icon: const Icon(Icons.hub_rounded),
+                      label: const Text('看這句怎麼傳回家'),
+                    )
+                  else ...[
+                    OutlinedButton.icon(
+                      key: const ValueKey('preview-replay-outcome'),
+                      onPressed: _playing ? null : _returnToOutcome,
+                      icon: const Icon(Icons.alt_route_rounded),
+                      label: const Text('再看一次舞台怎麼變'),
+                    ),
+                    const SizedBox(height: 10),
+                    FilledButton.icon(
+                      key: const ValueKey('finish-theater-preview'),
+                      onPressed: _playing ? null : () => Navigator.pop(context),
+                      icon: const Icon(Icons.family_restroom_rounded),
+                      label: const Text('同意後建立我們家的三棒故事'),
+                    ),
+                  ],
                 ],
               ),
             ),
@@ -170,6 +251,217 @@ class _TheaterPreviewScreenState extends State<TheaterPreviewScreen> {
       ),
     );
   }
+}
+
+/// Immutable, bundled copy used only by the zero-data first-run preview.
+///
+/// It cannot create a family, relay, attempt, recording, or story card. The
+/// real product flow constructs those records only after explicit consent.
+@immutable
+class RelayPreviewData {
+  const RelayPreviewData({
+    required this.childIntentZh,
+    required this.familyLine,
+    required this.childCompletionZh,
+  });
+
+  final String childIntentZh;
+  final ConversationLine familyLine;
+  final String childCompletionZh;
+}
+
+class _RelayPreview extends StatelessWidget {
+  const _RelayPreview({
+    super.key,
+    required this.data,
+    required this.playing,
+    required this.onListen,
+  });
+
+  final RelayPreviewData data;
+  final bool playing;
+  final VoidCallback onListen;
+
+  @override
+  Widget build(BuildContext context) {
+    return Semantics(
+      container: true,
+      explicitChildNodes: true,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          const Icon(Icons.hub_rounded, color: AppColors.coral, size: 44),
+          const SizedBox(height: 6),
+          Text(
+            '原來，一句話會這樣傳下來',
+            textAlign: TextAlign.center,
+            style: Theme.of(context).textTheme.headlineMedium,
+          ),
+          const SizedBox(height: 4),
+          const Text(
+            '這是固定操作示範；正式使用時，內容由孩子與家人一起完成。',
+            textAlign: TextAlign.center,
+            style: TextStyle(color: AppColors.muted),
+          ),
+          const SizedBox(height: 14),
+          _PreviewRelayBaton(
+            key: const ValueKey('preview-relay-baton-1'),
+            number: 1,
+            icon: Icons.child_care_rounded,
+            color: AppColors.coral,
+            label: '孩子帶回',
+            primary: data.childIntentZh,
+            detail: '孩子先決定今天真正想說的事。',
+          ),
+          const _PreviewRelayConnector(),
+          _PreviewRelayBaton(
+            key: const ValueKey('preview-relay-baton-2'),
+            number: 2,
+            icon: Icons.family_restroom_rounded,
+            color: AppColors.berry,
+            label: '家人傳下',
+            primary: data.familyLine.targetText,
+            detail: '正式使用時，由家人確認真正說法或錄下原音。',
+          ),
+          const _PreviewRelayConnector(),
+          _PreviewRelayBaton(
+            key: const ValueKey('preview-relay-baton-3'),
+            number: 3,
+            icon: Icons.record_voice_over_rounded,
+            color: AppColors.jade,
+            label: '孩子接住',
+            primary: data.familyLine.targetText,
+            detail: data.childCompletionZh,
+          ),
+          const SizedBox(height: 13),
+          FilledButton.icon(
+            key: const ValueKey('preview-relay-listen'),
+            onPressed: playing ? null : onListen,
+            style: FilledButton.styleFrom(backgroundColor: AppColors.berry),
+            icon: Icon(
+              playing ? Icons.graphic_eq_rounded : Icons.volume_up_rounded,
+            ),
+            label: Text(playing ? '正在播放…' : '聽合成的家語示範'),
+          ),
+          const SizedBox(height: 10),
+          Container(
+            key: const ValueKey('preview-relay-disclosure'),
+            padding: const EdgeInsets.all(13),
+            decoration: BoxDecoration(
+              color: AppColors.coralSoft,
+              borderRadius: BorderRadius.circular(18),
+              border: Border.all(color: AppColors.coral.withValues(alpha: .35)),
+            ),
+            child: const Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Icon(Icons.info_outline_rounded,
+                    size: 20, color: AppColors.coral),
+                SizedBox(width: 9),
+                Expanded(
+                  child: Text(
+                    'Piper 合成操作示範，不是真人原音，也不代表母語審閱完成；未使用、建立或保存任何家庭資料。',
+                    style: TextStyle(fontSize: 12, height: 1.4),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _PreviewRelayBaton extends StatelessWidget {
+  const _PreviewRelayBaton({
+    super.key,
+    required this.number,
+    required this.icon,
+    required this.color,
+    required this.label,
+    required this.primary,
+    required this.detail,
+  });
+
+  final int number;
+  final IconData icon;
+  final Color color;
+  final String label;
+  final String primary;
+  final String detail;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: color.withValues(alpha: .09),
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: color.withValues(alpha: .72), width: 1.5),
+      ),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          CircleAvatar(
+            radius: 17,
+            backgroundColor: color,
+            foregroundColor: Colors.white,
+            child: Text(
+              '$number',
+              style: const TextStyle(fontWeight: FontWeight.w900),
+            ),
+          ),
+          const SizedBox(width: 10),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    Icon(icon, color: color, size: 18),
+                    const SizedBox(width: 5),
+                    Text(
+                      label,
+                      style:
+                          TextStyle(color: color, fontWeight: FontWeight.w900),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 3),
+                Text(
+                  primary,
+                  style: const TextStyle(
+                      fontSize: 17, fontWeight: FontWeight.w900),
+                ),
+                const SizedBox(height: 2),
+                Text(
+                  detail,
+                  style: const TextStyle(color: AppColors.muted, fontSize: 11),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _PreviewRelayConnector extends StatelessWidget {
+  const _PreviewRelayConnector();
+
+  @override
+  Widget build(BuildContext context) => const SizedBox(
+        height: 20,
+        child: Center(
+          child: Icon(
+            Icons.arrow_downward_rounded,
+            size: 18,
+            color: AppColors.muted,
+          ),
+        ),
+      );
 }
 
 class _OpeningPreview extends StatelessWidget {

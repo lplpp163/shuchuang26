@@ -32,6 +32,10 @@ async function typeFlutterText(page, locator, value) {
   await page.keyboard.press('Control+A');
   await page.keyboard.press('Backspace');
   await locator.pressSequentially(value, { delay: 35 });
+  if (await locator.inputValue() !== value) {
+    await locator.fill(value);
+  }
+  await expect(locator).toHaveValue(value);
   await page.keyboard.press('Tab');
   await afterPaint(page);
 }

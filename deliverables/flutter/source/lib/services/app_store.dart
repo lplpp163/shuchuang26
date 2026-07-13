@@ -657,7 +657,6 @@ class AppStore extends ChangeNotifier {
       ..sort((left, right) => left.key.compareTo(right.key));
     return const JsonEncoder.withIndent('  ').convert({
       'schema': 'hometongue-pilot-summary-v1',
-      'generatedAt': DateTime.now().toIso8601String(),
       'privacyNote': '只含彙總計數與平均時間；不含姓名、家庭短句、成員／故事／作答識別、時間戳或媒體路徑。',
       'totals': {
         'started': _relays.length,

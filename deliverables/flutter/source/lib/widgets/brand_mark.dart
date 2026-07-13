@@ -12,46 +12,62 @@ class BrandMark extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        Container(
-          width: compact ? 36 : 46,
-          height: compact ? 36 : 46,
-          alignment: Alignment.center,
-          decoration: BoxDecoration(
-            gradient: const LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [AppColors.coral, AppColors.sun],
-            ),
-            borderRadius: BorderRadius.circular(compact ? 12 : 15),
-            boxShadow: const [
-              BoxShadow(color: Color(0x22E96B52), blurRadius: 8),
-            ],
-          ),
-          child: Icon(
-            Icons.record_voice_over_rounded,
-            color: Colors.white,
-            size: compact ? 22 : 28,
-          ),
-        ),
-        const SizedBox(width: 10),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisSize: MainAxisSize.min,
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        final textScale = MediaQuery.textScalerOf(context).scale(1);
+        final showTagline = textScale < 1.6 &&
+            (!constraints.hasBoundedWidth || constraints.maxWidth >= 210);
+        return Row(
           children: [
-            Text(appBrandName, style: Theme.of(context).textTheme.titleLarge),
-            Text(
-              appBrandTagline,
-              style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                    color: AppColors.muted,
-                    letterSpacing: .2,
+            Container(
+              width: compact ? 36 : 46,
+              height: compact ? 36 : 46,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                gradient: const LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [AppColors.coral, AppColors.sun],
+                ),
+                borderRadius: BorderRadius.circular(compact ? 12 : 15),
+                boxShadow: const [
+                  BoxShadow(color: Color(0x22E96B52), blurRadius: 8),
+                ],
+              ),
+              child: Icon(
+                Icons.record_voice_over_rounded,
+                color: Colors.white,
+                size: compact ? 22 : 28,
+              ),
+            ),
+            const SizedBox(width: 10),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Text(
+                    appBrandName,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: Theme.of(context).textTheme.titleLarge,
                   ),
+                  if (showTagline)
+                    Text(
+                      appBrandTagline,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                            color: AppColors.muted,
+                            letterSpacing: .2,
+                          ),
+                    ),
+                ],
+              ),
             ),
           ],
-        ),
-      ],
+        );
+      },
     );
   }
 }

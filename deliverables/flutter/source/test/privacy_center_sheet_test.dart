@@ -99,6 +99,7 @@ void main() {
     expect(copiedText, isNotNull);
     final copied = jsonDecode(copiedText!) as Map<String, dynamic>;
     expect(copied['schema'], 'hometongue-pilot-summary-v1');
+    expect(copied.containsKey('generatedAt'), isFalse);
     expect(
       (copied['totals'] as Map<String, dynamic>)['started'],
       1,
