@@ -215,7 +215,7 @@ class _EpisodeHero extends StatelessWidget {
                   ),
                   const SizedBox(height: 13),
                   const Text(
-                    '約 1 分鐘 · 先聽、再選、再開口',
+                    '約 1 分鐘 · 點場景、聽阿嬤、讓故事改變',
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.w700,

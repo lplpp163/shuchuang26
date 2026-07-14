@@ -854,6 +854,188 @@ class FamilyCircleScreen extends StatelessWidget {
         final viewer = store.memberById(viewerMemberId);
         final canManageFamily = adultActions &&
             (managerMemberId == null || managerMemberId == viewerMemberId);
+        if (adultActions) {
+          final primaryCard = store.cards.isEmpty ? null : store.cards.last;
+          final olderCards = store.cards.length <= 1
+              ? const <FamilyCircleStoryCard>[]
+              : store.cards.reversed.skip(1).toList(growable: false);
+          final pendingCount = store.pendingAdultInvitations.length;
+          return ListView(
+            key: const ValueKey('adult-family-circle'),
+            padding: const EdgeInsets.fromLTRB(18, 10, 18, 36),
+            children: [
+              Text(
+                '今天先回應一個故事',
+                style: Theme.of(context).textTheme.headlineLarge,
+              ),
+              const SizedBox(height: 6),
+              const Text(
+                '先用一個表情陪孩子接著演；想多說一句時再展開，不必先處理設定。',
+                style: TextStyle(color: AppColors.muted, fontSize: 16),
+              ),
+              const SizedBox(height: 12),
+              Container(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 13, vertical: 10),
+                decoration: BoxDecoration(
+                  color: AppColors.jadeSoft,
+                  borderRadius: BorderRadius.circular(18),
+                ),
+                child: const Row(
+                  children: [
+                    Icon(Icons.lock_outline_rounded,
+                        color: AppColors.jade, size: 21),
+                    SizedBox(width: 8),
+                    Expanded(
+                      child: Text(
+                        '只給家人看・保存在這台裝置',
+                        style: TextStyle(fontWeight: FontWeight.w800),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 14),
+              if (primaryCard == null)
+                const _EmptyCircle()
+              else
+                KeyedSubtree(
+                  key: const ValueKey('adult-primary-story-response'),
+                  child: _FamilyStoryCardView(
+                    card: primaryCard,
+                    store: store,
+                    media: media,
+                    actorMemberId: viewerMemberId,
+                    adultActions: true,
+                    onReact: (sticker) => _react(context, primaryCard, sticker),
+                    onContinue: () => _addContinuation(context, primaryCard),
+                  ),
+                ),
+              const SizedBox(height: 14),
+              ExpansionTile(
+                key: const ValueKey('adult-past-stories'),
+                tilePadding: const EdgeInsets.symmetric(horizontal: 4),
+                leading: const Icon(Icons.history_rounded),
+                title: const Text('過去故事與互動'),
+                subtitle: Text(
+                  olderCards.isEmpty
+                      ? '最新互動會整理在這裡'
+                      : '${olderCards.length} 張較早的家庭故事',
+                ),
+                children: [
+                  _FamilyActivityFeed(
+                    store: store,
+                    viewerMemberId: viewerMemberId,
+                    media: media,
+                    onMarkRead: (card) => _markActivityRead(context, card),
+                  ),
+                  for (final card in olderCards) ...[
+                    const SizedBox(height: 12),
+                    _FamilyStoryCardView(
+                      card: card,
+                      store: store,
+                      media: media,
+                      actorMemberId: viewerMemberId,
+                      adultActions: true,
+                      onReact: (sticker) => _react(context, card, sticker),
+                      onContinue: () => _addContinuation(context, card),
+                    ),
+                  ],
+                  const SizedBox(height: 8),
+                ],
+              ),
+              const SizedBox(height: 8),
+              KeyedSubtree(
+                key: const ValueKey('adult-family-tools'),
+                child: ExpansionTile(
+                  key: const ValueKey('family-tools-disclosure'),
+                  tilePadding: const EdgeInsets.symmetric(horizontal: 4),
+                  leading: const Icon(Icons.tune_rounded),
+                  title: const Text('邀請、備份與主劇情原音'),
+                  subtitle: Text(
+                    pendingCount == 0 ? '需要時再打開的家人設定' : '$pendingCount 份邀請等待確認',
+                  ),
+                  children: [
+                    const SizedBox(height: 6),
+                    _MemberRow(
+                      members: store.members
+                          .where((member) => member.isApproved)
+                          .toList(growable: false),
+                      viewer: viewer,
+                      protectedMemberIds: {viewerMemberId, childMemberId},
+                      onRemove: canManageFamily
+                          ? (member) => _removeFamilyMember(context, member)
+                          : null,
+                    ),
+                    if (canManageFamily) ...[
+                      if (store.pendingAdultInvitations.isNotEmpty) ...[
+                        const SizedBox(height: 12),
+                        _PendingInvitationsPanel(
+                          store: store,
+                          onRevoke: (invitation) =>
+                              _revokeInvitation(context, invitation),
+                        ),
+                      ],
+                      const SizedBox(height: 10),
+                      OutlinedButton.icon(
+                        key: const ValueKey('add-family-member'),
+                        onPressed: () => _addFamilyMember(context),
+                        icon: const Icon(Icons.person_add_alt_rounded),
+                        label: const Text('邀請或加入一位家人'),
+                      ),
+                      const SizedBox(height: 8),
+                      FilledButton.tonalIcon(
+                        key: const ValueKey('import-adult-invitation-receipt'),
+                        onPressed: () => _importInvitationReceipt(context),
+                        icon: const Icon(Icons.mark_email_read_outlined),
+                        label: const Text('家人已接受：帶入回覆包'),
+                      ),
+                      const SizedBox(height: 10),
+                      ExpansionTile(
+                        key: const ValueKey('manual-family-backup-tools'),
+                        tilePadding: EdgeInsets.zero,
+                        leading: const Icon(Icons.inventory_2_outlined),
+                        title: const Text('完整文字備份與搬移'),
+                        subtitle: const Text('手動操作，不是邀請或即時同步'),
+                        children: [
+                          Row(
+                            children: [
+                              Expanded(
+                                child: OutlinedButton.icon(
+                                  key: const ValueKey('export-family-package'),
+                                  onPressed: () => _copyFamilyPackage(context),
+                                  icon: const Icon(Icons.content_copy_rounded),
+                                  label: const Text('複製備份'),
+                                ),
+                              ),
+                              const SizedBox(width: 8),
+                              Expanded(
+                                child: OutlinedButton.icon(
+                                  key: const ValueKey('import-family-package'),
+                                  onPressed: () =>
+                                      _importFamilyPackage(context),
+                                  icon: const Icon(Icons.move_to_inbox_rounded),
+                                  label: const Text('帶入備份'),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ],
+                    const SizedBox(height: 12),
+                    _FamilyVoiceStudio(
+                      store: store,
+                      onEdit: (episode, prompt) =>
+                          _editEpisodeVoice(context, episode, prompt),
+                    ),
+                    const SizedBox(height: 12),
+                  ],
+                ),
+              ),
+            ],
+          );
+        }
         return ListView(
           key: ValueKey(
               adultActions ? 'adult-family-circle' : 'child-family-circle'),

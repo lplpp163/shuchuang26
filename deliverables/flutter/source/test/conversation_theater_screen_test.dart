@@ -245,15 +245,15 @@ void main() {
     );
     await tester.pumpAndSettle();
 
+    await tester.tap(find.byKey(const ValueKey('prepare-came-home')));
+    await tester.pumpAndSettle();
+
     const disclosure = '系統只幫你把聲音寫成字；你想說什麼由你確認，家裡怎麼說由家人確認。聽寫不準也不會卡住故事。';
     final microphone = find.byKey(const ValueKey('theater-microphone'));
     expect(
       tester.getRect(find.text(disclosure)).bottom,
       lessThan(tester.getRect(microphone).top),
     );
-
-    await tester.tap(find.byKey(const ValueKey('prepare-came-home')));
-    await tester.pumpAndSettle();
 
     final cameHomeAudio = ConversationEpisodeCatalog.homecoming
         .promptById('home-door')
@@ -384,8 +384,8 @@ void main() {
 
     expect(speech.listenCount, 1);
     expect(find.text('Bà nhớ cháu quá!'), findsOneWidget);
-    expect(find.textContaining('系統聽成：Cháu về rồi ạ'), findsOneWidget);
-    expect(find.textContaining('故事接到「我回來了。」'), findsOneWidget);
+    expect(find.textContaining('聽寫文字：Cháu về rồi ạ'), findsOneWidget);
+    expect(find.textContaining('故事依你確認的「我回來了。」'), findsOneWidget);
     expect(find.textContaining('門打開了'), findsWidgets);
     expect(find.textContaining('我回來了'), findsWidgets);
     final outcomeCharacterArt =
@@ -393,9 +393,13 @@ void main() {
               (image) =>
                   image.image is AssetImage &&
                   (image.image as AssetImage).assetName ==
-                      'assets/images/family-stage-duo-v1.png',
+                      'assets/images/family-homecoming-theater-v2.png',
             );
     expect(outcomeCharacterArt, isNotEmpty);
+    expect(
+      find.byKey(const ValueKey('elder-action-came-home')),
+      findsOneWidget,
+    );
 
     await _tapVisible(
       tester,
@@ -404,12 +408,11 @@ void main() {
     await tester.pumpAndSettle();
     expect(find.text('Hôm nay vui không?'), findsOneWidget);
 
+    await _tapVisible(tester, find.byKey(const ValueKey('prepare-new-friend')));
     await _tapVisible(
       tester,
-      find.byKey(const ValueKey('toggle-intent-hints')),
+      find.byKey(const ValueKey('continue-with-scene-choice')),
     );
-    await tester.pumpAndSettle();
-    await _tapVisible(tester, find.byKey(const ValueKey('intent-new-friend')));
     await tester.pumpAndSettle();
     expect(find.textContaining('故事多了一位新朋友'), findsWidgets);
 
@@ -525,11 +528,11 @@ void main() {
     );
     await tester.pumpAndSettle();
 
+    await _tapVisible(tester, find.byKey(const ValueKey('prepare-came-home')));
     await _tapVisible(
       tester,
-      find.byKey(const ValueKey('toggle-intent-hints')),
+      find.byKey(const ValueKey('continue-with-scene-choice')),
     );
-    await _tapVisible(tester, find.byKey(const ValueKey('intent-came-home')));
     await tester.pumpAndSettle();
     await _tapVisible(
       tester,
@@ -681,12 +684,16 @@ void main() {
     expect(find.byKey(const ValueKey('speech-pronunciation-help')),
         findsOneWidget);
     expect(find.byKey(const ValueKey('speech-self-confirm')), findsOneWidget);
-    expect(find.byKey(const ValueKey('intent-came-home')), findsOneWidget);
-    expect(find.byKey(const ValueKey('intent-a-bit-tired')), findsOneWidget);
+    expect(
+        find.byKey(const ValueKey('scene-choice-came-home')), findsOneWidget);
+    expect(
+      find.byKey(const ValueKey('scene-choice-a-bit-tired')),
+      findsOneWidget,
+    );
     expect(find.textContaining('答錯'), findsNothing);
     expect(find.textContaining('發音分數'), findsNothing);
     final firstFallbackRect = tester.getRect(
-      find.byKey(const ValueKey('intent-came-home')),
+      find.byKey(const ValueKey('scene-choice-came-home')),
     );
     expect(firstFallbackRect.top, greaterThanOrEqualTo(0));
     expect(firstFallbackRect.bottom, lessThanOrEqualTo(900));
@@ -695,7 +702,7 @@ void main() {
         tester, find.byKey(const ValueKey('speech-self-confirm')));
     await tester.pumpAndSettle();
     expect(find.textContaining('門打開了'), findsWidgets);
-    expect(find.textContaining('你選了：我回來了。'), findsOneWidget);
+    expect(find.textContaining('你用圖卡選了「我回來了。」'), findsOneWidget);
     expect(find.textContaining('系統聽成'), findsNothing);
 
     await _tapVisible(
@@ -746,8 +753,8 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.byKey(const ValueKey('speech-repair')), findsNothing);
-    expect(find.textContaining('系統聽成：Cháu về rồi ạ'), findsOneWidget);
-    expect(find.textContaining('故事接到「我回來了。」'), findsOneWidget);
+    expect(find.textContaining('聽寫文字：Cháu về rồi ạ'), findsOneWidget);
+    expect(find.textContaining('故事依你確認的「我回來了。」'), findsOneWidget);
     expect(find.text('Bà nhớ cháu quá!'), findsOneWidget);
     expect(find.textContaining('發音正確'), findsNothing);
   });
@@ -788,8 +795,12 @@ void main() {
     await _tapVisible(tester, find.byKey(const ValueKey('theater-microphone')));
     await tester.pumpAndSettle();
     expect(find.textContaining('像有兩個意思'), findsOneWidget);
-    expect(find.byKey(const ValueKey('intent-came-home')), findsOneWidget);
-    expect(find.byKey(const ValueKey('intent-a-bit-tired')), findsOneWidget);
+    expect(
+        find.byKey(const ValueKey('scene-choice-came-home')), findsOneWidget);
+    expect(
+      find.byKey(const ValueKey('scene-choice-a-bit-tired')),
+      findsOneWidget,
+    );
     expect(find.text('Bà nhớ cháu quá!'), findsNothing);
     expect(find.textContaining('門打開了'), findsNothing);
   });
@@ -804,11 +815,14 @@ void main() {
       find.byKey(const ValueKey('story-consequence-home-door-open')),
       findsOneWidget,
     );
-    expect(find.text('你讓故事發生了'), findsOneWidget);
+    expect(find.text('外婆已在圖上回話'), findsOneWidget);
     expect(find.text('門打開了！'), findsWidgets);
-    expect(find.text('外婆笑著接過你的書包。'), findsWidgets);
     expect(
-      find.byKey(const ValueKey('outcome-backdrop-home-door-open')),
+      find.byKey(const ValueKey('elder-action-came-home')),
+      findsOneWidget,
+    );
+    expect(
+      find.byKey(const ValueKey('scene-state-home-door-open')),
       findsOneWidget,
     );
     expect(
@@ -821,7 +835,7 @@ void main() {
 
     expect(find.text('Hôm nay vui không?'), findsOneWidget);
     expect(
-      find.byKey(const ValueKey('outcome-backdrop-home-door-open')),
+      find.byKey(const ValueKey('scene-state-home-door-open')),
       findsOneWidget,
     );
   });
@@ -954,11 +968,11 @@ Future<void> _pumpAutoAdvanceTheater(
 Future<void> _chooseAutoAdvanceCameHome(WidgetTester tester) async {
   await _tapVisible(
     tester,
-    find.byKey(const ValueKey('toggle-intent-hints')),
+    find.byKey(const ValueKey('prepare-came-home')),
   );
   await _tapVisible(
     tester,
-    find.byKey(const ValueKey('intent-came-home')),
+    find.byKey(const ValueKey('continue-with-scene-choice')),
   );
   await tester.pump();
   await tester.pump();

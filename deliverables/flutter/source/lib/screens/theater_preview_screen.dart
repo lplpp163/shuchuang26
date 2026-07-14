@@ -884,22 +884,15 @@ class _OpeningPreview extends StatelessWidget {
           voice: _PreviewVoice.openingElder,
           heard: heard,
           onListen: onListen,
+          choices: prompt.choices.take(2).toList(growable: false),
+          onChoose: onChoose,
         ),
-        const SizedBox(height: 16),
-        Text('你想怎麼接故事？', style: Theme.of(context).textTheme.headlineMedium),
-        const SizedBox(height: 5),
+        const SizedBox(height: 10),
         const Text(
-          '先選中文意思；下一秒就會看見這句話改變舞台。',
+          '直接點圖裡的兩個選擇；外婆會在同一個舞台上回話。',
+          textAlign: TextAlign.center,
           style: TextStyle(color: AppColors.muted),
         ),
-        const SizedBox(height: 12),
-        for (final choice in prompt.choices.take(2)) ...[
-          _PreviewChoiceCard(
-            choice: choice,
-            onTap: playingVoice != null ? null : () => onChoose(choice),
-          ),
-          const SizedBox(height: 10),
-        ],
       ],
     );
   }
@@ -1164,6 +1157,8 @@ class _PreviewStage extends StatelessWidget {
     required this.voice,
     required this.heard,
     required this.onListen,
+    required this.choices,
+    required this.onChoose,
   });
 
   final ConversationEpisode episode;
@@ -1174,11 +1169,13 @@ class _PreviewStage extends StatelessWidget {
   final _PreviewVoice voice;
   final bool heard;
   final VoidCallback onListen;
+  final List<ConversationChoice> choices;
+  final ValueChanged<ConversationChoice> onChoose;
 
   @override
   Widget build(BuildContext context) {
     final textScale = MediaQuery.textScalerOf(context).scale(1);
-    final responsiveHeight = 360.0 + ((textScale - 1).clamp(0.0, 1.0) * 140.0);
+    final responsiveHeight = 472.0 + ((textScale - 1).clamp(0.0, 1.0) * 160.0);
     return Container(
       height: responsiveHeight,
       clipBehavior: Clip.antiAlias,
@@ -1211,7 +1208,7 @@ class _PreviewStage extends StatelessWidget {
           Positioned(
             left: 18,
             right: 18,
-            bottom: 18,
+            bottom: 126,
             child: Container(
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
@@ -1255,6 +1252,34 @@ class _PreviewStage extends StatelessWidget {
               ),
             ),
           ),
+          Positioned(
+            left: 12,
+            right: 12,
+            bottom: 12,
+            child: Semantics(
+              container: true,
+              label: '點一個圖像，選擇你想怎麼接故事',
+              child: Row(
+                children: [
+                  for (var index = 0; index < choices.length; index++) ...[
+                    if (index > 0) const SizedBox(width: 9),
+                    Expanded(
+                      child: KeyedSubtree(
+                        key: ValueKey(
+                            'preview-scene-choice-${choices[index].id}'),
+                        child: _PreviewChoiceCard(
+                          choice: choices[index],
+                          onTap: playingVoice != null
+                              ? null
+                              : () => onChoose(choices[index]),
+                        ),
+                      ),
+                    ),
+                  ],
+                ],
+              ),
+            ),
+          ),
         ],
       ),
     );
@@ -1277,13 +1302,14 @@ class _PreviewChoiceCard extends StatelessWidget {
         onTap: onTap,
         borderRadius: BorderRadius.circular(20),
         child: Padding(
-          padding: const EdgeInsets.all(15),
-          child: Row(
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
             children: [
               Container(
                 key: ValueKey('preview-choice-icon-${choice.id}'),
-                width: 44,
-                height: 44,
+                width: 42,
+                height: 42,
                 decoration: const BoxDecoration(
                   color: AppColors.coralSoft,
                   shape: BoxShape.circle,
@@ -1291,24 +1317,23 @@ class _PreviewChoiceCard extends StatelessWidget {
                 child: Icon(
                   _previewChoiceIcon(choice),
                   color: AppColors.coral,
-                  size: 25,
+                  size: 24,
                 ),
               ),
-              const SizedBox(width: 12),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      choice.line.translationZh,
-                      style: Theme.of(context).textTheme.titleMedium,
+              const SizedBox(height: 5),
+              Text(
+                choice.line.translationZh,
+                textAlign: TextAlign.center,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+                style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                      fontWeight: FontWeight.w900,
                     ),
-                    const Text('點下去看故事怎麼變',
-                        style: TextStyle(color: AppColors.muted)),
-                  ],
-                ),
               ),
-              const Icon(Icons.arrow_forward_rounded, color: AppColors.jade),
+              const Text(
+                '點圖接故事',
+                style: TextStyle(color: AppColors.muted, fontSize: 11),
+              ),
             ],
           ),
         ),

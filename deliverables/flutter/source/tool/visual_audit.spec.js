@@ -154,14 +154,13 @@ async function scrollUntilAttached(page, locator, deltaY = 430) {
 
 async function chooseByCard(page, translation) {
   const prepare = page.getByRole('button', {
-    name: `準備「${translation}」，這一步不會送出`,
+    name: `圖像選擇「${translation}」；選取後可以開口或直接繼續故事`,
   });
   await scrollUntilAttached(page, prepare);
   await prepare.click();
-  const fallback = page.getByRole('button', { name: '今天先用小卡直接接故事' });
-  await scrollUntilAttached(page, fallback);
-  await fallback.click();
-  const choice = page.getByRole('button', { name: `直接選擇：${translation}` });
+  const choice = page.getByRole('button', {
+    name: /不開麥克風，用這張圖讓.+回話/,
+  });
   await scrollUntilAttached(page, choice);
   await choice.click();
   const next = page.getByRole('button', {
@@ -335,7 +334,7 @@ test('Pixel 7 cold-start, beginner theater, story card, and family-response audi
     'test-results/theater-preview-opening-pixel7.png',
     errors,
   );
-  await page.getByRole('button', { name: /我回來了。.*故事怎麼變/ }).click();
+  await page.getByRole('button', { name: /我回來了。.*點圖接故事/ }).click();
   await captureReady(
     page,
     page.getByRole('button', { name: '聽外婆接下一句' }),
@@ -344,7 +343,7 @@ test('Pixel 7 cold-start, beginner theater, story card, and family-response audi
   );
   const firstOutcomeWorld = await page.screenshot({ animations: 'disabled' });
   await page.getByRole('button', { name: '換另一句，看看不同結果' }).click();
-  await page.getByRole('button', { name: /我有一點累。.*故事怎麼變/ }).click();
+  await page.getByRole('button', { name: /我有一點累。.*點圖接故事/ }).click();
   await captureReady(
     page,
     page.getByRole('button', { name: '聽外婆接下一句' }),
@@ -450,20 +449,20 @@ test('Pixel 7 cold-start, beginner theater, story card, and family-response audi
   await captureReady(
     page,
     page.getByRole('button', {
-      name: /準備「我回來了。」，這一步不會送出/,
+      name: /圖像選擇「我回來了。」/,
     }),
     'test-results/theater-opening-pixel7.png',
     errors,
   );
 
   const prepare = page.getByRole('button', {
-    name: '準備「我回來了。」，這一步不會送出',
+    name: '圖像選擇「我回來了。」；選取後可以開口或直接繼續故事',
   });
   await scrollUntilAttached(page, prepare);
   await prepare.click();
   await captureReady(
     page,
-    page.getByRole('group', { name: /cháu \/ về rồi \/ ạ/ }),
+    page.getByRole('button', { name: '慢速・逐段學' }),
     'test-results/theater-beginner-scaffold-pixel7.png',
     errors,
   );
@@ -481,7 +480,9 @@ test('Pixel 7 cold-start, beginner theater, story card, and family-response audi
   await page.getByRole('button', { name: '關閉慢速聆聽' }).click();
   await expect(page.getByText('慢慢聽這一句')).toHaveCount(0);
 
-  const listenSlot = page.getByRole('button', { name: /先聽整句|播放中/ });
+  const listenSlot = page.getByRole('button', {
+    name: /^(先聽整句|播放中.*)$/,
+  });
   await scrollUntilAttached(page, listenSlot);
   const listen = page.getByRole('button', { name: '先聽整句' });
   try {
@@ -490,16 +491,16 @@ test('Pixel 7 cold-start, beginner theater, story card, and family-response audi
   } catch (_) {
     await expect(page.getByRole('button', { name: /^播放中/ })).toBeDisabled();
   }
-  const fallback = page.getByRole('button', { name: '今天先用小卡直接接故事' });
-  await scrollUntilAttached(page, fallback);
-  await fallback.click();
+  const directSceneChoice = page.getByRole('button', {
+    name: /不開麥克風，用這張圖讓.+回話/,
+  });
   await captureReady(
     page,
-    page.getByRole('button', { name: '直接選擇：我回來了。' }),
+    directSceneChoice,
     'test-results/theater-fallback-cards-pixel7.png',
     errors,
   );
-  await page.getByRole('button', { name: '直接選擇：我回來了。' }).click();
+  await directSceneChoice.click();
   const firstNext = page.getByRole('button', {
     name: /看接下來發生什麼|馬上接下去|我看完了，接著演/,
   });

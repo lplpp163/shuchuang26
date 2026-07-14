@@ -1,55 +1,55 @@
 {
   "project": "傳家話",
   "source_of_truth": "交付成果/README.md",
-  "synced_at": "2026-07-14T14:00:39.5570862+08:00",
+  "synced_at": "2026-07-14T22:07:19.0917928+08:00",
   "files": [
     {
       "label": "『傳家話』計畫書 PDF",
       "source": "交付成果/計畫書/2026臺灣數創大賞_數位組創業計畫書_傳家話_正式版.pdf",
       "destination": "deliverables/plan/chuan-jia-hua-plan.pdf",
-      "bytes": 597465,
-      "source_modified_at": "2026-07-14T13:39:09.0560369+08:00",
-      "sha256": "A7748301B7568A8561F3630BC2B74021A4071E9CE07B16D4CFA61A09B088E895"
+      "bytes": 841392,
+      "source_modified_at": "2026-07-14T20:57:28.7100185+08:00",
+      "sha256": "006669BD0935BDEE87331CD6365D008C7335E85F25201B5FAA0D171CE7E70637"
     },
     {
       "label": "『傳家話』計畫書 DOCX",
       "source": "交付成果/計畫書/2026臺灣數創大賞_數位組創業計畫書_傳家話_正式版.docx",
       "destination": "deliverables/plan/chuan-jia-hua-plan.docx",
-      "bytes": 986650,
-      "source_modified_at": "2026-07-14T13:39:08.9580337+08:00",
-      "sha256": "7AC25A49B1E43924E77AC41AC12ED02462DD471C6F3A6E031FC2D81536A2491B"
+      "bytes": 971099,
+      "source_modified_at": "2026-07-14T20:57:28.6510153+08:00",
+      "sha256": "AC1FD8FDCAD1008884B2D9E7CDF10C3210B97B535807D8811748F02B05A75A21"
     },
     {
       "label": "3 分鐘初審影片分鏡與旁白",
       "source": "交付成果/影片/傳家話_初審影片分鏡與旁白.md",
       "destination": "deliverables/video/narration.md",
-      "bytes": 5963,
-      "source_modified_at": "2026-07-14T08:37:08.3390889+08:00",
-      "sha256": "D49E26D4C532EFFB3E8B49EDDDABF2E1D73CB0E148F39157E18CCF76C19F52A3"
+      "bytes": 6167,
+      "source_modified_at": "2026-07-14T21:07:22.9388618+08:00",
+      "sha256": "82FE06BC81249E80DA1912162DDFA79860397459AE4B9AB3B5E60077FC8767AA"
     },
     {
       "label": "『傳家話』初審影片 Web 預覽",
       "source": "交付成果/影片/傳家話_網頁預覽.mp4",
       "destination": "deliverables/video/chuan-jia-hua-submission.mp4",
-      "bytes": 21436942,
-      "source_modified_at": "2026-07-14T13:59:00.0413010+08:00",
-      "sha256": "3F2A385C3ABDD3ADE46D005466AD8C12FD074169DA38AFF3DA54E69FB2C35B0D"
+      "bytes": 21425556,
+      "source_modified_at": "2026-07-14T21:09:57.0983312+08:00",
+      "sha256": "AC05BF77E8B2DC3771B9EEEC4087B9E63232433C3A6E4C6CB70889172F8DCFC4"
     },
     {
       "label": "『傳家話』正式初審影片驗證",
       "source": "交付成果/影片/傳家話_正式初審影片_驗證.json",
       "destination": "deliverables/video/verification.json",
-      "bytes": 33998,
-      "source_modified_at": "2026-07-14T13:59:31.9907847+08:00",
-      "sha256": "701CF6994C409D9FC4B1841A8568E134BC317DCB298C25FA622E3AA4E38E65DD"
+      "bytes": 33999,
+      "source_modified_at": "2026-07-14T21:10:29.0435364+08:00",
+      "sha256": "BCC6D6693959CCCAD8AB825A74C0405E67E19EB8B6CE747079AE0330EA11C7BA"
     },
     {
       "label": "『傳家話』正式初審影片內容設定",
       "source": "交付成果/影片/video_content.json",
       "destination": "deliverables/video/video_content.json",
-      "bytes": 15214,
-      "source_modified_at": "2026-07-14T08:37:08.3380906+08:00",
-      "sha256": "F057F448E5411FCCA892F156FE39E1C4960A1F9D031AEC3C24AF4202156512E2"
+      "bytes": 15335,
+      "source_modified_at": "2026-07-14T21:07:22.9378697+08:00",
+      "sha256": "550F4D4B8EDA3ABCD626DAE209FBC5EF65AEEAEFB337D25E6A29EAE1DDB7D366"
     },
     {
       "label": "『傳家話』正式初審影片重建腳本",
@@ -71,17 +71,17 @@
       "label": "『傳家話』嚴格驗收報告",
       "source": "交付成果/嚴格驗收報告.md",
       "destination": "deliverables/docs/strict-review.md",
-      "bytes": 18378,
-      "source_modified_at": "2026-07-14T14:00:20.2445524+08:00",
-      "sha256": "6C2507B000831CF7BD296B41F0888CCEC14808129415FC0CF775A9A93C55220F"
+      "bytes": 19231,
+      "source_modified_at": "2026-07-14T21:13:45.5446594+08:00",
+      "sha256": "D5188AB46C10D201B73FD07FCA656D10EFAA1430F20CF7B5BE4677759E83800C"
     },
     {
       "label": "『傳家話』技術驗證紀錄",
       "source": "交付成果/作品/傳家話_技術驗證紀錄.md",
       "destination": "deliverables/docs/technical-validation.md",
-      "bytes": 14216,
-      "source_modified_at": "2026-07-14T14:00:20.2475519+08:00",
-      "sha256": "91A2E9753169A2CA0AE32A64073E87FB1D4C2D2D176A7F7F26386510B9FFE452"
+      "bytes": 14627,
+      "source_modified_at": "2026-07-14T21:14:40.6474872+08:00",
+      "sha256": "6FABB2421C53D70FCA3EC3AB027087E18777BC000013BB8BC433422C238DF020"
     },
     {
       "label": "『傳家話』家庭需求與試演問卷",
@@ -128,7 +128,7 @@
       "source": "交付成果/語言審閱/傳家話_越南語119句母語審閱工具.html",
       "destination": "deliverables/review/index.html",
       "bytes": 177109,
-      "source_modified_at": "2026-07-14T13:54:18.3333112+08:00",
+      "source_modified_at": "2026-07-14T20:53:30.6175160+08:00",
       "sha256": "2E8539D190FF49596400893AB1EDFE6633CAD3669533D16B465A6239E95FC536"
     },
     {
@@ -144,7 +144,7 @@
       "source": "交付成果/語言審閱/傳家話_越南語119句語境目錄.json",
       "destination": "deliverables/review/context-catalog.json",
       "bytes": 195535,
-      "source_modified_at": "2026-07-14T13:54:18.3343112+08:00",
+      "source_modified_at": "2026-07-14T20:53:30.6185165+08:00",
       "sha256": "36B71D6180B6730EEC6286CDBC1033BC92BCEF53B3A5B0DCF78A941A369AB72B"
     },
     {
@@ -152,24 +152,24 @@
       "source": "交付成果/語言審閱/傳家話_越南語119句母語審閱可攜包.zip",
       "destination": "deliverables/review/chuan-jia-hua-native-review-portable.zip",
       "bytes": 875989,
-      "source_modified_at": "2026-07-14T13:54:18.3703283+08:00",
+      "source_modified_at": "2026-07-14T20:53:30.6515158+08:00",
       "sha256": "5F9C9F75CBDED744967FCC932A97A9072432AB166D07AB5F69B2DD758B2FDF4F"
     },
     {
       "label": "Flutter README.md",
       "source": "正式版/flutter_app/README.md",
       "destination": "deliverables/flutter/source/README.md",
-      "bytes": 27204,
-      "source_modified_at": "2026-07-14T13:37:54.2980200+08:00",
-      "sha256": "41B9DEA38045A4A72BC459CD06CDD086AF74E0CEC0F321929D0CC0310383D062"
+      "bytes": 29089,
+      "source_modified_at": "2026-07-14T21:41:57.3678328+08:00",
+      "sha256": "EC584E69051D84098DE178E04D419E4B309B23EEC215314FF0E6CC17C6E2976D"
     },
     {
       "label": "Flutter QUALITY_SCORECARD.md",
       "source": "正式版/flutter_app/QUALITY_SCORECARD.md",
       "destination": "deliverables/flutter/source/QUALITY_SCORECARD.md",
-      "bytes": 28990,
-      "source_modified_at": "2026-07-14T13:37:54.2990227+08:00",
-      "sha256": "8916B74D922BE4AE067BC6067F05B2F1C47200BC28DF76154C0D6FD5ABB2EBDF"
+      "bytes": 31251,
+      "source_modified_at": "2026-07-14T21:41:57.3688486+08:00",
+      "sha256": "A8F608FBC83489D369D6B8DAE2B13B3E3622078DF55677D42144987201180B4F"
     },
     {
       "label": "Flutter OPEN_SOURCE_NOTICES.md",
@@ -351,9 +351,9 @@
       "label": "Flutter lib/screens/conversation_theater_screen.dart",
       "source": "正式版/flutter_app/lib/screens/conversation_theater_screen.dart",
       "destination": "deliverables/flutter/source/lib/screens/conversation_theater_screen.dart",
-      "bytes": 89790,
-      "source_modified_at": "2026-07-14T13:32:57.3361785+08:00",
-      "sha256": "7AAB1C418F08A5188116C00FAE2D4C2A5CD44389787722B8E1BA898AB45F79A5"
+      "bytes": 79551,
+      "source_modified_at": "2026-07-14T19:16:59.7260736+08:00",
+      "sha256": "01B7D3930B462165BAF9F007C29716339B770F41F5542663627CC28D02E51152"
     },
     {
       "label": "Flutter lib/screens/create_story_screen.dart",
@@ -367,9 +367,9 @@
       "label": "Flutter lib/screens/family_circle_screen.dart",
       "source": "正式版/flutter_app/lib/screens/family_circle_screen.dart",
       "destination": "deliverables/flutter/source/lib/screens/family_circle_screen.dart",
-      "bytes": 87401,
-      "source_modified_at": "2026-07-14T02:55:02.7779315+08:00",
-      "sha256": "0E1D56CB6F1F6C7C2E4BB827FC21FAEBB746FCA4AE0DB4D74E386248FD81DE57"
+      "bytes": 95919,
+      "source_modified_at": "2026-07-14T15:53:01.1977181+08:00",
+      "sha256": "9CF1D46D649346285F004B070D64FB95A7A725F6373DC15255913C720541DCFC"
     },
     {
       "label": "Flutter lib/screens/family_relay_reveal_screen.dart",
@@ -383,9 +383,9 @@
       "label": "Flutter lib/screens/home_screen.dart",
       "source": "正式版/flutter_app/lib/screens/home_screen.dart",
       "destination": "deliverables/flutter/source/lib/screens/home_screen.dart",
-      "bytes": 17988,
-      "source_modified_at": "2026-07-13T04:23:26.2243156+08:00",
-      "sha256": "979534F275D320B8EB60446C7721F1699C9FBF5547AB58BFAC894F41F9222AB6"
+      "bytes": 18000,
+      "source_modified_at": "2026-07-14T15:55:26.5509360+08:00",
+      "sha256": "77CDE9125F1F1096C8799CB518B11DD856945434B39FF889DE39A86FFCEEA9DB"
     },
     {
       "label": "Flutter lib/screens/language_map_screen.dart",
@@ -455,9 +455,9 @@
       "label": "Flutter lib/screens/theater_preview_screen.dart",
       "source": "正式版/flutter_app/lib/screens/theater_preview_screen.dart",
       "destination": "deliverables/flutter/source/lib/screens/theater_preview_screen.dart",
-      "bytes": 46185,
-      "source_modified_at": "2026-07-14T07:35:54.4035009+08:00",
-      "sha256": "46122D579E40747A3DB266D99E5A13FC8F96CDEF84E30831D9CBE6FE0DC14271"
+      "bytes": 47073,
+      "source_modified_at": "2026-07-14T15:54:58.2689775+08:00",
+      "sha256": "AB118EB26373C4A63DB4DF23DEC31BFE03F2730C6DE804943D77C727339B4415"
     },
     {
       "label": "Flutter lib/services/app_store.dart",
@@ -639,9 +639,9 @@
       "label": "Flutter test/conversation_theater_screen_test.dart",
       "source": "正式版/flutter_app/test/conversation_theater_screen_test.dart",
       "destination": "deliverables/flutter/source/test/conversation_theater_screen_test.dart",
-      "bytes": 34373,
-      "source_modified_at": "2026-07-14T13:32:57.3381695+08:00",
-      "sha256": "EAC6C061A78D4B6BC69E089B2E7A63E5A3A293CC16655B9B1A76E0BFE52058F0"
+      "bytes": 34609,
+      "source_modified_at": "2026-07-14T19:17:39.2075952+08:00",
+      "sha256": "79B12A98FB565DF3E5CD00E1C41F8B2ADCA9A3615F085732B599BD7728EF50A1"
     },
     {
       "label": "Flutter test/device_speech_service_test.dart",
@@ -663,9 +663,9 @@
       "label": "Flutter test/family_circle_screen_test.dart",
       "source": "正式版/flutter_app/test/family_circle_screen_test.dart",
       "destination": "deliverables/flutter/source/test/family_circle_screen_test.dart",
-      "bytes": 17582,
-      "source_modified_at": "2026-07-13T07:39:55.2179683+08:00",
-      "sha256": "0243FCA3043219057AFBBF6D37BE6D08D3EAC13B20EFAE97EAE714B80210A378"
+      "bytes": 17914,
+      "source_modified_at": "2026-07-14T16:20:18.0409643+08:00",
+      "sha256": "8D6C93880A8D2E609E68765E5CFBBD9F5A4A4DE40894D46BD89DA338CAC2F93E"
     },
     {
       "label": "Flutter test/family_circle_store_test.dart",
@@ -791,9 +791,9 @@
       "label": "Flutter test/widget_test.dart",
       "source": "正式版/flutter_app/test/widget_test.dart",
       "destination": "deliverables/flutter/source/test/widget_test.dart",
-      "bytes": 33864,
-      "source_modified_at": "2026-07-14T13:31:01.4329373+08:00",
-      "sha256": "1F54A99E19D747E6C927588435C8A9C3A0EE0C89684711CF6F33F37BB2ED5274"
+      "bytes": 34278,
+      "source_modified_at": "2026-07-14T19:19:11.5525345+08:00",
+      "sha256": "2528D3385AC2F721012558C280BBD5D88D3318C4EDFAC49CEA1A7667E8CA7278"
     },
     {
       "label": "Flutter tool/build_web_relative.ps1",
@@ -879,17 +879,17 @@
       "label": "Flutter tool/visual_audit.spec.js",
       "source": "正式版/flutter_app/tool/visual_audit.spec.js",
       "destination": "deliverables/flutter/source/tool/visual_audit.spec.js",
-      "bytes": 21714,
-      "source_modified_at": "2026-07-14T13:45:19.1056404+08:00",
-      "sha256": "CC69CBE8913BA59A87DA18F805A685AF481E37C65505FEEA529DA8A0542149B9"
+      "bytes": 21463,
+      "source_modified_at": "2026-07-14T19:13:24.0070799+08:00",
+      "sha256": "448683464AD35F32ABF0FAAE37BEFA5EA320EC64931821F93B01BE360AB38DAE"
     },
     {
       "label": "Flutter tool/web_smoke.spec.js",
       "source": "正式版/flutter_app/tool/web_smoke.spec.js",
       "destination": "deliverables/flutter/source/tool/web_smoke.spec.js",
-      "bytes": 33856,
-      "source_modified_at": "2026-07-14T13:45:19.1066295+08:00",
-      "sha256": "E8F97BEE86EA8115425926A19510937B571F3007DB5EE74A5C608BF22805A402"
+      "bytes": 33922,
+      "source_modified_at": "2026-07-14T20:59:25.2520086+08:00",
+      "sha256": "5282846AC5EEA373BC95AA05E54F89264F2F5A18A4173DF48BE63D86266EE4B9"
     },
     {
       "label": "Flutter assets/audio/piper_generation_manifest.json",
@@ -2056,7 +2056,7 @@
       "source": "正式版/flutter_app/build/web/flutter_bootstrap.js",
       "destination": "deliverables/app/flutter_bootstrap.js",
       "bytes": 9808,
-      "source_modified_at": "2026-07-14T13:38:19.1061293+08:00",
+      "source_modified_at": "2026-07-14T21:19:12.0228742+08:00",
       "sha256": "87B1FEAFA6ACEDF8A1AFF59A04FD0B169051206398C8C26813795028F5A61C8F"
     },
     {
@@ -2064,7 +2064,7 @@
       "source": "正式版/flutter_app/build/web/flutter_service_worker.js",
       "destination": "deliverables/app/flutter_service_worker.js",
       "bytes": 0,
-      "source_modified_at": "2026-07-14T13:39:13.9280561+08:00",
+      "source_modified_at": "2026-07-14T19:21:09.7102635+08:00",
       "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
     },
     {
@@ -2080,16 +2080,16 @@
       "source": "正式版/flutter_app/build/web/index.html",
       "destination": "deliverables/app/index.html",
       "bytes": 3330,
-      "source_modified_at": "2026-07-14T13:39:14.5410369+08:00",
+      "source_modified_at": "2026-07-14T21:19:59.6315794+08:00",
       "sha256": "A202B1A11050B66309808C6B989F053F9E60ACCDF2690AA7D71F220C34F28973"
     },
     {
       "label": "Flutter Web main.dart.js",
       "source": "正式版/flutter_app/build/web/main.dart.js",
       "destination": "deliverables/app/main.dart.js",
-      "bytes": 3648712,
-      "source_modified_at": "2026-07-14T13:38:59.0927782+08:00",
-      "sha256": "D545B0EC13AE9000DEB8AE1A4A5570F38051E0903C20CB10B5850164A0CDCDE8"
+      "bytes": 3649660,
+      "source_modified_at": "2026-07-14T19:20:59.7530785+08:00",
+      "sha256": "288A193A096260DFC77C70A61A4ED6F17191BDF49A086206F7B9A242C994DFD7"
     },
     {
       "label": "Flutter Web manifest.json",
@@ -2104,7 +2104,7 @@
       "source": "正式版/flutter_app/build/web/version.json",
       "destination": "deliverables/app/version.json",
       "bytes": 100,
-      "source_modified_at": "2026-07-14T13:39:07.7380357+08:00",
+      "source_modified_at": "2026-07-14T21:19:53.9801150+08:00",
       "sha256": "86184D2435BD0B42B92F6DA3BB857EB7F80E3025CC7600FD1CEE250F68086467"
     },
     {
@@ -2112,7 +2112,7 @@
       "source": "正式版/flutter_app/build/web/assets/AssetManifest.bin",
       "destination": "deliverables/app/assets/AssetManifest.bin",
       "bytes": 12500,
-      "source_modified_at": "2026-07-14T13:39:08.2880428+08:00",
+      "source_modified_at": "2026-07-14T21:19:54.4334549+08:00",
       "sha256": "7D24E48548FE00A8462034AE9A1A9EA9E55907A514643904D399FB42B591BF12"
     },
     {
@@ -2120,7 +2120,7 @@
       "source": "正式版/flutter_app/build/web/assets/AssetManifest.bin.json",
       "destination": "deliverables/app/assets/AssetManifest.bin.json",
       "bytes": 16670,
-      "source_modified_at": "2026-07-14T13:39:08.2880428+08:00",
+      "source_modified_at": "2026-07-14T21:19:54.4334549+08:00",
       "sha256": "F4F2D8BD44893A04DE9DF41571F92BAF52EC35AB7E19A3C07FE7EE2883933B72"
     },
     {
@@ -2128,7 +2128,7 @@
       "source": "正式版/flutter_app/build/web/assets/FontManifest.json",
       "destination": "deliverables/app/assets/FontManifest.json",
       "bytes": 285,
-      "source_modified_at": "2026-07-14T13:39:08.2880428+08:00",
+      "source_modified_at": "2026-07-14T21:19:54.4334549+08:00",
       "sha256": "729EEFFD9326BBF3FEA62A8D9357A8C3A4FD3356152BC1DE9E1149B3F5BED741"
     },
     {
@@ -2136,7 +2136,7 @@
       "source": "正式版/flutter_app/build/web/assets/NOTICES",
       "destination": "deliverables/app/assets/NOTICES",
       "bytes": 1401008,
-      "source_modified_at": "2026-07-14T13:39:08.2890431+08:00",
+      "source_modified_at": "2026-07-14T21:19:54.4344632+08:00",
       "sha256": "B7914067957C0DC93789358E718CA5CAACD6B4D8625A772F0191FF68452A564A"
     },
     {
@@ -3191,16 +3191,16 @@
       "label": "Flutter Web assets/fonts/MaterialIcons-Regular.otf",
       "source": "正式版/flutter_app/build/web/assets/fonts/MaterialIcons-Regular.otf",
       "destination": "deliverables/app/assets/fonts/MaterialIcons-Regular.otf",
-      "bytes": 31976,
-      "source_modified_at": "2026-07-14T13:39:10.6380340+08:00",
-      "sha256": "297043D50A3635EFDF1396372A577BF89F78FCF2E7DF868B4B34C5BDCAD13E9C"
+      "bytes": 32172,
+      "source_modified_at": "2026-07-14T21:19:56.3214573+08:00",
+      "sha256": "25E123BE312E00B4547BF1B02B714C5BD997ED04DC27036F91E612166D40CCFF"
     },
     {
       "label": "Flutter Web assets/packages/cupertino_icons/assets/CupertinoIcons.ttf",
       "source": "正式版/flutter_app/build/web/assets/packages/cupertino_icons/assets/CupertinoIcons.ttf",
       "destination": "deliverables/app/assets/packages/cupertino_icons/assets/CupertinoIcons.ttf",
       "bytes": 1472,
-      "source_modified_at": "2026-07-14T13:39:10.6290322+08:00",
+      "source_modified_at": "2026-07-14T21:19:56.3174520+08:00",
       "sha256": "3D90C370AA4CF00DC57EE2B902F6652147C0F81E03E483DF584A9C08B1687C9D"
     },
     {
@@ -3224,7 +3224,7 @@
       "source": "正式版/flutter_app/build/web/assets/shaders/ink_sparkle.frag",
       "destination": "deliverables/app/assets/shaders/ink_sparkle.frag",
       "bytes": 8890,
-      "source_modified_at": "2026-07-14T13:39:08.5900339+08:00",
+      "source_modified_at": "2026-07-14T21:19:54.6304543+08:00",
       "sha256": "2DCA5AB93D4EC29E963F996F3916320BA60825E9537DFB149A68008C7A16B026"
     },
     {
@@ -3232,7 +3232,7 @@
       "source": "正式版/flutter_app/build/web/assets/shaders/stretch_effect.frag",
       "destination": "deliverables/app/assets/shaders/stretch_effect.frag",
       "bytes": 6737,
-      "source_modified_at": "2026-07-14T13:39:08.5890429+08:00",
+      "source_modified_at": "2026-07-14T21:19:54.6284540+08:00",
       "sha256": "AB412F07A5B9B50B67A885B24DBE16929738AE28630407D6490C924CAF0A3220"
     },
     {

@@ -90,21 +90,22 @@ void main() {
       '今天很開心。': 'happy-today',
       '好呀！': 'wash-hands',
     }[translation]!;
-    final toggle = find.byKey(const ValueKey('toggle-intent-hints'));
+    final choice = find.byKey(ValueKey('prepare-$choiceId'));
     await tester.scrollUntilVisible(
-      toggle,
+      choice,
       260,
       scrollable: find.byType(Scrollable).last,
     );
-    await tester.tap(toggle);
+    await tester.tap(choice);
     await tester.pumpAndSettle();
-    final choice = find.byKey(ValueKey('intent-$choiceId'));
+    final continueWithScene =
+        find.byKey(const ValueKey('continue-with-scene-choice'));
     await tester.scrollUntilVisible(
-      choice.first,
+      continueWithScene,
       260,
       scrollable: find.byType(Scrollable).last,
     );
-    await tester.tap(choice.first);
+    await tester.tap(continueWithScene);
     await tester.pumpAndSettle();
   }
 
@@ -533,7 +534,7 @@ void main() {
 
     expect(find.text('今天，外婆在等你接故事'), findsOneWidget);
     expect(find.byKey(const ValueKey('open-daily-theater')), findsOneWidget);
-    expect(find.text('約 1 分鐘 · 先聽、再選、再開口'), findsOneWidget);
+    expect(find.text('約 1 分鐘 · 點場景、聽阿嬤、讓故事改變'), findsOneWidget);
     expect(find.text('你一句、她一句'), findsNothing);
     expect(find.text('故事會改變'), findsNothing);
     expect(find.text('可說也可點圖'), findsNothing);
@@ -546,18 +547,15 @@ void main() {
     await tester.tap(openTheater);
     await tester.pumpAndSettle();
     expect(find.text('家庭對話劇場'), findsOneWidget);
-    expect(find.byKey(const ValueKey('toggle-intent-hints')), findsOneWidget);
     expect(find.text('家庭對話劇場'), findsOneWidget);
-    expect(find.text('換你接故事'), findsOneWidget);
-    expect(find.byKey(const ValueKey('theater-microphone')), findsOneWidget);
-    expect(find.text('先選你想表達的意思'), findsOneWidget);
-    expect(find.byKey(const ValueKey('prepare-came-home')), findsOneWidget);
+    expect(find.byKey(const ValueKey('theater-microphone')), findsNothing);
     expect(
-      find.text(
-        '系統只幫你把聲音寫成字；你想說什麼由你確認，家裡怎麼說由家人確認。聽寫不準也不會卡住故事。',
-      ),
+      find.textContaining('先點圖裡的一幕'),
       findsOneWidget,
     );
+    expect(find.byKey(const ValueKey('prepare-came-home')), findsOneWidget);
+    expect(
+        find.byKey(const ValueKey('scene-choice-came-home')), findsOneWidget);
   });
 
   testWidgets('three meaningful choices create one private family story card', (
@@ -576,7 +574,10 @@ void main() {
     await tester.tap(openTheater);
     await tester.pumpAndSettle();
     expect(find.text('家庭對話劇場'), findsOneWidget);
-    expect(find.byKey(const ValueKey('toggle-intent-hints')), findsOneWidget);
+    expect(
+      find.byKey(const ValueKey('scene-choice-came-home')),
+      findsOneWidget,
+    );
 
     await chooseLine(tester, '我回來了。');
     expect(find.textContaining('門打開了'), findsWidgets);
@@ -584,7 +585,7 @@ void main() {
 
     await chooseLine(tester, '今天很開心。');
     expect(
-      find.byKey(const ValueKey('outcome-backdrop-home-happy-story')),
+      find.byKey(const ValueKey('scene-state-home-happy-story')),
       findsOneWidget,
     );
     await continueStory(tester);
@@ -610,7 +611,25 @@ void main() {
     expect(find.text('回應孩子的故事卡（1）'), findsOneWidget);
     await tester.tap(find.text('回應孩子的故事卡（1）'));
     await tester.pumpAndSettle();
-    expect(find.text('回到故事裡陪孩子'), findsOneWidget);
+    expect(find.text('今天先回應一個故事'), findsOneWidget);
+    expect(
+      find.byKey(const ValueKey('adult-primary-story-response')),
+      findsOneWidget,
+    );
+    expect(find.byKey(const ValueKey('add-family-member')), findsNothing);
+    final familyTools = find.byKey(const ValueKey('family-tools-disclosure'));
+    await tester.scrollUntilVisible(
+      familyTools,
+      220,
+      scrollable: find.byType(Scrollable).last,
+    );
+    await tester.drag(
+      find.byType(Scrollable).last,
+      const Offset(0, -120),
+    );
+    await tester.pumpAndSettle();
+    await tester.tap(familyTools);
+    await tester.pumpAndSettle();
     final addFamilyMember = find.byKey(const ValueKey('add-family-member'));
     await tester.scrollUntilVisible(
       addFamilyMember,
@@ -889,7 +908,7 @@ void main() {
     );
     await tester.pumpAndSettle();
     expect(find.text('家人加戲 · 阿公'), findsOneWidget);
-    expect(find.text('回到故事裡陪孩子'), findsOneWidget);
+    expect(find.text('今天先回應一個故事'), findsOneWidget);
     expect(find.byKey(const ValueKey('add-family-member')), findsNothing);
   });
 }

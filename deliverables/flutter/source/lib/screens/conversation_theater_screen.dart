@@ -241,7 +241,6 @@ class ConversationTheaterScreen extends StatefulWidget {
 class _ConversationTheaterScreenState extends State<ConversationTheaterScreen> {
   static const _replyAutoAdvanceDelay = Duration(milliseconds: 2200);
 
-  final GlobalKey _firstIntentCardAnchorKey = GlobalKey();
   final ScrollController _pageScrollController = ScrollController();
   late final ConversationSpeechRecognizer _recognizer;
   late final bool _ownsRecognizer;
@@ -254,7 +253,6 @@ class _ConversationTheaterScreenState extends State<ConversationTheaterScreen> {
   bool _speaking = false;
   bool _elderLinePlayed = false;
   int _speechEpoch = 0;
-  bool _showHints = false;
   bool _completed = false;
   bool _storyCardDelivered = false;
   String? _repairMessage;
@@ -451,9 +449,7 @@ class _ConversationTheaterScreenState extends State<ConversationTheaterScreen> {
       setState(() {
         _repairMessage = message;
         _speechSelfConfirmAvailable = _preparedChoice != null;
-        _showHints = true;
       });
-      _scheduleIntentCardReveal();
       return;
     }
 
@@ -479,39 +475,13 @@ class _ConversationTheaterScreenState extends State<ConversationTheaterScreen> {
                     ? '系統寫成「$transcript」，和你先選的意思不一樣。這只是瀏覽器聽寫，不代表你念錯。'
                     : '系統寫成「$transcript」，但沒找到完整關鍵詞。這只是瀏覽器聽寫，不代表你念錯。';
         _speechSelfConfirmAvailable = true;
-        _showHints = true;
       });
-      _scheduleIntentCardReveal();
       return;
     }
 
     setState(() {
       _repairMessage = '先選你想表達的意思；系統只幫忙把聲音寫成字，不會替你決定。';
       _speechSelfConfirmAvailable = false;
-      _showHints = true;
-    });
-    _scheduleIntentCardReveal();
-  }
-
-  void _toggleIntentHints() {
-    final reveal = !_showHints;
-    setState(() => _showHints = reveal);
-    if (reveal) _scheduleIntentCardReveal();
-  }
-
-  void _scheduleIntentCardReveal() {
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (!mounted || !_showHints) return;
-      final anchorContext = _firstIntentCardAnchorKey.currentContext;
-      if (anchorContext == null) return;
-      unawaited(
-        Scrollable.ensureVisible(
-          anchorContext,
-          duration: const Duration(milliseconds: 320),
-          curve: Curves.easeOutCubic,
-          alignment: .72,
-        ),
-      );
     });
   }
 
@@ -554,7 +524,6 @@ class _ConversationTheaterScreenState extends State<ConversationTheaterScreen> {
       _scene = choice.sceneAfter;
       _repairMessage = null;
       _speechSelfConfirmAvailable = false;
-      _showHints = false;
       _replyPauseRequested = false;
       _replyFlowPhase = widget.autoAdvanceReplies
           ? _ReplyFlowPhase.speaking
@@ -642,7 +611,6 @@ class _ConversationTheaterScreenState extends State<ConversationTheaterScreen> {
       _prompt = widget.episode.promptById(nextId);
       _preparedChoice = null;
       _elderResponse = null;
-      _showHints = false;
       _repairMessage = null;
       _speechSelfConfirmAvailable = false;
       _elderLinePlayed = false;
@@ -742,10 +710,7 @@ class _ConversationTheaterScreenState extends State<ConversationTheaterScreen> {
           ],
         ),
         const SizedBox(height: 14),
-        if (_preparedChoice != null && _elderResponse == null)
-          _buildCompactSceneReminder()
-        else
-          _buildScene(),
+        _buildScene(),
         const SizedBox(height: 14),
         AnimatedSwitcher(
           duration: const Duration(milliseconds: 280),
@@ -757,88 +722,12 @@ class _ConversationTheaterScreenState extends State<ConversationTheaterScreen> {
     );
   }
 
-  Widget _buildCompactSceneReminder() {
-    final line = _currentPromptElderLine;
-    return Container(
-      key: ValueKey('compact-scene-${_prompt.id}'),
-      constraints: const BoxConstraints(minHeight: 112),
-      padding: const EdgeInsets.fromLTRB(14, 12, 8, 12),
-      decoration: BoxDecoration(
-        gradient: const LinearGradient(
-          colors: [AppColors.jadeSoft, Colors.white],
-        ),
-        borderRadius: BorderRadius.circular(24),
-        border: Border.all(color: AppColors.jade.withValues(alpha: .22)),
-      ),
-      child: Row(
-        children: [
-          Container(
-            width: 54,
-            height: 54,
-            alignment: Alignment.center,
-            decoration: const BoxDecoration(
-              color: AppColors.sunSoft,
-              shape: BoxShape.circle,
-            ),
-            child: const Icon(
-              Icons.face_3_rounded,
-              size: 34,
-              color: AppColors.coral,
-            ),
-          ),
-          const SizedBox(width: 12),
-          Expanded(
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  children: [
-                    Expanded(
-                      child: Text(
-                        '${widget.episode.elderName}剛才說',
-                        style: const TextStyle(
-                          color: AppColors.jade,
-                          fontSize: 12,
-                          fontWeight: FontWeight.w900,
-                        ),
-                      ),
-                    ),
-                    _VoiceSourcePill(label: _currentLineSourceLabel),
-                  ],
-                ),
-                Text(
-                  line.targetText,
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                  style: const TextStyle(
-                    fontSize: 17,
-                    fontWeight: FontWeight.w900,
-                  ),
-                ),
-                Text(
-                  line.translationZh,
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                  style: const TextStyle(color: AppColors.muted),
-                ),
-              ],
-            ),
-          ),
-          IconButton(
-            tooltip: '再聽長輩這一句',
-            onPressed: _speaking ? null : () => unawaited(_speakLine(line)),
-            icon: const Icon(Icons.volume_up_rounded),
-          ),
-        ],
-      ),
-    );
-  }
-
   Widget _buildScene() {
     final line = _elderResponse?.elderReply ?? _currentPromptElderLine;
-    return Container(
-      height: 330,
+    return AnimatedContainer(
+      key: ValueKey('scene-state-${_scene.id}'),
+      duration: const Duration(milliseconds: 360),
+      height: _elderResponse == null ? 438 : 370,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(32),
         boxShadow: const [
@@ -854,16 +743,11 @@ class _ConversationTheaterScreenState extends State<ConversationTheaterScreen> {
         fit: StackFit.expand,
         children: [
           const _SceneGradient(),
-          if (_elderResponse != null || _moments.isNotEmpty)
-            _SceneOutcomeBackdrop(
-              key: ValueKey('outcome-backdrop-${_scene.id}'),
-              scene: _scene,
-            )
-          else if (widget.episode.illustrationAsset case final asset?)
+          if (widget.episode.illustrationAsset case final asset?)
             AnimatedScale(
               duration: const Duration(milliseconds: 720),
               curve: Curves.easeOutCubic,
-              scale: _elderResponse == null ? 1 : 1.065,
+              scale: _elderResponse == null ? 1 : 1.045,
               child: Image.asset(
                 asset,
                 fit: BoxFit.cover,
@@ -919,6 +803,38 @@ class _ConversationTheaterScreenState extends State<ConversationTheaterScreen> {
           ),
           if (_elderResponse == null)
             Positioned(
+              left: 12,
+              right: 12,
+              bottom: 12,
+              child: Semantics(
+                container: true,
+                label: '點一個圖像，選擇你想告訴${widget.episode.elderName}的事',
+                child: Row(
+                  children: [
+                    for (var index = 0;
+                        index < _prompt.choices.length;
+                        index++) ...[
+                      if (index > 0) const SizedBox(width: 9),
+                      Expanded(
+                        child: KeyedSubtree(
+                          key: ValueKey(
+                            'scene-choice-${_prompt.choices[index].id}',
+                          ),
+                          child: _MeaningChoiceButton(
+                            choice: _prompt.choices[index],
+                            selected: _preparedChoice?.id ==
+                                _prompt.choices[index].id,
+                            onTap: () => _prepareChoice(_prompt.choices[index]),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ],
+                ),
+              ),
+            ),
+          if (_elderResponse == null)
+            Positioned(
               left: 18,
               top: 64,
               child: Semantics(
@@ -940,96 +856,153 @@ class _ConversationTheaterScreenState extends State<ConversationTheaterScreen> {
                 ),
               ),
             ),
+          if (_elderResponse case final response?)
+            Positioned(
+              right: 20,
+              top: 58,
+              child: TweenAnimationBuilder<double>(
+                key: ValueKey('elder-action-${response.id}'),
+                tween: Tween(begin: .72, end: 1),
+                duration: const Duration(milliseconds: 620),
+                curve: Curves.elasticOut,
+                builder: (context, scale, child) => Transform.scale(
+                  scale: scale,
+                  child: child,
+                ),
+                child: Semantics(
+                  label:
+                      '${widget.episode.elderName}正在回應：${response.elderReply.translationZh}',
+                  child: Container(
+                    width: 72,
+                    height: 72,
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(
+                      color: AppColors.sun,
+                      shape: BoxShape.circle,
+                      border: Border.all(color: Colors.white, width: 4),
+                      boxShadow: const [
+                        BoxShadow(
+                          color: Color(0x33000000),
+                          blurRadius: 18,
+                          offset: Offset(0, 8),
+                        ),
+                      ],
+                    ),
+                    child: const Icon(
+                      Icons.waving_hand_rounded,
+                      size: 38,
+                      color: AppColors.coral,
+                    ),
+                  ),
+                ),
+              ),
+            ),
           Positioned(
             left: 18,
             right: 18,
-            bottom: 16,
+            bottom: _elderResponse == null ? 116 : 16,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Container(
-                  padding: const EdgeInsets.fromLTRB(16, 13, 16, 12),
-                  decoration: BoxDecoration(
-                    color: Colors.white.withValues(alpha: .95),
-                    borderRadius: BorderRadius.circular(22),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        children: [
-                          Expanded(
-                            child: Text(
-                              '${widget.episode.elderName}說',
-                              style: const TextStyle(
-                                color: AppColors.jade,
-                                fontWeight: FontWeight.w800,
-                              ),
-                            ),
-                          ),
-                          _VoiceSourcePill(label: _currentLineSourceLabel),
-                          if (_elderLinePlayed) ...[
-                            const SizedBox(width: 4),
-                            IconButton(
-                              key: const ValueKey('replay-elder-line'),
-                              tooltip: '再聽一次',
-                              constraints: const BoxConstraints(
-                                minWidth: 48,
-                                minHeight: 48,
-                              ),
-                              onPressed: _speaking
-                                  ? null
-                                  : () => unawaited(_replaySceneLine(line)),
-                              icon: Icon(
-                                _speaking
-                                    ? Icons.graphic_eq_rounded
-                                    : Icons.volume_up_rounded,
-                              ),
-                            ),
-                          ],
-                        ],
-                      ),
-                      Text(
-                        line.targetText,
-                        style: Theme.of(context)
-                            .textTheme
-                            .titleLarge
-                            ?.copyWith(fontSize: 20),
-                      ),
-                      const SizedBox(height: 3),
-                      Text(
-                        line.romanization,
-                        key: const ValueKey('elder-line-romanization'),
-                        style: const TextStyle(
-                          color: AppColors.jade,
-                          fontSize: 14,
-                          height: 1.3,
-                          fontWeight: FontWeight.w700,
-                        ),
-                      ),
-                      const SizedBox(height: 2),
-                      Text(
-                        line.translationZh,
-                        style: const TextStyle(color: AppColors.muted),
-                      ),
-                      if (!_elderLinePlayed) ...[
-                        const SizedBox(height: 9),
-                        FilledButton.icon(
-                          key: const ValueKey('listen-elder-line'),
-                          onPressed: _speaking
-                              ? null
-                              : () => unawaited(_replaySceneLine(line)),
-                          style: FilledButton.styleFrom(
-                            minimumSize: const Size.fromHeight(60),
-                            tapTargetSize: MaterialTapTargetSize.padded,
-                            backgroundColor: AppColors.jade,
-                            foregroundColor: Colors.white,
-                          ),
-                          icon: const Icon(Icons.volume_up_rounded),
-                          label: Text('點一下，聽${widget.episode.elderName}說'),
+                Semantics(
+                  key: ValueKey('scene-elder-${_prompt.id}'),
+                  liveRegion: _elderResponse != null,
+                  label:
+                      '${widget.episode.elderName}說：${line.targetText}，${line.translationZh}',
+                  child: Container(
+                    key: ValueKey(
+                      'elder-speech-bubble-${_elderResponse?.id ?? _prompt.id}',
+                    ),
+                    padding: const EdgeInsets.fromLTRB(16, 13, 16, 12),
+                    decoration: BoxDecoration(
+                      color: Colors.white.withValues(alpha: .95),
+                      borderRadius: BorderRadius.circular(22),
+                      boxShadow: const [
+                        BoxShadow(
+                          color: Color(0x26000000),
+                          blurRadius: 18,
+                          offset: Offset(0, 8),
                         ),
                       ],
-                    ],
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+                            Expanded(
+                              child: Text(
+                                '${widget.episode.elderName}說',
+                                style: const TextStyle(
+                                  color: AppColors.jade,
+                                  fontWeight: FontWeight.w800,
+                                ),
+                              ),
+                            ),
+                            _VoiceSourcePill(label: _currentLineSourceLabel),
+                            if (_elderLinePlayed) ...[
+                              const SizedBox(width: 4),
+                              IconButton(
+                                key: const ValueKey('replay-elder-line'),
+                                tooltip: '再聽一次',
+                                constraints: const BoxConstraints(
+                                  minWidth: 48,
+                                  minHeight: 48,
+                                ),
+                                onPressed: _speaking
+                                    ? null
+                                    : () => unawaited(_replaySceneLine(line)),
+                                icon: Icon(
+                                  _speaking
+                                      ? Icons.graphic_eq_rounded
+                                      : Icons.volume_up_rounded,
+                                ),
+                              ),
+                            ],
+                          ],
+                        ),
+                        Text(
+                          line.targetText,
+                          style: Theme.of(context)
+                              .textTheme
+                              .titleLarge
+                              ?.copyWith(fontSize: 20),
+                        ),
+                        const SizedBox(height: 3),
+                        Text(
+                          line.romanization,
+                          key: const ValueKey('elder-line-romanization'),
+                          style: const TextStyle(
+                            color: AppColors.jade,
+                            fontSize: 14,
+                            height: 1.3,
+                            fontWeight: FontWeight.w700,
+                          ),
+                        ),
+                        const SizedBox(height: 2),
+                        Text(
+                          line.translationZh,
+                          style: const TextStyle(color: AppColors.muted),
+                        ),
+                        if (!_elderLinePlayed) ...[
+                          const SizedBox(height: 9),
+                          FilledButton.icon(
+                            key: const ValueKey('listen-elder-line'),
+                            onPressed: _speaking
+                                ? null
+                                : () => unawaited(_replaySceneLine(line)),
+                            style: FilledButton.styleFrom(
+                              minimumSize: const Size.fromHeight(60),
+                              tapTargetSize: MaterialTapTargetSize.padded,
+                              backgroundColor: AppColors.jade,
+                              foregroundColor: Colors.white,
+                            ),
+                            icon: const Icon(Icons.volume_up_rounded),
+                            label: Text('點一下，聽${widget.episode.elderName}說'),
+                          ),
+                        ],
+                      ],
+                    ),
                   ),
                 ),
                 const SizedBox(height: 8),
@@ -1307,6 +1280,33 @@ class _ConversationTheaterScreenState extends State<ConversationTheaterScreen> {
 
   Widget _buildChildTurn() {
     final prepared = _preparedChoice;
+    if (prepared == null && _repairMessage == null) {
+      return Container(
+        key: ValueKey('child-turn-${_prompt.id}'),
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+        decoration: BoxDecoration(
+          color: AppColors.jadeSoft,
+          borderRadius: BorderRadius.circular(22),
+          border: Border.all(color: AppColors.jade.withValues(alpha: .22)),
+        ),
+        child: const Row(
+          children: [
+            Icon(Icons.touch_app_rounded, color: AppColors.jade, size: 26),
+            SizedBox(width: 10),
+            Expanded(
+              child: Text(
+                '先點圖裡的一幕；選好後才會出現聆聽、慢速練習與麥克風。',
+                style: TextStyle(
+                  color: AppColors.jade,
+                  fontWeight: FontWeight.w800,
+                  height: 1.35,
+                ),
+              ),
+            ),
+          ],
+        ),
+      );
+    }
     return Card(
       key: ValueKey('child-turn-${_prompt.id}'),
       child: Padding(
@@ -1314,10 +1314,25 @@ class _ConversationTheaterScreenState extends State<ConversationTheaterScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Text('換你接故事', style: Theme.of(context).textTheme.titleLarge),
+            Row(
+              children: [
+                const Icon(Icons.touch_app_rounded, color: AppColors.jade),
+                const SizedBox(width: 8),
+                Expanded(
+                  child: Text(
+                    prepared == null ? '點圖接故事' : '你選了這個場景',
+                    style: Theme.of(context).textTheme.titleLarge,
+                  ),
+                ),
+              ],
+            ),
             const SizedBox(height: 4),
-            Text(_prompt.stageDirectionZh,
-                style: const TextStyle(color: AppColors.muted)),
+            Text(
+              prepared == null
+                  ? '直接點上方兩個圖像選擇；選好後再決定要不要開口。'
+                  : '「${prepared.line.translationZh}」— 可以先聽、慢慢練，或直接讓${widget.episode.elderName}回話。',
+              style: const TextStyle(color: AppColors.muted),
+            ),
             if (_repairMessage case final message?) ...[
               const SizedBox(height: 12),
               Container(
@@ -1377,37 +1392,8 @@ class _ConversationTheaterScreenState extends State<ConversationTheaterScreen> {
                 ),
               ),
             ],
-            const SizedBox(height: 14),
-            const _LearningStepTitle(
-              number: 1,
-              title: '先選你想表達的意思',
-              subtitle: '現在只是準備，還不會送出答案',
-            ),
-            const SizedBox(height: 10),
-            Row(
-              children: [
-                for (var index = 0;
-                    index < _prompt.choices.length;
-                    index++) ...[
-                  if (index > 0) const SizedBox(width: 10),
-                  Expanded(
-                    child: _MeaningChoiceButton(
-                      choice: _prompt.choices[index],
-                      selected: prepared?.id == _prompt.choices[index].id,
-                      onTap: () => _prepareChoice(_prompt.choices[index]),
-                    ),
-                  ),
-                ],
-              ],
-            ),
             if (prepared != null) ...[
-              const SizedBox(height: 16),
-              const _LearningStepTitle(
-                number: 2,
-                title: '先看短句，再聽一次',
-                subtitle: '一次只練你剛剛選的這一句',
-              ),
-              const SizedBox(height: 10),
+              const SizedBox(height: 14),
               _PracticeCoach(
                 choice: prepared,
                 speaking: _speaking,
@@ -1415,31 +1401,16 @@ class _ConversationTheaterScreenState extends State<ConversationTheaterScreen> {
                 onOpenListeningTools: () =>
                     unawaited(_openPracticeListeningTools(prepared)),
               ),
-              const SizedBox(height: 16),
-              const _LearningStepTitle(
-                number: 3,
-                title: '換你開口',
-                subtitle: '照自己的速度說，慢慢來也可以',
-              ),
-              const SizedBox(height: 10),
+              const SizedBox(height: 12),
             ] else ...[
               const SizedBox(height: 12),
-              const Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(Icons.touch_app_rounded, color: AppColors.jade),
-                  SizedBox(width: 6),
-                  Flexible(
-                    child: Text(
-                      '點一個意思後，才會出現要練的外語短句。',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: AppColors.jade,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
-                  ),
-                ],
+              const Text(
+                '圖像按鈕就在舞台下方，不必先讀完整外語句子。',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: AppColors.jade,
+                  fontWeight: FontWeight.w700,
+                ),
               ),
               const SizedBox(height: 12),
             ],
@@ -1453,6 +1424,7 @@ class _ConversationTheaterScreenState extends State<ConversationTheaterScreen> {
             ),
             const SizedBox(height: 6),
             Semantics(
+              container: true,
               button: true,
               enabled: prepared != null,
               excludeSemantics: true,
@@ -1488,36 +1460,24 @@ class _ConversationTheaterScreenState extends State<ConversationTheaterScreen> {
                 ),
               ),
             ),
-            const SizedBox(height: 4),
-            TextButton.icon(
+            const SizedBox(height: 8),
+            KeyedSubtree(
               key: const ValueKey('toggle-intent-hints'),
-              onPressed: _toggleIntentHints,
-              icon: Icon(_showHints
-                  ? Icons.visibility_off_rounded
-                  : Icons.touch_app_rounded),
-              label: Text(
-                _showHints ? '收起直接選的小卡' : '今天先用小卡直接接故事',
+              child: OutlinedButton.icon(
+                key: const ValueKey('continue-with-scene-choice'),
+                onPressed:
+                    prepared == null ? null : () => _chooseIntent(prepared),
+                style: OutlinedButton.styleFrom(
+                  minimumSize: const Size.fromHeight(54),
+                ),
+                icon: const Icon(Icons.image_rounded),
+                label: Text(
+                  prepared == null
+                      ? '先點圖中的一個場景'
+                      : '不開麥克風，用這張圖讓${widget.episode.elderName}回話',
+                ),
               ),
             ),
-            if (_showHints) ...[
-              const SizedBox(height: 6),
-              const Text(
-                '點小卡會直接送出，不需要假裝是你開口說的。',
-                textAlign: TextAlign.center,
-                style: TextStyle(color: AppColors.muted, fontSize: 12),
-              ),
-              const SizedBox(height: 8),
-              for (var index = 0; index < _prompt.choices.length; index++) ...[
-                KeyedSubtree(
-                  key: index == 0 ? _firstIntentCardAnchorKey : null,
-                  child: _IntentCard(
-                    choice: _prompt.choices[index],
-                    onTap: () => _chooseIntent(_prompt.choices[index]),
-                  ),
-                ),
-                const SizedBox(height: 10),
-              ],
-            ],
           ],
         ),
       ),
@@ -1535,43 +1495,6 @@ class _ConversationTheaterScreenState extends State<ConversationTheaterScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Row(
-              children: [
-                _StageGlyph(emoji: response.emoji, size: 36),
-                const SizedBox(width: 12),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        heardTranscript == null
-                            ? '你選了：${response.line.translationZh}'
-                            : '系統聽成：$heardTranscript',
-                        style: Theme.of(context).textTheme.titleMedium,
-                      ),
-                      if (heardTranscript != null)
-                        Text(
-                          '故事接到「${response.line.translationZh}」這個意思',
-                          style: const TextStyle(color: AppColors.muted),
-                        ),
-                      Text(
-                        response.line.targetText,
-                        style: const TextStyle(fontWeight: FontWeight.w800),
-                      ),
-                      Text(response.line.romanization,
-                          style: const TextStyle(
-                            color: AppColors.jade,
-                            fontSize: 12,
-                            fontWeight: FontWeight.w700,
-                          )),
-                      Text(response.line.translationZh,
-                          style: const TextStyle(color: AppColors.muted)),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-            const SizedBox(height: 14),
             Container(
               key: ValueKey('story-consequence-${_scene.id}'),
               padding: const EdgeInsets.all(14),
@@ -1591,8 +1514,8 @@ class _ConversationTheaterScreenState extends State<ConversationTheaterScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text(
-                          '你讓故事發生了',
+                        Text(
+                          '${widget.episode.elderName}已在圖上回話',
                           style: TextStyle(
                             color: AppColors.jade,
                             fontSize: 12,
@@ -1605,7 +1528,9 @@ class _ConversationTheaterScreenState extends State<ConversationTheaterScreen> {
                         ),
                         const SizedBox(height: 2),
                         Text(
-                          _scene.descriptionZh,
+                          heardTranscript == null
+                              ? '你用圖卡選了「${response.line.translationZh}」。'
+                              : '聽寫文字：$heardTranscript｜故事依你確認的「${response.line.translationZh}」前進。',
                           style: const TextStyle(color: AppColors.muted),
                         ),
                       ],
@@ -1859,56 +1784,6 @@ Future<void> _ignoreFailure(Future<void> work) async {
   }
 }
 
-class _LearningStepTitle extends StatelessWidget {
-  const _LearningStepTitle({
-    required this.number,
-    required this.title,
-    required this.subtitle,
-  });
-
-  final int number;
-  final String title;
-  final String subtitle;
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Container(
-          width: 28,
-          height: 28,
-          alignment: Alignment.center,
-          decoration: const BoxDecoration(
-            color: AppColors.jade,
-            shape: BoxShape.circle,
-          ),
-          child: Text(
-            '$number',
-            style: const TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.w900,
-            ),
-          ),
-        ),
-        const SizedBox(width: 9),
-        Expanded(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(title, style: Theme.of(context).textTheme.titleMedium),
-              Text(
-                subtitle,
-                style: const TextStyle(color: AppColors.muted, fontSize: 12),
-              ),
-            ],
-          ),
-        ),
-      ],
-    );
-  }
-}
-
 class _MeaningChoiceButton extends StatelessWidget {
   const _MeaningChoiceButton({
     required this.choice,
@@ -1925,7 +1800,7 @@ class _MeaningChoiceButton extends StatelessWidget {
     return Semantics(
       button: true,
       selected: selected,
-      label: '準備「${choice.line.translationZh}」，這一步不會送出',
+      label: '圖像選擇「${choice.line.translationZh}」；選取後可以開口或直接繼續故事',
       child: Material(
         color: selected ? AppColors.jadeSoft : Colors.white,
         shape: RoundedRectangleBorder(
@@ -1954,7 +1829,7 @@ class _MeaningChoiceButton extends StatelessWidget {
                 ),
                 const SizedBox(height: 3),
                 Text(
-                  selected ? '已選，下面先練習' : '先練這句',
+                  selected ? '已選・等你接故事' : '點圖選這一幕',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: selected ? AppColors.jade : AppColors.muted,
@@ -2064,65 +1939,6 @@ class _PracticeCoach extends StatelessWidget {
             style: TextStyle(color: AppColors.muted, fontSize: 12, height: 1.4),
           ),
         ],
-      ),
-    );
-  }
-}
-
-class _IntentCard extends StatelessWidget {
-  const _IntentCard({required this.choice, required this.onTap});
-
-  final ConversationChoice choice;
-  final VoidCallback onTap;
-
-  @override
-  Widget build(BuildContext context) {
-    return Semantics(
-      button: true,
-      label: '直接選擇：${choice.line.translationZh}',
-      child: Material(
-        color: Colors.white,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(18),
-          side: const BorderSide(color: AppColors.border, width: 1.5),
-        ),
-        child: InkWell(
-          key: ValueKey('intent-${choice.id}'),
-          borderRadius: BorderRadius.circular(18),
-          onTap: onTap,
-          child: Padding(
-            padding: const EdgeInsets.all(13),
-            child: Row(
-              children: [
-                Container(
-                  width: 52,
-                  height: 52,
-                  alignment: Alignment.center,
-                  decoration: const BoxDecoration(
-                    color: AppColors.sunSoft,
-                    shape: BoxShape.circle,
-                  ),
-                  child: _StageGlyph(emoji: choice.emoji, size: 29),
-                ),
-                const SizedBox(width: 12),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(choice.line.translationZh,
-                          style: Theme.of(context).textTheme.titleMedium),
-                      const Text(
-                        '點一下，直接接故事',
-                        style: TextStyle(color: AppColors.muted, fontSize: 12),
-                      ),
-                    ],
-                  ),
-                ),
-                const Icon(Icons.touch_app_rounded, color: AppColors.jade),
-              ],
-            ),
-          ),
-        ),
       ),
     );
   }
@@ -2271,147 +2087,6 @@ class _SceneImageSkeleton extends StatelessWidget {
   }
 }
 
-class _SceneOutcomeBackdrop extends StatelessWidget {
-  const _SceneOutcomeBackdrop({super.key, required this.scene});
-
-  final ConversationSceneSnapshot scene;
-
-  @override
-  Widget build(BuildContext context) {
-    final accent = _sceneAccent(scene.id);
-    final seed = _sceneSeed(scene.id);
-    const propAlignment = Alignment(0, -.68);
-    return DecoratedBox(
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-          colors: [
-            Color.lerp(accent, Colors.white, .08)!,
-            Color.lerp(accent, AppColors.ink, .48)!,
-          ],
-        ),
-      ),
-      child: Stack(
-        fit: StackFit.expand,
-        children: [
-          Positioned(
-            left: -34,
-            top: -58,
-            child: Container(
-              width: 190,
-              height: 190,
-              decoration: BoxDecoration(
-                color: Colors.white.withValues(alpha: .10),
-                shape: BoxShape.circle,
-              ),
-            ),
-          ),
-          Positioned(
-            right: -18,
-            top: 18,
-            child: Container(
-              width: 126,
-              height: 126,
-              decoration: BoxDecoration(
-                color: AppColors.sun.withValues(alpha: .20),
-                borderRadius: BorderRadius.circular(38),
-              ),
-            ),
-          ),
-          Positioned.fill(
-            child: CustomPaint(
-              painter: _OutcomeStoryPathPainter(
-                color: Colors.white.withValues(alpha: .42),
-              ),
-            ),
-          ),
-          Positioned(
-            left: 8,
-            right: 8,
-            top: 18,
-            bottom: 92,
-            child: Semantics(
-              label: '孩子正在和長輩接故事',
-              image: true,
-              child: Image.asset(
-                'assets/images/family-stage-duo-v1.png',
-                fit: BoxFit.contain,
-                alignment: Alignment.bottomCenter,
-                filterQuality: FilterQuality.high,
-                errorBuilder: (_, __, ___) => const SizedBox.shrink(),
-              ),
-            ),
-          ),
-          Align(
-            alignment: propAlignment,
-            child: Container(
-              width: 78,
-              height: 78,
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                color: AppColors.sun,
-                borderRadius: BorderRadius.circular(seed.isEven ? 48 : 28),
-                border: Border.all(color: Colors.white, width: 4),
-                boxShadow: const [
-                  BoxShadow(
-                    color: Color(0x33000000),
-                    blurRadius: 18,
-                    offset: Offset(0, 8),
-                  ),
-                ],
-              ),
-              child: Icon(
-                _stageIconForScene(scene),
-                color: AppColors.ink,
-                size: 40,
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class _OutcomeStoryPathPainter extends CustomPainter {
-  const _OutcomeStoryPathPainter({required this.color});
-
-  final Color color;
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    final paint = Paint()
-      ..color = color
-      ..strokeWidth = 4
-      ..strokeCap = StrokeCap.round
-      ..style = PaintingStyle.stroke;
-    final path = Path()
-      ..moveTo(size.width * .25, size.height * .35)
-      ..cubicTo(
-        size.width * .43,
-        size.height * .08,
-        size.width * .66,
-        size.height * .12,
-        size.width * .78,
-        size.height * .36,
-      );
-    canvas.drawPath(path, paint);
-    final dot = Paint()..color = Colors.white.withValues(alpha: .65);
-    for (final point in [
-      Offset(size.width * .38, size.height * .18),
-      Offset(size.width * .56, size.height * .15),
-      Offset(size.width * .68, size.height * .22),
-    ]) {
-      canvas.drawCircle(point, 5, dot);
-    }
-  }
-
-  @override
-  bool shouldRepaint(covariant _OutcomeStoryPathPainter oldDelegate) =>
-      oldDelegate.color != color;
-}
-
 class _EnvironmentStageIcon extends StatelessWidget {
   const _EnvironmentStageIcon({required this.emoji, required this.color});
 
@@ -2464,35 +2139,6 @@ int _sceneSeed(String id) => id.codeUnits
 
 Color _sceneAccent(String id) =>
     _sceneAccents[_sceneSeed(id) % _sceneAccents.length];
-
-IconData _stageIconForScene(ConversationSceneSnapshot scene) {
-  final id = scene.id.toLowerCase();
-  if (id.contains('door')) return Icons.door_front_door_rounded;
-  if (id.contains('rest') || id.contains('cushion')) {
-    return Icons.weekend_rounded;
-  }
-  if (id.contains('water')) return Icons.water_drop_rounded;
-  if (id.contains('friend')) return Icons.groups_rounded;
-  if (id.contains('wash')) return Icons.clean_hands_rounded;
-  if (id.contains('hug')) return Icons.favorite_rounded;
-  if (id.contains('shirt')) return Icons.checkroom_rounded;
-  if (id.contains('bread') || id.contains('meal')) {
-    return Icons.restaurant_rounded;
-  }
-  if (id.contains('leaf') ||
-      id.contains('flower') ||
-      id.contains('plant') ||
-      id.contains('garden')) {
-    return Icons.local_florist_rounded;
-  }
-  if (id.contains('story') || id.contains('book')) {
-    return Icons.menu_book_rounded;
-  }
-  if (id.contains('moon') || id.contains('sleep') || id.contains('bedtime')) {
-    return Icons.bedtime_rounded;
-  }
-  return _stageIconForEmoji(scene.focusEmoji);
-}
 
 IconData _stageIconForEmoji(String emoji) {
   if (emoji.contains('🚪')) return Icons.door_front_door_rounded;

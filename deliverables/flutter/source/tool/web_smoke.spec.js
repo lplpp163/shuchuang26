@@ -304,7 +304,7 @@ test('zero-data preview labels every speaker, plays four audible turns, and expo
 
   await clickPreviewAudioAndWaitForEnded(
     page,
-    page.getByRole('button', { name: /我回來了。.*故事怎麼變/ }),
+    page.getByRole('button', { name: /我回來了。.*點圖接故事/ }),
     mp3Responses,
   );
   await expect(page.getByText(/已聽過：你選的話.*接著可以聽外婆回話/))
@@ -393,18 +393,17 @@ async function scrollUntilAttached(page, locator) {
 
 async function chooseWithBeginnerScaffold(page, choice) {
   const prepare = page.getByRole('button', {
-    name: `準備「${choice.translation}」，這一步不會送出`,
+    name: `圖像選擇「${choice.translation}」；選取後可以開口或直接繼續故事`,
   });
   await scrollUntilAttached(page, prepare);
   await prepare.click();
 
-  const scaffold = page.getByRole('group', {
-    name: new RegExp(choice.romanization.replaceAll('/', '\\/')),
-  });
+  const scaffold = page.getByRole('button', { name: '慢速・逐段學' });
   await expect(scaffold).toBeVisible();
-  await expect(scaffold).toHaveAccessibleName(new RegExp(choice.target));
 
-  const listenSlot = page.getByRole('button', { name: /先聽整句|播放中/ });
+  const listenSlot = page.getByRole('button', {
+    name: /^(先聽整句|播放中.*)$/,
+  });
   await scrollUntilAttached(page, listenSlot);
   const listen = page.getByRole('button', { name: '先聽整句' });
   // Headless Edge can expose speechSynthesis without ever firing its end
@@ -417,11 +416,8 @@ async function chooseWithBeginnerScaffold(page, choice) {
     await expect(page.getByRole('button', { name: /^播放中/ })).toBeDisabled();
   }
 
-  const fallback = page.getByRole('button', { name: '今天先用小卡直接接故事' });
-  await scrollUntilAttached(page, fallback);
-  await fallback.click();
   const directChoice = page.getByRole('button', {
-    name: `直接選擇：${choice.translation}`,
+    name: /不開麥克風，用這張圖讓.+回話/,
   });
   await scrollUntilAttached(page, directChoice);
   await directChoice.click();
@@ -588,10 +584,9 @@ test('adult establishes the circle, child completes three turns, and family resp
   await expect(page.getByText('家庭對話劇場')).toBeVisible();
   await playFirstElderLineAndWaitForEnded(page, '阿嬤', mp3Responses);
   await expect(page.getByRole('button', {
-    name: /準備「我回來了。」，這一步不會送出/,
+    name: /圖像選擇「我回來了。」/,
   })).toBeVisible();
-  await expect(page.getByRole('button', { name: '先選意思才能開啟麥克風' }))
-    .toBeDisabled();
+  await expect(page.getByText(/先點圖裡的一幕/)).toBeVisible();
 
   let next = await chooseWithBeginnerScaffold(page, {
     translation: '我回來了。',
@@ -626,7 +621,7 @@ test('adult establishes the circle, child completes three turns, and family resp
 
   await unlockParent(page);
   await page.getByRole('button', { name: /回應孩子的故事卡/ }).click();
-  await expect(page.getByText('回到故事裡陪孩子')).toBeVisible();
+  await expect(page.getByText('今天先回應一個故事')).toBeVisible();
 
   const proud = page.getByRole('checkbox', { name: '以你為榮' });
   await scrollUntilAttached(page, proud);
@@ -691,21 +686,20 @@ test('five-story library and microphone repair keep a zero-beginner moving', asy
   await page.getByRole('button', { name: /陽台澆花/ }).click();
   await expect(page.getByText('家庭對話劇場')).toBeVisible();
   await expect(page.getByRole('button', {
-    name: /準備「我來澆花。」，這一步不會送出/,
+    name: /圖像選擇「我來澆花。」/,
   })).toBeVisible();
   await page.getByRole('button', {
-    name: '準備「我來澆花。」，這一步不會送出',
+    name: '圖像選擇「我來澆花。」；選取後可以開口或直接繼續故事',
   }).click();
-  await expect(page.getByRole('group', { name: /cháu \/ tưới cây \/ ạ/ }))
+  await expect(page.getByRole('button', { name: '慢速・逐段學' }))
     .toBeVisible();
 
   const microphone = page.getByRole('button', { name: '開啟麥克風說練習短句' });
   await scrollUntilAttached(page, microphone);
   await microphone.click();
-  const directGardenChoice = page.getByRole('button', {
-    name: '直接選擇：我來澆花。',
-  });
-  await expect(directGardenChoice).toBeVisible({ timeout: 20_000 });
+  await expect(page.getByRole('button', {
+    name: '我說的是「我來澆花。」，繼續故事',
+  })).toBeVisible({ timeout: 20_000 });
   await expect(page.getByRole('group', {
     name: /不能聽寫|麥克風還沒打開|沒有寫出文字|聽寫沒有完成|瀏覽器限制/,
   })).toBeVisible();
@@ -748,7 +742,12 @@ test('one-time invite requires personal acceptance before an adult can enter', a
 
   await unlockParent(page);
   await page.getByRole('button', { name: /回應孩子的故事卡/ }).click();
-  await expect(page.getByText('回到故事裡陪孩子')).toBeVisible();
+  await expect(page.getByText('今天先回應一個故事')).toBeVisible();
+  const familyTools = page.getByRole('button', {
+    name: /邀請、備份與主劇情原音/,
+  });
+  await scrollUntilAttached(page, familyTools);
+  await familyTools.click();
   const addMember = page.getByRole('button', { name: '邀請或加入一位家人' });
   await scrollUntilAttached(page, addMember);
   await addMember.click();
@@ -799,6 +798,11 @@ test('one-time invite requires personal acceptance before an adult can enter', a
   await page.getByRole('button', { name: '確認' }).click();
   await expect(page.getByText('家人怎麼參與？')).toBeVisible();
   await page.getByRole('button', { name: /回應孩子的故事卡/ }).click();
+  const managerFamilyTools = page.getByRole('button', {
+    name: /邀請、備份與主劇情原音/,
+  });
+  await scrollUntilAttached(page, managerFamilyTools);
+  await managerFamilyTools.click();
   const importReceipt = page.getByRole('button', {
     name: '家人已接受：帶入回覆包',
   });

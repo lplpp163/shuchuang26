@@ -245,6 +245,11 @@ void main() {
 
     expect(
       find.byKey(const ValueKey('pending-family-invitations')),
+      findsNothing,
+    );
+    await _expandAdultTools(tester);
+    expect(
+      find.byKey(const ValueKey('pending-family-invitations')),
       findsOneWidget,
     );
     expect(find.text('阿公'), findsOneWidget);
@@ -274,6 +279,7 @@ void main() {
       ),
     );
     await tester.pumpAndSettle();
+    await _expandAdultTools(tester);
     final addMember = find.byKey(const ValueKey('add-family-member'));
     await tester.scrollUntilVisible(
       addMember,
@@ -509,12 +515,12 @@ void main() {
     );
     await tester.pumpAndSettle();
 
-    final outerList = find.byKey(const ValueKey('adult-family-circle'));
+    expect(
+      find.byKey(const ValueKey('family-voice-studio')),
+      findsNothing,
+    );
+    await _expandAdultTools(tester);
     final studio = find.byKey(const ValueKey('family-voice-studio'));
-    for (var attempt = 0; attempt < 8 && studio.evaluate().isEmpty; attempt++) {
-      await tester.drag(outerList, const Offset(0, -360));
-      await tester.pumpAndSettle();
-    }
     expect(studio, findsOneWidget);
 
     final episode = ConversationEpisodeCatalog.homecoming;
@@ -538,6 +544,14 @@ void main() {
       );
     }
   });
+}
+
+Future<void> _expandAdultTools(WidgetTester tester) async {
+  final disclosure = find.byKey(const ValueKey('family-tools-disclosure'));
+  await tester.ensureVisible(disclosure);
+  await tester.pumpAndSettle();
+  await tester.tap(disclosure);
+  await tester.pumpAndSettle();
 }
 
 class _FastInvitationAcceptanceCrypto extends FamilyInvitationCrypto {
