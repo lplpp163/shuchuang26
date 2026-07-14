@@ -33,10 +33,12 @@ void main() {
     );
 
     expect(result.pace, PracticePace.steady);
-    expect(result.voiceLabel, contains('收音清楚'));
+    expect(result.voiceLabel, contains('音量在建議範圍'));
     expect(result.nextTip, contains('Đây là'));
     expect(result.storageSummary, isNot(contains('發音正確')));
     expect(result.storageSummary, isNot(contains('聲調正確')));
+    expect(result.storageSummary, isNot(contains('完整一句')));
+    expect(result.storageSummary, isNot(contains('每個字')));
   });
 
   test('flags very short and quiet recordings as practice issues', () {

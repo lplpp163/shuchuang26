@@ -132,6 +132,7 @@ void main() {
 
       expect(find.text('傳家話'), findsOneWidget);
       expect(find.text('說一句・演成我們家的故事'), findsOneWidget);
+      expect(find.text('聽家人說，換你回一句'), findsNothing);
       expect(find.text('我們家怎麼說'), findsNothing);
       expect(
         tester.widget<MaterialApp>(find.byType(MaterialApp)).title,
@@ -176,9 +177,15 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text('約 30 秒試演'), findsOneWidget);
-    expect(find.text('不錄音・不儲存'), findsOneWidget);
-    expect(find.text('固定合成・零家庭資料'), findsOneWidget);
-    expect(find.text('1 / 3'), findsOneWidget);
+    expect(find.text('這次不錄音'), findsOneWidget);
+    expect(find.text('不存家庭資料'), findsOneWidget);
+    expect(find.text('選一句'), findsOneWidget);
+    expect(find.text('看故事變'), findsOneWidget);
+    expect(find.text('傳回家'), findsOneWidget);
+    expect(
+      find.byKey(const ValueKey('preview-act-progress-step-1')),
+      findsOneWidget,
+    );
     expect(find.byKey(const ValueKey('preview-opening')), findsOneWidget);
     expect(find.byKey(const ValueKey('preview-listen-line')), findsOneWidget);
     expect(
@@ -215,9 +222,19 @@ void main() {
       find.byKey(const ValueKey('preview-outcome-icon-came-home')),
       findsOneWidget,
     );
+    expect(
+      find.byKey(
+        const ValueKey('preview-outcome-image-home-door-open'),
+      ),
+      findsOneWidget,
+    );
     expect(find.text('✨'), findsNothing);
     expect(find.textContaining('家真正會說的版本或原音'), findsOneWidget);
-    expect(find.text('2 / 3'), findsOneWidget);
+    expect(
+      find.byKey(const ValueKey('preview-act-progress-step-2')),
+      findsOneWidget,
+    );
+    expect(find.textContaining('已聽過：你選的話'), findsOneWidget);
     expect(find.byKey(const ValueKey('preview-to-relay')), findsOneWidget);
     expect(media.played, isNotEmpty);
     expect(store.privacyConsent, isFalse);
@@ -229,7 +246,10 @@ void main() {
     await tester.tap(find.byKey(const ValueKey('preview-to-relay')));
     await tester.pumpAndSettle();
 
-    expect(find.text('3 / 3'), findsOneWidget);
+    expect(
+      find.byKey(const ValueKey('preview-act-progress-step-3')),
+      findsOneWidget,
+    );
     expect(find.byKey(const ValueKey('preview-relay')), findsOneWidget);
     expect(find.byKey(const ValueKey('preview-relay-baton-1')), findsOneWidget);
     expect(find.byKey(const ValueKey('preview-relay-baton-2')), findsOneWidget);
@@ -237,6 +257,8 @@ void main() {
     expect(find.text('孩子帶回'), findsOneWidget);
     expect(find.text('家人傳下'), findsOneWidget);
     expect(find.text('孩子接住'), findsOneWidget);
+    expect(find.text('門打開了！'), findsOneWidget);
+    expect(find.text('Cháu về rồi ạ.'), findsOneWidget);
     expect(find.textContaining('Piper 合成操作示範'), findsOneWidget);
     expect(find.textContaining('不是真人原音'), findsOneWidget);
     expect(find.textContaining('未使用、建立或保存任何家庭資料'), findsOneWidget);
@@ -250,7 +272,10 @@ void main() {
     );
     await tester.tap(find.byKey(const ValueKey('preview-replay-outcome')));
     await tester.pumpAndSettle();
-    expect(find.text('2 / 3'), findsOneWidget);
+    expect(
+      find.byKey(const ValueKey('preview-act-progress-step-2')),
+      findsOneWidget,
+    );
     expect(
       find.byKey(const ValueKey('preview-outcome-came-home')),
       findsOneWidget,
@@ -260,7 +285,29 @@ void main() {
     );
     await tester.tap(find.byKey(const ValueKey('preview-to-relay')));
     await tester.pumpAndSettle();
-    expect(find.text('3 / 3'), findsOneWidget);
+    expect(
+      find.byKey(const ValueKey('preview-act-progress-step-3')),
+      findsOneWidget,
+    );
+
+    for (final seed in <String>[
+      'family-sharing',
+      'club',
+      'lunch',
+      'class',
+      'friendship',
+    ]) {
+      expect(
+        find.byKey(ValueKey('preview-life-seed-$seed')),
+        findsOneWidget,
+      );
+    }
+    final clubSeed = find.byKey(const ValueKey('preview-life-seed-club'));
+    await tester.ensureVisible(clubSeed);
+    await tester.tap(clubSeed);
+    await tester.pumpAndSettle();
+    expect(find.textContaining('我今天第一次參加社團'), findsOneWidget);
+    expect(find.textContaining('系統不會自己猜翻譯'), findsOneWidget);
 
     await tester.ensureVisible(
       find.byKey(const ValueKey('preview-relay-listen')),
@@ -268,6 +315,7 @@ void main() {
     await tester.tap(find.byKey(const ValueKey('preview-relay-listen')));
     await tester.pumpAndSettle();
     expect(media.played.length, playedAfterOutcome + 1);
+    expect(find.text('三棒接力完成 ✓'), findsOneWidget);
 
     expect(store.stories.map((story) => story.id).toList(), storyIdsBefore);
     expect(
@@ -283,6 +331,70 @@ void main() {
     await tester.tap(find.byKey(const ValueKey('finish-theater-preview')));
     await tester.pumpAndSettle();
     expect(find.text('先取得家人的同意'), findsOneWidget);
+    expect(store.stories.map((story) => story.id).toList(), storyIdsBefore);
+    expect(
+      store.attempts.map((attempt) => attempt.id).toList(),
+      attemptIdsBefore,
+    );
+    expect(store.relays.map((relay) => relay.id).toList(), relayIdsBefore);
+  });
+
+  testWidgets('preview choices open visibly different story worlds',
+      (tester) async {
+    SharedPreferences.setMockInitialValues(<String, Object>{});
+    final store = await AppStore.load(adultPinKdf: fastTestPinKdf);
+    final storyIdsBefore = store.stories.map((story) => story.id).toList();
+    final attemptIdsBefore =
+        store.attempts.map((attempt) => attempt.id).toList();
+    final relayIdsBefore = store.relays.map((relay) => relay.id).toList();
+
+    await tester.pumpWidget(testApp(store));
+    await tester.pumpAndSettle();
+    await tester.tap(find.byKey(const ValueKey('open-theater-preview')));
+    await tester.pumpAndSettle();
+
+    final cameHome = find.byKey(const ValueKey('preview-choice-came-home'));
+    await tester.ensureVisible(cameHome);
+    await tester.tap(cameHome);
+    await tester.pumpAndSettle();
+    expect(
+      find.byKey(
+        const ValueKey('preview-outcome-image-home-door-open'),
+      ),
+      findsOneWidget,
+    );
+    expect(
+      find.byKey(const ValueKey('preview-outcome-image-home-cushion')),
+      findsNothing,
+    );
+    expect(
+      find.bySemanticsLabel('孩子說回來了，外婆在打開的家門前迎接他'),
+      findsOneWidget,
+    );
+
+    final tryOther = find.byKey(const ValueKey('preview-try-other'));
+    await tester.ensureVisible(tryOther);
+    await tester.tap(tryOther);
+    await tester.pumpAndSettle();
+    final tired = find.byKey(const ValueKey('preview-choice-a-bit-tired'));
+    await tester.ensureVisible(tired);
+    await tester.tap(tired);
+    await tester.pumpAndSettle();
+    expect(
+      find.byKey(const ValueKey('preview-outcome-image-home-cushion')),
+      findsOneWidget,
+    );
+    expect(
+      find.byKey(
+        const ValueKey('preview-outcome-image-home-door-open'),
+      ),
+      findsNothing,
+    );
+    expect(
+      find.bySemanticsLabel('孩子說有一點累，外婆陪他在柔軟的休息場景坐下來'),
+      findsOneWidget,
+    );
+    expect(store.privacyConsent, isFalse);
     expect(store.stories.map((story) => story.id).toList(), storyIdsBefore);
     expect(
       store.attempts.map((attempt) => attempt.id).toList(),
@@ -319,6 +431,7 @@ void main() {
 
     final choice = find.byKey(const ValueKey('preview-choice-came-home'));
     await tester.ensureVisible(choice);
+    expect(tester.getSize(choice).height, greaterThanOrEqualTo(48));
     await tester.tap(choice);
     await tester.pumpAndSettle();
     final relay = find.byKey(const ValueKey('preview-to-relay'));
@@ -327,10 +440,22 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.byKey(const ValueKey('preview-relay')), findsOneWidget);
+    expect(
+      find.byKey(const ValueKey('preview-act-progress-step-3')),
+      findsOneWidget,
+    );
+    expect(tester.takeException(), isNull);
+    final lifeSeed = find.byKey(const ValueKey('preview-life-seed-friendship'));
+    await tester.ensureVisible(lifeSeed);
+    expect(tester.getSize(lifeSeed).height, greaterThanOrEqualTo(48));
+    await tester.tap(lifeSeed);
+    await tester.pumpAndSettle();
+    expect(find.textContaining('我想和朋友把事情說開'), findsOneWidget);
     expect(tester.takeException(), isNull);
     final finish = find.byKey(const ValueKey('finish-theater-preview'));
     await tester.ensureVisible(finish);
     expect(finish, findsOneWidget);
+    expect(tester.getSize(finish).height, greaterThanOrEqualTo(48));
     expect(tester.takeException(), isNull);
   });
 
@@ -428,7 +553,9 @@ void main() {
     expect(find.text('先選你想表達的意思'), findsOneWidget);
     expect(find.byKey(const ValueKey('prepare-came-home')), findsOneWidget);
     expect(
-      find.text('聽寫可能由裝置或瀏覽器平台處理；回來的文字只用來尋找本題關鍵詞，不會替發音打分。'),
+      find.text(
+        '系統只幫你把聲音寫成字；你想說什麼由你確認，家裡怎麼說由家人確認。聽寫不準也不會卡住故事。',
+      ),
       findsOneWidget,
     );
   });

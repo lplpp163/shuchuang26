@@ -5,8 +5,14 @@ class EducationOpportunity {
     required this.organizer,
     required this.summary,
     required this.officialUrl,
+    required this.eligibilityLabel,
+    required this.applicationRoleLabel,
+    required this.ruleSummary,
+    required this.checkedOn,
+    required this.reviewBy,
     required this.localStoryIdeaId,
     required this.localActionLabel,
+    this.officialRulesUrl,
     this.opensOn,
     this.closesOn,
     this.fixedStatus,
@@ -18,6 +24,12 @@ class EducationOpportunity {
   final String organizer;
   final String summary;
   final Uri officialUrl;
+  final Uri? officialRulesUrl;
+  final String eligibilityLabel;
+  final String applicationRoleLabel;
+  final String ruleSummary;
+  final DateTime checkedOn;
+  final DateTime reviewBy;
   final String localStoryIdeaId;
   final String localActionLabel;
   final DateTime? opensOn;
@@ -36,6 +48,15 @@ class EducationOpportunity {
     }
     return '收件中';
   }
+
+  bool needsReviewAt(DateTime now) {
+    final localDay = DateTime(now.year, now.month, now.day);
+    return localDay.isAfter(reviewBy);
+  }
+
+  String get checkedOnLabel => '查核 ${_dateLabel(checkedOn)}';
+
+  String get reviewByLabel => '下次複查 ${_dateLabel(reviewBy)}';
 }
 
 class EducationOpportunityCatalog {
@@ -50,6 +71,14 @@ class EducationOpportunityCatalog {
       officialUrl: Uri.parse(
         'https://mkm.k12ea.gov.tw/news/17202605110001',
       ),
+      officialRulesUrl: Uri.parse(
+        'https://mkm.k12ea.gov.tw/upload/file-download/1778459907/115%E5%B9%B4%E5%85%A8%E5%9C%8B%E6%80%A7%E5%A4%9A%E8%AA%9E%E5%A4%9A%E5%85%83%E6%96%87%E5%8C%96%E7%B9%AA%E6%9C%AC%E8%A6%AA%E5%AD%90%E5%85%B1%E8%AE%80%E5%BF%83%E5%BE%97%E6%84%9F%E6%83%B3%E7%94%84%E9%81%B8%E6%B4%BB%E5%8B%95%E7%B0%A1%E7%AB%A0.pdf',
+      ),
+      eligibilityLabel: '幼兒園至國中，依官方五組資格參加',
+      applicationRoleLabel: '由學校統一報名',
+      ruleSummary: '原創作品；主題40%、表現30%、多元文化感受30%，另依簡章備妥授權。',
+      checkedOn: DateTime(2026, 7, 14),
+      reviewBy: DateTime(2026, 7, 28),
       localStoryIdeaId: 'family-sharing',
       localActionLabel: '先做一張親子共讀接力',
       opensOn: DateTime(2026, 9, 21),
@@ -62,6 +91,11 @@ class EducationOpportunityCatalog {
       organizer: '教育部國民及學前教育署',
       summary: '查教材、實體與遠距課程、研習及競賽公告。App 只提供入口，不代替官方報名。',
       officialUrl: Uri.parse('https://mkm.k12ea.gov.tw/'),
+      eligibilityLabel: '家庭、學生、教師與承辦依各公告資格使用',
+      applicationRoleLabel: '依各教材、課程或活動公告辦理',
+      ruleSummary: '入口持續更新；逐筆查看適用資格與期限，App 不代替官方報名。',
+      checkedOn: DateTime(2026, 7, 14),
+      reviewBy: DateTime(2026, 7, 28),
       localStoryIdeaId: 'class',
       localActionLabel: '先做一張上課故事接力',
       fixedStatus: '持續更新',
@@ -75,6 +109,11 @@ class EducationOpportunityCatalog {
       officialUrl: Uri.parse(
         'https://www.moe.gov.tw/News_Content.aspx?n=9E7AC85F1954DDA8&s=9C06AFB083644471&sms=169B8E91BB75571F',
       ),
+      eligibilityLabel: '115年賽事已辦理，只作成果與主題參考',
+      applicationRoleLabel: '目前沒有報名入口',
+      ruleSummary: '文化探索、家庭時光與文化體驗可作靈感；不得顯示成仍在收件。',
+      checkedOn: DateTime(2026, 7, 14),
+      reviewBy: DateTime(2026, 8, 13),
       localStoryIdeaId: 'family-sharing',
       localActionLabel: '把今天的故事說給家人',
       fixedStatus: '已結束・成果參考',
@@ -84,6 +123,9 @@ class EducationOpportunityCatalog {
 
   static const checkedOnLabel = '官方資訊查核日：2026-07-14';
 }
+
+String _dateLabel(DateTime value) =>
+    '${value.year}-${value.month.toString().padLeft(2, '0')}-${value.day.toString().padLeft(2, '0')}';
 
 class StoryIdea {
   const StoryIdea({

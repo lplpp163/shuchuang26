@@ -3,9 +3,9 @@
   "source": "傳家話_教師家庭延伸情境包_四週試辦版.md",
   "pdf": "傳家話_教師家庭延伸情境包_四週試辦版.pdf",
   "generatedAtLocal": "2026-07-14",
-  "bytes": 551671,
-  "sha256": "6B83F3DB0A478174B8998CC46209D037DFE31E0439E9CC41DA58A6370725B6F5",
-  "pageCount": 19,
+  "bytes": 594647,
+  "sha256": "4422A71CC412660B6705B2853963C77DBF8183E7E8EDC7A8FC340CCACBC4C97A",
+  "pageCount": 22,
   "pageSizes": [
     {
       "page": 1,
@@ -120,11 +120,33 @@
       "widthPt": 595.276,
       "heightPt": 841.89,
       "isA4": true
+    },
+    {
+      "page": 20,
+      "widthPt": 595.276,
+      "heightPt": 841.89,
+      "isA4": true
+    },
+    {
+      "page": 21,
+      "widthPt": 595.276,
+      "heightPt": 841.89,
+      "isA4": true
+    },
+    {
+      "page": 22,
+      "widthPt": 595.276,
+      "heightPt": 841.89,
+      "isA4": true
     }
   ],
   "minimumRenderedFontPt": 12.0,
-  "minimumExtractedCharactersOnPage": 280,
+  "minimumExtractedCharactersOnPage": 208,
   "embeddedImageCount": 0,
+  "forbiddenAnnualPriceMatches": {
+    "source": [],
+    "pdf": []
+  },
   "metadata": {
     "title": "傳家話｜教師家庭延伸情境包｜四週試辦版",
     "author": "",
@@ -143,10 +165,13 @@
     "每週完成條件": true,
     "資料權限圖": true,
     "空白試辦記錄表": true,
-    "價格待訪談": true,
+    "價格定義完整": true,
+    "無8,000元年度價格": true,
     "價格包含": true,
     "價格不包含": true,
     "支援上限": true,
+    "採購角色分離": true,
+    "官方機會資料結構": true,
     "預定最終用語": true,
     "不確定UI有標記": true,
     "官方查核日": true,
@@ -163,6 +188,8 @@
     "PDF含四週": true,
     "PDF含資料權限圖文字": true,
     "PDF含空白表": true,
+    "PDF含正確價格定義": true,
+    "PDF無8,000元年度價格": true,
     "PDF含價格誠實標示": true
   },
   "failedChecks": [],

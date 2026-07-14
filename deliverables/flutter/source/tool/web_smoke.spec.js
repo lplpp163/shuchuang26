@@ -225,6 +225,122 @@ async function playFirstElderLineAndWaitForEnded(
   await expect(listen).toHaveCount(0);
 }
 
+async function clickPreviewAudioAndWaitForEnded(
+  page,
+  trigger,
+  mp3Responses,
+) {
+  await page.evaluate(() => {
+    window.__hometongueMediaEvents.length = 0;
+  });
+  mp3Responses.length = 0;
+  await trigger.click();
+  await expect.poll(
+    async () => page.evaluate(() =>
+      window.__hometongueMediaEvents.some((event) => event.type === 'ended')),
+    {
+      message: 'the explicitly-triggered preview MP3 should reach ended',
+      timeout: 20_000,
+    },
+  ).toBe(true);
+  const events = await page.evaluate(() => window.__hometongueMediaEvents);
+  const eventTypes = events.map((event) => event.type);
+  expect(eventTypes, JSON.stringify(events, null, 2)).not.toContain('error');
+  expect(eventTypes).toContain('play');
+  expect(eventTypes).toContain('playing');
+  expect(eventTypes).toContain('ended');
+  expect(eventTypes.indexOf('play')).toBeLessThan(eventTypes.indexOf('playing'));
+  expect(eventTypes.indexOf('playing')).toBeLessThan(eventTypes.indexOf('ended'));
+  const ended = [...events].reverse().find((event) => event.type === 'ended');
+  expect(ended.duration, JSON.stringify(events, null, 2)).toBeGreaterThan(0);
+  expect(ended.currentTime, JSON.stringify(events, null, 2)).toBeGreaterThan(0);
+  await expect.poll(
+    () => mp3Responses.some((response) => response.status === 200),
+    {
+      message: `expected a 200 preview MP3 response, got ${JSON.stringify(mp3Responses)}`,
+      timeout: 5_000,
+    },
+  ).toBe(true);
+}
+
+async function appOwnedStorageSnapshot(page) {
+  return page.evaluate(async () => {
+    const databases = typeof indexedDB.databases === 'function'
+      ? await indexedDB.databases()
+      : [];
+    return {
+      localStorage: Object.entries(localStorage).sort(([left], [right]) =>
+        left.localeCompare(right)),
+      databases: databases
+        .map(({ name, version }) => ({ name: name || '', version: version || 0 }))
+        .sort((left, right) => left.name.localeCompare(right.name)),
+    };
+  });
+}
+
+test('zero-data preview labels every speaker, plays four audible turns, and exposes five life stories', async ({ page }) => {
+  await page.setViewportSize({ width: 412, height: 915 });
+  const errors = [];
+  const mp3Responses = [];
+  installMp3ResponseAudit(page, mp3Responses);
+  page.on('pageerror', (error) => errors.push(error.stack || error.message));
+  await openColdApp(page, errors);
+  const before = await appOwnedStorageSnapshot(page);
+
+  await page.getByRole('button', { name: '先試演約 30 秒' }).click();
+  const progress = page.getByText(/第 1 幕，共三幕：選一句/);
+  await expect(progress).toBeVisible();
+  await expect(progress).toContainText('1 選一句');
+  await expect(progress).toContainText('2 看故事變');
+  await expect(progress).toContainText('3 傳回家');
+
+  await clickPreviewAudioAndWaitForEnded(
+    page,
+    page.getByRole('button', { name: '點一下聽外婆開場' }),
+    mp3Responses,
+  );
+  await expect(page.getByRole('button', { name: '再聽一次外婆開場' }))
+    .toBeVisible();
+
+  await clickPreviewAudioAndWaitForEnded(
+    page,
+    page.getByRole('button', { name: /我回來了。.*故事怎麼變/ }),
+    mp3Responses,
+  );
+  await expect(page.getByText(/已聽過：你選的話.*接著可以聽外婆回話/))
+    .toBeVisible();
+
+  await clickPreviewAudioAndWaitForEnded(
+    page,
+    page.getByRole('button', { name: '聽外婆接下一句' }),
+    mp3Responses,
+  );
+  await expect(page.getByText(/你選的話與外婆回話都已聽過/)).toBeVisible();
+
+  const relay = page.getByRole('button', { name: '看這句怎麼傳回家' });
+  await scrollUntilAttached(page, relay);
+  await relay.click();
+  await clickPreviewAudioAndWaitForEnded(
+    page,
+    page.getByRole('button', { name: '播放三棒接力' }),
+    mp3Responses,
+  );
+  await expect(page.getByText('三棒接力完成 ✓')).toBeVisible();
+  await expect(page.getByText('門打開了！')).toBeVisible();
+
+  for (const seed of ['和家人分享', '社團', '午餐', '上課', '朋友關係']) {
+    await expect(page.getByRole('checkbox', { name: seed })).toBeVisible();
+  }
+  await page.getByRole('checkbox', { name: '朋友關係' }).click();
+  await expect(page.getByText(/我想和朋友把事情說開，再一起重來。/))
+    .toBeVisible();
+  await expect(page.getByText(/系統不會自己猜翻譯/)).toBeVisible();
+
+  const after = await appOwnedStorageSnapshot(page);
+  expect(after).toEqual(before);
+  expect(errors).toEqual([]);
+});
+
 async function acceptConsentAndCreateFamilyCircle(page, errors) {
   await openColdApp(page, errors);
 
@@ -288,9 +404,9 @@ async function chooseWithBeginnerScaffold(page, choice) {
   await expect(scaffold).toBeVisible();
   await expect(scaffold).toHaveAccessibleName(new RegExp(choice.target));
 
-  const listenSlot = page.getByRole('button', { name: /先聽這一句|正在播放/ });
+  const listenSlot = page.getByRole('button', { name: /先聽整句|播放中/ });
   await scrollUntilAttached(page, listenSlot);
-  const listen = page.getByRole('button', { name: '先聽這一句' });
+  const listen = page.getByRole('button', { name: '先聽整句' });
   // Headless Edge can expose speechSynthesis without ever firing its end
   // callback. The explicit listening control is still verified above; click
   // it only when the platform reports that narration has finished.
@@ -298,7 +414,7 @@ async function chooseWithBeginnerScaffold(page, choice) {
     await listen.waitFor({ state: 'visible', timeout: 3_000 });
     await listen.click();
   } catch (_) {
-    await expect(page.getByRole('button', { name: '正在播放' })).toBeDisabled();
+    await expect(page.getByRole('button', { name: /^播放中/ })).toBeDisabled();
   }
 
   const fallback = page.getByRole('button', { name: '今天先用小卡直接接故事' });
@@ -591,7 +707,13 @@ test('five-story library and microphone repair keep a zero-beginner moving', asy
   });
   await expect(directGardenChoice).toBeVisible({ timeout: 20_000 });
   await expect(page.getByRole('group', {
-    name: /聽不到你|麥克風還沒打開|沒聽清楚|聲音剛剛迷路/,
+    name: /不能聽寫|麥克風還沒打開|沒有寫出文字|聽寫沒有完成|瀏覽器限制/,
+  })).toBeVisible();
+  await expect(page.getByRole('button', {
+    name: '先慢速・逐段聽，再試一次',
+  })).toBeVisible();
+  await expect(page.getByRole('button', {
+    name: '我說的是「我來澆花。」，繼續故事',
   })).toBeVisible();
 
   await page.getByRole('button', { name: 'Back' }).click();

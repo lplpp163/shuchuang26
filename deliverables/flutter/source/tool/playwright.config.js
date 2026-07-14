@@ -4,7 +4,7 @@ const browserChannel = process.env.PLAYWRIGHT_CHANNEL;
 
 module.exports = defineConfig({
   testDir: __dirname,
-  testMatch: /.*(?:web_smoke|visual_audit|native_review|deliverables_media)\.spec\.js/,
+  testMatch: /.*(?:web_smoke|visual_audit|native_review|deliverables_media|pilot_workbench)\.spec\.js/,
   timeout: 90_000,
   expect: {
     // Flutter's first CanvasKit/semantics boot can be slower on a cold CI worker.

@@ -47,9 +47,9 @@ class LocalPracticeCoach {
 
     final pace = actual <= 0
         ? PracticePace.unavailable
-        : ratio < .68
+        : ratio < .55
             ? PracticePace.tooFast
-            : ratio > 1.65
+            : ratio > 1.90
                 ? PracticePace.tooSlow
                 : PracticePace.steady;
     final score = actual <= 0
@@ -64,16 +64,16 @@ class LocalPracticeCoach {
 
     final (headline, tip) = switch (pace) {
       PracticePace.tooFast => (
-          '有錄到完整一句，再放鬆一點',
-          '下一次在「$focus」前停半拍，讓每一段更容易聽清楚。',
+          '這次比示範短一些',
+          '下一次先把「$focus」慢慢說完；長度提示不代表發音對錯。',
         ),
       PracticePace.tooSlow => (
-          '每個字都有說到，很不錯',
-          '試著把前後兩段接起來，像家人說話時一樣自然。',
+          '這次比示範長一些',
+          '先分段聽，再試著把「$focus」和前後一段自然接起來。',
         ),
       PracticePace.steady => (
-          '節奏很接近示範音',
-          '下一次只專心練「$focus」，再把整句連起來。',
+          '這次長度接近示範',
+          '下一次只專心練「$focus」；聲調與家庭腔調仍請家人確認。',
         ),
       PracticePace.unavailable => (
           '錄音已保存',
@@ -101,6 +101,6 @@ class LocalPracticeCoach {
     if (!metrics.hasVolumeData || average == null) return '音量：此裝置未提供數值';
     if (average < -48) return '音量偏小：靠近麥克風一點';
     if (average > -12) return '音量偏大：離麥克風一點';
-    return '收音清楚：音量在舒適範圍';
+    return '音量在建議範圍';
   }
 }

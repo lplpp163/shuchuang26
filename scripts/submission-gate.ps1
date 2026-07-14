@@ -223,7 +223,10 @@ function Get-PdfTextIfAvailable {
 }
 
 $canonicalBrand = "傳家話"
+$canonicalSubtitle = "說一句・演成我們家的故事"
+$legacySubtitle = "聽家人說，換你回一句"
 $legacyPatterns = @(
+    @{ Label = "舊副標『$legacySubtitle』"; Pattern = [regex]::Escape($legacySubtitle) },
     @{ Label = "舊品牌『我們家怎麼說』"; Pattern = "我們家怎麼說" },
     @{ Label = "舊品牌『家語貼』"; Pattern = "家語貼|HomeTongue\s+Tags" },
     @{ Label = "舊流程『聲音信箱』"; Pattern = "聲音信箱" },
@@ -260,6 +263,26 @@ function Test-CanonicalText {
     }
 }
 
+function Test-CanonicalSubtitle {
+    param(
+        [Parameter(Mandatory = $true)][string]$Label,
+        [Parameter(Mandatory = $true)][string]$Path,
+        [Parameter(Mandatory = $true)][string]$Text
+    )
+
+    $localFailureCount = $failures.Count
+    if (-not $Text.Contains($canonicalSubtitle, [StringComparison]::Ordinal)) {
+        Add-Failure "$Label 未使用精確 canonical 副標『$canonicalSubtitle』：$Path"
+    }
+    if ($Text.Contains($legacySubtitle, [StringComparison]::Ordinal)) {
+        Add-Failure "$Label 仍含舊副標『$legacySubtitle』：$Path"
+    }
+
+    if ($failures.Count -eq $localFailureCount) {
+        Add-Pass "$Label 使用精確 canonical 副標"
+    }
+}
+
 Write-Output "=== 傳家話｜跨產物 submission gate ==="
 Write-Output "專案：$projectRoot"
 
@@ -274,6 +297,7 @@ $canonicalTextFiles = @(
     @{ Label = "技術驗證紀錄"; RelativePath = "交付成果\作品\傳家話_技術驗證紀錄.md" },
     @{ Label = "影片分鏡與旁白"; RelativePath = "交付成果\影片\傳家話_初審影片分鏡與旁白.md" },
     @{ Label = "家庭需求與試演問卷"; RelativePath = "交付成果\問卷\傳家話_新住民家庭需求與試演問卷.md" },
+    @{ Label = "匿名試辦彙整台"; RelativePath = "交付成果\導入\傳家話_匿名試辦彙整台.html" },
     @{ Label = "越南語母語審閱工具"; RelativePath = "交付成果\語言審閱\傳家話_越南語119句母語審閱工具.html" },
     @{ Label = "越南語母語審閱說明"; RelativePath = "交付成果\語言審閱\README.md" },
     @{ Label = "成果網站"; RelativePath = "團隊進度網站\index.html" },
@@ -291,6 +315,7 @@ $canonicalTextFiles = @(
     @{ Label = "嚴格驗收鏡像"; RelativePath = "團隊進度網站\deliverables\docs\strict-review.md" },
     @{ Label = "技術驗證鏡像"; RelativePath = "團隊進度網站\deliverables\docs\technical-validation.md" },
     @{ Label = "需求問卷鏡像"; RelativePath = "團隊進度網站\deliverables\docs\family-pilot-questionnaire.md" },
+    @{ Label = "匿名試辦彙整台鏡像"; RelativePath = "團隊進度網站\deliverables\pilot\evidence-workbench.html" },
     @{ Label = "越南語母語審閱工具鏡像"; RelativePath = "團隊進度網站\deliverables\review\index.html" },
     @{ Label = "越南語母語審閱說明鏡像"; RelativePath = "團隊進度網站\deliverables\review\README.md" }
 )
@@ -306,6 +331,78 @@ foreach ($artifact in $canonicalTextFiles) {
     Test-CanonicalText -Label $artifact.Label -Path $artifact.RelativePath -Text $artifactText
 }
 
+Write-Output "`n--- 匿名試辦彙整台 ---"
+$pilotWorkbenchSource = Get-ProjectPath "交付成果\導入\傳家話_匿名試辦彙整台.html"
+$pilotWorkbenchMirror = Get-ProjectPath "團隊進度網站\deliverables\pilot\evidence-workbench.html"
+$pilotWorkbenchProblems = [Collections.Generic.List[string]]::new()
+if (-not (Test-Path -LiteralPath $pilotWorkbenchSource -PathType Leaf)) {
+    $pilotWorkbenchProblems.Add("缺少來源工具")
+}
+if (-not (Test-Path -LiteralPath $pilotWorkbenchMirror -PathType Leaf)) {
+    $pilotWorkbenchProblems.Add("缺少網站鏡像")
+}
+if ($pilotWorkbenchProblems.Count -eq 0) {
+    $pilotWorkbenchText = Get-Content -Raw -Encoding UTF8 -LiteralPath $pilotWorkbenchSource
+    foreach ($requiredMarker in @(
+        "hometongue-pilot-summary-v1",
+        "hometongue-pilot-aggregate-v1",
+        "connect-src 'none'",
+        "anonymous-self-reported-not-externally-verified",
+        "synthetic-example-not-evidence",
+        "not-aggregated",
+        "runSelfTests"
+    )) {
+        if (-not $pilotWorkbenchText.Contains($requiredMarker, [StringComparison]::Ordinal)) {
+            $pilotWorkbenchProblems.Add("缺少必要標記：$requiredMarker")
+        }
+    }
+    if ($pilotWorkbenchText -match "\b(localStorage|sessionStorage|indexedDB|fetch|XMLHttpRequest|WebSocket|sendBeacon)\b") {
+        $pilotWorkbenchProblems.Add("含網路或持久儲存 API")
+    }
+    if ((Get-CachedSha256 -Path $pilotWorkbenchSource) -ne (Get-CachedSha256 -Path $pilotWorkbenchMirror)) {
+        $pilotWorkbenchProblems.Add("來源與網站鏡像 SHA-256 不一致")
+    }
+}
+if ($pilotWorkbenchProblems.Count -gt 0) {
+    Add-ProblemSummary -Label "匿名試辦彙整台未維持離線白名單與誠實證據邊界" -Problems $pilotWorkbenchProblems
+}
+else {
+    Add-Pass "匿名試辦彙整台使用固定 schema、離線 CSP、合成／自陳標記且不合併無權重平均值"
+}
+
+$canonicalSubtitleFiles = @(
+    @{ Label = "成果網站"; RelativePath = "團隊進度網站\index.html" },
+    @{ Label = "計畫書 README"; RelativePath = "交付成果\計畫書\README.md" },
+    @{ Label = "計畫書 QA 摘要"; RelativePath = "交付成果\計畫書\QA\檢查摘要.json" },
+    @{ Label = "影片分鏡與旁白"; RelativePath = "交付成果\影片\傳家話_初審影片分鏡與旁白.md" },
+    @{ Label = "影片內容設定"; RelativePath = "交付成果\影片\video_content.json" },
+    @{ Label = "Flutter README"; RelativePath = "正式版\flutter_app\README.md" },
+    @{ Label = "Flutter 套件描述"; RelativePath = "正式版\flutter_app\pubspec.yaml" },
+    @{ Label = "Flutter 品牌元件"; RelativePath = "正式版\flutter_app\lib\widgets\brand_mark.dart" },
+    @{ Label = "Flutter Web 入口"; RelativePath = "正式版\flutter_app\web\index.html" },
+    @{ Label = "Flutter Web manifest"; RelativePath = "正式版\flutter_app\web\manifest.json" },
+    @{ Label = "App 鏡像入口"; RelativePath = "團隊進度網站\deliverables\app\index.html" },
+    @{ Label = "App 鏡像 manifest"; RelativePath = "團隊進度網站\deliverables\app\manifest.json" },
+    @{ Label = "Flutter 原始碼鏡像 README"; RelativePath = "團隊進度網站\deliverables\flutter\source\README.md" },
+    @{ Label = "Flutter 原始碼鏡像套件描述"; RelativePath = "團隊進度網站\deliverables\flutter\source\pubspec.yaml" },
+    @{ Label = "Flutter 原始碼鏡像品牌元件"; RelativePath = "團隊進度網站\deliverables\flutter\source\lib\widgets\brand_mark.dart" },
+    @{ Label = "Flutter 原始碼鏡像 Web 入口"; RelativePath = "團隊進度網站\deliverables\flutter\source\web\index.html" },
+    @{ Label = "Flutter 原始碼鏡像 Web manifest"; RelativePath = "團隊進度網站\deliverables\flutter\source\web\manifest.json" },
+    @{ Label = "影片旁白鏡像"; RelativePath = "團隊進度網站\deliverables\video\narration.md" },
+    @{ Label = "影片內容設定鏡像"; RelativePath = "團隊進度網站\deliverables\video\video_content.json" }
+)
+
+Write-Output "`n--- canonical 副標 ---"
+foreach ($artifact in $canonicalSubtitleFiles) {
+    $artifactPath = Get-ProjectPath $artifact.RelativePath
+    if (-not (Test-Path -LiteralPath $artifactPath -PathType Leaf)) {
+        Add-Failure "$($artifact.Label) 不存在，無法檢查 canonical 副標：$($artifact.RelativePath)"
+        continue
+    }
+    $artifactText = Get-Content -Raw -Encoding UTF8 -LiteralPath $artifactPath
+    Test-CanonicalSubtitle -Label $artifact.Label -Path $artifact.RelativePath -Text $artifactText
+}
+
 $canonicalPlanBaseName = "2026臺灣數創大賞_數位組創業計畫書_傳家話_正式版"
 $canonicalPlanDocx = Get-ProjectPath "交付成果\計畫書\$canonicalPlanBaseName.docx"
 $canonicalPlanPdf = Get-ProjectPath "交付成果\計畫書\$canonicalPlanBaseName.pdf"
@@ -317,6 +414,7 @@ else {
     try {
         $docxText = Get-DocxText -Path $canonicalPlanDocx
         Test-CanonicalText -Label "正式計畫書 DOCX" -Path ([IO.Path]::GetRelativePath($projectRoot, $canonicalPlanDocx)) -Text $docxText
+        Test-CanonicalSubtitle -Label "正式計畫書 DOCX" -Path ([IO.Path]::GetRelativePath($projectRoot, $canonicalPlanDocx)) -Text $docxText
     }
     catch {
         Add-Failure "正式計畫書 DOCX 無法檢查：$($_.Exception.Message)"
@@ -341,6 +439,7 @@ else {
         }
         else {
             Test-CanonicalText -Label "正式計畫書 PDF" -Path ([IO.Path]::GetRelativePath($projectRoot, $canonicalPlanPdf)) -Text $pdfText
+            Test-CanonicalSubtitle -Label "正式計畫書 PDF" -Path ([IO.Path]::GetRelativePath($projectRoot, $canonicalPlanPdf)) -Text $pdfText
         }
     }
     catch {

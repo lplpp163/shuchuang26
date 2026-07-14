@@ -33,6 +33,7 @@ void main() {
     required Future<bool> Function(Uri url) launchOfficialUrl,
     Future<void> Function(StoryIdea idea)? onCreateFromIdea,
     Set<String> completedStoryIdeaIds = const <String>{},
+    DateTime? now,
   }) async {
     await tester.pumpWidget(
       MaterialApp(
@@ -43,7 +44,7 @@ void main() {
             onOpenEpisode: (_) async {},
             onCreateFromIdea: onCreateFromIdea ?? (_) async {},
             completedStoryIdeaIds: completedStoryIdeaIds,
-            now: () => checkedAt,
+            now: () => now ?? checkedAt,
             launchOfficialUrl: launchOfficialUrl,
           ),
         ),
@@ -174,11 +175,14 @@ void main() {
     expect(find.text('即將收件'), findsOneWidget);
     expect(find.text('持續更新'), findsOneWidget);
     expect(find.text('已結束・成果參考'), findsOneWidget);
+    expect(find.textContaining('查核 2026-07-14'), findsNWidgets(3));
     expect(
-      find.text(EducationOpportunityCatalog.checkedOnLabel),
+      find.text('資格、期限與文件一律以官網最新公告為準'),
       findsNWidgets(3),
     );
-    expect(find.text('以官網為準'), findsNWidgets(3));
+    expect(find.textContaining('適用｜'), findsNWidgets(3));
+    expect(find.textContaining('報名角色｜'), findsNWidgets(3));
+    expect(find.textContaining('規則重點｜'), findsNWidgets(3));
     expect(
       find.text('官方主辦：教育部國民及學前教育署'),
       findsNWidgets(3),
@@ -195,6 +199,36 @@ void main() {
     expect(
       launchedUrl,
       Uri.parse('https://mkm.k12ea.gov.tw/news/17202605110001'),
+    );
+  });
+
+  testWidgets('stale official information is visibly blocked for recheck', (
+    tester,
+  ) async {
+    await pumpHub(
+      tester,
+      launchOfficialUrl: (_) async => true,
+      now: DateTime(2026, 8, 1),
+    );
+
+    await openOpportunitySheet(tester);
+    expect(
+      find.byKey(
+        const ValueKey('education-stale-moe-2026-multilingual-reading'),
+      ),
+      findsOneWidget,
+    );
+    expect(
+      find.byKey(
+        const ValueKey('education-stale-moe-new-resident-education-portal'),
+      ),
+      findsOneWidget,
+    );
+    expect(
+      find.byKey(
+        const ValueKey('education-stale-moe-2026-storytelling-results'),
+      ),
+      findsNothing,
     );
   });
 

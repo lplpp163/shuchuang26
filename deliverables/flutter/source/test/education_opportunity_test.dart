@@ -31,6 +31,28 @@ void main() {
       isTrue,
     );
     expect(EducationOpportunityCatalog.checkedOnLabel, contains('2026-07-14'));
+    expect(
+      EducationOpportunityCatalog.official.every(
+        (item) =>
+            item.officialRulesUrl == null ||
+            item.officialRulesUrl!.scheme == 'https',
+      ),
+      isTrue,
+    );
+  });
+
+  test('official information exposes a deterministic stale boundary', () {
+    final opportunity = EducationOpportunityCatalog.official.firstWhere(
+      (item) => item.id == 'moe-2026-multilingual-reading',
+    );
+
+    expect(opportunity.checkedOnLabel, '查核 2026-07-14');
+    expect(opportunity.reviewByLabel, '下次複查 2026-07-28');
+    expect(opportunity.needsReviewAt(DateTime(2026, 7, 28, 23, 59)), isFalse);
+    expect(opportunity.needsReviewAt(DateTime(2026, 7, 29)), isTrue);
+    expect(opportunity.eligibilityLabel, isNotEmpty);
+    expect(opportunity.applicationRoleLabel, isNotEmpty);
+    expect(opportunity.ruleSummary, isNotEmpty);
   });
 
   test('every official entry maps to a real local story extension', () {

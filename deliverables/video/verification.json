@@ -1,12 +1,12 @@
 {
   "schemaVersion": 3,
-  "generatedAt": "2026-07-14T05:55:41.5937343+08:00",
+  "generatedAt": "2026-07-14T13:59:31.9810881+08:00",
   "outputs": [
     {
       "role": "submission_1080p",
       "file": "傳家話_正式初審影片.mp4",
-      "bytes": 52551781,
-      "sha256": "F45E264DABC1D1D761FBFF5F5D01ADB063925544427230CBCC4815FD4C4496F6",
+      "bytes": 53423717,
+      "sha256": "9BBB48FBC0A6215EAA09A34B693550E7E34BF2FEF7DF0B0B817F64919CEA373B",
       "container": "mov,mp4,m4a,3gp,3g2,mj2",
       "durationSeconds": 173.9,
       "video": {
@@ -16,7 +16,7 @@
         "height": 1080,
         "pixelFormat": "yuv420p",
         "averageFrameRate": "30/1",
-        "bitrate": 2214681
+        "bitrate": 2254795
       },
       "audio": {
         "codec": "aac",
@@ -457,7 +457,7 @@
         "durationSeconds": 180.0,
         "sizeBytes": 314572800,
         "sizeRelation": "strictly_less_than",
-        "remainingBytes": 262021019
+        "remainingBytes": 261149083
       },
       "metadata": {
         "anonymous": true,
@@ -494,8 +494,8 @@
     {
       "role": "web_preview_720p",
       "file": "傳家話_網頁預覽.mp4",
-      "bytes": 21439864,
-      "sha256": "4367754719C99589F523E72F7B3BF501CD36C3E8D7A381367E040D1D22A00413",
+      "bytes": 21436942,
+      "sha256": "3F2A385C3ABDD3ADE46D005466AD8C12FD074169DA38AFF3DA54E69FB2C35B0D",
       "container": "mov,mp4,m4a,3gp,3g2,mj2",
       "durationSeconds": 173.9,
       "video": {
@@ -505,7 +505,7 @@
         "height": 720,
         "pixelFormat": "yuv420p",
         "averageFrameRate": "30/1",
-        "bitrate": 848572
+        "bitrate": 848439
       },
       "audio": {
         "codec": "aac",
@@ -946,7 +946,7 @@
         "durationSeconds": 180.0,
         "sizeBytes": 26214400,
         "sizeRelation": "strictly_less_than",
-        "remainingBytes": 4774536
+        "remainingBytes": 4777458
       },
       "metadata": {
         "anonymous": true,

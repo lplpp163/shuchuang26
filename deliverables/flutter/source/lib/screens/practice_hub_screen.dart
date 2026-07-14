@@ -602,12 +602,12 @@ class _EducationOpportunityCard extends StatelessWidget {
     unawaited(onCreateFromIdea(idea));
   }
 
-  Future<void> _openOfficialPage(BuildContext context) async {
+  Future<void> _openOfficialUri(BuildContext context, Uri url) async {
     var opened = false;
     try {
-      opened = await (launchOfficialUrl?.call(opportunity.officialUrl) ??
+      opened = await (launchOfficialUrl?.call(url) ??
           launchUrl(
-            opportunity.officialUrl,
+            url,
             mode: LaunchMode.externalApplication,
           ));
     } on Object {
@@ -633,6 +633,7 @@ class _EducationOpportunityCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final status = opportunity.statusAt(now);
+    final needsReview = opportunity.needsReviewAt(now);
     return Container(
       key: ValueKey('education-opportunity-${opportunity.id}'),
       padding: const EdgeInsets.all(16),
@@ -675,6 +676,24 @@ class _EducationOpportunityCard extends StatelessWidget {
                     fontWeight: FontWeight.w700,
                   ),
                 ),
+              if (needsReview)
+                Container(
+                  key: ValueKey('education-stale-${opportunity.id}'),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                  decoration: BoxDecoration(
+                    color: AppColors.coralSoft,
+                    borderRadius: BorderRadius.circular(99),
+                  ),
+                  child: const Text(
+                    '資料待複查',
+                    style: TextStyle(
+                      color: AppColors.coral,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w900,
+                    ),
+                  ),
+                ),
             ],
           ),
           const SizedBox(height: 10),
@@ -692,14 +711,37 @@ class _EducationOpportunityCard extends StatelessWidget {
               fontWeight: FontWeight.w800,
             ),
           ),
-          const SizedBox(height: 4),
-          const Text(
-            EducationOpportunityCatalog.checkedOnLabel,
-            style: TextStyle(color: AppColors.muted, fontSize: 12),
+          const SizedBox(height: 10),
+          _OpportunityFact(
+            icon: Icons.groups_2_outlined,
+            label: '適用',
+            value: opportunity.eligibilityLabel,
+          ),
+          const SizedBox(height: 6),
+          _OpportunityFact(
+            icon: Icons.how_to_reg_outlined,
+            label: '報名角色',
+            value: opportunity.applicationRoleLabel,
+          ),
+          const SizedBox(height: 6),
+          _OpportunityFact(
+            icon: Icons.rule_folder_outlined,
+            label: '規則重點',
+            value: opportunity.ruleSummary,
+          ),
+          const SizedBox(height: 9),
+          Text(
+            '${opportunity.checkedOnLabel}・${opportunity.reviewByLabel}',
+            key: ValueKey('education-review-date-${opportunity.id}'),
+            style: TextStyle(
+              color: needsReview ? AppColors.coral : AppColors.muted,
+              fontSize: 12,
+              fontWeight: needsReview ? FontWeight.w900 : FontWeight.w500,
+            ),
           ),
           const SizedBox(height: 2),
           const Text(
-            '以官網為準',
+            '資格、期限與文件一律以官網最新公告為準',
             style: TextStyle(
               color: AppColors.coral,
               fontSize: 12,
@@ -725,10 +767,20 @@ class _EducationOpportunityCard extends StatelessWidget {
           const SizedBox(height: 6),
           OutlinedButton.icon(
             key: ValueKey('open-official-${opportunity.id}'),
-            onPressed: () => unawaited(_openOfficialPage(context)),
+            onPressed: () =>
+                unawaited(_openOfficialUri(context, opportunity.officialUrl)),
             icon: const Icon(Icons.open_in_new_rounded),
             label: const Text('和家人開啟官方頁'),
           ),
+          if (opportunity.officialRulesUrl case final rulesUrl?) ...[
+            const SizedBox(height: 6),
+            TextButton.icon(
+              key: ValueKey('open-official-rules-${opportunity.id}'),
+              onPressed: () => unawaited(_openOfficialUri(context, rulesUrl)),
+              icon: const Icon(Icons.description_outlined),
+              label: const Text('查看官方簡章 PDF'),
+            ),
+          ],
         ],
       ),
     );
@@ -740,6 +792,42 @@ class _EducationOpportunityCard extends StatelessWidget {
         '持續更新' => AppColors.sunSoft,
         _ => AppColors.cream,
       };
+}
+
+class _OpportunityFact extends StatelessWidget {
+  const _OpportunityFact({
+    required this.icon,
+    required this.label,
+    required this.value,
+  });
+
+  final IconData icon;
+  final String label;
+  final String value;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Icon(icon, size: 18, color: AppColors.berry),
+        const SizedBox(width: 7),
+        Expanded(
+          child: Text.rich(
+            TextSpan(
+              children: [
+                TextSpan(
+                  text: '$label｜',
+                  style: const TextStyle(fontWeight: FontWeight.w900),
+                ),
+                TextSpan(text: value),
+              ],
+            ),
+          ),
+        ),
+      ],
+    );
+  }
 }
 
 class _LibraryHero extends StatelessWidget {

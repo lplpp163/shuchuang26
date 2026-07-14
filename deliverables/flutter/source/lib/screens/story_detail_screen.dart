@@ -239,19 +239,32 @@ class _StoryDetailScreenState extends State<StoryDetailScreen> {
       _transcriptFeedback = null;
     });
     try {
+      var listenStarted = false;
+      var receivedTranscript = false;
       final available = await _speech.initialize(
         onStatus: (status) {
           if (!mounted) return;
-          if (status == stt.SpeechToText.doneStatus ||
-              status == stt.SpeechToText.notListeningStatus) {
-            setState(() => _checkingSpeech = false);
+          if (listenStarted &&
+              (status == stt.SpeechToText.doneStatus ||
+                  status == stt.SpeechToText.notListeningStatus)) {
+            setState(() {
+              _checkingSpeech = false;
+              if (!receivedTranscript && _transcriptFeedback == null) {
+                _speechMessage = '系統這次沒有寫出文字。可能是瀏覽器、環境音或腔調差異，不代表你念錯。';
+              }
+            });
           }
         },
         onError: (error) {
           if (!mounted) return;
+          final code = error.errorMsg.toLowerCase();
           setState(() {
             _checkingSpeech = false;
-            _speechMessage = '語音辨識暫時無法使用，仍可保留本機節奏回饋。';
+            _speechMessage = code.contains('not-allowed') ||
+                    code.contains('not_allowed') ||
+                    code.contains('permission')
+                ? '麥克風權限尚未開啟；可以請大人調整瀏覽器權限。原本錄音與節奏提示仍會保留。'
+                : '聽寫暫時無法使用；這是裝置或瀏覽器限制，不代表你念錯。原本錄音與節奏提示仍會保留。';
           });
         },
       );
@@ -273,11 +286,13 @@ class _StoryDetailScreenState extends State<StoryDetailScreen> {
         }
       }
       localeId ??= _story.lessonContent!.languageTag;
+      listenStarted = true;
       setState(() => _checkingSpeech = true);
       await _speech.listen(
         onResult: (result) {
           if (!mounted) return;
           final transcript = result.recognizedWords;
+          if (transcript.trim().isNotEmpty) receivedTranscript = true;
           setState(() {
             _transcriptFeedback = _transcriptCoach.analyze(
               story: _story,
@@ -1483,10 +1498,10 @@ class _CoachFeedbackCard extends StatelessWidget {
     };
     final understoodLabel = switch (transcriptFeedback?.level) {
       null => '可加測',
-      TranscriptMatchLevel.understood => '整句聽懂',
-      TranscriptMatchLevel.close => '大致聽懂',
-      TranscriptMatchLevel.partial => '聽到一部分',
-      TranscriptMatchLevel.unavailable => '再說一次',
+      TranscriptMatchLevel.understood => '找到整句文字',
+      TranscriptMatchLevel.close => '找到大部分文字',
+      TranscriptMatchLevel.partial => '只收到一部分',
+      TranscriptMatchLevel.unavailable => '沒有聽寫文字',
     };
     return Container(
       padding: const EdgeInsets.all(18),
@@ -1554,7 +1569,9 @@ class _CoachFeedbackCard extends StatelessWidget {
                 child: _FeedbackMetric(
                   icon: Icons.graphic_eq_rounded,
                   label: '收音狀態',
-                  value: feedback.voiceLabel.startsWith('收音清楚') ? '清楚' : '可再調整',
+                  value: feedback.voiceLabel.startsWith('音量在建議範圍')
+                      ? '音量適中'
+                      : '可再調整',
                   color: AppColors.sky,
                 ),
               ),

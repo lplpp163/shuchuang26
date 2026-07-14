@@ -157,6 +157,7 @@ void main() {
         ConversationEpisodeCatalog.homecoming.promptById('home-door');
 
     expect(prompt.choiceForTranscript('Cháu về rồi ạ')?.id, 'came-home');
+    expect(prompt.choiceForTranscript('Chau ve roi a')?.id, 'came-home');
     expect(prompt.choiceForTranscript('我今天回來了')?.id, 'came-home');
     expect(prompt.choiceForTranscript('về'), isNull);
     expect(prompt.choiceForTranscript('cháu'), isNull);
@@ -244,7 +245,7 @@ void main() {
     );
     await tester.pumpAndSettle();
 
-    const disclosure = '聽寫可能由裝置或瀏覽器平台處理；回來的文字只用來尋找本題關鍵詞，不會替發音打分。';
+    const disclosure = '系統只幫你把聲音寫成字；你想說什麼由你確認，家裡怎麼說由家人確認。聽寫不準也不會卡住故事。';
     final microphone = find.byKey(const ValueKey('theater-microphone'));
     expect(
       tester.getRect(find.text(disclosure)).bottom,
@@ -280,7 +281,7 @@ void main() {
     );
     await tester.pumpAndSettle();
     expect(find.text('慢慢聽這一句'), findsOneWidget);
-    expect(find.textContaining('不是發音評分'), findsOneWidget);
+    expect(find.textContaining('不是發音評分'), findsWidgets);
 
     await tester.tap(find.byKey(const ValueKey('practice-slow-came-home')));
     await tester.pumpAndSettle();
@@ -646,7 +647,7 @@ void main() {
   });
 
   testWidgets(
-      'unsupported or low-confidence speech repairs naturally with visual intents',
+      'unsupported speech offers coaching and lets the child confirm the selected intent',
       (tester) async {
     tester.view.physicalSize = const Size(430, 900);
     tester.view.devicePixelRatio = 1;
@@ -676,7 +677,10 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.byKey(const ValueKey('speech-repair')), findsOneWidget);
-    expect(find.textContaining('指一張小卡'), findsOneWidget);
+    expect(find.textContaining('故事不用卡住'), findsOneWidget);
+    expect(find.byKey(const ValueKey('speech-pronunciation-help')),
+        findsOneWidget);
+    expect(find.byKey(const ValueKey('speech-self-confirm')), findsOneWidget);
     expect(find.byKey(const ValueKey('intent-came-home')), findsOneWidget);
     expect(find.byKey(const ValueKey('intent-a-bit-tired')), findsOneWidget);
     expect(find.textContaining('答錯'), findsNothing);
@@ -688,12 +692,10 @@ void main() {
     expect(firstFallbackRect.bottom, lessThanOrEqualTo(900));
 
     await _tapVisible(
-      tester,
-      find.byKey(const ValueKey('intent-a-bit-tired')),
-    );
+        tester, find.byKey(const ValueKey('speech-self-confirm')));
     await tester.pumpAndSettle();
-    expect(find.textContaining('外婆搬來軟墊'), findsWidgets);
-    expect(find.textContaining('你選了：我有一點累。'), findsOneWidget);
+    expect(find.textContaining('門打開了'), findsWidgets);
+    expect(find.textContaining('你選了：我回來了。'), findsOneWidget);
     expect(find.textContaining('系統聽成'), findsNothing);
 
     await _tapVisible(
@@ -701,12 +703,12 @@ void main() {
       find.byKey(const ValueKey('continue-theater-story')),
     );
     await tester.pumpAndSettle();
-    expect(find.text('Cháu muốn nghỉ hay uống nước?'), findsOneWidget);
-    expect(find.text('Hôm nay vui không?'), findsNothing);
+    expect(find.text('Hôm nay vui không?'), findsOneWidget);
+    expect(find.text('Cháu muốn nghỉ hay uống nước?'), findsNothing);
   });
 
   testWidgets(
-      'elder speaks first and low confidence never pretends to understand',
+      'vendor confidence is not a pronunciation gate when the selected phrase matches',
       (tester) async {
     tester.view.physicalSize = const Size(430, 900);
     tester.view.devicePixelRatio = 1;
@@ -743,11 +745,11 @@ void main() {
     await _tapVisible(tester, find.byKey(const ValueKey('theater-microphone')));
     await tester.pumpAndSettle();
 
-    expect(find.byKey(const ValueKey('speech-repair')), findsOneWidget);
-    expect(find.textContaining('還不太確定'), findsOneWidget);
-    expect(find.byKey(const ValueKey('intent-came-home')), findsOneWidget);
-    expect(find.text('Bà nhớ cháu quá!'), findsNothing);
-    expect(find.textContaining('門打開了'), findsNothing);
+    expect(find.byKey(const ValueKey('speech-repair')), findsNothing);
+    expect(find.textContaining('系統聽成：Cháu về rồi ạ'), findsOneWidget);
+    expect(find.textContaining('故事接到「我回來了。」'), findsOneWidget);
+    expect(find.text('Bà nhớ cháu quá!'), findsOneWidget);
+    expect(find.textContaining('發音正確'), findsNothing);
   });
 
   testWidgets('common words and multiple matches both ask the child to clarify',
@@ -780,12 +782,12 @@ void main() {
     await _tapVisible(tester, find.byKey(const ValueKey('prepare-came-home')));
     await _tapVisible(tester, find.byKey(const ValueKey('theater-microphone')));
     await tester.pumpAndSettle();
-    expect(find.textContaining('找不到這一題的選項關鍵詞'), findsOneWidget);
+    expect(find.textContaining('沒找到完整關鍵詞'), findsOneWidget);
     expect(find.text('Bà nhớ cháu quá!'), findsNothing);
 
     await _tapVisible(tester, find.byKey(const ValueKey('theater-microphone')));
     await tester.pumpAndSettle();
-    expect(find.textContaining('不只一張小卡的關鍵詞'), findsOneWidget);
+    expect(find.textContaining('像有兩個意思'), findsOneWidget);
     expect(find.byKey(const ValueKey('intent-came-home')), findsOneWidget);
     expect(find.byKey(const ValueKey('intent-a-bit-tired')), findsOneWidget);
     expect(find.text('Bà nhớ cháu quá!'), findsNothing);

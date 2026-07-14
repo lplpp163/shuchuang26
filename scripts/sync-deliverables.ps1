@@ -44,15 +44,20 @@ function Assert-NoLegacyTopic {
     # The widget test intentionally proves that the former title is absent.
     # Remove only that exact negative assertion before running the source scan;
     # a visible copy change or any other occurrence must still fail the sync.
-    $negativeBrandAssertion = "expect(find.text('我們家怎麼說'), findsNothing);"
+    $negativeBrandAssertions = @(
+        "expect(find.text('我們家怎麼說'), findsNothing);",
+        "expect(find.text('聽家人說，換你回一句'), findsNothing);"
+    )
     if ($Source.EndsWith("\正式版\flutter_app\test\widget_test.dart", [StringComparison]::OrdinalIgnoreCase)) {
-        if ($SourceText.IndexOf($negativeBrandAssertion, [StringComparison]::Ordinal) -lt 0) {
-            throw "品牌拒絕回歸測試缺失或已改形：$Source"
+        foreach ($negativeBrandAssertion in $negativeBrandAssertions) {
+            if ($SourceText.IndexOf($negativeBrandAssertion, [StringComparison]::Ordinal) -lt 0) {
+                throw "品牌拒絕回歸測試缺失或已改形：$Source"
+            }
+            $SourceText = $SourceText.Replace($negativeBrandAssertion, "")
         }
-        $SourceText = $SourceText.Replace($negativeBrandAssertion, "")
     }
 
-    if ($SourceText -match "我們家怎麼說|島語通|DaoTalk|WorkBridge|移工職場文件|合成薪資單|家語貼|HomeTongue Tags|14項|十四項|三種Android|Android競賽包") {
+    if ($SourceText -match "聽家人說，換你回一句|我們家怎麼說|島語通|DaoTalk|WorkBridge|移工職場文件|合成薪資單|家語貼|HomeTongue Tags|14項|十四項|三種Android|Android競賽包") {
         throw "來源仍包含前一個題目的內容，拒絕同步：$Source"
     }
 }
@@ -186,6 +191,11 @@ $deliverables = @(
         Destination = "deliverables\pilot\qa-summary.json"
     },
     @{
+        Label = "『傳家話』匿名試辦彙整台"
+        Source = "交付成果\導入\傳家話_匿名試辦彙整台.html"
+        Destination = "deliverables\pilot\evidence-workbench.html"
+    },
+    @{
         Label = "『傳家話』越南語 119 句母語審閱工具"
         Source = "交付成果\語言審閱\傳家話_越南語119句母語審閱工具.html"
         Destination = "deliverables\review\index.html"
@@ -272,6 +282,7 @@ $flutterToolFiles = @(
     "generate_bundled_audio.ps1",
     "generate_native_review_packet.py",
     "native_review.spec.js",
+    "pilot_workbench.spec.js",
     "playwright.config.js",
     "quality_gate.ps1",
     "visual_audit.spec.js",

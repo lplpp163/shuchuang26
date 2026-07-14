@@ -28,10 +28,19 @@ void main() {
 
     expect(result.level, TranscriptMatchLevel.understood);
     expect(result.matchPercent, 100);
-    expect(result.headline, '系統聽寫到完整短句');
+    expect(result.headline, '系統寫下的文字接近整句');
     expect(result.headline, isNot(contains('AI')));
     expect(result.headline, isNot(contains('聽懂')));
     expect(result.headline, isNot(contains('發音正確')));
+
+    final accentless = coach.analyze(
+      story: story,
+      transcript: 'Day la nuoc mam',
+      recognitionConfidence: 0,
+    );
+    expect(accentless.level, TranscriptMatchLevel.understood);
+    expect(accentless.matchPercent, 100);
+    expect(accentless.nextTip, contains('聲調'));
   });
 
   test('partial transcript points to the selected missing chunk', () {
@@ -42,7 +51,8 @@ void main() {
     );
 
     expect(result.level, TranscriptMatchLevel.partial);
-    expect(result.headline, '系統只聽寫到一部分');
+    expect(result.headline, '系統只寫下一部分');
     expect(result.nextTip, contains('nước mắm'));
+    expect(result.nextTip, contains('不代表念錯'));
   });
 }

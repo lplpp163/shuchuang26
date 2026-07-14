@@ -40,8 +40,8 @@ class TranscriptCoach {
         level: TranscriptMatchLevel.unavailable,
         matchPercent: 0,
         transcript: transcript.trim(),
-        headline: '這次還沒有辨識到文字',
-        nextTip: '靠近麥克風，聽完提示音後再說一次短句。',
+        headline: '系統這次沒有寫出文字',
+        nextTip: '可能是瀏覽器、環境音或腔調差異，不代表你念錯。先聽一小段，再決定要不要重試。',
         recognitionConfidence: recognitionConfidence,
       );
     }
@@ -51,9 +51,9 @@ class TranscriptCoach {
     final percent = longest == 0
         ? 0
         : ((1 - distance / longest) * 100).round().clamp(0, 100);
-    final level = percent >= 90
+    final level = percent >= 80
         ? TranscriptMatchLevel.understood
-        : percent >= 68
+        : percent >= 50
             ? TranscriptMatchLevel.close
             : TranscriptMatchLevel.partial;
 
@@ -69,20 +69,20 @@ class TranscriptCoach {
 
     final (headline, tip) = switch (level) {
       TranscriptMatchLevel.understood => (
-          '系統聽寫到完整短句',
-          '很接近目標；下一次保留同樣節奏，再請家人確認家庭腔調。',
+          '系統寫下的文字接近整句',
+          '這只表示聽寫有找到文字；聲調與家庭腔調仍請家人親耳確認。',
         ),
       TranscriptMatchLevel.close => (
-          '系統聽寫到大部分內容',
+          '系統寫下的文字大致相近',
           practiceTarget == null
-              ? '再聽一次示範，把兩段連得更自然。'
-              : '下一次先單獨練「$practiceTarget」，再回到整句。',
+              ? '再聽一次示範，把兩段分開跟讀後再連起來。'
+              : '先聽「$practiceTarget」一次、跟著說一次，再回到整句。',
         ),
       TranscriptMatchLevel.partial => (
-          '系統只聽寫到一部分',
+          '系統只寫下一部分',
           practiceTarget == null
-              ? '放慢一點，每一小段之間停半拍再試一次。'
-              : '先點播放聽「$practiceTarget」，跟一次後再測整句。',
+              ? '聽寫不完整不代表念錯；放慢一點，每一小段之間停半拍。'
+              : '聽寫不完整不代表念錯；先點播放聽「$practiceTarget」，跟一次後再試。',
         ),
       TranscriptMatchLevel.unavailable => throw StateError('handled above'),
     };
@@ -97,11 +97,26 @@ class TranscriptCoach {
     );
   }
 
-  String _normalize(String value) => value
-      .toLowerCase()
-      .replaceAll(RegExp(r"[^\p{L}\p{N}\s]", unicode: true), ' ')
-      .replaceAll(RegExp(r'\s+'), ' ')
-      .trim();
+  String _normalize(String value) {
+    var normalized = value
+        .toLowerCase()
+        .replaceAll(RegExp(r"[^\p{L}\p{N}\s]", unicode: true), ' ')
+        .replaceAll(RegExp(r'\s+'), ' ')
+        .trim();
+    const vietnameseFoldGroups = <String, String>{
+      'a': 'àáảãạăằắẳẵặâầấẩẫậ',
+      'e': 'èéẻẽẹêềếểễệ',
+      'i': 'ìíỉĩị',
+      'o': 'òóỏõọôồốổỗộơờớởỡợ',
+      'u': 'ùúủũụưừứửữự',
+      'y': 'ỳýỷỹỵ',
+      'd': 'đ',
+    };
+    for (final entry in vietnameseFoldGroups.entries) {
+      normalized = normalized.replaceAll(RegExp('[${entry.value}]'), entry.key);
+    }
+    return normalized;
+  }
 
   int _levenshtein(String source, String target) {
     if (source.isEmpty) return target.length;

@@ -46,11 +46,6 @@ class _PrivacyGateState extends State<PrivacyGate> {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   const BrandMark(),
-                  const SizedBox(height: 8),
-                  const Text(
-                    '聽家人說，換你回一句',
-                    style: TextStyle(color: AppColors.muted),
-                  ),
                   const SizedBox(height: 20),
                   _PreviewInvitation(
                     onTap: () => Navigator.of(context).push<void>(

@@ -7,6 +7,13 @@ import '../models/conversation_episode.dart';
 import '../services/local_media_service.dart';
 import '../widgets/brand_mark.dart';
 
+enum _PreviewVoice {
+  openingElder,
+  childChoice,
+  elderReply,
+  relayFamily,
+}
+
 /// A read-only first impression of the product's core interaction.
 ///
 /// It deliberately has no store, recorder, speech recognizer, family identity,
@@ -27,6 +34,11 @@ class _TheaterPreviewScreenState extends State<TheaterPreviewScreen> {
   ConversationChoice? _choice;
   bool _showRelay = false;
   bool _playing = false;
+  bool _relaySequenceRunning = false;
+  int _relayStep = 0;
+  _PreviewVoice? _playingVoice;
+  final Set<_PreviewVoice> _heardVoices = <_PreviewVoice>{};
+  PreviewStorySeed? _selectedStorySeed;
   String? _message;
 
   @override
@@ -50,10 +62,14 @@ class _TheaterPreviewScreenState extends State<TheaterPreviewScreen> {
     });
   }
 
-  Future<void> _play(ConversationLine line) async {
+  Future<void> _play(
+    ConversationLine line, {
+    required _PreviewVoice voice,
+  }) async {
     if (_playing) return;
     setState(() {
       _playing = true;
+      _playingVoice = voice;
       _message = null;
     });
     try {
@@ -66,10 +82,16 @@ class _TheaterPreviewScreenState extends State<TheaterPreviewScreen> {
           languageTag: _episode.languageTag,
         );
       }
+      if (mounted) setState(() => _heardVoices.add(voice));
     } on Object {
       if (mounted) setState(() => _message = '這台裝置暫時播不出聲音；文字與故事分支仍可繼續。');
     } finally {
-      if (mounted) setState(() => _playing = false);
+      if (mounted) {
+        setState(() {
+          _playing = false;
+          _playingVoice = null;
+        });
+      }
     }
   }
 
@@ -78,28 +100,60 @@ class _TheaterPreviewScreenState extends State<TheaterPreviewScreen> {
     setState(() {
       _choice = choice;
       _showRelay = false;
+      _relayStep = 0;
+      _selectedStorySeed = null;
     });
     _scrollToActStart();
-    unawaited(_play(choice.line));
+    unawaited(_play(choice.line, voice: _PreviewVoice.childChoice));
   }
 
   void _openRelayPreview() {
-    if (_playing || _choice == null) return;
-    setState(() => _showRelay = true);
+    if (_playing || _relaySequenceRunning || _choice == null) return;
+    setState(() {
+      _showRelay = true;
+      _relayStep = 0;
+      _selectedStorySeed = null;
+    });
     _scrollToActStart();
   }
 
+  Future<void> _playRelaySequence(RelayPreviewData relay) async {
+    if (_playing || _relaySequenceRunning) return;
+    setState(() {
+      _relaySequenceRunning = true;
+      _relayStep = 1;
+      _message = null;
+    });
+    await Future<void>.delayed(const Duration(milliseconds: 450));
+    if (!mounted) return;
+    setState(() => _relayStep = 2);
+    await _play(relay.familyLine, voice: _PreviewVoice.relayFamily);
+    if (!mounted) return;
+    await Future<void>.delayed(const Duration(milliseconds: 350));
+    if (!mounted) return;
+    setState(() {
+      _relayStep = 3;
+      _relaySequenceRunning = false;
+    });
+  }
+
   void _returnToOutcome() {
-    if (_playing) return;
-    setState(() => _showRelay = false);
+    if (_playing || _relaySequenceRunning) return;
+    setState(() {
+      _showRelay = false;
+      _relayStep = 0;
+      _selectedStorySeed = null;
+    });
     _scrollToActStart();
   }
 
   void _returnToOpening() {
-    if (_playing) return;
+    if (_playing || _relaySequenceRunning) return;
     setState(() {
       _choice = null;
       _showRelay = false;
+      _relayStep = 0;
+      _selectedStorySeed = null;
     });
     _scrollToActStart();
   }
@@ -117,7 +171,8 @@ class _TheaterPreviewScreenState extends State<TheaterPreviewScreen> {
         : RelayPreviewData(
             childIntentZh: choice.line.translationZh,
             familyLine: choice.line,
-            childCompletionZh: '正式使用時，完成看、聽、排、答後，可用錄音或文字留下這一棒。',
+            childResultZh: choice.sceneAfter.headlineZh,
+            childCompletionZh: '正式使用時，完成看、聽、排、答後，孩子會把家語變成故事裡真正發生的結果。',
           );
     return Scaffold(
       appBar: AppBar(title: const BrandMark(compact: true)),
@@ -132,52 +187,72 @@ class _TheaterPreviewScreenState extends State<TheaterPreviewScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  Wrap(
+                  const Wrap(
                     spacing: 8,
                     runSpacing: 8,
                     children: [
-                      const _PreviewPill(
+                      _PreviewPill(
                         icon: Icons.visibility_outlined,
                         label: '約 30 秒試演',
                       ),
-                      const _PreviewPill(
-                        icon: Icons.no_accounts_outlined,
-                        label: '不錄音・不儲存',
-                      ),
-                      const _PreviewPill(
-                        icon: Icons.science_outlined,
-                        label: '固定合成・零家庭資料',
+                      _PreviewPill(
+                        icon: Icons.mic_off_outlined,
+                        label: '這次不錄音',
                       ),
                       _PreviewPill(
-                        icon: Icons.theater_comedy_outlined,
-                        label: '$step / 3',
+                        icon: Icons.folder_off_outlined,
+                        label: '不存家庭資料',
                       ),
                     ],
                   ),
+                  const SizedBox(height: 12),
+                  _PreviewActProgress(step: step),
                   const SizedBox(height: 14),
                   if (choice == null)
                     _OpeningPreview(
                       key: const ValueKey('preview-opening'),
                       episode: _episode,
                       prompt: _prompt,
-                      playing: _playing,
-                      onListen: () => unawaited(_play(_prompt.elderLine)),
+                      playingVoice: _playingVoice,
+                      heard: _heardVoices.contains(_PreviewVoice.openingElder),
+                      onListen: () => unawaited(
+                        _play(
+                          _prompt.elderLine,
+                          voice: _PreviewVoice.openingElder,
+                        ),
+                      ),
                       onChoose: _choose,
                     )
                   else if (!_showRelay)
                     _OutcomePreview(
                       key: ValueKey('preview-outcome-${choice.id}'),
                       choice: choice,
-                      playing: _playing,
-                      onListen: () => unawaited(_play(choice.elderReply)),
+                      playingVoice: _playingVoice,
+                      heardChildLine:
+                          _heardVoices.contains(_PreviewVoice.childChoice),
+                      heardElderReply:
+                          _heardVoices.contains(_PreviewVoice.elderReply),
+                      onListen: () => unawaited(
+                        _play(
+                          choice.elderReply,
+                          voice: _PreviewVoice.elderReply,
+                        ),
+                      ),
                       onTryOther: _returnToOpening,
                     )
                   else
                     _RelayPreview(
                       key: const ValueKey('preview-relay'),
                       data: relay!,
-                      playing: _playing,
-                      onListen: () => unawaited(_play(relay.familyLine)),
+                      activeStep: _relayStep,
+                      sequenceRunning: _relaySequenceRunning,
+                      heardFamilyLine:
+                          _heardVoices.contains(_PreviewVoice.relayFamily),
+                      selectedStorySeed: _selectedStorySeed,
+                      onSelectStorySeed: (seed) =>
+                          setState(() => _selectedStorySeed = seed),
+                      onPlaySequence: () =>
+                          unawaited(_playRelaySequence(relay)),
                     ),
                   if (_message != null) ...[
                     const SizedBox(height: 12),
@@ -231,14 +306,18 @@ class _TheaterPreviewScreenState extends State<TheaterPreviewScreen> {
                   else ...[
                     OutlinedButton.icon(
                       key: const ValueKey('preview-replay-outcome'),
-                      onPressed: _playing ? null : _returnToOutcome,
+                      onPressed: _playing || _relaySequenceRunning
+                          ? null
+                          : _returnToOutcome,
                       icon: const Icon(Icons.alt_route_rounded),
                       label: const Text('再看一次舞台怎麼變'),
                     ),
                     const SizedBox(height: 10),
                     FilledButton.icon(
                       key: const ValueKey('finish-theater-preview'),
-                      onPressed: _playing ? null : () => Navigator.pop(context),
+                      onPressed: _playing || _relaySequenceRunning
+                          ? null
+                          : () => Navigator.pop(context),
                       icon: const Icon(Icons.family_restroom_rounded),
                       label: const Text('同意後建立我們家的三棒故事'),
                     ),
@@ -262,25 +341,83 @@ class RelayPreviewData {
   const RelayPreviewData({
     required this.childIntentZh,
     required this.familyLine,
+    required this.childResultZh,
     required this.childCompletionZh,
   });
 
   final String childIntentZh;
   final ConversationLine familyLine;
+  final String childResultZh;
   final String childCompletionZh;
 }
+
+@immutable
+class PreviewStorySeed {
+  const PreviewStorySeed({
+    required this.id,
+    required this.label,
+    required this.intentZh,
+    required this.icon,
+  });
+
+  final String id;
+  final String label;
+  final String intentZh;
+  final IconData icon;
+}
+
+const _previewStorySeeds = <PreviewStorySeed>[
+  PreviewStorySeed(
+    id: 'family-sharing',
+    label: '和家人分享',
+    intentZh: '我今天最想告訴你一件事。',
+    icon: Icons.forum_rounded,
+  ),
+  PreviewStorySeed(
+    id: 'club',
+    label: '社團',
+    intentZh: '我今天第一次參加社團。',
+    icon: Icons.groups_rounded,
+  ),
+  PreviewStorySeed(
+    id: 'lunch',
+    label: '午餐',
+    intentZh: '今天午餐有一道菜我很喜歡。',
+    icon: Icons.lunch_dining_rounded,
+  ),
+  PreviewStorySeed(
+    id: 'class',
+    label: '上課',
+    intentZh: '今天上課有一件事我學會了。',
+    icon: Icons.school_rounded,
+  ),
+  PreviewStorySeed(
+    id: 'friendship',
+    label: '朋友關係',
+    intentZh: '我想和朋友把事情說開，再一起重來。',
+    icon: Icons.diversity_1_rounded,
+  ),
+];
 
 class _RelayPreview extends StatelessWidget {
   const _RelayPreview({
     super.key,
     required this.data,
-    required this.playing,
-    required this.onListen,
+    required this.activeStep,
+    required this.sequenceRunning,
+    required this.heardFamilyLine,
+    required this.selectedStorySeed,
+    required this.onSelectStorySeed,
+    required this.onPlaySequence,
   });
 
   final RelayPreviewData data;
-  final bool playing;
-  final VoidCallback onListen;
+  final int activeStep;
+  final bool sequenceRunning;
+  final bool heardFamilyLine;
+  final PreviewStorySeed? selectedStorySeed;
+  final ValueChanged<PreviewStorySeed> onSelectStorySeed;
+  final VoidCallback onPlaySequence;
 
   @override
   Widget build(BuildContext context) {
@@ -312,6 +449,8 @@ class _RelayPreview extends StatelessWidget {
             label: '孩子帶回',
             primary: data.childIntentZh,
             detail: '孩子先決定今天真正想說的事。',
+            active: activeStep == 1,
+            completed: activeStep > 1,
           ),
           const _PreviewRelayConnector(),
           _PreviewRelayBaton(
@@ -322,6 +461,8 @@ class _RelayPreview extends StatelessWidget {
             label: '家人傳下',
             primary: data.familyLine.targetText,
             detail: '正式使用時，由家人確認真正說法或錄下原音。',
+            active: activeStep == 2,
+            completed: activeStep > 2,
           ),
           const _PreviewRelayConnector(),
           _PreviewRelayBaton(
@@ -330,19 +471,43 @@ class _RelayPreview extends StatelessWidget {
             icon: Icons.record_voice_over_rounded,
             color: AppColors.jade,
             label: '孩子接住',
-            primary: data.familyLine.targetText,
+            primary: data.childResultZh,
             detail: data.childCompletionZh,
+            active: activeStep == 3,
+            completed: activeStep == 3,
           ),
           const SizedBox(height: 13),
           FilledButton.icon(
             key: const ValueKey('preview-relay-listen'),
-            onPressed: playing ? null : onListen,
+            onPressed: sequenceRunning ? null : onPlaySequence,
             style: FilledButton.styleFrom(backgroundColor: AppColors.berry),
             icon: Icon(
-              playing ? Icons.graphic_eq_rounded : Icons.volume_up_rounded,
+              sequenceRunning
+                  ? Icons.graphic_eq_rounded
+                  : activeStep == 3
+                      ? Icons.replay_rounded
+                      : Icons.play_arrow_rounded,
             ),
-            label: Text(playing ? '正在播放…' : '聽合成的家語示範'),
+            label: Text(
+              sequenceRunning
+                  ? '正在傳第 $activeStep 棒…'
+                  : activeStep == 3
+                      ? '重播三棒接力'
+                      : '播放三棒接力',
+            ),
           ),
+          if (heardFamilyLine && activeStep == 3) ...[
+            const SizedBox(height: 7),
+            const Text(
+              '三棒接力完成 ✓',
+              key: ValueKey('preview-relay-complete'),
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: AppColors.jade,
+                fontWeight: FontWeight.w900,
+              ),
+            ),
+          ],
           const SizedBox(height: 10),
           Container(
             key: const ValueKey('preview-relay-disclosure'),
@@ -367,6 +532,11 @@ class _RelayPreview extends StatelessWidget {
               ],
             ),
           ),
+          const SizedBox(height: 14),
+          _PreviewStorySeedPicker(
+            selected: selectedStorySeed,
+            onSelected: onSelectStorySeed,
+          ),
         ],
       ),
     );
@@ -382,6 +552,8 @@ class _PreviewRelayBaton extends StatelessWidget {
     required this.label,
     required this.primary,
     required this.detail,
+    required this.active,
+    required this.completed,
   });
 
   final int number;
@@ -390,58 +562,194 @@ class _PreviewRelayBaton extends StatelessWidget {
   final String label;
   final String primary;
   final String detail;
+  final bool active;
+  final bool completed;
+
+  @override
+  Widget build(BuildContext context) {
+    return Semantics(
+      label:
+          '$label：$primary${active ? '，正在接力' : completed ? '，已完成' : '，等待接力'}',
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 260),
+        padding: const EdgeInsets.all(12),
+        decoration: BoxDecoration(
+          color: color.withValues(
+              alpha: active
+                  ? .18
+                  : completed
+                      ? .11
+                      : .05),
+          borderRadius: BorderRadius.circular(20),
+          border: Border.all(
+            color: color.withValues(
+                alpha: active
+                    ? 1
+                    : completed
+                        ? .72
+                        : .35),
+            width: active ? 2.5 : 1.5,
+          ),
+          boxShadow: active
+              ? [
+                  BoxShadow(
+                    color: color.withValues(alpha: .22),
+                    blurRadius: 16,
+                    offset: const Offset(0, 5),
+                  ),
+                ]
+              : null,
+        ),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            CircleAvatar(
+              radius: 17,
+              backgroundColor:
+                  active || completed ? color : color.withValues(alpha: .45),
+              foregroundColor: Colors.white,
+              child: completed && !active
+                  ? const Icon(Icons.check_rounded, size: 19)
+                  : Text(
+                      '$number',
+                      style: const TextStyle(fontWeight: FontWeight.w900),
+                    ),
+            ),
+            const SizedBox(width: 10),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Icon(icon, color: color, size: 18),
+                      const SizedBox(width: 5),
+                      Text(
+                        label,
+                        style: TextStyle(
+                          color: color,
+                          fontWeight: FontWeight.w900,
+                        ),
+                      ),
+                      if (active) ...[
+                        const SizedBox(width: 6),
+                        const Text(
+                          '接力中',
+                          style: TextStyle(
+                            color: AppColors.ink,
+                            fontSize: 11,
+                            fontWeight: FontWeight.w900,
+                          ),
+                        ),
+                      ],
+                    ],
+                  ),
+                  const SizedBox(height: 3),
+                  Text(
+                    primary,
+                    style: const TextStyle(
+                      fontSize: 17,
+                      fontWeight: FontWeight.w900,
+                    ),
+                  ),
+                  const SizedBox(height: 2),
+                  Text(
+                    detail,
+                    style: const TextStyle(
+                      color: AppColors.muted,
+                      fontSize: 11,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _PreviewStorySeedPicker extends StatelessWidget {
+  const _PreviewStorySeedPicker({
+    required this.selected,
+    required this.onSelected,
+  });
+
+  final PreviewStorySeed? selected;
+  final ValueChanged<PreviewStorySeed> onSelected;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(12),
+      key: const ValueKey('preview-life-seeds'),
+      padding: const EdgeInsets.all(14),
       decoration: BoxDecoration(
-        color: color.withValues(alpha: .09),
-        borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: color.withValues(alpha: .72), width: 1.5),
+        color: AppColors.skySoft,
+        borderRadius: BorderRadius.circular(22),
+        border: Border.all(color: AppColors.border),
       ),
-      child: Row(
+      child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          CircleAvatar(
-            radius: 17,
-            backgroundColor: color,
-            foregroundColor: Colors.white,
-            child: Text(
-              '$number',
-              style: const TextStyle(fontWeight: FontWeight.w900),
-            ),
+          const Row(
+            children: [
+              Icon(Icons.backpack_rounded, color: AppColors.berry),
+              SizedBox(width: 8),
+              Expanded(
+                child: Text(
+                  '今天還能把什麼帶回家？',
+                  style: TextStyle(fontSize: 17, fontWeight: FontWeight.w900),
+                ),
+              ),
+            ],
           ),
-          const SizedBox(width: 10),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
+          const SizedBox(height: 5),
+          const Text(
+            '先選中文心意；同意後才交給家人確認家語，系統不會自己猜翻譯。',
+            style: TextStyle(color: AppColors.muted, fontSize: 12, height: 1.4),
+          ),
+          const SizedBox(height: 10),
+          Wrap(
+            spacing: 7,
+            runSpacing: 7,
+            children: [
+              for (final seed in _previewStorySeeds)
+                ChoiceChip(
+                  key: ValueKey('preview-life-seed-${seed.id}'),
+                  selected: selected?.id == seed.id,
+                  onSelected: (_) => onSelected(seed),
+                  avatar: Icon(seed.icon, size: 17),
+                  label: Text(seed.label),
+                ),
+            ],
+          ),
+          if (selected case final seed?) ...[
+            const SizedBox(height: 11),
+            Container(
+              key: const ValueKey('preview-life-seed-message'),
+              width: double.infinity,
+              padding: const EdgeInsets.all(12),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(17),
+              ),
+              child: Text.rich(
+                TextSpan(
                   children: [
-                    Icon(icon, color: color, size: 18),
-                    const SizedBox(width: 5),
-                    Text(
-                      label,
-                      style:
-                          TextStyle(color: color, fontWeight: FontWeight.w900),
+                    TextSpan(
+                      text: '孩子想說｜${seed.intentZh}\n',
+                      style: const TextStyle(fontWeight: FontWeight.w900),
+                    ),
+                    const TextSpan(
+                      text: '這裡只試選題，不建立故事；真正家語由家人同意後確認。',
+                      style: TextStyle(color: AppColors.muted, fontSize: 12),
                     ),
                   ],
                 ),
-                const SizedBox(height: 3),
-                Text(
-                  primary,
-                  style: const TextStyle(
-                      fontSize: 17, fontWeight: FontWeight.w900),
-                ),
-                const SizedBox(height: 2),
-                Text(
-                  detail,
-                  style: const TextStyle(color: AppColors.muted, fontSize: 11),
-                ),
-              ],
+              ),
             ),
-          ),
+          ],
         ],
       ),
     );
@@ -464,19 +772,101 @@ class _PreviewRelayConnector extends StatelessWidget {
       );
 }
 
+class _PreviewActProgress extends StatelessWidget {
+  const _PreviewActProgress({required this.step});
+
+  final int step;
+
+  @override
+  Widget build(BuildContext context) {
+    const labels = <String>['選一句', '看故事變', '傳回家'];
+    return Semantics(
+      key: ValueKey('preview-act-progress-step-$step'),
+      container: true,
+      label: '第 $step 幕，共三幕：${labels[step - 1]}',
+      child: Container(
+        key: const ValueKey('preview-act-progress'),
+        padding: const EdgeInsets.all(10),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(20),
+          border: Border.all(color: AppColors.border),
+        ),
+        child: Wrap(
+          spacing: 7,
+          runSpacing: 7,
+          alignment: WrapAlignment.center,
+          children: [
+            for (var index = 0; index < labels.length; index += 1)
+              AnimatedContainer(
+                key: ValueKey('preview-act-${index + 1}'),
+                duration: const Duration(milliseconds: 220),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                decoration: BoxDecoration(
+                  color: step == index + 1
+                      ? AppColors.jade
+                      : step > index + 1
+                          ? AppColors.jadeSoft
+                          : AppColors.cream,
+                  borderRadius: BorderRadius.circular(99),
+                  border: Border.all(
+                    color:
+                        step >= index + 1 ? AppColors.jade : AppColors.border,
+                  ),
+                ),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    if (step > index + 1)
+                      const Icon(
+                        Icons.check_rounded,
+                        size: 16,
+                        color: AppColors.jade,
+                      )
+                    else
+                      Text(
+                        '${index + 1}',
+                        style: TextStyle(
+                          color: step == index + 1
+                              ? Colors.white
+                              : AppColors.muted,
+                          fontWeight: FontWeight.w900,
+                        ),
+                      ),
+                    const SizedBox(width: 5),
+                    Text(
+                      labels[index],
+                      style: TextStyle(
+                        color: step == index + 1 ? Colors.white : AppColors.ink,
+                        fontWeight: FontWeight.w900,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
 class _OpeningPreview extends StatelessWidget {
   const _OpeningPreview({
     super.key,
     required this.episode,
     required this.prompt,
-    required this.playing,
+    required this.playingVoice,
+    required this.heard,
     required this.onListen,
     required this.onChoose,
   });
 
   final ConversationEpisode episode;
   final ConversationPrompt prompt;
-  final bool playing;
+  final _PreviewVoice? playingVoice;
+  final bool heard;
   final VoidCallback onListen;
   final ValueChanged<ConversationChoice> onChoose;
 
@@ -490,7 +880,9 @@ class _OpeningPreview extends StatelessWidget {
           headline: '外婆先說',
           targetText: prompt.elderLine.targetText,
           translation: prompt.elderLine.translationZh,
-          playing: playing,
+          playingVoice: playingVoice,
+          voice: _PreviewVoice.openingElder,
+          heard: heard,
           onListen: onListen,
         ),
         const SizedBox(height: 16),
@@ -504,7 +896,7 @@ class _OpeningPreview extends StatelessWidget {
         for (final choice in prompt.choices.take(2)) ...[
           _PreviewChoiceCard(
             choice: choice,
-            onTap: playing ? null : () => onChoose(choice),
+            onTap: playingVoice != null ? null : () => onChoose(choice),
           ),
           const SizedBox(height: 10),
         ],
@@ -517,13 +909,17 @@ class _OutcomePreview extends StatelessWidget {
   const _OutcomePreview({
     super.key,
     required this.choice,
-    required this.playing,
+    required this.playingVoice,
+    required this.heardChildLine,
+    required this.heardElderReply,
     required this.onListen,
     required this.onTryOther,
   });
 
   final ConversationChoice choice;
-  final bool playing;
+  final _PreviewVoice? playingVoice;
+  final bool heardChildLine;
+  final bool heardElderReply;
   final VoidCallback onListen;
   final VoidCallback onTryOther;
 
@@ -534,7 +930,9 @@ class _OutcomePreview extends StatelessWidget {
       children: [
         _PreviewOutcomeStage(
           choice: choice,
-          playing: playing,
+          playingVoice: playingVoice,
+          heardChildLine: heardChildLine,
+          heardElderReply: heardElderReply,
           onListen: onListen,
         ),
         const SizedBox(height: 12),
@@ -560,7 +958,8 @@ class _OutcomePreview extends StatelessWidget {
         ),
         const SizedBox(height: 12),
         OutlinedButton.icon(
-          onPressed: playing ? null : onTryOther,
+          key: const ValueKey('preview-try-other'),
+          onPressed: playingVoice != null ? null : onTryOther,
           icon: const Icon(Icons.alt_route_rounded),
           label: const Text('換另一句，看看不同結果'),
         ),
@@ -572,19 +971,20 @@ class _OutcomePreview extends StatelessWidget {
 class _PreviewOutcomeStage extends StatelessWidget {
   const _PreviewOutcomeStage({
     required this.choice,
-    required this.playing,
+    required this.playingVoice,
+    required this.heardChildLine,
+    required this.heardElderReply,
     required this.onListen,
   });
 
   final ConversationChoice choice;
-  final bool playing;
+  final _PreviewVoice? playingVoice;
+  final bool heardChildLine;
+  final bool heardElderReply;
   final VoidCallback onListen;
 
   @override
   Widget build(BuildContext context) {
-    final accent = choice.sceneAfter.id == 'home-cushion'
-        ? AppColors.berry
-        : AppColors.jade;
     final textScale = MediaQuery.textScalerOf(context).scale(1);
     final responsiveHeight = 440.0 + ((textScale - 1).clamp(0.0, 1.0) * 180.0);
     return Container(
@@ -593,14 +993,7 @@ class _PreviewOutcomeStage extends StatelessWidget {
       clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(32),
-        gradient: LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-          colors: [
-            Color.lerp(accent, Colors.white, .10)!,
-            Color.lerp(accent, AppColors.ink, .48)!,
-          ],
-        ),
+        color: AppColors.ink,
         boxShadow: const [
           BoxShadow(
             color: Color(0x1A253331),
@@ -612,42 +1005,24 @@ class _PreviewOutcomeStage extends StatelessWidget {
       child: Stack(
         fit: StackFit.expand,
         children: [
-          Positioned(
-            left: -38,
-            top: -64,
-            child: Container(
-              width: 190,
-              height: 190,
-              decoration: BoxDecoration(
-                color: Colors.white.withValues(alpha: .11),
-                shape: BoxShape.circle,
+          Semantics(
+            label: _previewOutcomeSemanticLabel(choice),
+            image: true,
+            child: Image.asset(
+              _previewOutcomeAsset(choice),
+              key: ValueKey(
+                'preview-outcome-image-${choice.sceneAfter.id}',
               ),
+              fit: BoxFit.cover,
             ),
           ),
-          Positioned(
-            right: -20,
-            top: 22,
-            child: Container(
-              width: 132,
-              height: 132,
-              decoration: BoxDecoration(
-                color: AppColors.sun.withValues(alpha: .22),
-                borderRadius: BorderRadius.circular(40),
-              ),
-            ),
-          ),
-          Positioned(
-            left: 10,
-            right: 10,
-            top: 38,
-            bottom: 150,
-            child: Semantics(
-              label: '孩子的選擇改變了祖孫故事舞台',
-              image: true,
-              child: Image.asset(
-                'assets/images/family-stage-duo-v1.png',
-                fit: BoxFit.contain,
-                alignment: Alignment.bottomCenter,
+          const DecoratedBox(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [Color(0x16000000), Color(0xD9253331)],
+                stops: [.35, 1],
               ),
             ),
           ),
@@ -674,16 +1049,17 @@ class _PreviewOutcomeStage extends StatelessWidget {
               ),
             ),
           ),
-          Align(
-            alignment: const Alignment(0, -.48),
+          Positioned(
+            right: 16,
+            top: 16,
             child: Container(
               key: ValueKey('preview-outcome-icon-${choice.id}'),
-              width: 82,
-              height: 82,
+              width: 58,
+              height: 58,
               decoration: BoxDecoration(
                 color: AppColors.sun,
-                borderRadius: BorderRadius.circular(30),
-                border: Border.all(color: Colors.white, width: 4),
+                borderRadius: BorderRadius.circular(21),
+                border: Border.all(color: Colors.white, width: 3),
                 boxShadow: const [
                   BoxShadow(
                     color: Color(0x33000000),
@@ -695,7 +1071,7 @@ class _PreviewOutcomeStage extends StatelessWidget {
               child: Icon(
                 _previewSceneIcon(choice),
                 color: AppColors.ink,
-                size: 42,
+                size: 31,
               ),
             ),
           ),
@@ -730,16 +1106,43 @@ class _PreviewOutcomeStage extends StatelessWidget {
                     ),
                   ),
                   Text(choice.elderReply.translationZh),
+                  const SizedBox(height: 8),
+                  AnimatedSwitcher(
+                    duration: const Duration(milliseconds: 180),
+                    child: Text(
+                      _outcomePlaybackStatus(
+                        playingVoice: playingVoice,
+                        heardChildLine: heardChildLine,
+                        heardElderReply: heardElderReply,
+                      ),
+                      key: ValueKey(
+                        'preview-playback-status-${playingVoice?.name ?? 'idle'}-$heardChildLine-$heardElderReply',
+                      ),
+                      style: const TextStyle(
+                        color: AppColors.berry,
+                        fontSize: 12,
+                        fontWeight: FontWeight.w900,
+                      ),
+                    ),
+                  ),
                   const SizedBox(height: 10),
                   FilledButton.icon(
                     key: const ValueKey('preview-listen-line'),
-                    onPressed: playing ? null : onListen,
+                    onPressed: playingVoice != null ? null : onListen,
                     icon: Icon(
-                      playing
+                      playingVoice != null
                           ? Icons.graphic_eq_rounded
                           : Icons.volume_up_rounded,
                     ),
-                    label: Text(playing ? '正在播放…' : '聽外婆接下一句'),
+                    label: Text(
+                      playingVoice == _PreviewVoice.childChoice
+                          ? '正在播放：你選的話'
+                          : playingVoice == _PreviewVoice.elderReply
+                              ? '外婆正在說…'
+                              : heardElderReply
+                                  ? '再聽一次外婆接話'
+                                  : '聽外婆接下一句',
+                    ),
                   ),
                 ],
               ),
@@ -757,7 +1160,9 @@ class _PreviewStage extends StatelessWidget {
     required this.headline,
     required this.targetText,
     required this.translation,
-    required this.playing,
+    required this.playingVoice,
+    required this.voice,
+    required this.heard,
     required this.onListen,
   });
 
@@ -765,7 +1170,9 @@ class _PreviewStage extends StatelessWidget {
   final String headline;
   final String targetText;
   final String translation;
-  final bool playing;
+  final _PreviewVoice? playingVoice;
+  final _PreviewVoice voice;
+  final bool heard;
   final VoidCallback onListen;
 
   @override
@@ -830,13 +1237,19 @@ class _PreviewStage extends StatelessWidget {
                   const SizedBox(height: 10),
                   FilledButton.icon(
                     key: const ValueKey('preview-listen-line'),
-                    onPressed: playing ? null : onListen,
+                    onPressed: playingVoice != null ? null : onListen,
                     icon: Icon(
-                      playing
+                      playingVoice == voice
                           ? Icons.graphic_eq_rounded
                           : Icons.volume_up_rounded,
                     ),
-                    label: Text(playing ? '正在播放…' : '點一下聽這一句'),
+                    label: Text(
+                      playingVoice == voice
+                          ? '外婆正在說…'
+                          : heard
+                              ? '再聽一次外婆開場'
+                              : '點一下聽外婆開場',
+                    ),
                   ),
                 ],
               ),
@@ -944,3 +1357,29 @@ IconData _previewSceneIcon(ConversationChoice choice) =>
       'home-cushion' => Icons.chair_rounded,
       _ => Icons.auto_awesome_rounded,
     };
+
+String _previewOutcomeAsset(ConversationChoice choice) =>
+    switch (choice.sceneAfter.id) {
+      'home-door-open' => 'assets/images/family-homecoming-theater-v2.png',
+      'home-cushion' => 'assets/images/family-bedtime-theater-v1.png',
+      _ => 'assets/images/family-stage-duo-v1.png',
+    };
+
+String _previewOutcomeSemanticLabel(ConversationChoice choice) =>
+    switch (choice.sceneAfter.id) {
+      'home-door-open' => '孩子說回來了，外婆在打開的家門前迎接他',
+      'home-cushion' => '孩子說有一點累，外婆陪他在柔軟的休息場景坐下來',
+      _ => '孩子的選擇改變了祖孫故事舞台',
+    };
+
+String _outcomePlaybackStatus({
+  required _PreviewVoice? playingVoice,
+  required bool heardChildLine,
+  required bool heardElderReply,
+}) {
+  if (playingVoice == _PreviewVoice.childChoice) return '正在播放：你選的話';
+  if (playingVoice == _PreviewVoice.elderReply) return '外婆正在接下一句';
+  if (heardElderReply) return '你選的話與外婆回話都已聽過 ✓';
+  if (heardChildLine) return '已聽過：你選的話 ✓，接著可以聽外婆回話';
+  return '先聽你選的話，再聽外婆怎麼接';
+}

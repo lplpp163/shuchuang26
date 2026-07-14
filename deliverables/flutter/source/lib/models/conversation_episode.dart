@@ -264,12 +264,27 @@ class ConversationStoryCard {
       };
 }
 
-String _normalizeSpeech(String value) => value
-    .toLowerCase()
-    .replaceAll(
-        RegExp(r'[^a-z0-9\u00c0-\u024f\u1e00-\u1eff\u3400-\u9fff]+'), ' ')
-    .trim()
-    .replaceAll(RegExp(r'\s+'), ' ');
+String _normalizeSpeech(String value) {
+  var normalized = value
+      .toLowerCase()
+      .replaceAll(
+          RegExp(r'[^a-z0-9\u00c0-\u024f\u1e00-\u1eff\u3400-\u9fff]+'), ' ')
+      .trim()
+      .replaceAll(RegExp(r'\s+'), ' ');
+  const vietnameseFoldGroups = <String, String>{
+    'a': 'àáảãạăằắẳẵặâầấẩẫậ',
+    'e': 'èéẻẽẹêềếểễệ',
+    'i': 'ìíỉĩị',
+    'o': 'òóỏõọôồốổỗộơờớởỡợ',
+    'u': 'ùúủũụưừứửữự',
+    'y': 'ỳýỷỹỵ',
+    'd': 'đ',
+  };
+  for (final entry in vietnameseFoldGroups.entries) {
+    normalized = normalized.replaceAll(RegExp('[${entry.value}]'), entry.key);
+  }
+  return normalized;
+}
 
 bool _containsSpeechPhrase(String heard, String candidate) {
   if (heard == candidate) return true;

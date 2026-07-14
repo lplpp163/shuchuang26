@@ -331,27 +331,38 @@ test('Pixel 7 cold-start, beginner theater, story card, and family-response audi
   await page.getByRole('button', { name: '先試演約 30 秒' }).click();
   await captureReady(
     page,
-    page.getByRole('button', { name: '點一下聽這一句' }),
+    page.getByRole('button', { name: '點一下聽外婆開場' }),
     'test-results/theater-preview-opening-pixel7.png',
     errors,
   );
   await page.getByRole('button', { name: /我回來了。.*故事怎麼變/ }).click();
   await captureReady(
     page,
-    page.getByText('你的話讓故事變了'),
+    page.getByRole('button', { name: '聽外婆接下一句' }),
     'test-results/theater-preview-outcome-pixel7.png',
     errors,
   );
+  const firstOutcomeWorld = await page.screenshot({ animations: 'disabled' });
+  await page.getByRole('button', { name: '換另一句，看看不同結果' }).click();
+  await page.getByRole('button', { name: /我有一點累。.*故事怎麼變/ }).click();
+  await captureReady(
+    page,
+    page.getByRole('button', { name: '聽外婆接下一句' }),
+    'test-results/theater-preview-outcome-tired-pixel7.png',
+    errors,
+  );
+  const tiredOutcomeWorld = await page.screenshot({ animations: 'disabled' });
+  expect(firstOutcomeWorld.equals(tiredOutcomeWorld)).toBe(false);
   const openRelayPreview = page.getByRole('button', {
     name: '看這句怎麼傳回家',
   });
   await scrollUntilAttached(page, openRelayPreview);
   await openRelayPreview.click();
-  await expect(page.getByText('3 / 3')).toBeVisible();
+  await expect(page.getByText(/第 3 幕，共三幕：傳回家/)).toBeVisible();
   await expect(page.getByText('原來，一句話會這樣傳下來')).toBeVisible();
-  await expect(page.getByText('孩子帶回', { exact: true })).toBeVisible();
-  await expect(page.getByText('家人傳下', { exact: true })).toBeVisible();
-  await expect(page.getByText('孩子接住', { exact: true })).toBeVisible();
+  await expect(page.getByText(/孩子帶回：我有一點累。/)).toBeVisible();
+  await expect(page.getByText(/家人傳下：Cháu hơi mệt ạ\./)).toBeVisible();
+  await expect(page.getByText(/孩子接住：外婆搬來軟墊/)).toBeVisible();
   await captureReady(
     page,
     page.getByText('原來，一句話會這樣傳下來'),
@@ -359,17 +370,24 @@ test('Pixel 7 cold-start, beginner theater, story card, and family-response audi
     errors,
   );
   const relayAudio = page.getByRole('button', {
-    name: '聽合成的家語示範',
+    name: '播放三棒接力',
   });
   await relayAudio.click();
-  await expect(page.getByRole('button', {
-    name: '聽合成的家語示範',
-  })).toBeVisible();
+  await expect(page.getByText('三棒接力完成 ✓')).toBeVisible();
+  await expect(page.getByRole('button', { name: '重播三棒接力' }))
+    .toBeVisible();
   const relayDisclosure = page.getByText(
     /Piper 合成操作示範.*不是真人原音.*未使用、建立或保存任何家庭資料/,
   );
   await scrollUntilAttached(page, relayDisclosure);
   await expect(relayDisclosure).toBeVisible();
+  for (const seed of ['和家人分享', '社團', '午餐', '上課', '朋友關係']) {
+    await expect(page.getByRole('checkbox', { name: seed })).toBeVisible();
+  }
+  await page.getByRole('checkbox', { name: '社團' }).click();
+  await expect(page.getByText(/孩子想說｜我今天第一次參加社團。/))
+    .toBeVisible();
+  await expect(page.getByText(/系統不會自己猜翻譯/)).toBeVisible();
   const finishPreview = page.getByRole('button', {
     name: '同意後建立我們家的三棒故事',
   });
@@ -450,7 +468,7 @@ test('Pixel 7 cold-start, beginner theater, story card, and family-response audi
     errors,
   );
 
-  await page.getByRole('button', { name: '慢速與逐段聽' }).click();
+  await page.getByRole('button', { name: '慢速・逐段學' }).click();
   await captureReady(
     page,
     page.getByText('慢慢聽這一句'),
@@ -463,14 +481,14 @@ test('Pixel 7 cold-start, beginner theater, story card, and family-response audi
   await page.getByRole('button', { name: '關閉慢速聆聽' }).click();
   await expect(page.getByText('慢慢聽這一句')).toHaveCount(0);
 
-  const listenSlot = page.getByRole('button', { name: /先聽這一句|正在播放/ });
+  const listenSlot = page.getByRole('button', { name: /先聽整句|播放中/ });
   await scrollUntilAttached(page, listenSlot);
-  const listen = page.getByRole('button', { name: '先聽這一句' });
+  const listen = page.getByRole('button', { name: '先聽整句' });
   try {
     await listen.waitFor({ state: 'visible', timeout: 3_000 });
     await listen.click();
   } catch (_) {
-    await expect(page.getByRole('button', { name: '正在播放' })).toBeDisabled();
+    await expect(page.getByRole('button', { name: /^播放中/ })).toBeDisabled();
   }
   const fallback = page.getByRole('button', { name: '今天先用小卡直接接故事' });
   await scrollUntilAttached(page, fallback);

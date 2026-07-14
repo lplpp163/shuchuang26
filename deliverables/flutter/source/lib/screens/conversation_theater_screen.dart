@@ -96,8 +96,10 @@ class DeviceConversationSpeechRecognizer
             }
           },
           onError: (error) {
-            final permissionProblem =
-                error.errorMsg.toLowerCase().contains('permission');
+            final errorCode = error.errorMsg.toLowerCase();
+            final permissionProblem = errorCode.contains('permission') ||
+                errorCode.contains('not-allowed') ||
+                errorCode.contains('not_allowed');
             _complete(
               ConversationSpeechResult.unavailable(
                 permissionProblem
@@ -134,7 +136,9 @@ class DeviceConversationSpeechRecognizer
       await _speech.listen(
         onResult: (result) {
           _latestTranscript = result.recognizedWords.trim();
-          if (result.hasConfidenceRating) {
+          // speech_to_text uses 0 when a platform does not expose confidence.
+          // Treat it as unknown instead of a low pronunciation score.
+          if (result.hasConfidenceRating && result.confidence > 0) {
             _latestConfidence = result.confidence;
           }
           if (result.finalResult) _completeWithLatest();
@@ -238,6 +242,7 @@ class _ConversationTheaterScreenState extends State<ConversationTheaterScreen> {
   static const _replyAutoAdvanceDelay = Duration(milliseconds: 2200);
 
   final GlobalKey _firstIntentCardAnchorKey = GlobalKey();
+  final ScrollController _pageScrollController = ScrollController();
   late final ConversationSpeechRecognizer _recognizer;
   late final bool _ownsRecognizer;
   late ConversationPrompt _prompt;
@@ -253,6 +258,7 @@ class _ConversationTheaterScreenState extends State<ConversationTheaterScreen> {
   bool _completed = false;
   bool _storyCardDelivered = false;
   String? _repairMessage;
+  bool _speechSelfConfirmAvailable = false;
   String? _familyVoiceFallbackPromptId;
   String? _bundledAudioFallbackText;
   Timer? _replyAutoAdvanceTimer;
@@ -327,6 +333,7 @@ class _ConversationTheaterScreenState extends State<ConversationTheaterScreen> {
     _speechEpoch += 1;
     unawaited(_ignoreFailure(widget.media.stopPlayback()));
     if (_ownsRecognizer) unawaited(_ignoreFailure(_recognizer.dispose()));
+    _pageScrollController.dispose();
     super.dispose();
   }
 
@@ -419,6 +426,7 @@ class _ConversationTheaterScreenState extends State<ConversationTheaterScreen> {
       _speaking = false;
       _listening = true;
       _repairMessage = null;
+      _speechSelfConfirmAvailable = false;
     });
     final result = await _recognizer.listen(
       languageTag: widget.episode.languageTag,
@@ -433,17 +441,16 @@ class _ConversationTheaterScreenState extends State<ConversationTheaterScreen> {
     if (result.status != ConversationSpeechStatus.heard) {
       final message = switch (result.status) {
         ConversationSpeechStatus.unsupported =>
-          '這台裝置現在聽不到你。指一張小卡給${widget.episode.elderName}看，故事一樣會繼續。',
+          '這台裝置現在不能聽寫，但故事不用卡住。沒有文字不代表你念錯。',
         ConversationSpeechStatus.permissionDenied =>
-          '麥克風還沒打開。先用小卡告訴${widget.episode.elderName}，之後再請大人開啟權限。',
-        ConversationSpeechStatus.noSpeech =>
-          '${widget.episode.elderName}剛剛沒聽清楚。慢慢說一次，或指一張小卡給她看。',
-        ConversationSpeechStatus.failed =>
-          '聲音剛剛迷路了。可以再說一次，也可以直接指給${widget.episode.elderName}看。',
+          '麥克風還沒打開。可以請大人開啟權限，也可以用你先選的意思繼續。',
+        ConversationSpeechStatus.noSpeech => '系統這次沒有寫出文字。可能是收音或瀏覽器限制，不代表你念錯。',
+        ConversationSpeechStatus.failed => '這次聽寫沒有完成。可以慢速再聽，也可以照你先選的意思繼續。',
         ConversationSpeechStatus.heard => '',
       };
       setState(() {
         _repairMessage = message;
+        _speechSelfConfirmAvailable = _preparedChoice != null;
         _showHints = true;
       });
       _scheduleIntentCardReveal();
@@ -452,22 +459,38 @@ class _ConversationTheaterScreenState extends State<ConversationTheaterScreen> {
 
     final transcript = result.transcript.trim();
     final matches = _prompt.matchingChoicesForTranscript(transcript);
-    final lowConfidence = result.confidence != null && result.confidence! < .42;
-    if (matches.length != 1 || lowConfidence) {
+    final prepared = _preparedChoice;
+    if (prepared != null &&
+        matches.length == 1 &&
+        matches.single.id == prepared.id) {
+      // The child already selected the intended meaning. A unique reviewed
+      // phrase match may continue the story, but it is never a pronunciation
+      // score; vendor confidence varies by browser and is deliberately ignored.
+      _chooseIntent(prepared, transcript: transcript);
+      return;
+    }
+    if (prepared != null) {
       setState(() {
         _repairMessage = transcript.isEmpty
-            ? '${widget.episode.elderName}剛剛沒聽清楚。先選意思、聽一次，再慢慢說。'
-            : lowConfidence
-                ? '${widget.episode.elderName}聽到「$transcript」，但還不太確定。先選你想說的意思，再試一次。'
-                : matches.length > 1
-                    ? '「$transcript」裡有不只一張小卡的關鍵詞。你真正想選哪一張？'
-                    : '${widget.episode.elderName}聽到「$transcript」，但找不到這一題的選項關鍵詞。先選意思、聽一次，再試一次。';
+            ? '系統這次沒有寫出文字。可能是瀏覽器、環境音或腔調差異，不代表你念錯。'
+            : matches.length > 1
+                ? '系統寫成「$transcript」，裡面像有兩個意思。這不代表你念錯，故事仍照你自己確認的意思走。'
+                : matches.length == 1
+                    ? '系統寫成「$transcript」，和你先選的意思不一樣。這只是瀏覽器聽寫，不代表你念錯。'
+                    : '系統寫成「$transcript」，但沒找到完整關鍵詞。這只是瀏覽器聽寫，不代表你念錯。';
+        _speechSelfConfirmAvailable = true;
         _showHints = true;
       });
       _scheduleIntentCardReveal();
       return;
     }
-    _chooseIntent(matches.single, transcript: transcript);
+
+    setState(() {
+      _repairMessage = '先選你想表達的意思；系統只幫忙把聲音寫成字，不會替你決定。';
+      _speechSelfConfirmAvailable = false;
+      _showHints = true;
+    });
+    _scheduleIntentCardReveal();
   }
 
   void _toggleIntentHints() {
@@ -497,8 +520,19 @@ class _ConversationTheaterScreenState extends State<ConversationTheaterScreen> {
     setState(() {
       _preparedChoice = choice;
       _repairMessage = null;
+      _speechSelfConfirmAvailable = false;
     });
     unawaited(_speakLine(choice.line));
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (!mounted || !_pageScrollController.hasClients) return;
+      unawaited(
+        _pageScrollController.animateTo(
+          _pageScrollController.position.maxScrollExtent,
+          duration: const Duration(milliseconds: 320),
+          curve: Curves.easeOutCubic,
+        ),
+      );
+    });
   }
 
   void _chooseIntent(ConversationChoice choice, {String? transcript}) {
@@ -519,6 +553,7 @@ class _ConversationTheaterScreenState extends State<ConversationTheaterScreen> {
       _lastResponseWasSpoken = transcript != null;
       _scene = choice.sceneAfter;
       _repairMessage = null;
+      _speechSelfConfirmAvailable = false;
       _showHints = false;
       _replyPauseRequested = false;
       _replyFlowPhase = widget.autoAdvanceReplies
@@ -609,6 +644,7 @@ class _ConversationTheaterScreenState extends State<ConversationTheaterScreen> {
       _elderResponse = null;
       _showHints = false;
       _repairMessage = null;
+      _speechSelfConfirmAvailable = false;
       _elderLinePlayed = false;
       _replyPauseRequested = false;
       _replyFlowPhase = _ReplyFlowPhase.manual;
@@ -665,6 +701,7 @@ class _ConversationTheaterScreenState extends State<ConversationTheaterScreen> {
       ),
       body: SafeArea(
         child: SingleChildScrollView(
+          controller: _pageScrollController,
           padding: const EdgeInsets.fromLTRB(16, 10, 16, 32),
           child: Center(
             child: ConstrainedBox(
@@ -1290,19 +1327,52 @@ class _ConversationTheaterScreenState extends State<ConversationTheaterScreen> {
                   color: AppColors.sunSoft,
                   borderRadius: BorderRadius.circular(16),
                 ),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    const Icon(
-                      Icons.hearing_rounded,
-                      size: 27,
-                      color: AppColors.coral,
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Icon(
+                          Icons.hearing_rounded,
+                          size: 27,
+                          color: AppColors.coral,
+                        ),
+                        const SizedBox(width: 10),
+                        Expanded(
+                          child: Text(
+                            message,
+                            style: const TextStyle(fontWeight: FontWeight.w700),
+                          ),
+                        ),
+                      ],
                     ),
-                    const SizedBox(width: 10),
-                    Expanded(
-                      child: Text(message,
-                          style: const TextStyle(fontWeight: FontWeight.w700)),
-                    ),
+                    if (_speechSelfConfirmAvailable && prepared != null) ...[
+                      const SizedBox(height: 12),
+                      OutlinedButton.icon(
+                        key: const ValueKey('speech-pronunciation-help'),
+                        onPressed: () => unawaited(
+                          _openPracticeListeningTools(prepared),
+                        ),
+                        style: OutlinedButton.styleFrom(
+                          minimumSize: const Size.fromHeight(48),
+                        ),
+                        icon: const Icon(Icons.slow_motion_video_rounded),
+                        label: const Text('先慢速・逐段聽，再試一次'),
+                      ),
+                      const SizedBox(height: 8),
+                      FilledButton.tonalIcon(
+                        key: const ValueKey('speech-self-confirm'),
+                        onPressed: () => _chooseIntent(prepared),
+                        style: FilledButton.styleFrom(
+                          minimumSize: const Size.fromHeight(48),
+                        ),
+                        icon: const Icon(Icons.check_circle_rounded),
+                        label: Text(
+                          '我說的是「${prepared.line.translationZh}」，繼續故事',
+                        ),
+                      ),
+                    ],
                   ],
                 ),
               ),
@@ -1374,7 +1444,7 @@ class _ConversationTheaterScreenState extends State<ConversationTheaterScreen> {
               const SizedBox(height: 12),
             ],
             Text(
-              '聽寫可能由裝置或瀏覽器平台處理；回來的文字只用來尋找本題關鍵詞，不會替發音打分。',
+              '系統只幫你把聲音寫成字；你想說什麼由你確認，家裡怎麼說由家人確認。聽寫不準也不會卡住故事。',
               textAlign: TextAlign.center,
               style: Theme.of(context)
                   .textTheme
@@ -1924,58 +1994,74 @@ class _PracticeCoach extends StatelessWidget {
         borderRadius: BorderRadius.circular(20),
         border: Border.all(color: AppColors.jade.withValues(alpha: .28)),
       ),
-      child: Row(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          _StageGlyph(emoji: choice.emoji, size: 36),
-          const SizedBox(width: 12),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  choice.line.targetText,
-                  style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                        fontSize: 20,
-                        height: 1.2,
-                      ),
-                ),
-                const SizedBox(height: 3),
-                Text(
-                  choice.line.romanization,
-                  style: const TextStyle(
-                    color: AppColors.jade,
-                    fontSize: 13,
-                    fontWeight: FontWeight.w800,
-                  ),
-                ),
-                const SizedBox(height: 3),
-                Text(
-                  choice.line.translationZh,
-                  style: const TextStyle(color: AppColors.muted),
-                ),
-              ],
-            ),
-          ),
           Row(
-            mainAxisSize: MainAxisSize.min,
             children: [
-              IconButton.filled(
+              _StageGlyph(emoji: choice.emoji, size: 36),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      choice.line.targetText,
+                      style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                            fontSize: 20,
+                            height: 1.2,
+                          ),
+                    ),
+                    const SizedBox(height: 3),
+                    Text(
+                      choice.line.romanization,
+                      style: const TextStyle(
+                        color: AppColors.jade,
+                        fontSize: 13,
+                        fontWeight: FontWeight.w800,
+                      ),
+                    ),
+                    const SizedBox(height: 3),
+                    Text(
+                      choice.line.translationZh,
+                      style: const TextStyle(color: AppColors.muted),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 12),
+          Wrap(
+            spacing: 8,
+            runSpacing: 8,
+            children: [
+              FilledButton.tonalIcon(
                 key: ValueKey('practice-listen-${choice.id}'),
-                tooltip: speaking ? '正在播放' : '先聽這一句',
-                visualDensity: VisualDensity.compact,
                 onPressed: speaking ? null : onListen,
+                style: FilledButton.styleFrom(
+                  minimumSize: const Size(0, 48),
+                ),
                 icon: Icon(
                   speaking ? Icons.graphic_eq_rounded : Icons.volume_up_rounded,
                 ),
+                label: Text(speaking ? '播放中…' : '先聽整句'),
               ),
-              IconButton(
+              OutlinedButton.icon(
                 key: ValueKey('practice-listening-tools-${choice.id}'),
-                tooltip: '慢速與逐段聽',
-                visualDensity: VisualDensity.compact,
                 onPressed: speaking ? null : onOpenListeningTools,
+                style: OutlinedButton.styleFrom(
+                  minimumSize: const Size(0, 48),
+                ),
                 icon: const Icon(Icons.hearing_rounded),
+                label: const Text('慢速・逐段學'),
               ),
             ],
+          ),
+          const SizedBox(height: 8),
+          const Text(
+            '跟讀三步：先聽整句 → 只練一小段 → 回來說整句。這是練習提示，不是發音評分。',
+            style: TextStyle(color: AppColors.muted, fontSize: 12, height: 1.4),
           ),
         ],
       ),
