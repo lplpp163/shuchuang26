@@ -1,0 +1,34 @@
+{
+  "purpose": "Short authentic Vietnamese listening prompts for the family relay game",
+  "downloadedAt": "2026-07-19",
+  "speaker": "Jessica Nguyen",
+  "recorder": "Pamputt",
+  "project": "Lingua Libre",
+  "license": "CC0 1.0",
+  "files": [
+    {
+      "asset": "ba_me.wav",
+      "transcription": "ba mẹ",
+      "source": "https://commons.wikimedia.org/wiki/File:LL-Q9199_(vie)-Jessica_Nguyen_(Pamputt)-ba_m%E1%BA%B9.wav",
+      "sha256": "211B5EF5E2051A169C925973262AAF0F17F9481B209779CC791FC49FF62E5350"
+    },
+    {
+      "asset": "buoi_sang.wav",
+      "transcription": "buổi sáng",
+      "source": "https://commons.wikimedia.org/wiki/File:LL-Q9199_(vie)-Jessica_Nguyen_(Pamputt)-bu%E1%BB%95i_s%C3%A1ng.wav",
+      "sha256": "C277F068DDA814FAAB809D0173966FA10AA0240CE3967C2154DBDA72CB848835"
+    },
+    {
+      "asset": "banh_mi.wav",
+      "transcription": "bánh mì",
+      "source": "https://commons.wikimedia.org/wiki/File:LL-Q9199_(vie)-Jessica_Nguyen_(Pamputt)-b%C3%A1nh_m%C3%AC.wav",
+      "sha256": "4BB240B4EE93C8903502CD01F2006E53B4686977EDD441CD81F0B5276DD20DAE"
+    },
+    {
+      "asset": "choi.wav",
+      "transcription": "chơi",
+      "source": "https://commons.wikimedia.org/wiki/File:LL-Q9199_(vie)-Jessica_Nguyen_(Pamputt)-ch%C6%A1i.wav",
+      "sha256": "D4E5C29973A00DB76785E0CEDEC9B183EA6998E4B4D3E3C19CE2D08D6E4157D6"
+    }
+  ]
+}

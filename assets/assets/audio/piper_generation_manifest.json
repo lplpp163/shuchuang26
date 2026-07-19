@@ -1,0 +1,555 @@
+{
+  "generator": "Piper 1.2.0",
+  "model": "rhasspy/piper-voices v1.0.0 vi_VN-vais1000-medium",
+  "model_sha256": "EC7C89E2C85F4D1EDC24B6120C18AAF1BDA614F06B511567EB9C7C0DE15E2DAB",
+  "dataset_license": "CC BY 4.0",
+  "generated_at": "2026-07-19T08:06:32.5740625+08:00",
+  "files": [
+    {
+      "path": "assets/audio/theater_011cb5972841.mp3",
+      "text": "Mình xếp vào hộp nhé. Cái này để ở đâu?",
+      "bytes": 14336,
+      "sha256": "DE8C75DE2836A771BC3AF49E72139C75ED9FA48FFBE3160E6E02844BEA100B93"
+    },
+    {
+      "path": "assets/audio/theater_01647a2452dd.mp3",
+      "text": "Mình đi thôi! Thùng rác ở đâu?",
+      "bytes": 9802,
+      "sha256": "BBE56DA45AFBD97A3AC38A71FA774D36E67ED354F52A6ECE24A95725F6385C29"
+    },
+    {
+      "path": "assets/audio/theater_02e6d16a27d6.mp3",
+      "text": "Nó đang hót kìa.",
+      "bytes": 5718,
+      "sha256": "C78B031FE9C7DCF969F4E7C4208BC0F4F58523E9E79A59F57E21A0D8392B514E"
+    },
+    {
+      "path": "assets/audio/theater_0df10129f4dc.mp3",
+      "text": "Cho búp bê ngủ nhé. Cái này để ở đâu?",
+      "bytes": 12563,
+      "sha256": "8831A556814FB405430DA9CB50B9527DC9165652D44D2E651A60CCB77FF3A21D"
+    },
+    {
+      "path": "assets/audio/theater_0f21d13f9fb7.mp3",
+      "text": "Cháu ôm bà trước ạ.",
+      "bytes": 6602,
+      "sha256": "82153F3A55C64C8A0A2444862A0F88E16D00D52A45D1206E3F5095FEFAF60CB9"
+    },
+    {
+      "path": "assets/audio/theater_10ddf8656662.mp3",
+      "text": "Mình đi chậm thôi ạ.",
+      "bytes": 7228,
+      "sha256": "2D56A39A05B6A742F6CBD5D1A0D062E81179D544836BAC32152C6EF30502FF64"
+    },
+    {
+      "path": "assets/audio/theater_13a7b78d3388.mp3",
+      "text": "Mình lấy một cái nhé.",
+      "bytes": 6992,
+      "sha256": "A1A597744590440DA6AB0AAC8209764DAC80FF1420E7C706AC14D4084FBAE059"
+    },
+    {
+      "path": "assets/audio/theater_146f04c90a6c.mp3",
+      "text": "Mình đi thôi!",
+      "bytes": 4265,
+      "sha256": "E48D047947BE1993A9515F49E0C77D6BE5E25355F8293CE4E19CB688B937D4B5"
+    },
+    {
+      "path": "assets/audio/theater_14c78cb4ebfd.mp3",
+      "text": "Mình vừa đi vừa ngắm nhé. Cháu thấy gì?",
+      "bytes": 11989,
+      "sha256": "299FAD07D3C605E7DF4697E2C62617A076E4E43849A86198E98CF42E68DEE235"
+    },
+    {
+      "path": "assets/audio/theater_14f706ab8492.mp3",
+      "text": "Không ạ, cháu có túi rồi.",
+      "bytes": 9571,
+      "sha256": "A67E365505F0A206CCF85035AF15F67EBA8D214EEA7DE2CD3139E597B6D5F272"
+    },
+    {
+      "path": "assets/audio/theater_1c2ef95b6be3.mp3",
+      "text": "Gọn gàng quá!",
+      "bytes": 5483,
+      "sha256": "4015B8EA5145745866345D56D916B04BDF8247EB6CC1798188B273F1C7EDB748"
+    },
+    {
+      "path": "assets/audio/theater_1d6178ff57de.mp3",
+      "text": "Cháu muốn nghỉ hay uống nước?",
+      "bytes": 7875,
+      "sha256": "535062A09ED7DA20A0F81EF9D1D0C63BCD63E16A05F40A65B0D13337830A5294"
+    },
+    {
+      "path": "assets/audio/theater_20245ed3782a.mp3",
+      "text": "Cháu cảm ơn cô ạ.",
+      "bytes": 6341,
+      "sha256": "AF2B2D94E6355B1B0B49C5D56A4B73ACBFB7F11044B10BEA76CE95119AD00D2C"
+    },
+    {
+      "path": "assets/audio/theater_20b799cf169c.mp3",
+      "text": "Để trên kệ ạ.",
+      "bytes": 5616,
+      "sha256": "85B5A88B4C3958E7584377FA059172AF8081A2FE0670BFFB3BE8C04EB8E9C0C1"
+    },
+    {
+      "path": "assets/audio/theater_227115a46442.mp3",
+      "text": "Cảm ơn cháu.",
+      "bytes": 5434,
+      "sha256": "1079B6170C281F9EF5630B27566DD69E78611C115E569EC56A6B1FAAEBFC8394"
+    },
+    {
+      "path": "assets/audio/theater_23380cdc2b3f.mp3",
+      "text": "Dạ, mình đi ạ.",
+      "bytes": 5433,
+      "sha256": "404B1E5836D692DEF4066BDFA8C963288CE6C3F7E65711233AB1DA7F6B2FC896"
+    },
+    {
+      "path": "assets/audio/theater_26ff47b9d2f3.mp3",
+      "text": "Cháu muốn mua bánh mì ạ.",
+      "bytes": 8084,
+      "sha256": "D722D1E1A583090F15FEC9D5424C246A890536E9784D1DD2B933E2CFF8523B3C"
+    },
+    {
+      "path": "assets/audio/theater_2b5fa93c160c.mp3",
+      "text": "Cháu muốn chơi bóng ạ.",
+      "bytes": 6680,
+      "sha256": "F30C2008F0A03A5D23CDEE85E6CF50C24B650FB22392897C2C224D5B7C295574"
+    },
+    {
+      "path": "assets/audio/theater_2d5aab1247c7.mp3",
+      "text": "Mình tìm cùng nhau nhé.",
+      "bytes": 7306,
+      "sha256": "261D63FF6D84E6174FCC0A18676F014A7CF08B986DA83631FD981136E9203E58"
+    },
+    {
+      "path": "assets/audio/theater_2f7c8ab37a8f.mp3",
+      "text": "Mình qua đó nhé. Xong rồi, mình làm gì?",
+      "bytes": 14279,
+      "sha256": "1233FCCDA196B891926D87C810CA06868F35ABE2D4F65B200B0505E13A5C3DE6"
+    },
+    {
+      "path": "assets/audio/theater_2f9eed4193c6.mp3",
+      "text": "Cháu chào cô ạ.",
+      "bytes": 5328,
+      "sha256": "713200313E35651E7EA32BDE1F10C43DF354155B0F574B81C5F29D7B12233923"
+    },
+    {
+      "path": "assets/audio/theater_35edc7ea04fb.mp3",
+      "text": "Hôm nay vui không?",
+      "bytes": 4675,
+      "sha256": "D06AC814621AE8449F131F599C03CC9F7344A12B4562B08B659E658DF2CF6A27"
+    },
+    {
+      "path": "assets/audio/theater_387aa14325b1.mp3",
+      "text": "Cháu muốn nghỉ ạ.",
+      "bytes": 5508,
+      "sha256": "B64CDAAA35F2D0C6588B8FFD938E958C58A97D89CB84E17E285D92A8B5097E70"
+    },
+    {
+      "path": "assets/audio/theater_40afbbafc37c.mp3",
+      "text": "Có ạ.",
+      "bytes": 2595,
+      "sha256": "520925DBDCB22CDA76E4BA3625CA15145A4F75ACBAFAEA6C414F4D197C04CE84"
+    },
+    {
+      "path": "assets/audio/theater_4152cf240b9b.mp3",
+      "text": "Vâng ạ!",
+      "bytes": 3245,
+      "sha256": "740B6AAE609DA462993EDF191EAD57BB99A0E3F41CB7EBDDD0810BFD0B6C05C2"
+    },
+    {
+      "path": "assets/audio/theater_4e2b2fbaf617.mp3",
+      "text": "Nghe cháu vui, bà cũng vui. Mình rửa tay rồi ăn cơm nhé?",
+      "bytes": 18881,
+      "sha256": "2470961882936DD31F025CCE646DD5CB67F8D6C804C9AFBE4E52CA555706EB9C"
+    },
+    {
+      "path": "assets/audio/theater_4f473c0de5c7.mp3",
+      "text": "Cháu muốn chơi xích đu ạ.",
+      "bytes": 7200,
+      "sha256": "2C78356F597BD717A7E708C0A5419450346757B3BCADAD3FDAD7C987D13013D4"
+    },
+    {
+      "path": "assets/audio/theater_5671d17055cb.mp3",
+      "text": "Cảm ơn cháu. Thùng rác ở đâu?",
+      "bytes": 10532,
+      "sha256": "99B148ECAE7BAFBC98EF7AE18B4F78CC67B54D515DC35CCEC0225B4D2F430B5C"
+    },
+    {
+      "path": "assets/audio/theater_5779fa970cdd.mp3",
+      "text": "Hẹn gặp lại cháu!",
+      "bytes": 6759,
+      "sha256": "B6D5998248E79E159B957F5383501881C513C41AAE71363C488D6A13E8C0857F"
+    },
+    {
+      "path": "assets/audio/theater_5ae32f6402ff.mp3",
+      "text": "Mình xếp vào hộp nhé.",
+      "bytes": 7594,
+      "sha256": "95438B9758879CC8F721BFEBD6A22B6DD38D86B2E7CFD000AA25B4B3988C944B"
+    },
+    {
+      "path": "assets/audio/theater_5f4ef4a4a33a.mp3",
+      "text": "Mình đi đổ rác nhé?",
+      "bytes": 7826,
+      "sha256": "07D3BF67C358786D064F9309DDC7B9A25BB260325DB5BAEEA6EC90A67948711E"
+    },
+    {
+      "path": "assets/audio/theater_64b031d55b44.mp3",
+      "text": "Mình vừa đi vừa ngắm nhé.",
+      "bytes": 8058,
+      "sha256": "52DF57124CBAE8D23E0E2423C9DFBB962C62ABC998DD2E861F175AA5CEA054AD"
+    },
+    {
+      "path": "assets/audio/theater_6982d36adffb.mp3",
+      "text": "Uống nước xong rồi mình đi nhé. Mình rửa tay rồi ăn cơm nhé?",
+      "bytes": 19089,
+      "sha256": "C76ED7F9254DD142F2C2A029CAAD3DD11604E752F95225C6FDE9E60942DE7504"
+    },
+    {
+      "path": "assets/audio/theater_6a5a7c04ea60.mp3",
+      "text": "Lại đây với bà nào!",
+      "bytes": 7540,
+      "sha256": "A0CE4283468280DA38C60B64DE05AC0B766D6EF3CEEF7A6EAE00E1A1F8AB1957"
+    },
+    {
+      "path": "assets/audio/theater_6a7b2794106c.mp3",
+      "text": "Cháu hơi mệt ạ.",
+      "bytes": 4988,
+      "sha256": "690BF4D35A7B6B2CC635A1AFEE19D00E50BA142369DBAF9B2EB37FBE658DFFEA"
+    },
+    {
+      "path": "assets/audio/theater_6a8a451a9dee.mp3",
+      "text": "Cháu dọn búp bê ạ.",
+      "bytes": 6395,
+      "sha256": "12CA6ED72437543C52E51D85EBA20652FEE263136868E7FCA0D593FE5CD104A9"
+    },
+    {
+      "path": "assets/audio/theater_70a31a11398a.mp3",
+      "text": "Gọn gàng quá! Phòng sạch chưa?",
+      "bytes": 9748,
+      "sha256": "39F1D4D948EF6840D3000A42A5F4D12A179F80CABBCE06208450716770D568D1"
+    },
+    {
+      "path": "assets/audio/theater_7430a79cd482.mp3",
+      "text": "Kể bà nghe nhé!",
+      "bytes": 5353,
+      "sha256": "4B29652580CF43A8485178DEDC44CD7B79856B3A5F92758A46CA831CEA02F1D2"
+    },
+    {
+      "path": "assets/audio/theater_753eceddc171.mp3",
+      "text": "Chào cháu!",
+      "bytes": 3583,
+      "sha256": "95D28C5E24D776276DEFE7EA4BCBFF3990065CD71A2C478B478F024B55A7D8EF"
+    },
+    {
+      "path": "assets/audio/theater_773f6c8d846c.mp3",
+      "text": "Tuyệt quá!",
+      "bytes": 4285,
+      "sha256": "9BB95C42E2EB525ADF22B02BF184F4E1BBC11CC72920A33DBEBFFAA5DF332526"
+    },
+    {
+      "path": "assets/audio/theater_7852aa7aed95.mp3",
+      "text": "Cho búp bê ngủ nhé.",
+      "bytes": 6005,
+      "sha256": "5AD3D310C36DCBAC47C260CB6EADC7F03F771492361521E6F82393B6DF185240"
+    },
+    {
+      "path": "assets/audio/theater_7a15fe7cb21a.mp3",
+      "text": "Mình cùng chọn nhé.",
+      "bytes": 6657,
+      "sha256": "4763D1C777E4DE335804C43B9A5B9ADEA1888C1103884064A9908167C4587925"
+    },
+    {
+      "path": "assets/audio/theater_7c1953a63d96.mp3",
+      "text": "Cho cháu nước ạ.",
+      "bytes": 5226,
+      "sha256": "9DA27A2CF8B084DE127E5D56E59605E0EC36E8BFF353FE5130E19D60FF7F3D7F"
+    },
+    {
+      "path": "assets/audio/theater_800180823f86.mp3",
+      "text": "Để trong hộp ạ.",
+      "bytes": 5276,
+      "sha256": "4093E75F82495D9CB5815510F51F86E488EC84582A34EA9B8C0964906DF6E659"
+    },
+    {
+      "path": "assets/audio/theater_837fea1ac831.mp3",
+      "text": "Giỏi quá! Mình nói gì với cô?",
+      "bytes": 11258,
+      "sha256": "87B68F5779C5D63AA70094E5C62FB208147E5CB7201DDBCDD1D4B56EF9B77795"
+    },
+    {
+      "path": "assets/audio/theater_849b1344175d.mp3",
+      "text": "Nó đang hót kìa. Cháu muốn chơi gì?",
+      "bytes": 11207,
+      "sha256": "9E4786C31B13490EB9E398A81D5D95F8BF175712F9776E2B136A5124303A0582"
+    },
+    {
+      "path": "assets/audio/theater_8c8f2640af55.mp3",
+      "text": "Cháu mở cửa ạ.",
+      "bytes": 5274,
+      "sha256": "1174DEA7F34A6A9EB918FDB1FFCC92C477CD915957BFC46F2874DAADB0AC096F"
+    },
+    {
+      "path": "assets/audio/theater_8eccc8f6006b.mp3",
+      "text": "Ở trước nhà ạ.",
+      "bytes": 5043,
+      "sha256": "6F2B02A02C7AA8105E62F60C06CDE6DFA081B3796938BB54EC2C3E9C666CF88E"
+    },
+    {
+      "path": "assets/audio/theater_911d2bdd2159.mp3",
+      "text": "Cháu muốn mua trái cây ạ.",
+      "bytes": 7563,
+      "sha256": "5B59B96F8B90197872CA5AA9D383A1938AA26E0557C78C01C704A74F02BD878A"
+    },
+    {
+      "path": "assets/audio/theater_9402b2ff755d.mp3",
+      "text": "Đúng chỗ rồi!",
+      "bytes": 4885,
+      "sha256": "4659323630A4E1D5DC82850CD78BDFBAC8CD8F8291C7E9FDCE94DC5128260AB2"
+    },
+    {
+      "path": "assets/audio/theater_9519890f42d7.mp3",
+      "text": "Đây, uống từ từ nhé.",
+      "bytes": 7695,
+      "sha256": "9495BC27CFB4DB4FFC5782497ACFE031B7095C0B9CEB25D66A32E3B269185D35"
+    },
+    {
+      "path": "assets/audio/theater_99d257221a76.mp3",
+      "text": "Đúng chỗ rồi! Phòng sạch chưa?",
+      "bytes": 9334,
+      "sha256": "E3A54291FD97F8EC7C0824D75CE9BA54730D45206A4447932D5DC50A0BDF8B80"
+    },
+    {
+      "path": "assets/audio/theater_9cadf126c39d.mp3",
+      "text": "Hay quá! Lát nữa kể bà nghe nhé.",
+      "bytes": 12124,
+      "sha256": "CF796F2154AB9057CFB4AC2C4D1C2BD58F2F3CADF28ECA712BF9C21F5310B13B"
+    },
+    {
+      "path": "assets/audio/theater_9d23edb903a9.mp3",
+      "text": "Giỏi quá!",
+      "bytes": 4261,
+      "sha256": "DB7A20BFC2C8947D89F81382CAD865D1D7B3A2D68284FE9BEB57781D2B6C88A8"
+    },
+    {
+      "path": "assets/audio/theater_9d4a564cde24.mp3",
+      "text": "Cháu về rồi à?",
+      "bytes": 6579,
+      "sha256": "406F8523FA78A0D5B26ECBFAEFADE72B529409460CEDC25520ACA946CA8FB765"
+    },
+    {
+      "path": "assets/audio/theater_a080e1774f56.mp3",
+      "text": "Cô cho cháu một cái túi.",
+      "bytes": 8111,
+      "sha256": "BF1BB9F67A1CBE48033B18A874F96B75DA7261DDA136CDBD7F539D06A8B47439"
+    },
+    {
+      "path": "assets/audio/theater_a50ee356359b.mp3",
+      "text": "Cháu muốn mua gì?",
+      "bytes": 5664,
+      "sha256": "2E869E9FC60B3522736E83B861842A3CDF7E85A8C488F2659FC34A84DD6CF66F"
+    },
+    {
+      "path": "assets/audio/theater_a584a212e867.mp3",
+      "text": "Cháu về rồi ạ.",
+      "bytes": 5976,
+      "sha256": "3F60143994A128E7DC6A4052FDFE7CCD32B6F06E33E346F68201DCFA214DBAFE"
+    },
+    {
+      "path": "assets/audio/theater_ac1cd38dea6c.mp3",
+      "text": "Mình dọn đồ chơi nhé?",
+      "bytes": 8060,
+      "sha256": "E91E190858C6A447871A7E93F22AE30F09E57602D4AF3FBA31C9A5A6FFA9CF49"
+    },
+    {
+      "path": "assets/audio/theater_afd59e592610.mp3",
+      "text": "Cô cho cháu một cái túi. Mình nói gì với cô?",
+      "bytes": 15244,
+      "sha256": "35103307665B65E1217C7AF1456FC279BE7C65562C988E0DCD8B739A6D112790"
+    },
+    {
+      "path": "assets/audio/theater_b05cb948b8db.mp3",
+      "text": "Mình rửa tay nhé.",
+      "bytes": 6786,
+      "sha256": "02C18D25AFE5A088CDA2DB5A2ADB70DE90FFA750DEBA73EC84B386495D95CA1D"
+    },
+    {
+      "path": "assets/audio/theater_b19fc675cece.mp3",
+      "text": "Hôm nay vui ạ.",
+      "bytes": 5225,
+      "sha256": "FCAF31E41F1FD9EE244AD6E4289505BB661F06203AC58DC2816BC234D91C0F01"
+    },
+    {
+      "path": "assets/audio/theater_b6f5debe9ba8.mp3",
+      "text": "Mình mang nước nhé.",
+      "bytes": 6421,
+      "sha256": "F1C02CBE56D2AA62B3DA9B0A55674E354FB0AC785F07DF74B9F8721EF0AA1163"
+    },
+    {
+      "path": "assets/audio/theater_ba8f0852b623.mp3",
+      "text": "Đẹp quá nhỉ! Cháu muốn chơi gì?",
+      "bytes": 10270,
+      "sha256": "2DD6C3BA5B76BDC50CAA3D20D56771549430374E750AEDCB090B065A426FDEAC"
+    },
+    {
+      "path": "assets/audio/theater_bfffdb79dd2a.mp3",
+      "text": "Mình cùng chọn nhé. Cháu cần túi không?",
+      "bytes": 12535,
+      "sha256": "8E8AE033B59ED3FADE6549254D5E9F264B4F830A45A235EF9FCF59FA1AC4D5E5"
+    },
+    {
+      "path": "assets/audio/theater_c0dcf825b133.mp3",
+      "text": "Bà để gối ở đây nhé.",
+      "bytes": 7930,
+      "sha256": "F3B8C60D8B1F84AE54F108F91502A890DFE5F031DB3F8EB05A326BC31645B8FD"
+    },
+    {
+      "path": "assets/audio/theater_c10b4cf77914.mp3",
+      "text": "Mình đi công viên nhé?",
+      "bytes": 6291,
+      "sha256": "BAC2309C2F51223CC488F14A4F9CE52EADBD8418187B406E7D8CD93A561B69F4"
+    },
+    {
+      "path": "assets/audio/theater_c224f4c19220.mp3",
+      "text": "Cháu có bạn mới ạ.",
+      "bytes": 6603,
+      "sha256": "FBC05990C82FDE4DAC5D66A0DB2E6CA1E2D59E82B145BB869E69AA1D1D8196A8"
+    },
+    {
+      "path": "assets/audio/theater_c33603e4e13b.mp3",
+      "text": "Sạch sẽ rồi!",
+      "bytes": 4598,
+      "sha256": "243D92EF9AAAF229BAED716BA487AEE90C2942FF3ED4FD6534C6109CEFC3C0F2"
+    },
+    {
+      "path": "assets/audio/theater_c5af5a70b268.mp3",
+      "text": "Sạch rồi ạ.",
+      "bytes": 4521,
+      "sha256": "80A154CE8DA06C1A9521310A3B40031506EC994A58E932513E106DC15582AF30"
+    },
+    {
+      "path": "assets/audio/theater_c77637752270.mp3",
+      "text": "Đúng rồi! Xong rồi, mình làm gì?",
+      "bytes": 11204,
+      "sha256": "163B1495DD74083186486C4B046BE642E9D36B151DB7F0BBDD91136DE06A4A96"
+    },
+    {
+      "path": "assets/audio/theater_cab8ad0619fe.mp3",
+      "text": "Đúng rồi!",
+      "bytes": 3661,
+      "sha256": "C5DFCF8CDD8CF947B809E9099A667F6A7CC72CB8E197BD49B82FE69AF61B2530"
+    },
+    {
+      "path": "assets/audio/theater_cc3919f570b2.mp3",
+      "text": "Ngoan quá, cùng đi thôi!",
+      "bytes": 8318,
+      "sha256": "44EE1014095E2B4CCB982DA8AF117212D5589CE776A9AE7C484CDE4C1149686E"
+    },
+    {
+      "path": "assets/audio/theater_ccb8f8aa6499.mp3",
+      "text": "Cháu nghỉ một chút rồi mình đi nhé. Mình rửa tay rồi ăn cơm nhé?",
+      "bytes": 19711,
+      "sha256": "F43E2F4818B91D01033610FD846B335E4938A182C58E656BE094F33FCFF04D1A"
+    },
+    {
+      "path": "assets/audio/theater_cf37295e8bea.mp3",
+      "text": "Mình mang nước nhé. Cháu thấy gì?",
+      "bytes": 10587,
+      "sha256": "55B2B89ADF7439123CC71FBE9D5BB8B9F84433F49D8E13CB720E70F47C8838C8"
+    },
+    {
+      "path": "assets/audio/theater_d11bbd9a69bf.mp3",
+      "text": "Mình lấy một cái nhé. Cháu cần túi không?",
+      "bytes": 13184,
+      "sha256": "E4E0A7A1552513D34B409D7095C07D47BB056AC81869A1CF3007882EBE595230"
+    },
+    {
+      "path": "assets/audio/theater_d1500815f6cd.mp3",
+      "text": "Bà đẩy nhẹ nhé.",
+      "bytes": 6790,
+      "sha256": "CF5EF85E5F77718CEF86A5D228E0F50ECD204D10F611D2E3824B42D44ADCE7EE"
+    },
+    {
+      "path": "assets/audio/theater_d3a2299e6ddf.mp3",
+      "text": "Cháu thấy nhiều hoa ạ.",
+      "bytes": 6730,
+      "sha256": "6537ABB5E4DDFD038159A3AA87CCEE170E1F5A0EEA3D51B15D43EDC0156E9736"
+    },
+    {
+      "path": "assets/audio/theater_d568eb38d2e9.mp3",
+      "text": "Mình qua đó nhé.",
+      "bytes": 6291,
+      "sha256": "2781951B6085CE36D2251C412F99FD6C6E3FC3E1B5F4AB166247F5907B00708D"
+    },
+    {
+      "path": "assets/audio/theater_d797cbdc06b4.mp3",
+      "text": "Cháu giỏi quá!",
+      "bytes": 5639,
+      "sha256": "A61FF53FB6621F012FE66CF4386A7FBA40B849A7FA3FB993A16541E2AAAEF2CB"
+    },
+    {
+      "path": "assets/audio/theater_d9b1ae74a7d3.mp3",
+      "text": "Còn một cái ạ.",
+      "bytes": 4884,
+      "sha256": "08F22AD3D39553AE9859BEDF0F50458174517E65F709A135C153A830518AB839"
+    },
+    {
+      "path": "assets/audio/theater_dc35a64fc235.mp3",
+      "text": "Bà nhớ cháu quá!",
+      "bytes": 6186,
+      "sha256": "6BDA0DB25A4057E3D0DAA5488325584F969526FF94521787B6DF1ACA6E8BA621"
+    },
+    {
+      "path": "assets/audio/theater_e701b2caa225.mp3",
+      "text": "Cháu thấy con chim ạ.",
+      "bytes": 7023,
+      "sha256": "D6A96B85E1F48EAEFABC1AEAD8B0C52527BF4528A49DCA2F6DD18943EFA45819"
+    },
+    {
+      "path": "assets/audio/theater_e8ad39dc1423.mp3",
+      "text": "Ôi, vào nghỉ một chút nhé.",
+      "bytes": 8970,
+      "sha256": "025FAE071C682D30D17D37AA868CF447D1E7D492B185BABB4C6CFBAA0FA1BE74"
+    },
+    {
+      "path": "assets/audio/theater_e9533966704d.mp3",
+      "text": "Bà chơi cùng cháu.",
+      "bytes": 6733,
+      "sha256": "E74D643AA4BB612BF247F0C97831C8AD3BA375A47113DE486251B280CD337932"
+    },
+    {
+      "path": "assets/audio/theater_f15b9b60cbd4.mp3",
+      "text": "Đẹp quá nhỉ!",
+      "bytes": 5304,
+      "sha256": "C6C32782D7593F184E9B2F57DCAE83034483B21AAE98DEF76539F44BC0D9F030"
+    },
+    {
+      "path": "assets/audio/theater_f1c0b7b6b29a.mp3",
+      "text": "Ở bên kia ạ.",
+      "bytes": 5041,
+      "sha256": "ED3636879284E8C247932E064096B77F0E214AF448CAFBDE8A246FA405403304"
+    },
+    {
+      "path": "assets/audio/theater_f1f3681e8738.mp3",
+      "text": "Cháu dọn khối gỗ ạ.",
+      "bytes": 7071,
+      "sha256": "015803816EE3B0B32B594DC8E367D96B845E0B7EA5283F214BE1338085385A74"
+    },
+    {
+      "path": "assets/audio/theater_f20c1ea9caef.mp3",
+      "text": "Cháu làm xong rồi ạ.",
+      "bytes": 6914,
+      "sha256": "C62141CE5575520E877272E039F7EDD6A39A97B977F63B1641AA3F25B4746178"
+    },
+    {
+      "path": "assets/audio/theater_f40436327ec0.mp3",
+      "text": "Mai kể bà nghe về bạn mới nhé. Mình rửa tay rồi ăn cơm nhé?",
+      "bytes": 20341,
+      "sha256": "206157E933F6E4B9DD40ED82C4572A2187039823322B35BD56A6670CFF1687AA"
+    },
+    {
+      "path": "assets/audio/theater_f71b40293d05.mp3",
+      "text": "Cháu cầm túi rác ạ.",
+      "bytes": 7329,
+      "sha256": "E09758C82A50E91D22E6209057F3359272714545FA33BD5803D86BF5BC99345B"
+    }
+  ]
+}

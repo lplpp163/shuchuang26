@@ -1,211 +1,98 @@
-<!doctype html>
-<html lang="zh-Hant">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="傳家話團隊成果入口：家庭母語問題、Flutter作品、計畫書、初審影片與嚴格驗收。">
-  <meta name="theme-color" content="#f7f2e9">
-  <title>傳家話｜說一句・演成我們家的故事｜數位組初賽評審入口</title>
-  <link rel="icon" href="deliverables/app/favicon.png">
-  <link rel="stylesheet" href="styles.css">
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="./">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="傳家話－一句話，一個故事，一份傳承。">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="傳家話">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>傳家話</title>
+  <link rel="manifest" href="manifest.json">
 </head>
 <body>
-  <a class="skip-link" href="#main">跳到主要內容</a>
+  <!--
+    You can customize the "flutter_bootstrap.js" script.
+    This is useful to provide a custom configuration to the Flutter loader
+    or to give the user feedback during the initialization process.
 
-  <header class="site-header">
-    <div class="shell header-inner">
-      <a class="brand" href="#top" aria-label="回到傳家話成果入口頂端">
-        <span class="brand-mark" aria-hidden="true">傳</span>
-        <span><strong>傳家話</strong><small>說一句・演成我們家的故事</small></span>
-      </a>
-      <nav aria-label="主要導覽">
-        <a href="#problem">問題</a>
-        <a href="#flow">操作</a>
-        <a href="#deliverables">成果</a>
-        <a href="#status">驗證</a>
-      </nav>
-    </div>
-  </header>
+    For more details:
+    * https://docs.flutter.dev/platform-integration/web/initialization
+  -->
+  <script>
+    // Builds before 2026-07-13 registered Flutter's deprecated cache-first
+    // service worker. Remove only this app's scope, clear its old Flutter
+    // caches, then reload once so an installed/previously-opened copy cannot
+    // keep serving an obsolete main.dart.js.
+    (() => {
+      const scopePath = new URL('.', document.baseURI).pathname;
+      const cleanupKey = `hometongue-sw-cleanup-v1:${scopePath}`;
 
-  <main id="main">
-    <section class="hero" id="top">
-      <div class="shell hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">2026 臺灣數創大賞｜數位組初賽評審入口</p>
-          <h1>家人先開口，<br>孩子讓故事往前走。</h1>
-          <p class="lead">先用約 30 秒、不錄音也不儲存的三幕試演：孩子直接點場景圖選一幕，看外婆在同一個舞台回話，再看「孩子帶回 → 家人傳下 → 孩子接住」如何成為三棒作品。成人同意後，孩子可走進五集三幕劇場；也能把社團、午餐、上課、朋友或今天最想分享的事交給家人接棒，再用四階段把家語接回來。</p>
-          <div class="hero-actions">
-            <a class="button primary" href="deliverables/app/index.html">Demo｜先試演約 30 秒</a>
-            <a class="button secondary" href="deliverables/video/index.html">正式影片｜播放有聲預覽</a>
-            <a class="button secondary" href="deliverables/plan/chuan-jia-hua-plan.pdf">正式計畫書｜開啟 PDF</a>
-          </div>
-          <p class="scope-note">試演三幕只使用固定 Piper 合成示範，不是真人家庭接力；它不會建立家庭、啟用麥克風、建立故事／接力／作答紀錄或寫入家庭資料。正式內容在成人同意後才建立，預載越南語也尚未完成母語者逐句審閱；每段聲音都要由使用者明確點擊才播放。</p>
-        </div>
+      const loadFlutter = () => {
+        const script = document.createElement('script');
+        script.src = 'flutter_bootstrap.js';
+        script.async = true;
+        document.body.appendChild(script);
+      };
 
-        <div class="phone-demo" aria-label="傳家話操作流程示意">
-          <div class="phone-top" aria-hidden="true"><span></span></div>
-          <div class="phone-screen">
-            <div class="demo-head"><span>約 30 秒三幕試演</span><small>零家庭資料</small></div>
-            <div class="voice-card">
-              <div class="avatar" aria-hidden="true">家</div>
-              <div><small>外婆先說</small><strong>你回來啦？</strong></div>
-              <button type="button" aria-label="點擊播放外婆的示範短句" disabled>▶</button>
-            </div>
-            <p class="task-title">你想怎麼接故事？</p>
-            <div class="object-options" aria-hidden="true"><span>我回來了</span><span>我有一點累</span><span>點一下聽</span></div>
-            <div class="feedback"><small>你的話讓故事變了</small><span>門打開了</span><span>外婆搬來軟墊</span></div>
-            <div class="map-line" aria-hidden="true"><i></i><i></i><i></i></div>
-            <p class="map-caption">第三幕：孩子帶回 → 家人傳下 → 孩子接住</p>
-          </div>
-        </div>
-      </div>
-    </section>
+      const cleanLegacyWorker = async () => {
+        if (!('serviceWorker' in navigator)) return false;
+        const registrations = await navigator.serviceWorker.getRegistrations();
+        const matching = registrations.filter(
+          (registration) => new URL(registration.scope).pathname === scopePath,
+        );
+        if (matching.length === 0) return false;
 
-    <section class="section evidence" id="problem">
-      <div class="shell evidence-grid">
-        <div>
-          <p class="section-label">課程之外的家庭日常</p>
-          <h2>資源已經存在，但語言要留下來，還需要家中的使用機會。</h2>
-        </div>
-        <div class="evidence-copy">
-          <p>教育部已建立新住民語文課程與七種語言的數位學習資源，問題焦點因此落在課程結束後的家庭日常。移民署研究中的家庭語言環境、親子共讀陪伴與母語學習呈顯著關聯；產品是否產生成效，則要再以真實家庭使用測量。</p>
-          <p>移民署112年調查的東南亞國家組中，年滿六歲子女有51.7%由家長回報為「都不會」母語、23.2%只會簡單對話。這組比例適用於該調查的東南亞國家組，資料性質是家長回報，不是孩子的標準化測驗。</p>
-          <p>教育部2026年7月1日更新的114學年度開放資料顯示：國中小新住民子女98,835人，七國背景48,948人，首波越南背景國小22,002人；這些都是在學學生數，不是家庭、使用者或買家。114年度另有103校、124班新住民語文樂學活動，代表可訪談的制度入口，不代表已取得合作。</p>
-          <p>「傳家話」把母語放回放學、起床、晚餐、澆花與睡前等生活情境。孩子不是做完一題就離開，而是在三幕故事中聽家人、選擇意思、開口接戲；每個選擇都會留下不同的家庭故事卡，真人家人也能再用原音或一句話接續。</p>
-          <div class="source-links">
-            <a href="https://www.moe.gov.tw/News_Content.aspx?n=9E7AC85F1954DDA8&amp;s=B2058C9F5298E32B" target="_blank" rel="noopener noreferrer">教育部：新住民語文學習資源 ↗</a>
-            <a href="https://www.immigration.gov.tw/media/107730/112%E5%B9%B4%E6%96%B0%E4%BD%8F%E6%B0%91%E7%94%9F%E6%B4%BB%E9%9C%80%E6%B1%82%E8%AA%BF%E6%9F%A5%E5%A0%B1%E5%91%8A.pdf" target="_blank" rel="noopener noreferrer">移民署：112 年新住民生活需求調查 ↗</a>
-            <a href="https://www.immigration.gov.tw/media/101629/%E5%A4%9A%E5%85%83%E6%96%87%E5%8C%96%E8%88%87%E8%AA%9E%E8%A8%80%E5%AD%B8%E7%BF%92%E4%B9%8B%E7%A0%94%E7%A9%B6-1111f302.pdf" target="_blank" rel="noopener noreferrer">移民署：多元文化與語言學習之研究 ↗</a>
-            <a href="https://data.gov.tw/dataset/46320" target="_blank" rel="noopener noreferrer">教育部：新住民子女就學開放資料 ↗</a>
-          </div>
-        </div>
-      </div>
-    </section>
+        await Promise.all(matching.map((registration) => registration.unregister()));
+        if ('caches' in window) {
+          const names = await caches.keys();
+          await Promise.all(
+            names
+              .filter((name) => name.startsWith('flutter-'))
+              .map((name) => caches.delete(name)),
+          );
+        }
 
-    <section class="section" id="flow">
-      <div class="shell">
-        <div class="section-heading">
-          <p class="section-label">一次完整操作</p>
-          <h2>先看懂三幕，再建立我們家的三棒故事。</h2>
-          <p>評審或第一次來訪者可先走完約 30 秒固定試演，不必留下家庭資料；第三幕只是把完整接力濃縮成示範。選擇「同意後建立我們家的三棒故事」後，才由成人建立家庭圈。五集三幕劇場與五類家庭接力都已能在同一台裝置完成。</p>
-        </div>
+        if (
+          navigator.serviceWorker.controller &&
+          sessionStorage.getItem(cleanupKey) !== 'done'
+        ) {
+          sessionStorage.setItem(cleanupKey, 'done');
+          location.reload();
+          return true;
+        }
+        return false;
+      };
 
-        <ol class="flow-list">
-          <li><span>01</span><div><strong>先試演約 30 秒</strong><p>第一幕點擊固定合成示範並直接在圖上選意思，第二幕看外婆同圖回話與舞台後果，第三幕看三棒如何傳回家；不錄音、不儲存，也不建立任何家庭、故事、接力或作答資料。</p></div></li>
-          <li><span>02</span><div><strong>同意後才建立自家內容</strong><p>要保存故事或使用麥克風時，才由成人取得同意、設定管理碼並確認家人稱謂；試演中的三棒不是這個家庭的真人作品。</p></div></li>
-          <li><span>03</span><div><strong>從五個生活舞台選一集</strong><p>放學回家、早晨起床、準備晚餐、陽台澆花與睡前故事，每集都有三幕與不同分支。</p></div></li>
-          <li><span>04</span><div><strong>選好圖，才展開練習</strong><p>長輩台詞、孩子短句、慢速整句與逐段練習都由使用者明確點擊播放；未選前不堆停用控制，選後才顯示中文、羅馬拼音與選配麥克風。</p></div></li>
-          <li><span>05</span><div><strong>不用麥克風也能演</strong><p>聽寫只協助把已選的句子寫成字，不替發音打分；孩子可直接用剛才選的圖讓外婆在同一個舞台回話。</p></div></li>
-          <li><span>06</span><div><strong>家長先回最新故事</strong><p>三幕後生成家庭故事卡；家長第一屏先留貼圖、文字或錄音，過去故事與邀請、備份、成員、家庭原音工具需要時才展開。</p></div></li>
-          <li><span>07</span><div><strong>完成一張家庭接力作品</strong><p>孩子選第一棒，成人經管理碼確認家裡真正說法，孩子再走完看、聽、排、答四階段；三棒作品進入家人圈，故事護照只在完成後蓋章。</p></div></li>
-        </ol>
-      </div>
-    </section>
-
-    <section class="section technology">
-      <div class="shell technology-grid">
-        <div>
-          <p class="section-label">目前技術與模型邊界</p>
-          <h2>靜態 Web、本機資料優先，也能演完一個家庭故事。</h2>
-          <p>五集三幕分支由可檢查的本機內容與狀態機驅動；內建台詞使用隨包音檔，家庭若已錄下自己的版本則優先播放。裝置／瀏覽器聽寫只回傳它聽到的文字並尋找本題關鍵詞，不是逐音、聲調或家庭口音評量。試演不寫入家庭資料，正式故事、角色與互動則保存在目前裝置。</p>
-        </div>
-        <dl class="boundary-list">
-          <div><dt>故事核心</dt><dd>五集、每集三幕；孩子的前兩次選擇會一路保留到結局。</dd></div>
-          <div><dt>播放控制</dt><dd>不靠自動播放；每句示範、家人原音與練習片段都由使用者點擊開始。</dd></div>
-          <div><dt>家人決定</dt><dd>家庭真正的說法、稱謂與原音由真人確認，系統不指定唯一正解。</dd></div>
-          <div><dt>接力狀態</dt><dd>等家人、等孩子、已完成只能單向前進；兩段本機聲音依序播放，不混音、不上傳。</dd></div>
-          <div><dt>聽寫邊界</dt><dd>只找已審核關鍵詞；模糊時回到小卡，不宣稱能做發音或聲調評分。</dd></div>
-          <div><dt>資料原則</dt><dd>本機優先、沒有公開動態或陌生人搜尋；目前也沒有伺服器帳號與雲端同步。</dd></div>
-        </dl>
-      </div>
-    </section>
-
-    <section class="section" id="deliverables">
-      <div class="shell">
-        <div class="section-heading">
-          <p class="section-label">目前交付物</p>
-          <h2>從原始碼、計畫書到初審影片</h2>
-          <p>連結使用固定路徑。Web 版可直接操作；原始碼、測試、計畫書與驗收紀錄可相互核對。</p>
-        </div>
-        <div class="deliverable-list">
-          <article>
-            <div><small>01｜作品</small><h3>Flutter Web 初賽主作品</h3><p>可操作約 30 秒三幕零資料試演、五集三幕劇場，以及五類「孩子第一棒—家人傳下—孩子接住」家庭接力與故事護照。</p></div>
-            <span class="deliverable-actions"><a href="deliverables/app/index.html">操作 Web</a><a href="deliverables/flutter/index.html">原始碼</a></span>
-          </article>
-          <article>
-            <div><small>02｜送審主檔</small><h3>數位組創業計畫書</h3><p>依官方六章架構、A4 版面與標楷體輸出；正文不用底色短句填頁。</p></div>
-            <span class="deliverable-actions"><a href="deliverables/plan/chuan-jia-hua-plan.pdf">PDF</a><a href="deliverables/plan/chuan-jia-hua-plan.docx">DOCX</a></span>
-          </article>
-          <article>
-            <div><small>03｜初審影片</small><h3>2分53.9秒正式影片</h3><p>正式送審保留1080p H.264／AAC原檔；網站播放同內容720p預覽，兩者都有獨立雜湊與ffprobe紀錄。不虛構真人訪談或使用成效。</p></div>
-            <span class="deliverable-actions"><a href="deliverables/video/chuan-jia-hua-submission.mp4">播放網頁預覽</a><a href="deliverables/video/index.html">雙檔規格與分鏡</a></span>
-          </article>
-          <article>
-            <div><small>04｜評審視角</small><h3>嚴格驗收報告</h3><p>分開檢查創意、需求證據、技術可行性、作品完整度、匿名與一致性。</p></div>
-            <a href="deliverables/docs/strict-review.md">查看驗收</a>
-          </article>
-          <article>
-            <div><small>05｜教師試辦</small><h3>四週教師家庭延伸情境包</h3><p>A4 工作包含每週流程、家庭交接、無麥克風備援、權限邊界與紀錄表；8,000元只是一班、一次四週、最多30戶的待訪談假設，不是年費、報價或成效證據。</p></div>
-            <a href="deliverables/pilot/teacher-family-extension-pack.pdf">開啟試辦包</a>
-          </article>
-          <article>
-            <div><small>06｜匿名彙整</small><h3>離線試辦證據彙整台</h3><p>只接受 App 固定匿名 schema，拒絕額外欄位、疑似個資、重複 cohort 與不一致漏斗；只加總有明確分母的計數，不把合成示例或自陳資料冒充成效。</p></div>
-            <a href="deliverables/pilot/evidence-workbench.html">開啟離線彙整台</a>
-          </article>
-          <article>
-            <div><small>07｜真人驗證</small><h3>家庭試演與導入訪談協議</h3><p>先讓孩子做約 30 秒三幕試演，再記錄三幕不提示完成率、資料理解、卡點與家長意願；目前是空白協議，不冒充已取得的市場數據。</p></div>
-            <a href="deliverables/docs/family-pilot-questionnaire.md">開啟協議</a>
-          </article>
-          <article>
-            <div><small>08｜語言審閱</small><h3>119 句／204 語境母語審閱工具</h3><p>每檔先完整播放，再依中文意圖、說話者／聽者與實際使用位置作三項是／否判定；另附含119個MP3與逐檔checksum的離線包。空白工具不冒充真人成果。</p></div>
-            <span class="deliverable-actions"><a href="deliverables/review/index.html">開啟審閱工具</a><a href="deliverables/review/chuan-jia-hua-native-review-portable.zip">取得離線包</a></span>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section status" id="status">
-      <div class="shell status-grid">
-        <div>
-          <p class="section-label">目前證據邊界</p>
-          <h2>哪些可以現場打開，哪些還不能當成結果。</h2>
-        </div>
-        <div class="status-copy">
-          <section>
-            <h3>目前可核對</h3>
-            <ul>
-              <li>可從本機交付網址打開約 30 秒三幕零資料試演，依序看見圖上選意思、外婆同圖回話、舞台後果與三棒接力；另有五集、每集三幕的家庭對話劇場。</li>
-              <li>劇場聲音採明確點擊播放；內建合成示範、家人原音與失敗退回在介面上使用不同標示。</li>
-              <li>孩子可用選配麥克風，或直接用剛才選的圖完成分支；三幕後建立故事卡，家長第一屏先回最新故事，再按需要展開管理工具。</li>
-              <li>五類日常題材可完成孩子第一棒、成人確認、孩子看、聽、排、答四階段、三棒揭示與故事護照；教育資訊另有明確標示的非官方本機延伸。</li>
-              <li>22 頁四週教師家庭延伸試辦包與離線匿名彙整台可開啟；工具會拒絕疑似個資與錯誤漏斗，但尚未有教師採用、真人 cohort 或付費結果。</li>
-              <li>原始碼、最新自動化驗證、同步清單、技術紀錄與嚴格驗收可相互核對；數量以當次驗證輸出為準。</li>
-              <li>正式計畫書與2分53.9秒初審影片預覽可開啟；1080p正式檔另保留於送審來源，雙檔都有可重現腳本、ffprobe規格與SHA-256紀錄。</li>
-              <li>公開的教育部、移民署與法規資料來源。</li>
-            </ul>
-          </section>
-          <section>
-            <h3>仍待實際完成</h3>
-            <ul>
-              <li>Android 與 iOS runner 保留在 Flutter 原始碼；原生實機權限、簽章與安裝封裝仍待完成。</li>
-              <li>預載合成越南語句子、指令和作業流程的母語人工審閱；目前不是家庭真人錄音。</li>
-              <li>公開 HTTPS 部署，以及不同手機與桌面瀏覽器的真機驗證。</li>
-              <li>真實家庭的任務測試、長期使用與學習成效。</li>
-              <li>生成式插圖的10次原始生成、prompt、匿名技術紀錄與11個成品轉換雜湊已封存；生成帳號、輸入／參考圖、競賽與商業使用權仍待權利人本人正式聲明。</li>
-              <li>任何合作、採用、付費意願或市場數字的第一手驗證。</li>
-            </ul>
-          </section>
-          <p class="honesty-note">本網站的家庭情境是作品流程示範，不代表已完成訪談、實地測試或機構合作。</p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="shell footer-inner">
-      <div><strong>傳家話</strong><p>說一句・演成我們家的故事｜2026 臺灣數創大賞</p></div>
-      <div><a href="README.md">網站說明</a><a href="deliverables/manifest.json">同步清單</a><a href="#top">回到頂端</a></div>
-    </div>
-  </footer>
+      cleanLegacyWorker()
+        .then((reloading) => {
+          if (!reloading) loadFlutter();
+        })
+        .catch(loadFlutter);
+    })();
+  </script>
 </body>
 </html>
+
