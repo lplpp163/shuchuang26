@@ -1,10 +1,12 @@
 {
   "schema": "hometongue.image-provenance.v1",
   "project": "傳家話",
-  "compiledAtUtc": "2026-07-13T18:47:32Z",
+  "compiledAtUtc": "2026-07-22T00:00:00Z",
   "scope": {
-    "finalAssetCount": 11,
-    "generationCount": 10
+    "finalAssetCount": 12,
+    "generationCount": 11,
+    "otherIllustrationCount": 4,
+    "boundary": "This manifest covers only image_gen outputs with archived prompts and source files; four separately created story illustrations are outside this bundle."
   },
   "generatorEvidence": {
     "tool": "image_gen__imagegen",
@@ -205,6 +207,26 @@
       "finalAssets": [
         "family-stage-duo-v1.png"
       ]
+    },
+    {
+      "generationId": "exec-3413784d-0d7f-42d1-b246-73ea44f00fb3",
+      "callId": "client-call-not-exposed-exec-3413784d",
+      "startedAtUtc": "2026-07-21T17:43:30.000Z",
+      "completedAtUtc": "2026-07-21T17:44:52.390Z",
+      "promptSha256": "B6CF8F77A3B439C3C57C445179B68598021693DB7B95AF98ADD42F92884EFEC4",
+      "references": [
+        "family-homecoming-theater-v2.png"
+      ],
+      "source": {
+        "sha256": "AC1F7AD31BCBCEFC3FCC57BCAB68A232FA31D0D97DD961948919859C72FD98F9",
+        "bytes": 2633148,
+        "width": 1672,
+        "height": 941
+      },
+      "finalAssets": [
+        "family-memory-tree-v1.png"
+      ],
+      "captureBoundary": "client call ID was not exposed; completion time is bound to the source PNG write time"
     }
   ],
   "assets": [
@@ -290,6 +312,15 @@
       "transformId": "copy-mealtime-theater-png"
     },
     {
+      "file": "family-memory-tree-v1.png",
+      "bytes": 2633148,
+      "sha256": "AC1F7AD31BCBCEFC3FCC57BCAB68A232FA31D0D97DD961948919859C72FD98F9",
+      "width": 1672,
+      "height": 941,
+      "generationId": "exec-3413784d-0d7f-42d1-b246-73ea44f00fb3",
+      "transformId": "copy-memory-tree-png"
+    },
+    {
       "file": "family-morning-game-v1.webp",
       "bytes": 140222,
       "sha256": "20A192047B36FB9675A9C3100CEED0DC80CC8C59FB45EA522EA31F08DB82C33F",
@@ -333,4 +364,3 @@
     "containsSessionTranscript": false
   }
 }
-
